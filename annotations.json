@@ -1,0 +1,9 @@
+{
+  "_note": "Builder's annotations, made by reading all 20 authored pairs side by side. They add a flag to the results page. They do not change any score, because the scoring rules were fixed before the data came in.",
+  "convergence": [
+    {"label": "a rival caterer's freezer is switched off", "pairs": ["au_sonnet_intent_accident", "au_fable_intent_accident"]},
+    {"label": "a greenhouse is left to the frost", "pairs": ["au_sonnet_doing_allowing", "au_opus_doing_allowing"]},
+    {"label": "a farm gate is left open and animals get out", "pairs": ["au_haiku_norm_causation", "au_opus_norm_causation", "au_fable_doing_allowing"]},
+    {"label": "appliances overload a shared circuit", "pairs": ["au_sonnet_norm_causation", "nc_paraphrase"]}
+  ]
+}

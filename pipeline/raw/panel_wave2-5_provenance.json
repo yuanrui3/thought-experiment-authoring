@@ -1,0 +1,322 @@
+{
+ "judge:sonnet-r4-y": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r4-x": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r2-x": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r2-y": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r4-y": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r3-y": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r5-y": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r4-x": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r3-x": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r2-y": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r5-y": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r5-y": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r4-x": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r3-x": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r4-y": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r3-x": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r2-y": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r2-x": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r5-y": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r3-x": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r5-x": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r3-y": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r2-x": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r4-x": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r3-y": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r2-x": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r5-x": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:haiku-r3-y": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r5-x": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:opus-r2-y": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:sonnet-r5-x": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ },
+ "judge:fable-r4-y": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "tool_calls": [
+   "StructuredOutput"
+  ],
+  "other_tools": []
+ }
+}

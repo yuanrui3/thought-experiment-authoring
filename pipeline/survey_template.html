@@ -1,0 +1,234 @@
+<title>Everyday Judgments Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow column, one scenario per screen; the scenario in serif like a printed questionnaire, the questions in sans. */
+:root {
+  --bg: #f5f6f8; --surface: #fdfdfe; --ink: #14171c; --ink-2: #474e59; --muted: #747c88;
+  --hair: #e1e4ea; --base: #c2c8d1; --band: #e3e7ee; --accent: #1f62b8; --accent-ink: #ffffff; --pick: #dfeafb;
+  --warn: #8a5a00; --warn-bg: #fdf0cf;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1013; --surface: #171a1f; --ink: #eef0f3; --ink-2: #c1c6ce; --muted: #8f96a1;
+  --hair: #292d34; --base: #3b4049; --band: #2a2f38; --accent: #5a9bee; --accent-ink: #0b1220; --pick: #1d2c44;
+  --warn: #f0b93a; --warn-bg: #3a2e0f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1013; --surface: #171a1f; --ink: #eef0f3; --ink-2: #c1c6ce; --muted: #8f96a1;
+  --hair: #292d34; --base: #3b4049; --band: #2a2f38; --accent: #5a9bee; --accent-ink: #0b1220; --pick: #1d2c44;
+  --warn: #f0b93a; --warn-bg: #3a2e0f; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 20px; }
+.screen { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+h1 { font-size: 28px; line-height: 1.2; font-weight: 600; margin: 0; text-wrap: balance; }
+h2 { font-size: 19px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; } ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.lede { font-size: 17px; color: var(--ink-2); }
+.small { font-size: 14px; color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.progress { display: flex; flex-direction: column; gap: 6px; }
+.progress .row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { height: 4px; background: var(--band); border-radius: 2px; overflow: hidden; } .bar > div { height: 100%; background: var(--accent); width: 0; }
+.vig { font-family: var(--serif); font-size: 17.5px; line-height: 1.65; color: var(--ink); }
+.qtext { font-weight: 500; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+legend { padding: 0; margin-bottom: 8px; }
+.scale { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.scale label, .opts label, .choice label { border: 1px solid var(--base); border-radius: 8px; background: var(--surface); cursor: pointer; }
+.scale label { display: flex; align-items: center; justify-content: center; min-height: 46px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.scale input, .opts input, .choice input { position: absolute; opacity: 0; pointer-events: none; }
+.scale label:has(input:checked), .opts label:has(input:checked), .choice label:has(input:checked) { background: var(--pick); border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.scale label:has(input:focus-visible), .opts label:has(input:focus-visible), .choice label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ends { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--ink-2); }
+.ends span { max-width: 46%; } .ends span:last-child { text-align: right; }
+.opts, .choice { display: flex; flex-direction: column; gap: 8px; }
+.opts label, .choice label { padding: 11px 14px; display: block; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+button { font: inherit; cursor: pointer; border-radius: 8px; }
+.primary { background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent); padding: 11px 22px; font-weight: 600; }
+.primary:disabled { background: var(--band); border-color: var(--band); color: var(--muted); cursor: not-allowed; }
+.link { background: none; border: 0; color: var(--ink-2); text-decoration: underline; padding: 6px 0; font-size: 14px; }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.check { display: flex; gap: 10px; align-items: flex-start; } .check input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--accent); }
+.code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 14px; line-height: 1.5; word-break: break-all; background: var(--band); border-radius: 8px; padding: 12px; user-select: all; -webkit-user-select: all; }
+.note { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 10px 12px; font-size: 14px; }
+.ok { color: var(--ink-2); font-size: 14px; min-height: 1.4em; }
+</style>
+
+<main class="wrap" id="app">
+  <div class="screen"><h1>Everyday Judgments Study</h1><p class="lede">Loading…</p></div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var ITEMS = /*__ITEMS__*/{};
+  var FORMS = /*__FORMS__*/{};
+  var N_ITEMS = __N_ITEMS__;
+  var ALPHA = 'abcdefghjkmnpqrstuvwxyz23456789';
+  var KEY = 'everyday-judgments-v1';
+  var app = document.getElementById('app');
+  var state = null, shownAt = 0;
+
+  function rand(n) {
+    try { var a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; } catch (e) { return Math.floor(Math.random() * n); }
+  }
+  function shuffle(xs) { xs = xs.slice(); for (var i = xs.length - 1; i > 0; i--) { var j = rand(i + 1); var t = xs[i]; xs[i] = xs[j]; xs[j] = t; } return xs; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  function load() { try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.pid && FORMS[s.form] && s.order) return s; } catch (e) {} return null; }
+  function fresh() {
+    var names = Object.keys(FORMS).sort();
+    var h = (location.hash || '').replace('#', '').toLowerCase();
+    var form = FORMS[h] ? h : names[rand(names.length)];
+    var pid = ''; for (var i = 0; i < 8; i++) pid += ALPHA[rand(ALPHA.length)];
+    return { pid: pid, form: form, order: shuffle(FORMS[form]), answers: [], bg: [0, 0, 0], stage: 'intro' };
+  }
+  function check(s) { var a = 1, b = 0; for (var i = 0; i < s.length; i++) { a = (a + s.charCodeAt(i)) % 65521; b = (b + a) % 65521; } return (b * 65536 + a).toString(36); }
+  function code() {
+    var body = state.answers.map(function (x) {
+      var secs = Math.max(0, Math.min(1295, Math.round(x.s)));
+      return x.i + String(x.r) + x.c + ('0' + secs.toString(36)).slice(-2);
+    }).join('');
+    var s = 'TE1-' + state.pid + '-' + state.form + '-' + state.bg.join('') + '-' + body;
+    return s + '-' + check(s);
+  }
+  function el(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      if (k === 'text') e.textContent = attrs[k]; else if (k === 'class') e.className = attrs[k];
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), attrs[k]); else e.setAttribute(k, attrs[k]);
+    });
+    (kids || []).forEach(function (c) { if (c) e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function show(nodes) { app.replaceChildren(el('div', { class: 'screen' }, nodes)); window.scrollTo(0, 0); }
+  function radios(name, opts, cls, onpick) {
+    return el('div', { class: cls }, opts.map(function (o, i) {
+      return el('label', { for: name + '-' + i }, [el('input', { type: 'radio', name: name, id: name + '-' + i, value: String(o.v), onchange: function () { onpick(o.v); } }), o.t]);
+    }));
+  }
+
+  function intro() {
+    var box = el('input', { type: 'checkbox', id: 'consent' });
+    var go = el('button', { class: 'primary', id: 'begin', disabled: '', text: 'Begin', onclick: function () { state.stage = 'background'; save(); background(); } });
+    box.addEventListener('change', function () { go.disabled = !box.checked; });
+    show([
+      el('h1', { text: 'Everyday Judgments Study' }),
+      el('p', { class: 'lede', text: 'You will read short scenarios about everyday situations and answer two questions about each. It is part of a project on how to evaluate AI systems.' }),
+      el('div', { class: 'panel' }, [
+        el('h2', { text: 'Before you start' }),
+        el('ul', {}, [
+          el('li', { text: 'There are ' + N_ITEMS + ' scenarios, and all of them take about 20 minutes. You can stop at any point and your answers so far still count.' }),
+          el('li', { text: 'Some scenarios describe accidents, injuries or deaths.' }),
+          el('li', { text: 'Taking part is voluntary. Please take part only if you are 18 or older.' }),
+          el('li', { text: 'No name, email or account information is collected. Your answers stay in this browser. At the end you get a completion code that holds your answers and a random participant code, and you choose whether to send it to the person who invited you.' }),
+          el('li', { text: 'Results may be published in summary form. Nothing in them can identify you.' })
+        ]),
+        el('div', { class: 'check' }, [box, el('label', { for: 'consent', text: 'I am 18 or older and I agree to take part.' })])
+      ]),
+      el('div', { class: 'actions' }, [go])
+    ]);
+  }
+
+  function background() {
+    var q1 = el('fieldset', {}, [el('legend', { class: 'qtext', text: 'Have you studied philosophy? (optional)' }),
+      radios('phil', [{ v: 1, t: 'No' }, { v: 2, t: 'A course or two' }, { v: 3, t: 'A degree or more' }], 'choice', function (v) { state.bg[0] = v; save(); })]);
+    var q2 = el('fieldset', {}, [el('legend', { class: 'qtext', text: 'How well do you read English? (optional)' }),
+      radios('eng', [{ v: 1, t: 'It is my first language' }, { v: 2, t: 'Fluently' }, { v: 3, t: 'With some effort' }], 'choice', function (v) { state.bg[1] = v; save(); })]);
+    show([
+      el('h1', { text: 'Two quick questions about you' }),
+      el('div', { class: 'panel' }, [q1, q2]),
+      el('div', { class: 'actions' }, [el('button', { class: 'primary', id: 'to-instructions', text: 'Continue', onclick: function () { state.stage = 'instructions'; save(); instructions(); } })])
+    ]);
+  }
+
+  function instructions() {
+    show([
+      el('h1', { text: 'How to answer' }),
+      el('div', { class: 'panel' }, [
+        el('p', { text: 'Each scenario is followed by two questions.' }),
+        el('ul', {}, [
+          el('li', { text: 'The first asks for your own judgment on a scale from 1 to 7. There are no right or wrong answers. Give your honest judgment of the scenario as it is written.' }),
+          el('li', { text: 'The second is a factual question about what the scenario says.' }),
+          el('li', { text: 'Treat every scenario independently: judge each one as if it were the only one you had read, and use only what that scenario states.' }),
+          el('li', { text: 'You cannot go back to an earlier scenario, so take the time you need on each one.' })
+        ])
+      ]),
+      el('div', { class: 'actions' }, [el('button', { class: 'primary', id: 'start', text: 'Show the first scenario', onclick: function () { state.stage = 'items'; save(); item(); } })])
+    ]);
+  }
+
+  function item() {
+    var k = state.answers.length;
+    if (k >= state.order.length) { state.stage = 'wrap'; save(); return wrap(); }
+    var id = state.order[k], it = ITEMS[id], pick = { r: null, c: null };
+    var next = el('button', { class: 'primary', id: 'next', disabled: '', text: k + 1 === state.order.length ? 'Finish' : 'Next scenario' });
+    function upd() { next.disabled = !(pick.r && pick.c); }
+    next.addEventListener('click', function () {
+      if (!(pick.r && pick.c)) return;
+      state.answers.push({ i: id, r: pick.r, c: pick.c, s: (Date.now() - shownAt) / 1000 });
+      save(); item();
+    });
+    var bar = el('div', {}); bar.style.width = Math.round(100 * k / state.order.length) + '%';
+    var stopBox = el('div', { class: 'note', hidden: '' }, [
+      el('p', { text: 'You have answered ' + k + ' of ' + state.order.length + '. If you stop now, those answers still count.' }),
+      el('div', { class: 'actions' }, [
+        el('button', { class: 'link', id: 'confirm-stop', text: 'Stop and get my code', onclick: function () { state.stage = 'wrap'; save(); wrap(); } }),
+        el('button', { class: 'link', text: 'Keep going', onclick: function () { stopBox.hidden = true; } })])
+    ]);
+    show([
+      el('div', { class: 'progress' }, [el('div', { class: 'row' }, [el('span', { text: 'Scenario ' + (k + 1) + ' of ' + state.order.length }), el('span', { text: 'Everyday Judgments Study' })]), el('div', { class: 'bar' }, [bar])]),
+      el('p', { class: 'vig', text: it.t }),
+      el('div', { class: 'panel' }, [
+        el('fieldset', {}, [el('legend', { class: 'qtext', text: it.q }),
+          radios('rating', [1, 2, 3, 4, 5, 6, 7].map(function (n) { return { v: n, t: String(n) }; }), 'scale', function (v) { pick.r = v; upd(); }),
+          el('div', { class: 'ends' }, [el('span', { text: '1 = ' + it.l1 }), el('span', { text: '7 = ' + it.l7 })])]),
+        el('fieldset', {}, [el('legend', { class: 'qtext', text: it.c }),
+          radios('check', ['a', 'b', 'c'].map(function (c) { return { v: c, t: it.o[c] }; }), 'opts', function (v) { pick.c = v; upd(); })])
+      ]),
+      el('div', { class: 'actions' }, [k > 0 ? el('button', { class: 'link', id: 'stop', text: 'Stop here', onclick: function () { stopBox.hidden = false; } }) : el('span', {}), next]),
+      stopBox
+    ]);
+    shownAt = Date.now();
+  }
+
+  function wrap() {
+    if (state.stage === 'done') return done();
+    show([
+      el('h1', { text: 'One last question' }),
+      el('div', { class: 'panel' }, [el('fieldset', {}, [el('legend', { class: 'qtext', text: 'Did any of the scenarios seem familiar from somewhere else, such as a course, a book or an article? (optional)' }),
+        radios('fam', [{ v: 1, t: 'No' }, { v: 2, t: 'One or two' }, { v: 3, t: 'Several' }], 'choice', function (v) { state.bg[2] = v; save(); })])]),
+      el('div', { class: 'actions' }, [el('button', { class: 'primary', id: 'get-code', text: 'Get my completion code', onclick: function () { state.stage = 'done'; save(); done(); } })])
+    ]);
+  }
+
+  function done() {
+    var c = code();
+    var status = el('p', { class: 'ok', id: 'copy-status', role: 'status', text: '' });
+    var box = el('div', { class: 'code', id: 'code', text: c, tabindex: '0' });
+    var copy = el('button', { class: 'primary', id: 'copy', text: 'Copy the code', onclick: function () {
+      function fallback() { var r = document.createRange(); r.selectNodeContents(box); var s = getSelection(); s.removeAllRanges(); s.addRange(r); status.textContent = 'The code is selected. Copy it with your usual copy command.'; }
+      try { navigator.clipboard.writeText(c).then(function () { status.textContent = 'Copied.'; }, fallback); } catch (e) { fallback(); }
+    } });
+    show([
+      el('h1', { text: 'Thank you' }),
+      el('p', { class: 'lede', text: 'You answered ' + state.answers.length + ' of ' + state.order.length + ' scenarios. To hand in your answers, send this code to the person who invited you.' }),
+      el('div', { class: 'panel' }, [box, el('div', { class: 'actions' }, [copy, status]),
+        el('p', { class: 'small', text: 'The code holds your answers and a random participant code. It does not hold your name or anything about your device. If you do not send it, nothing is recorded.' })]),
+      el('div', { class: 'panel' }, [
+        el('h2', { text: 'What this was for' }),
+        el('p', { text: 'Many of the scenarios were written by AI systems, in pairs that differ in one detail. You saw one version of each pair. The study tests whether people judge the two versions differently in the way the AI system predicted.' }),
+        el('p', { text: 'Please do not describe the scenarios to anyone who may still take part.' })
+      ])
+    ]);
+  }
+
+  function boot() {
+    if ((location.hash || '') === '#reset') { try { localStorage.removeItem(KEY); } catch (e) {} }
+    state = load() || fresh();
+    ({ intro: intro, background: background, instructions: instructions, items: item, wrap: wrap, done: done }[state.stage] || intro)();
+  }
+  boot();
+})();
+</script>

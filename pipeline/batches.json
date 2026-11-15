@@ -1,0 +1,6886 @@
+{
+ "seed": 20261114,
+ "repeats": 5,
+ "models": [
+  "haiku",
+  "sonnet",
+  "opus",
+  "fable"
+ ],
+ "batches": [
+  {
+   "batch_id": "haiku-r1-x",
+   "model_alias": "haiku",
+   "repeat": 1,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r1-y",
+   "model_alias": "haiku",
+   "repeat": 1,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r2-x",
+   "model_alias": "haiku",
+   "repeat": 2,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r2-y",
+   "model_alias": "haiku",
+   "repeat": 2,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r3-x",
+   "model_alias": "haiku",
+   "repeat": 3,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r3-y",
+   "model_alias": "haiku",
+   "repeat": 3,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r4-x",
+   "model_alias": "haiku",
+   "repeat": 4,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r4-y",
+   "model_alias": "haiku",
+   "repeat": 4,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r5-x",
+   "model_alias": "haiku",
+   "repeat": 5,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "haiku-r5-y",
+   "model_alias": "haiku",
+   "repeat": 5,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r1-x",
+   "model_alias": "sonnet",
+   "repeat": 1,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r1-y",
+   "model_alias": "sonnet",
+   "repeat": 1,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r2-x",
+   "model_alias": "sonnet",
+   "repeat": 2,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r2-y",
+   "model_alias": "sonnet",
+   "repeat": 2,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r3-x",
+   "model_alias": "sonnet",
+   "repeat": 3,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_weather",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r3-y",
+   "model_alias": "sonnet",
+   "repeat": 3,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r4-x",
+   "model_alias": "sonnet",
+   "repeat": 4,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r4-y",
+   "model_alias": "sonnet",
+   "repeat": 4,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r5-x",
+   "model_alias": "sonnet",
+   "repeat": 5,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "sonnet-r5-y",
+   "model_alias": "sonnet",
+   "repeat": 5,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r1-x",
+   "model_alias": "opus",
+   "repeat": 1,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r1-y",
+   "model_alias": "opus",
+   "repeat": 1,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r2-x",
+   "model_alias": "opus",
+   "repeat": 2,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r2-y",
+   "model_alias": "opus",
+   "repeat": 2,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r3-x",
+   "model_alias": "opus",
+   "repeat": 3,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r3-y",
+   "model_alias": "opus",
+   "repeat": 3,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r4-x",
+   "model_alias": "opus",
+   "repeat": 4,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r4-y",
+   "model_alias": "opus",
+   "repeat": 4,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r5-x",
+   "model_alias": "opus",
+   "repeat": 5,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "opus-r5-y",
+   "model_alias": "opus",
+   "repeat": 5,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r1-x",
+   "model_alias": "fable",
+   "repeat": 1,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r1-y",
+   "model_alias": "fable",
+   "repeat": 1,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r2-x",
+   "model_alias": "fable",
+   "repeat": 2,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_weather",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r2-y",
+   "model_alias": "fable",
+   "repeat": 2,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_weather",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r3-x",
+   "model_alias": "fable",
+   "repeat": 3,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r3-y",
+   "model_alias": "fable",
+   "repeat": 3,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 13,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r4-x",
+   "model_alias": "fable",
+   "repeat": 4,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 10,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 11,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r4-y",
+   "model_alias": "fable",
+   "repeat": 4,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_name",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 9,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 27,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r5-x",
+   "model_alias": "fable",
+   "repeat": 5,
+   "arm": "x",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "cc_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "cc_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 3,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 4,
+     "pair_id": "au_fable_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 5,
+     "pair_id": "nc_color",
+     "version": "A"
+    },
+    {
+     "position": 6,
+     "pair_id": "cc_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 7,
+     "pair_id": "nc_weather",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_opus_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 12,
+     "pair_id": "nc_weekday",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 15,
+     "pair_id": "cc_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 16,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 19,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 20,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_fable_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 24,
+     "pair_id": "nc_paraphrase",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_opus_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "au_opus_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 28,
+     "pair_id": "cc_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "nc_name",
+     "version": "B"
+    }
+   ]
+  },
+  {
+   "batch_id": "fable-r5-y",
+   "model_alias": "fable",
+   "repeat": 5,
+   "arm": "y",
+   "items": [
+    {
+     "position": 1,
+     "pair_id": "nc_name",
+     "version": "A"
+    },
+    {
+     "position": 2,
+     "pair_id": "au_haiku_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 3,
+     "pair_id": "cc_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 4,
+     "pair_id": "nc_paraphrase",
+     "version": "B"
+    },
+    {
+     "position": 5,
+     "pair_id": "au_opus_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 6,
+     "pair_id": "au_haiku_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 7,
+     "pair_id": "au_sonnet_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 8,
+     "pair_id": "au_sonnet_doing_allowing",
+     "version": "A"
+    },
+    {
+     "position": 9,
+     "pair_id": "cc_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 10,
+     "pair_id": "au_fable_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 11,
+     "pair_id": "au_opus_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 12,
+     "pair_id": "au_haiku_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 13,
+     "pair_id": "au_sonnet_norm_causation",
+     "version": "A"
+    },
+    {
+     "position": 14,
+     "pair_id": "au_fable_norm_causation",
+     "version": "B"
+    },
+    {
+     "position": 15,
+     "pair_id": "au_opus_intent_accident",
+     "version": "A"
+    },
+    {
+     "position": 16,
+     "pair_id": "nc_weekday",
+     "version": "B"
+    },
+    {
+     "position": 17,
+     "pair_id": "cc_doing_allowing",
+     "version": "B"
+    },
+    {
+     "position": 18,
+     "pair_id": "nc_color",
+     "version": "B"
+    },
+    {
+     "position": 19,
+     "pair_id": "cc_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 20,
+     "pair_id": "nc_weather",
+     "version": "B"
+    },
+    {
+     "position": 21,
+     "pair_id": "au_opus_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 22,
+     "pair_id": "au_fable_intent_accident",
+     "version": "B"
+    },
+    {
+     "position": 23,
+     "pair_id": "au_sonnet_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 24,
+     "pair_id": "au_sonnet_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 25,
+     "pair_id": "au_fable_moral_luck",
+     "version": "B"
+    },
+    {
+     "position": 26,
+     "pair_id": "cc_moral_luck",
+     "version": "A"
+    },
+    {
+     "position": 27,
+     "pair_id": "au_opus_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 28,
+     "pair_id": "au_fable_knowledge_luck",
+     "version": "A"
+    },
+    {
+     "position": 29,
+     "pair_id": "au_haiku_knowledge_luck",
+     "version": "B"
+    },
+    {
+     "position": 30,
+     "pair_id": "au_haiku_moral_luck",
+     "version": "B"
+    }
+   ]
+  }
+ ],
+ "audits": [
+  {
+   "audit_id": "audit-haiku",
+   "model_alias": "haiku",
+   "items": [
+    {
+     "code": "P01",
+     "pair_id": "nc_weather"
+    },
+    {
+     "code": "P02",
+     "pair_id": "au_sonnet_knowledge_luck"
+    },
+    {
+     "code": "P03",
+     "pair_id": "au_sonnet_norm_causation"
+    },
+    {
+     "code": "P04",
+     "pair_id": "nc_paraphrase"
+    },
+    {
+     "code": "P05",
+     "pair_id": "cc_intent_accident"
+    },
+    {
+     "code": "P06",
+     "pair_id": "au_fable_knowledge_luck"
+    },
+    {
+     "code": "P07",
+     "pair_id": "au_haiku_norm_causation"
+    },
+    {
+     "code": "P08",
+     "pair_id": "au_haiku_intent_accident"
+    },
+    {
+     "code": "P09",
+     "pair_id": "au_opus_knowledge_luck"
+    },
+    {
+     "code": "P10",
+     "pair_id": "au_fable_norm_causation"
+    },
+    {
+     "code": "P11",
+     "pair_id": "nc_name"
+    },
+    {
+     "code": "P12",
+     "pair_id": "au_fable_intent_accident"
+    },
+    {
+     "code": "P13",
+     "pair_id": "au_opus_doing_allowing"
+    },
+    {
+     "code": "P14",
+     "pair_id": "au_haiku_doing_allowing"
+    },
+    {
+     "code": "P15",
+     "pair_id": "au_sonnet_doing_allowing"
+    },
+    {
+     "code": "P16",
+     "pair_id": "au_opus_norm_causation"
+    },
+    {
+     "code": "P17",
+     "pair_id": "au_opus_intent_accident"
+    },
+    {
+     "code": "P18",
+     "pair_id": "au_sonnet_intent_accident"
+    },
+    {
+     "code": "P19",
+     "pair_id": "nc_weekday"
+    },
+    {
+     "code": "P20",
+     "pair_id": "nc_color"
+    },
+    {
+     "code": "P21",
+     "pair_id": "cc_moral_luck"
+    },
+    {
+     "code": "P22",
+     "pair_id": "ac_severity"
+    },
+    {
+     "code": "P23",
+     "pair_id": "ac_contribution"
+    },
+    {
+     "code": "P24",
+     "pair_id": "cc_norm_causation"
+    },
+    {
+     "code": "P25",
+     "pair_id": "au_haiku_knowledge_luck"
+    },
+    {
+     "code": "P26",
+     "pair_id": "au_fable_doing_allowing"
+    },
+    {
+     "code": "P27",
+     "pair_id": "au_sonnet_moral_luck"
+    },
+    {
+     "code": "P28",
+     "pair_id": "cc_knowledge_luck"
+    },
+    {
+     "code": "P29",
+     "pair_id": "au_haiku_moral_luck"
+    },
+    {
+     "code": "P30",
+     "pair_id": "au_opus_moral_luck"
+    },
+    {
+     "code": "P31",
+     "pair_id": "au_fable_moral_luck"
+    },
+    {
+     "code": "P32",
+     "pair_id": "ac_evidence"
+    },
+    {
+     "code": "P33",
+     "pair_id": "cc_doing_allowing"
+    }
+   ]
+  },
+  {
+   "audit_id": "audit-sonnet",
+   "model_alias": "sonnet",
+   "items": [
+    {
+     "code": "P01",
+     "pair_id": "au_opus_knowledge_luck"
+    },
+    {
+     "code": "P02",
+     "pair_id": "cc_knowledge_luck"
+    },
+    {
+     "code": "P03",
+     "pair_id": "nc_color"
+    },
+    {
+     "code": "P04",
+     "pair_id": "au_haiku_intent_accident"
+    },
+    {
+     "code": "P05",
+     "pair_id": "au_haiku_knowledge_luck"
+    },
+    {
+     "code": "P06",
+     "pair_id": "au_sonnet_knowledge_luck"
+    },
+    {
+     "code": "P07",
+     "pair_id": "au_opus_doing_allowing"
+    },
+    {
+     "code": "P08",
+     "pair_id": "au_fable_moral_luck"
+    },
+    {
+     "code": "P09",
+     "pair_id": "au_haiku_moral_luck"
+    },
+    {
+     "code": "P10",
+     "pair_id": "nc_weekday"
+    },
+    {
+     "code": "P11",
+     "pair_id": "cc_norm_causation"
+    },
+    {
+     "code": "P12",
+     "pair_id": "au_fable_norm_causation"
+    },
+    {
+     "code": "P13",
+     "pair_id": "nc_weather"
+    },
+    {
+     "code": "P14",
+     "pair_id": "ac_contribution"
+    },
+    {
+     "code": "P15",
+     "pair_id": "au_sonnet_moral_luck"
+    },
+    {
+     "code": "P16",
+     "pair_id": "au_fable_intent_accident"
+    },
+    {
+     "code": "P17",
+     "pair_id": "au_sonnet_doing_allowing"
+    },
+    {
+     "code": "P18",
+     "pair_id": "cc_intent_accident"
+    },
+    {
+     "code": "P19",
+     "pair_id": "au_opus_intent_accident"
+    },
+    {
+     "code": "P20",
+     "pair_id": "au_opus_moral_luck"
+    },
+    {
+     "code": "P21",
+     "pair_id": "cc_doing_allowing"
+    },
+    {
+     "code": "P22",
+     "pair_id": "au_opus_norm_causation"
+    },
+    {
+     "code": "P23",
+     "pair_id": "au_fable_knowledge_luck"
+    },
+    {
+     "code": "P24",
+     "pair_id": "nc_paraphrase"
+    },
+    {
+     "code": "P25",
+     "pair_id": "au_fable_doing_allowing"
+    },
+    {
+     "code": "P26",
+     "pair_id": "au_haiku_norm_causation"
+    },
+    {
+     "code": "P27",
+     "pair_id": "ac_severity"
+    },
+    {
+     "code": "P28",
+     "pair_id": "au_sonnet_norm_causation"
+    },
+    {
+     "code": "P29",
+     "pair_id": "nc_name"
+    },
+    {
+     "code": "P30",
+     "pair_id": "cc_moral_luck"
+    },
+    {
+     "code": "P31",
+     "pair_id": "ac_evidence"
+    },
+    {
+     "code": "P32",
+     "pair_id": "au_haiku_doing_allowing"
+    },
+    {
+     "code": "P33",
+     "pair_id": "au_sonnet_intent_accident"
+    }
+   ]
+  },
+  {
+   "audit_id": "audit-opus",
+   "model_alias": "opus",
+   "items": [
+    {
+     "code": "P01",
+     "pair_id": "au_sonnet_moral_luck"
+    },
+    {
+     "code": "P02",
+     "pair_id": "au_opus_moral_luck"
+    },
+    {
+     "code": "P03",
+     "pair_id": "nc_weather"
+    },
+    {
+     "code": "P04",
+     "pair_id": "cc_knowledge_luck"
+    },
+    {
+     "code": "P05",
+     "pair_id": "cc_moral_luck"
+    },
+    {
+     "code": "P06",
+     "pair_id": "cc_intent_accident"
+    },
+    {
+     "code": "P07",
+     "pair_id": "au_opus_knowledge_luck"
+    },
+    {
+     "code": "P08",
+     "pair_id": "au_fable_intent_accident"
+    },
+    {
+     "code": "P09",
+     "pair_id": "nc_color"
+    },
+    {
+     "code": "P10",
+     "pair_id": "au_haiku_norm_causation"
+    },
+    {
+     "code": "P11",
+     "pair_id": "au_sonnet_intent_accident"
+    },
+    {
+     "code": "P12",
+     "pair_id": "au_opus_norm_causation"
+    },
+    {
+     "code": "P13",
+     "pair_id": "cc_doing_allowing"
+    },
+    {
+     "code": "P14",
+     "pair_id": "nc_name"
+    },
+    {
+     "code": "P15",
+     "pair_id": "au_sonnet_doing_allowing"
+    },
+    {
+     "code": "P16",
+     "pair_id": "au_haiku_doing_allowing"
+    },
+    {
+     "code": "P17",
+     "pair_id": "nc_paraphrase"
+    },
+    {
+     "code": "P18",
+     "pair_id": "au_haiku_moral_luck"
+    },
+    {
+     "code": "P19",
+     "pair_id": "ac_severity"
+    },
+    {
+     "code": "P20",
+     "pair_id": "au_fable_norm_causation"
+    },
+    {
+     "code": "P21",
+     "pair_id": "ac_evidence"
+    },
+    {
+     "code": "P22",
+     "pair_id": "au_sonnet_knowledge_luck"
+    },
+    {
+     "code": "P23",
+     "pair_id": "au_opus_doing_allowing"
+    },
+    {
+     "code": "P24",
+     "pair_id": "ac_contribution"
+    },
+    {
+     "code": "P25",
+     "pair_id": "au_fable_moral_luck"
+    },
+    {
+     "code": "P26",
+     "pair_id": "nc_weekday"
+    },
+    {
+     "code": "P27",
+     "pair_id": "au_fable_knowledge_luck"
+    },
+    {
+     "code": "P28",
+     "pair_id": "au_fable_doing_allowing"
+    },
+    {
+     "code": "P29",
+     "pair_id": "cc_norm_causation"
+    },
+    {
+     "code": "P30",
+     "pair_id": "au_opus_intent_accident"
+    },
+    {
+     "code": "P31",
+     "pair_id": "au_sonnet_norm_causation"
+    },
+    {
+     "code": "P32",
+     "pair_id": "au_haiku_knowledge_luck"
+    },
+    {
+     "code": "P33",
+     "pair_id": "au_haiku_intent_accident"
+    }
+   ]
+  },
+  {
+   "audit_id": "audit-fable",
+   "model_alias": "fable",
+   "items": [
+    {
+     "code": "P01",
+     "pair_id": "au_opus_doing_allowing"
+    },
+    {
+     "code": "P02",
+     "pair_id": "nc_weather"
+    },
+    {
+     "code": "P03",
+     "pair_id": "nc_name"
+    },
+    {
+     "code": "P04",
+     "pair_id": "au_opus_norm_causation"
+    },
+    {
+     "code": "P05",
+     "pair_id": "nc_paraphrase"
+    },
+    {
+     "code": "P06",
+     "pair_id": "au_opus_knowledge_luck"
+    },
+    {
+     "code": "P07",
+     "pair_id": "au_sonnet_moral_luck"
+    },
+    {
+     "code": "P08",
+     "pair_id": "au_opus_intent_accident"
+    },
+    {
+     "code": "P09",
+     "pair_id": "au_haiku_intent_accident"
+    },
+    {
+     "code": "P10",
+     "pair_id": "ac_contribution"
+    },
+    {
+     "code": "P11",
+     "pair_id": "nc_color"
+    },
+    {
+     "code": "P12",
+     "pair_id": "au_haiku_knowledge_luck"
+    },
+    {
+     "code": "P13",
+     "pair_id": "cc_norm_causation"
+    },
+    {
+     "code": "P14",
+     "pair_id": "au_fable_norm_causation"
+    },
+    {
+     "code": "P15",
+     "pair_id": "au_haiku_doing_allowing"
+    },
+    {
+     "code": "P16",
+     "pair_id": "au_sonnet_norm_causation"
+    },
+    {
+     "code": "P17",
+     "pair_id": "au_fable_doing_allowing"
+    },
+    {
+     "code": "P18",
+     "pair_id": "cc_doing_allowing"
+    },
+    {
+     "code": "P19",
+     "pair_id": "au_haiku_norm_causation"
+    },
+    {
+     "code": "P20",
+     "pair_id": "au_sonnet_doing_allowing"
+    },
+    {
+     "code": "P21",
+     "pair_id": "au_fable_intent_accident"
+    },
+    {
+     "code": "P22",
+     "pair_id": "au_haiku_moral_luck"
+    },
+    {
+     "code": "P23",
+     "pair_id": "au_sonnet_intent_accident"
+    },
+    {
+     "code": "P24",
+     "pair_id": "cc_moral_luck"
+    },
+    {
+     "code": "P25",
+     "pair_id": "ac_evidence"
+    },
+    {
+     "code": "P26",
+     "pair_id": "cc_knowledge_luck"
+    },
+    {
+     "code": "P27",
+     "pair_id": "au_sonnet_knowledge_luck"
+    },
+    {
+     "code": "P28",
+     "pair_id": "au_opus_moral_luck"
+    },
+    {
+     "code": "P29",
+     "pair_id": "nc_weekday"
+    },
+    {
+     "code": "P30",
+     "pair_id": "cc_intent_accident"
+    },
+    {
+     "code": "P31",
+     "pair_id": "ac_severity"
+    },
+    {
+     "code": "P32",
+     "pair_id": "au_fable_knowledge_luck"
+    },
+    {
+     "code": "P33",
+     "pair_id": "au_fable_moral_luck"
+    }
+   ]
+  }
+ ]
+}
