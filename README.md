@@ -50,3 +50,7 @@ score), `--boot` (bootstrap resamples), `--seed`.
 - **More authors:** add pairs to `vignettes.json` with a new `author` block and
   collect judgments for them.
 - **More auditors:** append rows to `audits.csv`.
+
+## Licence
+
+MIT. See `LICENSE`. It covers the code, the data files and the documentation in this repository.
