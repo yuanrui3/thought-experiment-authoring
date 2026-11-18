@@ -608,5 +608,35 @@
    "moral_luck": 18,
    "norm_causation": 18
   }
+ },
+ "set_diversity": {
+  "distinct": 16,
+  "hill": {
+   "1": 14.76576010620077,
+   "2": 13.333333333333332,
+   "inf": 6.666666666666667
+  },
+  "leave_one_out": {
+   "au_haiku_intent_accident": 0.9605210933291382,
+   "au_haiku_doing_allowing": 0.9605210933291382,
+   "au_haiku_knowledge_luck": 0.9605210933291382,
+   "au_haiku_moral_luck": 0.9605210933291382,
+   "au_haiku_norm_causation": -0.4990531985700031,
+   "au_sonnet_intent_accident": -0.08440554046484827,
+   "au_sonnet_doing_allowing": -0.08440554046484827,
+   "au_sonnet_knowledge_luck": 0.9605210933291382,
+   "au_sonnet_moral_luck": 0.9605210933291382,
+   "au_sonnet_norm_causation": 0.9605210933291382,
+   "au_opus_intent_accident": 0.9605210933291382,
+   "au_opus_doing_allowing": -0.08440554046484827,
+   "au_opus_knowledge_luck": 0.9605210933291382,
+   "au_opus_moral_luck": 0.9605210933291382,
+   "au_opus_norm_causation": -0.4990531985700031,
+   "au_fable_intent_accident": -0.08440554046484827,
+   "au_fable_doing_allowing": -0.4990531985700031,
+   "au_fable_knowledge_luck": 0.9605210933291382,
+   "au_fable_moral_luck": 0.9605210933291382,
+   "au_fable_norm_causation": 0.9605210933291382
+  }
  }
 }

@@ -151,6 +151,14 @@ The subset must be chosen at random, or with known probabilities, for the interv
 
 **Without the panel:** each participant rates all 30 pairs, and versions are randomised independently across pairs, so adjusting each rating for the participant's mean on the other pairs is valid and reduces noise by the share of variance that is personal leniency (section 3).
 
+## 10. Originality as a property of the set
+
+The per-pair originality audit missed that 8 of the 20 authored pairs share a setting. Measured on the whole set instead, with settings grouped by my hand annotation (`annotations.json`), the 20 pairs contain 16 distinct settings. Their effective number, the Hill number used in ecology and equal to the Vendi score when similarity is "same setting or not", is 14.8 at order 1 and 13.3 at order 2.
+
+Leave-one-out contributions give each pair a sign: a pair with a setting of its own adds +0.96 to the order-1 effective number, a pair that shares with one other adds −0.08, and a pair in the three-way farm-gate cluster adds −0.50. Summed by author: haiku +3.34, sonnet +2.71, opus +2.30, fable +2.30.
+
+Two cautions. The measure is only as good as the grouping, which here is one person's reading; the literature review covers ways to make it reproducible. And effective numbers grow with set size, so only sets of equal size can be compared.
+
 ## What I would change, in order
 
 1. **Before more people take the survey,** replace the calibration bar (section 4) and fix the analysis point (section 5). Neither changes the survey itself.

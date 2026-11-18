@@ -437,6 +437,38 @@ for n in NS:
         print("n=%-3d per version, pair-level disagreement SD %.2f: standard error of the calibration slope %.3f" % (
             n, tau, math.sqrt((tau ** 2 + se ** 2) / sxx)))
 
+# ---------------------------------------------------------------------------------------------
+h("11. Originality as a property of the set: effective number of distinct settings")
+ann = json.load(open(os.path.join(ROOT, "annotations.json"), encoding="utf-8"))
+cluster_of = {}
+for i, c in enumerate(ann["convergence"]):
+    for pid in c["pairs"]:
+        cluster_of[pid] = "cluster%d" % i
+labels = [cluster_of.get(p["pair_id"], p["pair_id"]) for p in authored]
+
+
+def hill(labels, q):
+    n = len(labels)
+    ps = [c / n for c in Counter(labels).values()]
+    if q == 1:
+        return math.exp(-sum(p * math.log(p) for p in ps))
+    if q == "inf":
+        return 1 / max(ps)
+    return sum(p ** q for p in ps) ** (1 / (1 - q))
+
+
+full = {q: hill(labels, q) for q in (1, 2, "inf")}
+print("20 authored pairs, settings grouped by the builder's hand annotation: %d distinct settings; effective number %.1f (order 1), %.1f (order 2), %.1f (order infinity)" % (
+    len(set(labels)), full[1], full[2], full["inf"]))
+contrib = {}
+for i, p in enumerate(authored):
+    rest = labels[:i] + labels[i + 1:]
+    contrib[p["pair_id"]] = full[1] - hill(rest, 1)
+for t in TIERS:
+    vals = [contrib[p["pair_id"]] for p in authored if p["author_tier"] == t]
+    print("   %-7s pairs add %s to the set's effective number (order 1); total %+.2f" % (t, [round(v, 2) for v in vals], sum(vals)))
+OUT["set_diversity"] = {"distinct": len(set(labels)), "hill": {str(k): v for k, v in full.items()}, "leave_one_out": contrib}
+
 os.makedirs(os.path.join(ROOT, "reports"), exist_ok=True)
 json.dump(OUT, open(os.path.join(ROOT, "reports", "math_analysis_numbers.json"), "w"), indent=1, default=float)
 print("\nwrote reports/math_analysis_numbers.json")
