@@ -21,6 +21,7 @@ This release is a pilot of the pipeline. All authors and judges are Claude model
 | `docs/human-survey.md` | How to run the human survey, and the analysis plan fixed in advance. |
 | `survey/survey.html` | The human survey as a single file. `survey/survey_page.html` is the same page for publishing. |
 | `compare_panels.py` | Compares the human panel with the model panel once human data exists. |
+| `reports/Mathematical analysis of the benchmark.md` | What the pilot data imply about factor choice, the prediction score, human sample sizes, the calibration bar and the survey design. Rebuilt by `pipeline/math_analysis.py`. |
 | `vignettes.json` | All pairs, questions, predictions, authors, control references. |
 | `judgments.csv` | One row per judge and scenario. |
 | `audits.csv` | One row per auditor and pair (confounds, originality). |
