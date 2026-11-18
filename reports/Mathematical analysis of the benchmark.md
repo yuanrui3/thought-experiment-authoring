@@ -13,7 +13,7 @@
 7. **The same-model effect is real: +0.44 points** (95% interval +0.10 to +0.82) after controlling for each pair and each judge model. Dropping the author's own model from its pairs' panel changes no verdict in the pilot, so it can be the default at no cost.
 8. **The pilot cannot rank its authors.** Shuffling authors within factors gives author differences as large as the observed ones 38% of the time for the prediction score. Detecting a 0.2 difference in mean prediction score needs about 26 pairs per author; 0.1 needs about 100.
 9. **The survey is between-subjects per pair, but within-subjects per factor.** Every participant meets both sides of the intention, doing-allowing and knowledge factors, and half of the forms show the two near-identical freezer stories on opposite sides. Judgments under that exposure can differ from single-vignette judgments.
-10. **Once human data exist, the model panel can stretch them.** If panel and human gaps correlate at 0.8 across pairs, prediction-powered estimation makes each human worth about 2.8; at 0.9, about 5.3.
+10. **Once human data exist, the model panel can stretch them, but not pair by pair in the way I first wrote.** For an aggregate over pairs (such as an author's mean score), with people rating a random subset of pairs, a panel–human correlation of 0.8 across pairs makes each human-rated pair worth about 2.8; at 0.9, about 5.3. For a single pair, the calibrated panel can act as a prior worth about 4σ²/τ² extra participants, where τ is how far true human gaps scatter around the calibrated panel: 36 at τ = 0.5, 9 at τ = 1.
 
 ## 1. What makes a factor informative
 
@@ -137,13 +137,19 @@ Ten of the 20 forms show one freezer story in its intentional version and the ot
 
 ## 9. Making the model panel stretch human data
 
-Prediction-powered inference treats panel gaps as cheap predictions and corrects them with the human sample. If the panel–human correlation across pairs is ρ and the panel is run on everything, a human sample of size n gives roughly the precision of n / (1 − ρ²) humans alone:
+There are two different ways the panel can help, and they work on different units. (An earlier version of this section mixed them up; the correction came from the literature review.)
+
+**Across pairs: prediction-powered inference.** Treat each pair as a unit. Run the panel on all N pairs and people on a random subset of n pairs, and estimate an aggregate (an author's mean human-scale score, or a factor's mean gap) as the panel's mean corrected by the average human-minus-panel difference on the human-rated subset. With the panel's weight tuned (PPI++), the variance is about σ²[(1 − ρ²)/n + ρ²/(n + N)], where ρ is the panel–human correlation across pairs. As N grows, n human-rated pairs give the precision of up to n / (1 − ρ²):
 
 | ρ | 0.5 | 0.7 | 0.8 | 0.9 | 0.95 |
 |---|---|---|---|---|---|
-| Each human worth | 1.3 | 2.0 | 2.8 | 5.3 | 10.3 |
+| Each human-rated pair worth up to | 1.3 | 2.0 | 2.8 | 5.3 | 10.3 |
 
-For later rounds: run the panel on all new pairs, run people on a random subset of pairs, and estimate each author's human-scale score with valid intervals. The subset must be chosen at random (or with known probabilities) for this to hold.
+The subset must be chosen at random, or with known probabilities, for the intervals to hold. Because the same people rate many pairs, standard errors should be clustered by participant.
+
+**Within one pair: shrinkage towards the calibrated panel.** The panel gives one number per version, the same for everyone who read it, so it cannot sharpen a single pair's human mean the way it sharpens an aggregate. It can act as a prior instead. With N_p participants split evenly between versions, the human gap has variance 4σ²/N_p. If true human gaps scatter around the calibrated panel prediction with SD τ, combining the two gives the precision of N_p + 4σ²/τ² participants. With σ = 1.5, that is 36 extra participants at τ = 0.5 and 9 at τ = 1. So estimating τ from the current run, where all 30 pairs are rated by people, is the key calibration result.
+
+**Without the panel:** each participant rates all 30 pairs, and versions are randomised independently across pairs, so adjusting each rating for the participant's mean on the other pairs is valid and reduces noise by the share of variance that is personal leniency (section 3).
 
 ## What I would change, in order
 

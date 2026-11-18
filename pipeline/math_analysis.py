@@ -424,8 +424,11 @@ print("pilot: in the intention and knowledge pairs the higher version averages %
 # ---------------------------------------------------------------------------------------------
 h("10. Using the model panel as a surrogate once human data exist")
 for rho in (0.5, 0.7, 0.8, 0.9, 0.95):
-    print("correlation %.2f between panel and people across pairs -> a human sample is worth %.1f times its size when combined with the panel" % (
+    print("correlation %.2f between panel and people across pairs -> each human-rated pair is worth up to %.1f in an aggregate over pairs" % (
         rho, 1 / (1 - rho ** 2)))
+for tau in (0.5, 1.0):
+    print("single pair: a calibrated panel scattering %.1f points around people's true gaps is worth %.0f extra participants (rating SD 1.5)" % (
+        tau, 4 * SIGMA ** 2 / tau ** 2))
 xs = [p["effect"]["effect"] for p in R["pairs"]]
 sxx = sum((x - statistics.mean(xs)) ** 2 for x in xs)
 for n in NS:
