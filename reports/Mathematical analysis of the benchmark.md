@@ -97,13 +97,15 @@ And with 5 null controls, the chance that at least one shows a confirmed gap in 
 - Regress human gaps on panel gaps across the 30 pairs: Δ_human = a + b · Δ_panel + error. Trust the panel for **direction** if the slope b is clearly positive and the correlation corrected for human sampling noise is at least 0.8. With 20 per version, the slope's SE is about 0.06 to 0.07.
 - Use b to **rescale** panel gaps to the human scale before binning, instead of expecting the bins to agree.
 - Report the residual SD (pair-level disagreement) as the panel's error per pair.
-- For nulls, use an equivalence test (interval inside ±0.5) instead of "no confirmed gap".
+- For "no difference", use three verdicts per pair: confirmed direction, equivalent (interval inside ±0.5) and inconclusive. At this survey's sizes almost every non-confirmed pair will be inconclusive: an equivalence test with ±0.5 bounds needs on the order of 150 people per version for 80% power when the true gap is zero (literature review's computation, consistent with section 3's standard errors).
 
 ## 5. Watching results arrive
 
 With seven looks (4, 8, 12, 16, 20, 30 and 40 people per version) and the classification rule applied at each, a null pair shows a false confirmed gap at some point 24% of the time, against 6% for a single look at 40.
 
-So: watch completion counts and comprehension freely, but classify pairs only at one pre-set sample size. If that is impractical, use anytime-valid confidence sequences, which allow continuous monitoring at the price of wider intervals.
+So: watch completion counts and comprehension freely, but classify pairs only at one pre-set sample size. If that is impractical, use anytime-valid confidence sequences, which allow continuous monitoring at the price of wider intervals: per pair, roughly 1.3 to 1.9 times a fixed-sample interval's half-width in the literature review's simulation, and one common variant (empirical Bernstein) covers the whole rating range below about 10 people per version.
+
+One more fix for the human analysis: at small cell sizes the percentile bootstrap that `score.py` uses is too narrow. With 8 per version it behaves like a 1.47-point half-width where a t-interval gives about 1.6. Use t-intervals (or a mixed model) for human cells.
 
 ## 6. The same-model effect
 
