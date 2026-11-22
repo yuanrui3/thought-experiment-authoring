@@ -13,7 +13,7 @@
 
 The errors depend on the factor, and they run in both directions:
 
-- **The panel exaggerates textbook distinctions.** Means vs side effect moves panel permissibility ratings by −0.68 scale points; humans move −0.07. The panel's effect is ten times larger.
+- **The panel sees a difference people don't.** Between the "means" and "side effect" versions, panel permissibility ratings move −0.68 scale points; people's move −0.07. In this dataset those versions are different stories, not a one-sentence change (see the correction below). The panel's gap points the textbook way in all ten scenarios, which suggests it reacts to the structure, but the data can't separate that from the change of story.
 - **The panel under-reacts to things people respond to.** Norm violations change people's causal judgments about twice as much as the panel's. Whether the agent knew changes people's judgments (0.29) and barely moves the panel (0.03).
 
 Because the bias is systematic, more repeats will not fix it, and tightening the rule doesn't either:
@@ -34,6 +34,8 @@ Because the bias is systematic, more repeats will not fix it, and tightening the
 - **Mixing doesn't help either.** Adding them to the Claude panel at equal weight leaves the verdicts no better (8 backed, 14 false positives).
 
 So the problem is not specific to Claude.
+
+**Correction (22 November 2026).** An earlier version of this report treated OffTheRails' "means vs side effect" contrast as a clean change of one factor. It isn't. In every scenario, the "means" and "side effect" versions describe a different plan, benefit and harm for the same character; they share about 30% of their words. The other two factors are near-minimal edits (75–93% shared). The comparison of panel with people still holds, since both read the same texts. What changes is the interpretation: the means/side-effect gaps below compare two different stories, not just two causal structures. The statements about evitability and acting vs not preventing are unaffected.
 
 ## Judgment calls
 
@@ -102,7 +104,7 @@ Gap in mean rating, in scale points on 1–5, averaged over the 10 scenarios. A 
 | acts − does not prevent | permissible | **+0.11** [+0.04, +0.19] | **−0.09** [−0.20, +0.02] | −0.20 | +0.06 | −0.16 | −0.06 |
 | acts − does not prevent | intended | +0.04 [−0.05, +0.12] | +0.21 [+0.11, +0.33] | +0.42 | +0.18 | +0.28 | −0.02 |
 
-- **Means vs side effect.** All four models apply the textbook doctrine of double effect hard. People barely do.
+- **Means vs side effect (two different stories per scenario).** All four models rate the "means" story less permissible and more intended, in every scenario: the direction the doctrine of double effect predicts. People barely distinguish the two stories.
 - **Evitability.** People think an agent who could have avoided the harm intended it more (+0.34). The panel does not (+0.08).
 - **Acting vs not preventing.** On permissibility, people and panel lean in opposite directions, though both effects are small.
 
@@ -117,7 +119,7 @@ Gap in mean rating, in scale points on 1–5, averaged over the 10 scenarios. A 
 | Not confirmed, humans show a smaller gap (miss) | 5 |
 | Not confirmed, humans show none (correct null) | 25 |
 
-- **Where the false positives sit.** 12 of the 15 are means vs side effect.
+- **Where the false positives sit.** 12 of the 15 are means vs side effect, the contrast between two different stories.
   - In the false positives, the panel's gap averages 0.70 and the human gap 0.10.
   - Humans lean the same way in 10 of the 15. So the panel is mostly exaggerating tiny real effects about sevenfold, not inventing them from nothing.
 - **Misses.** These are mostly evitability on the intention question: 6 of 10 scenarios.
@@ -164,7 +166,7 @@ Each variant is scored against the same human verdicts. These rules were picked 
 | All four models must agree | 20 | 8 | 11 | 1 |
 
 - No variant gets precision much above 50% without losing nearly every true gap.
-- The problem is bias concentrated in one factor, and the four models share it, so neither agreement nor width helps.
+- The problem is bias concentrated in one contrast (means vs side effect, which also changes the story), and the four models share it, so neither agreement nor width helps.
 
 ### Sensitivity
 
@@ -249,7 +251,7 @@ Same 40 batches, same human data, same rules. "Both Gemini" weights the two mode
 
 - **What Gemini gets right that Claude misses.** Both Gemini models pick up that people see an avoidable harm as more intended.
 - **What it shares with Claude.**
-  - It still exaggerates means vs side effect. Argon's gap on intention is seven times the human one.
+  - It still sees a large gap between the means and side-effect stories. Argon's gap on intention is seven times the human one.
   - Like Claude, it leans the opposite way to people on acting vs not preventing.
   - Most of its false positives are means vs side effect: 9 of Argon's 12 and 8 of Flash's 15.
 - **Spread.** Its ratings vary as little as Claude's within one version of a story: SD 0.21–0.44, against people's 0.79–1.03.
@@ -303,7 +305,7 @@ Argon's τ is larger despite its better ordering because it exaggerates sizes mo
 
 **Per factor:**
 
-1. **Intention vs accident.** The nearest analogue is means vs side effect, and on it the panel strongly amplifies the textbook distinction. Expect the panel to reward "large" predictions that people would rate small.
+1. **Intention vs accident.** The nearest analogue is means vs side effect, and there the panel shows a large, consistent gap that people don't. That analogue is weak, though, because the two versions are different stories. Still, expect the panel to reward "large" predictions on intention-related factors that people would rate smaller.
 2. **Doing vs allowing.** The analogue is acting vs not preventing a colleague's act. It is not a clean analogue: who acts also changes.
    - The panel did not invent gaps; 19 of 20 contrasts were correct nulls.
    - But on the overall permissibility effect it leans the textbook way while people lean slightly the other way.
