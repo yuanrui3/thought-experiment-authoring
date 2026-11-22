@@ -271,13 +271,20 @@ if args.step == "check":
                         if isinstance(x, dict) and x.get("type") == "tool_use" and x["name"] not in ("SubagentHandback", "StructuredOutput"):
                             calls.append([x["name"], os.path.basename((x.get("input") or {}).get("file_path", "") or "")])
             key = "%s:%s" % (kind, m.group(1))
+            own = {"author": m.group(1) + ".json", "auditor": "audit-%s.json" % m.group(1), "judge": m.group(1) + ".json"}[kind]
             wrote_at = next((i for i, cl in enumerate(calls) if cl[0] == "Write"), None)
             before = calls[:wrote_at] if wrote_at is not None else calls
             after = calls[wrote_at + 1:] if wrote_at is not None else []
             clean_read = all(cl[0] == "Read" for cl in before) and len(before) >= 1
+            # Judgment call (22 Nov): an agent may correct its own answer file after writing it (Write or
+            # Edit to that same file); any write to another file, or any read before the first write
+            # other than its own instructions, makes it unusable.
+            later_writes = [cl for cl in after if cl[0] in ("Write", "Edit")]
             out[key] = {"served": sorted(models), "calls": calls, "wrote": wrote_at is not None,
                         "only_read_its_file_before_writing": clean_read,
-                        "usable": wrote_at is not None and clean_read and not any(cl[0] in ("Write", "Edit") for cl in after),
+                        "revised_own_answer_after_writing": bool(later_writes),
+                        "usable": wrote_at is not None and calls[wrote_at][1] == own and clean_read
+                                  and all(cl[1] == own for cl in later_writes),
                         "stray_calls_after_answering": after}
     json.dump(out, open(os.path.join(RAW, "provenance.json"), "w"), indent=1)
     for k in sorted(out):

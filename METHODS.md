@@ -15,6 +15,7 @@
 9. **After the prior-art check** I narrowed the claim, kept direction and size as separate results, and added three pairs with a planted confound to test the auditors.
 10. **After seeing the data** I added diagnostics and flags (shared settings, auditor agreement, same-model effects). Until 22 November I changed no scoring rule.
 11. **On 22 November I changed the prediction score, after seeing these data and public human data.** The original rule gave half for direction and half for the size bin. Tested against real people (`reports/Authors predicting people.md`), it rewarded predicting "no difference": with mostly small human effects, that guess beat every model. The new rule scores the distance between the measured gap and the predicted range, and requires a pair meant to show a gap to show it. It is a post-hoc change, so the original scores are kept beside the new ones on the results page and in `out/pair_scores.csv`; `python3 score.py --prediction-rule classes` reproduces the original results exactly.
+12. **Round 2 (22 November) replaced the three easy factors** with inevitable harm, knowledge and causation, and luck and wrongness, each with a classic control anchored to public human data. Haiku, Sonnet and Opus wrote one pair each (Fable pending its usage limit). A persona panel of the same design as the pilot's persona run judged them, together with the pilot's doing-vs-allowing and norm pairs, reused unchanged. The scoring rules were not changed. Details and the judgment calls behind them: `reports/Round 2 contested factors.md`.
 
 ## What the checks showed
 
@@ -27,7 +28,7 @@
 ## Limitations
 
 - **Claude judging Claude.** Model panels are reported to give effects two to three times human size and to find effects in most studies where people showed none (Cui, Li and Zhou). Here, judges also favoured pairs from their own model by 0.44 points.
-- **Three factors are too easy.** Every author got the direction right on intention, knowledge and moral luck, so those predictions barely test authoring.
+- **Three factors are too easy.** Every author got the direction right on intention, knowledge and moral luck, so those predictions barely test authoring. Round 2 replaced them. On the new factors the same three authors score 0.44 on prediction instead of 0.72, but single-pair scores are now fragile: about a third could flip in a rerun, and one new control (avoidable harm and intention) fails on a known blind spot of the panel.
 - **Originality misses convergence.** 8 of 20 pairs share a setting with another pair; the audit grades pairs one at a time. I flagged these by hand.
 - **Two of four components are model opinion,** with low agreement. A broken pair reached the top four.
 - **Comprehension is at ceiling** (99.5%) on a model panel.
@@ -40,7 +41,7 @@
 
 1. Run the same pairs on people and re-set the size bins on that data. The survey and its analysis plan are ready (`docs/human-survey.md`); the project is paused until participants are found.
 2. Add judges from other vendors; `judgments.csv` already carries type, vendor, model and group.
-3. Replace easy factors with contested ones, and have authors hit a target size.
+3. Replace easy factors with contested ones (done in round 2), and have authors hit a target size (not yet). Round 2 showed that more pairs per author per factor, or more ratings per cell, must come first.
 4. Score originality across the whole set, so shared settings count against a pair.
 5. Add trained human auditors and placebo questions, so confounds are measured by behavior.
 6. Anchor classic controls to public human data (OffTheRails, MoCa, replication archives).
