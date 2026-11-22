@@ -2,6 +2,12 @@
 
 *22 November 2026. Pairs in `round2/vignettes.json`; judgments are run `round2` in `judgments.csv` and audits are run `round2` in `audits.csv`; scores in `out/round2/`, from `python3 score.py --vignettes round2/vignettes.json --run round2 --audit-run main,round2 --out out/round2 --no-report`. Every number below is rebuilt by `python3 pipeline/round2/analyse.py` into `reports/round2_numbers.json`. Fable is missing from round 2 (usage limit until 26 November); the published pilot results are unchanged.*
 
+> **Update, 22 November: round 2b corrects this report** (`reports/Round 2b three pairs per factor.md`). Each author wrote two more pairs per new factor, and all 27 were judged together by a second persona panel of the same design.
+> - **The nine pairs below were judged again.** Their mean prediction score went from 0.44 to 0.73, and 5 of 9 changed by more than a quarter point.
+> - **The claim that the new factors are harder is withdrawn.** It compared scores across panel runs, and a run's own shift is as large as the difference claimed.
+> - **The author order held:** Opus, Sonnet, Haiku. On nine pairs each, only Haiku against Opus is a clear difference.
+> - **The rerun simulation below understates real reruns** about threefold. It predicted about 1.6 score changes on these nine pairs, and the second run produced 5.
+
 ## Bottom line
 
 - **The new factors are harder, which was the point.** The same three authors (Haiku, Sonnet, Opus) score a mean prediction score of 0.44 on the new factors. On the pilot's three easy factors they scored 0.72 under the same kind of panel. Full marks drop from 6 of 9 pairs to 2 of 9, and zeros rise from 2 of 9 to 4 of 9. No new factor gives every author full marks; the pilot's intention factor did, under every panel.

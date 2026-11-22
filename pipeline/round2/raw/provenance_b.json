@@ -416,12 +416,16 @@
    [
     "Read",
     "audit-opus.txt"
+   ],
+   [
+    "Write",
+    "audit-opus.json"
    ]
   ],
-  "wrote": false,
+  "wrote": true,
   "only_read_its_file_before_writing": true,
   "revised_own_answer_after_writing": false,
-  "usable": false,
+  "usable": true,
   "stray_calls_after_answering": []
  },
  "judge:r2b-haiku-r5-x": {

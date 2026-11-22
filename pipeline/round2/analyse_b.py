@@ -80,6 +80,19 @@ def main(n_outer=300, n_inner=400, n_perm=20000, seed=20261123):
                                        "same_pair_in_round2b": round(f(b[pid]["prediction_score"]), 2),
                                        "three_pair_mean_round2b": tab[t][fac]["mean_prediction_score"]}
     res["one_pair_vs_three"] = one
+    # the nine round-2 pairs, scored in both runs
+    old = ["r2_%s_%s" % (t, fac) for t in TIERS for fac in NEW]
+    res["round2_pairs_in_both_runs"] = {
+        "mean_prediction_score": {"round2": round(statistics.mean(f(r2[p]["prediction_score"]) for p in old), 3),
+                                  "round2b": round(statistics.mean(f(b[p]["prediction_score"]) for p in old), 3)},
+        "mean_abs_effect": {"round2": round(statistics.mean(abs(f(r2[p]["effect"])) for p in old), 2),
+                            "round2b": round(statistics.mean(abs(f(b[p]["effect"])) for p in old), 2)},
+        "all_three_models_agree": {"round2": sum(r2[p]["groups_same_sign"] == "3" for p in old),
+                                   "round2b": sum(b[p]["groups_same_sign"] == "3" for p in old)},
+        "by_author": {t: {"round2": round(statistics.mean(f(r2["r2_%s_%s" % (t, fac)]["prediction_score"]) for fac in NEW), 3),
+                          "round2b": round(statistics.mean(f(b["r2_%s_%s" % (t, fac)]["prediction_score"]) for fac in NEW), 3)}
+                      for t in TIERS}}
+    res["new_pairs_all_three_models_agree"] = sum(b[p]["groups_same_sign"] == "3" for p in authored if p not in old)
 
     # 3. author vs pair variance, and a permutation test within factors
     ps = {pid: f(r["prediction_score"]) for pid, r in authored.items()}
@@ -194,6 +207,8 @@ def main(n_outer=300, n_inner=400, n_perm=20000, seed=20261123):
             o["mean_originality"], o["predicted_sizes"]))
         print("          " + "  ".join("%s %.2f %s" % (fac, tab[t][fac]["mean_prediction_score"], list(tab[t][fac]["pairs"].values())) for fac in NEW))
     print("one vs three:", json.dumps(one))
+    print("round-2 pairs in both runs:", json.dumps(res["round2_pairs_in_both_runs"]), "| new pairs with 3/3 agreement:",
+          res["new_pairs_all_three_models_agree"], "of 18")
     print("variance:", json.dumps(res["variance"]))
     print("pairwise:", json.dumps(pairwise))
     print("order:", json.dumps(res["fragility"]["author_order"]), "first", res["fragility"]["first"], "last", res["fragility"]["last"])

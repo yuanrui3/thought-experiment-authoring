@@ -146,7 +146,11 @@ def main(n_outer=300, n_inner=400, seed=20261122):
     res["fragility"] = {"method": "resample ratings inside each judge-model x version cell (%d reruns, %d-draw bootstrap "
                                   "interval inside each), then apply the scoring rule" % (n_outer, n_inner), "pairs": frag,
                         "author_order_new_factors_by_mean_prediction_score": {k: round(v / n_outer, 3) for k, v in
-                                                                               sorted(orders.items(), key=lambda kv: -kv[1])}}
+                                                                               sorted(orders.items(), key=lambda kv: -kv[1])},
+                        # added 22 Nov for comparison with round 2b (no extra random draws, so the numbers above are unchanged)
+                        "author_mean_sd_across_reruns": {t: round(statistics.pstdev(
+                            statistics.mean(scores["r2_%s_%s" % (t, fac)][i] for fac in NEW) for i in range(n_outer)), 3)
+                            for t in tiers}}
     json.dump(res, open(OUT, "w"), indent=1)
 
     # printout

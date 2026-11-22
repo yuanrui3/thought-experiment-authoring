@@ -766,6 +766,11 @@
    "haiku > opus > sonnet": 0.01,
    "sonnet > haiku > opus": 0.01,
    "haiku > sonnet > opus": 0.007
+  },
+  "author_mean_sd_across_reruns": {
+   "haiku": 0.195,
+   "sonnet": 0.189,
+   "opus": 0.166
   }
  }
 }
