@@ -1,0 +1,258 @@
+{
+ "sonnet_otr_r1": {
+  "task_file": "otr_r1.txt",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r1.txt"
+   ],
+   [
+    "Write",
+    "sonnet_otr_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "opus_otr_r2": {
+  "task_file": "otr_r2.txt",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r2.txt"
+   ],
+   [
+    "Write",
+    "opus_otr_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "haiku_otr_r1": {
+  "task_file": "otr_r1.txt",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r1.txt"
+   ],
+   [
+    "Write",
+    "haiku_otr_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "haiku_moca_r1": {
+  "task_file": "moca_r1.txt",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r1.txt"
+   ],
+   [
+    "Write",
+    "haiku_moca_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "opus_otr_r1": {
+  "task_file": "otr_r1.txt",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r1.txt"
+   ],
+   [
+    "Write",
+    "opus_otr_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "sonnet_otr_r2": {
+  "task_file": "otr_r2.txt",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r2.txt"
+   ],
+   [
+    "Write",
+    "sonnet_otr_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "sonnet_moca_r2": {
+  "task_file": "moca_r2.txt",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r2.txt"
+   ],
+   [
+    "Write",
+    "sonnet_moca_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "haiku_otr_r2": {
+  "task_file": "otr_r2.txt",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r2.txt"
+   ],
+   [
+    "Write",
+    "haiku_otr_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "sonnet_moca_r1": {
+  "task_file": "moca_r1.txt",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r1.txt"
+   ],
+   [
+    "Write",
+    "sonnet_moca_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "opus_moca_r2": {
+  "task_file": "moca_r2.txt",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r2.txt"
+   ],
+   [
+    "Write",
+    "opus_moca_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "fable_otr_r2": {
+  "task_file": "otr_r2.txt",
+  "served": [
+   "<synthetic>"
+  ],
+  "calls": [],
+  "clean": false,
+  "wrote_answers": false,
+  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+ },
+ "haiku_moca_r2": {
+  "task_file": "moca_r2.txt",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r2.txt"
+   ],
+   [
+    "Write",
+    "haiku_moca_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "fable_otr_r1": {
+  "task_file": "otr_r1.txt",
+  "served": [
+   "<synthetic>"
+  ],
+  "calls": [],
+  "clean": false,
+  "wrote_answers": false,
+  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+ },
+ "opus_moca_r1": {
+  "task_file": "moca_r1.txt",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "moca_r1.txt"
+   ],
+   [
+    "Write",
+    "opus_moca_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true
+ },
+ "fable_moca_r1": {
+  "task_file": "moca_r1.txt",
+  "served": [
+   "<synthetic>"
+  ],
+  "calls": [],
+  "clean": false,
+  "wrote_answers": false,
+  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+ },
+ "fable_moca_r2": {
+  "task_file": "moca_r2.txt",
+  "served": [
+   "<synthetic>"
+  ],
+  "calls": [],
+  "clean": false,
+  "wrote_answers": false,
+  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+ }
+}
