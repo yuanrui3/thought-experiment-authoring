@@ -1,0 +1,68 @@
+{
+ "author:sonnet": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "brief.txt"
+   ],
+   [
+    "Write",
+    "sonnet.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "author:haiku": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "brief.txt"
+   ],
+   [
+    "Write",
+    "haiku.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "author:opus": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "brief.txt"
+   ],
+   [
+    "Write",
+    "opus.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ }
+}

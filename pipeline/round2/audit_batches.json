@@ -1,0 +1,47 @@
+{
+ "run_id": "round2",
+ "auditors": {
+  "haiku": {
+   "Q01": "r2_sonnet_luck_wrongness",
+   "Q02": "cc_luck_wrongness",
+   "Q03": "r2_opus_luck_wrongness",
+   "Q04": "r2_opus_inevitable_harm",
+   "Q05": "r2_sonnet_inevitable_harm",
+   "Q06": "r2_opus_knowledge_causation",
+   "Q07": "r2_haiku_knowledge_causation",
+   "Q08": "r2_haiku_luck_wrongness",
+   "Q09": "cc_knowledge_causation",
+   "Q10": "r2_sonnet_knowledge_causation",
+   "Q11": "cc_inevitable_harm",
+   "Q12": "r2_haiku_inevitable_harm"
+  },
+  "sonnet": {
+   "Q01": "r2_sonnet_luck_wrongness",
+   "Q02": "r2_opus_inevitable_harm",
+   "Q03": "r2_opus_luck_wrongness",
+   "Q04": "r2_haiku_knowledge_causation",
+   "Q05": "cc_knowledge_causation",
+   "Q06": "r2_sonnet_knowledge_causation",
+   "Q07": "cc_inevitable_harm",
+   "Q08": "r2_sonnet_inevitable_harm",
+   "Q09": "cc_luck_wrongness",
+   "Q10": "r2_haiku_inevitable_harm",
+   "Q11": "r2_opus_knowledge_causation",
+   "Q12": "r2_haiku_luck_wrongness"
+  },
+  "opus": {
+   "Q01": "r2_haiku_luck_wrongness",
+   "Q02": "r2_opus_inevitable_harm",
+   "Q03": "r2_haiku_knowledge_causation",
+   "Q04": "cc_knowledge_causation",
+   "Q05": "cc_luck_wrongness",
+   "Q06": "r2_sonnet_luck_wrongness",
+   "Q07": "r2_sonnet_inevitable_harm",
+   "Q08": "r2_sonnet_knowledge_causation",
+   "Q09": "cc_inevitable_harm",
+   "Q10": "r2_opus_luck_wrongness",
+   "Q11": "r2_opus_knowledge_causation",
+   "Q12": "r2_haiku_inevitable_harm"
+  }
+ }
+}
