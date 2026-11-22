@@ -33,9 +33,9 @@
    "claude_verdict": "A_higher/large",
    "gemini_verdict": "A_higher/small",
    "vendor_groups_verdict": "A_higher/large",
-   "claude_prediction_score": "0.75",
+   "claude_prediction_score": "0.73",
    "gemini_prediction_score": "1.0",
-   "vendor_groups_prediction_score": "0.75"
+   "vendor_groups_prediction_score": "0.9"
   },
   {
    "pair_id": "au_sonnet_doing_allowing",
@@ -44,8 +44,8 @@
    "gemini_verdict": "none/none",
    "vendor_groups_verdict": "none/none",
    "claude_prediction_score": "1.0",
-   "gemini_prediction_score": "0.25",
-   "vendor_groups_prediction_score": "0.25"
+   "gemini_prediction_score": "0.0",
+   "vendor_groups_prediction_score": "0.0"
   },
   {
    "pair_id": "au_opus_doing_allowing",
@@ -53,9 +53,9 @@
    "claude_verdict": "none/none",
    "gemini_verdict": "A_higher/small",
    "vendor_groups_verdict": "none/none",
-   "claude_prediction_score": "0.25",
+   "claude_prediction_score": "0.0",
    "gemini_prediction_score": "1.0",
-   "vendor_groups_prediction_score": "0.25"
+   "vendor_groups_prediction_score": "0.0"
   },
   {
    "pair_id": "au_opus_moral_luck",
@@ -64,7 +64,7 @@
    "gemini_verdict": "A_higher/small",
    "vendor_groups_verdict": "A_higher/large",
    "claude_prediction_score": "1.0",
-   "gemini_prediction_score": "0.75",
+   "gemini_prediction_score": "0.93",
    "vendor_groups_prediction_score": "1.0"
   },
   {
@@ -73,7 +73,7 @@
    "claude_verdict": "B_higher/small",
    "gemini_verdict": "B_higher/large",
    "vendor_groups_verdict": "B_higher/large",
-   "claude_prediction_score": "0.75",
+   "claude_prediction_score": "1.0",
    "gemini_prediction_score": "1.0",
    "vendor_groups_prediction_score": "1.0"
   },
@@ -83,7 +83,7 @@
    "claude_verdict": "none/none",
    "gemini_verdict": "A_higher/small",
    "vendor_groups_verdict": "A_higher/small",
-   "claude_prediction_score": "0.25",
+   "claude_prediction_score": "0.0",
    "gemini_prediction_score": "1.0",
    "vendor_groups_prediction_score": "1.0"
   },
@@ -94,8 +94,8 @@
    "gemini_verdict": "A_higher/large",
    "vendor_groups_verdict": "A_higher/large",
    "claude_prediction_score": "1.0",
-   "gemini_prediction_score": "0.75",
-   "vendor_groups_prediction_score": "0.75"
+   "gemini_prediction_score": "0.73",
+   "vendor_groups_prediction_score": "0.98"
   }
  ],
  "authors": {
@@ -119,60 +119,60 @@
     "full_hits": "5"
    },
    "six_models": {
-    "mean_composite": "80.667",
-    "mean_prediction_score": "0.9",
+    "mean_composite": "76.667",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    }
   },
   "haiku": {
    "claude": {
-    "mean_composite": "63.667",
-    "mean_prediction_score": "0.65",
+    "mean_composite": "56.6",
+    "mean_prediction_score": "0.473",
     "direction_hits": "4",
     "full_hits": "1"
    },
    "gemini": {
-    "mean_composite": "65.667",
-    "mean_prediction_score": "0.7",
+    "mean_composite": "58.467",
+    "mean_prediction_score": "0.52",
     "direction_hits": "4",
     "full_hits": "2"
    },
    "vendor_groups": {
-    "mean_composite": "63.667",
-    "mean_prediction_score": "0.65",
+    "mean_composite": "57.8",
+    "mean_prediction_score": "0.503",
     "direction_hits": "4",
     "full_hits": "1"
    },
    "six_models": {
-    "mean_composite": "63.667",
-    "mean_prediction_score": "0.65",
+    "mean_composite": "57.4",
+    "mean_prediction_score": "0.493",
     "direction_hits": "4",
     "full_hits": "1"
    }
   },
   "opus": {
    "claude": {
-    "mean_composite": "74.592",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "72.592",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    },
    "gemini": {
-    "mean_composite": "78.667",
-    "mean_prediction_score": "0.95",
+    "mean_composite": "80.133",
+    "mean_prediction_score": "0.987",
     "direction_hits": "5",
     "full_hits": "4"
    },
    "vendor_groups": {
-    "mean_composite": "74.617",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "72.617",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    },
    "six_models": {
-    "mean_composite": "74.617",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "72.617",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    }
@@ -185,14 +185,14 @@
     "full_hits": "5"
    },
    "gemini": {
-    "mean_composite": "75.333",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "73.333",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    },
    "vendor_groups": {
-    "mean_composite": "75.333",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "73.333",
+    "mean_prediction_score": "0.8",
     "direction_hits": "4",
     "full_hits": "4"
    },

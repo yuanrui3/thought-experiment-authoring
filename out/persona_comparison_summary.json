@@ -50,7 +50,7 @@
    "original_same_models_verdict": "B_higher/small",
    "persona_verdict": "none/none",
    "original_same_models_prediction_score": "0.0",
-   "persona_prediction_score": "0.25"
+   "persona_prediction_score": "0.0"
   },
   {
    "pair_id": "au_sonnet_doing_allowing",
@@ -58,7 +58,7 @@
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "none/none",
    "original_same_models_prediction_score": "1.0",
-   "persona_prediction_score": "0.25"
+   "persona_prediction_score": "0.0"
   },
   {
    "pair_id": "au_sonnet_moral_luck",
@@ -66,14 +66,14 @@
    "original_same_models_verdict": "B_higher/small",
    "persona_verdict": "unclear/small",
    "original_same_models_prediction_score": "1.0",
-   "persona_prediction_score": "0.5"
+   "persona_prediction_score": "0.0"
   },
   {
    "pair_id": "au_opus_norm_causation",
    "predicted": "A_higher/large",
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "A_higher/large",
-   "original_same_models_prediction_score": "0.75",
+   "original_same_models_prediction_score": "0.98",
    "persona_prediction_score": "1.0"
   },
   {
@@ -82,14 +82,14 @@
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "none/none",
    "original_same_models_prediction_score": "1.0",
-   "persona_prediction_score": "0.25"
+   "persona_prediction_score": "0.0"
   },
   {
    "pair_id": "cc_norm_causation",
    "predicted": "A_higher/large",
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "A_higher/large",
-   "original_same_models_prediction_score": "0.75",
+   "original_same_models_prediction_score": "0.98",
    "persona_prediction_score": "1.0"
   }
  ],
@@ -101,13 +101,13 @@
     "full_hits": "3"
    },
    "original_same_models": {
-    "mean_composite": "76.667",
-    "mean_prediction_score": "0.8",
+    "mean_composite": "76.133",
+    "mean_prediction_score": "0.787",
     "full_hits": "3"
    },
    "persona": {
-    "mean_composite": "76.667",
-    "mean_prediction_score": "0.8",
+    "mean_composite": "74.711",
+    "mean_prediction_score": "0.751",
     "full_hits": "3"
    },
    "gemini": {
@@ -118,45 +118,45 @@
   },
   "haiku": {
    "published": {
-    "mean_composite": "63.667",
-    "mean_prediction_score": "0.65",
+    "mean_composite": "56.6",
+    "mean_prediction_score": "0.473",
     "full_hits": "1"
    },
    "original_same_models": {
-    "mean_composite": "63.667",
-    "mean_prediction_score": "0.65",
+    "mean_composite": "56.689",
+    "mean_prediction_score": "0.476",
     "full_hits": "1"
    },
    "persona": {
-    "mean_composite": "65.467",
-    "mean_prediction_score": "0.7",
+    "mean_composite": "56.133",
+    "mean_prediction_score": "0.467",
     "full_hits": "1"
    },
    "gemini": {
-    "mean_composite": "65.667",
-    "mean_prediction_score": "0.7",
+    "mean_composite": "58.467",
+    "mean_prediction_score": "0.52",
     "full_hits": "2"
    }
   },
   "opus": {
    "published": {
-    "mean_composite": "74.592",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "72.592",
+    "mean_prediction_score": "0.8",
     "full_hits": "4"
    },
    "original_same_models": {
-    "mean_composite": "72.567",
-    "mean_prediction_score": "0.8",
+    "mean_composite": "72.389",
+    "mean_prediction_score": "0.796",
     "full_hits": "3"
    },
    "persona": {
-    "mean_composite": "74.567",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "72.567",
+    "mean_prediction_score": "0.8",
     "full_hits": "4"
    },
    "gemini": {
-    "mean_composite": "78.667",
-    "mean_prediction_score": "0.95",
+    "mean_composite": "80.133",
+    "mean_prediction_score": "0.987",
     "full_hits": "4"
    }
   },
@@ -172,13 +172,13 @@
     "full_hits": "5"
    },
    "persona": {
-    "mean_composite": "71.333",
-    "mean_prediction_score": "0.75",
+    "mean_composite": "65.333",
+    "mean_prediction_score": "0.6",
     "full_hits": "3"
    },
    "gemini": {
-    "mean_composite": "75.333",
-    "mean_prediction_score": "0.85",
+    "mean_composite": "73.333",
+    "mean_prediction_score": "0.8",
     "full_hits": "4"
    }
   }

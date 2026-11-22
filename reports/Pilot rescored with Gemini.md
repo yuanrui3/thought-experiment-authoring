@@ -2,6 +2,17 @@
 
 *22 November 2026. Numbers come from `out/vendor_comparison.csv` and `out/vendor_comparison_summary.json`, which `pipeline/compare_vendor_panels.py` rebuilds. The pilot's own scores (`out/pair_scores.csv`, and every section of `results.html` above the new one) are unchanged and remain the Claude panel's. `results.html` now has a section, "A second judge panel: Gemini", that shows this comparison side by side.*
 
+> **Update, 22 November: the prediction score changed.** The pilot now uses a distance rule: credit falls with the distance between the measured gap and the predicted range, and a pair meant to show a gap earns nothing unless the gap is confirmed (see `reports/Prediction score change.md`). The numbers below were computed with the original rule. Under the new rule the order is the same; first place is still Sonnet under the Claude panel and Fable under Gemini:
+>
+> | Author | Claude panel | Gemini panel | Two judge groups |
+> |---|---|---|---|
+> | fable | 76.7 | **84.7** | **84.7** |
+> | sonnet | **81.3** | 73.3 | 73.3 |
+> | opus | 72.6 | 80.1 | 72.6 |
+> | haiku | 56.6 | 58.5 | 57.8 |
+>
+> *Mean composite score under the new rule; current numbers in `out/vendor_comparison_summary.json`.*
+
 ## Bottom line
 
 **The two vendors broadly agree, but not on the pairs that decide which author comes first.**

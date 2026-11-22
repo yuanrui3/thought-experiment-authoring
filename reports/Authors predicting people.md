@@ -94,7 +94,7 @@ The pilot scores authors against a panel of models. This task scores them agains
 ## What this means for the benchmark
 
 1. **Use this as the benchmark's human-grounded component now.** It needs no new participants, costs nothing per run beyond the model calls, and gives a ranking against people rather than against models. Rerun it whenever an author model is added. Add Fable once its limit resets.
-2. **Fix the prediction score before it meets human data.**
+2. **Fix the prediction score before it meets human data.** *(Done 22 November: see `reports/Prediction score change.md`.)*
    - With mostly small human effects, "always no difference" wins on the pilot's thresholds. Score the error against the human gap instead of size classes.
    - For authored pairs, keep the separate "demonstrated" requirement: the pair must actually show a gap in people. Then predicting "none" can't win.
 3. **Be wary of textbook expectations on doing vs allowing.** Authors and panels share the expectation that doing is worse than allowing. These participants didn't follow it. The benchmark's doing/allowing pairs are where authors' predictions and the panel's verdicts are most likely to agree with each other and both be wrong.

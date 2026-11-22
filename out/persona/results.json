@@ -13,6 +13,12 @@
    "originality": 0.2,
    "comprehension": 0.15
   },
+  "prediction_rule": "distance",
+  "distance_scale": 1.5,
+  "demonstration_required": [
+   "authored",
+   "control_classic"
+  ],
   "comprehension_floor": 0.8,
   "format_cap": 50.0
  },
@@ -247,6 +253,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 2,
@@ -334,6 +347,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -530,6 +547,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.3555555555555553,
+    "distance": 0.966666666666667,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 2,
@@ -616,15 +640,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.25
+   },
    "components": {
-    "prediction": 0.25,
+    "prediction": 0.0,
     "comprehension": 0.9666666666666667,
     "confounds": 0.33333333333333337,
     "originality": 0.3333333333333333
    },
-   "composite": 39.5,
+   "composite": 29.5,
    "gated": {
-    "behavior_score": 44.54545454545454,
+    "behavior_score": 26.36363636363636,
     "confound_gate": false,
     "originality_gate": true,
     "shared_setting": false,
@@ -811,6 +839,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.0,
+    "distance": 2.033333333333333,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -898,15 +933,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.75
+   },
    "components": {
-    "prediction": 0.75,
+    "prediction": 0.0,
     "comprehension": 1.0,
     "confounds": 0.6666666666666667,
     "originality": 0.3333333333333333
    },
-   "composite": 68.33333333333333,
+   "composite": 38.333333333333336,
    "gated": {
-    "behavior_score": 81.81818181818183,
+    "behavior_score": 27.27272727272727,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -1091,6 +1130,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.4444444444444444,
+    "accuracy": 0.4444444444444444,
+    "distance": 0.8333333333333334,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -1168,15 +1214,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.4444444444444444,
+    "classes": 0.75
+   },
    "components": {
-    "prediction": 0.75,
+    "prediction": 0.4444444444444444,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 76.66666666666667,
+   "composite": 64.44444444444444,
    "gated": {
-    "behavior_score": 81.81818181818183,
+    "behavior_score": 59.59595959595959,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -1361,6 +1411,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.8888888888888888,
+    "accuracy": 0.8888888888888888,
+    "distance": 0.16666666666666674,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 2,
@@ -1445,6 +1502,10 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.8888888888888888,
+    "classes": 0.75
+   },
    "convergence": {
     "label": "a farm gate is left open and animals get out",
     "with": [
@@ -1453,14 +1514,14 @@
     ]
    },
    "components": {
-    "prediction": 0.75,
+    "prediction": 0.8888888888888888,
     "comprehension": 1.0,
     "confounds": 0.33333333333333337,
     "originality": 0.6666666666666666
    },
-   "composite": 66.66666666666667,
+   "composite": 72.22222222222221,
    "gated": {
-    "behavior_score": 81.81818181818183,
+    "behavior_score": 91.91919191919192,
     "confound_gate": false,
     "originality_gate": false,
     "shared_setting": true,
@@ -1650,6 +1711,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -1730,6 +1798,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "a rival caterer's freezer is switched off",
@@ -1934,6 +2006,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.8444444444444442,
+    "distance": 0.23333333333333367,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -2015,6 +2094,10 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.25
+   },
    "convergence": {
     "label": "a greenhouse is left to the frost",
     "with": [
@@ -2022,14 +2105,14 @@
     ]
    },
    "components": {
-    "prediction": 0.25,
+    "prediction": 0.0,
     "comprehension": 1.0,
     "confounds": 0.6666666666666667,
     "originality": 0.3333333333333333
    },
-   "composite": 48.333333333333336,
+   "composite": 38.333333333333336,
    "gated": {
-    "behavior_score": 45.45454545454545,
+    "behavior_score": 27.27272727272727,
     "confound_gate": true,
     "originality_gate": false,
     "shared_setting": true,
@@ -2218,6 +2301,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -2296,6 +2386,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -2490,6 +2584,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -2560,15 +2661,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.5
+   },
    "components": {
-    "prediction": 0.5,
+    "prediction": 0.0,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 66.66666666666666,
+   "composite": 46.666666666666664,
    "gated": {
-    "behavior_score": 63.63636363636363,
+    "behavior_score": 27.27272727272727,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -2756,6 +2861,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -2832,6 +2944,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "appliances overload a shared circuit",
@@ -3036,6 +3152,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -3110,6 +3233,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -3304,6 +3431,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.8888888888888888,
+    "distance": 0.16666666666666669,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -3381,6 +3515,10 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.25
+   },
    "convergence": {
     "label": "a greenhouse is left to the frost",
     "with": [
@@ -3388,14 +3526,14 @@
     ]
    },
    "components": {
-    "prediction": 0.25,
+    "prediction": 0.0,
     "comprehension": 0.9666666666666667,
     "confounds": 0.6666666666666667,
     "originality": 0.3333333333333333
    },
-   "composite": 47.833333333333336,
+   "composite": 37.833333333333336,
    "gated": {
-    "behavior_score": 44.54545454545454,
+    "behavior_score": 26.36363636363636,
     "confound_gate": true,
     "originality_gate": false,
     "shared_setting": true,
@@ -3584,6 +3722,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -3664,6 +3809,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -3858,6 +4007,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -3937,6 +4093,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -4131,6 +4291,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 2,
@@ -4211,6 +4378,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "a farm gate is left open and animals get out",
@@ -4417,6 +4588,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -4493,6 +4671,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "a rival caterer's freezer is switched off",
@@ -4697,6 +4879,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -4776,6 +4965,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "a farm gate is left open and animals get out",
@@ -4981,6 +5174,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -5057,6 +5257,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -5251,6 +5455,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.7555555555555554,
+    "accuracy": 0.7555555555555554,
+    "distance": 0.3666666666666669,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -5323,15 +5534,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.7555555555555554,
+    "classes": 0.75
+   },
    "components": {
-    "prediction": 0.75,
+    "prediction": 0.7555555555555554,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 76.66666666666667,
+   "composite": 76.88888888888889,
    "gated": {
-    "behavior_score": 81.81818181818183,
+    "behavior_score": 82.22222222222221,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -5516,6 +5731,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.8,
+    "distance": 0.29999999999999993,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -5587,15 +5809,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.25
+   },
    "components": {
-    "prediction": 0.25,
+    "prediction": 0.0,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 56.666666666666664,
+   "composite": 46.666666666666664,
    "gated": {
-    "behavior_score": 45.45454545454545,
+    "behavior_score": 27.27272727272727,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -5789,6 +6015,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -5864,6 +6097,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -6071,6 +6308,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -6146,6 +6390,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -6353,6 +6601,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -6432,6 +6687,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -6639,6 +6898,13 @@
     "size_hit": false,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 0.0,
+    "accuracy": 0.7555555555555556,
+    "distance": 0.3666666666666666,
+    "demonstration_required": true,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -6721,15 +6987,19 @@
      }
     ]
    },
+   "prediction_scores_by_rule": {
+    "distance": 0.0,
+    "classes": 0.25
+   },
    "components": {
-    "prediction": 0.25,
+    "prediction": 0.0,
     "comprehension": 1.0,
     "confounds": 0.6666666666666667,
     "originality": 0.0
    },
-   "composite": 41.66666666666667,
+   "composite": 31.666666666666664,
    "gated": {
-    "behavior_score": 45.45454545454545,
+    "behavior_score": 27.27272727272727,
     "confound_gate": true,
     "originality_gate": false,
     "shared_setting": false,
@@ -6927,6 +7197,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": true,
+    "demonstrated": true
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 1,
@@ -7003,6 +7280,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -7201,6 +7482,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": false,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -7268,6 +7556,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -7462,6 +7754,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": false,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -7529,6 +7828,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -7723,6 +8026,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": false,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -7790,6 +8100,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -7984,6 +8298,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": false,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -8051,6 +8372,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
     "prediction": 1.0,
@@ -8245,6 +8570,13 @@
     "size_hit": true,
     "opposite": false
    },
+   "prediction_distance": {
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
+    "demonstration_required": false,
+    "demonstrated": false
+   },
    "audit": {
     "n_auditors": 4,
     "confound_severity": 0,
@@ -8319,6 +8651,10 @@
       "comprehension_key_ok": true
      }
     ]
+   },
+   "prediction_scores_by_rule": {
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "appliances overload a shared circuit",
@@ -8942,12 +9278,13 @@
    "author_id": "anthropic/claude-fable-5-2",
    "tier": "fable",
    "n_pairs": 5,
-   "mean_composite": 76.66666666666666,
+   "mean_composite": 74.71111111111111,
    "direction_hits": 4,
    "size_hits": 3,
    "full_hits": 3,
    "demonstrated": 4,
-   "mean_prediction_score": 0.8,
+   "mean_prediction_score": 0.7511111111111111,
+   "mean_prediction_score_classes_rule": 0.8,
    "mean_abs_effect": 1.573333333333333,
    "mean_confound_severity": 0.4,
    "mean_originality": 1.2,
@@ -8955,19 +9292,20 @@
    "mean_words_changed": 20.8,
    "n_flagged": 2,
    "gated_passes": 3,
-   "gated_mean_behavior_of_passing": 75.75757575757576,
+   "gated_mean_behavior_of_passing": 69.83164983164983,
    "n_shared_setting": 2
   },
   {
    "author_id": "anthropic/claude-haiku-5-5",
    "tier": "haiku",
    "n_pairs": 5,
-   "mean_composite": 65.46666666666667,
+   "mean_composite": 56.13333333333334,
    "direction_hits": 4,
    "size_hits": 1,
    "full_hits": 1,
    "demonstrated": 4,
-   "mean_prediction_score": 0.7,
+   "mean_prediction_score": 0.4666666666666666,
+   "mean_prediction_score_classes_rule": 0.7,
    "mean_abs_effect": 2.1066666666666665,
    "mean_confound_severity": 1.4,
    "mean_originality": 1.4,
@@ -8975,19 +9313,20 @@
    "mean_words_changed": 31.0,
    "n_flagged": 1,
    "gated_passes": 2,
-   "gated_mean_behavior_of_passing": 81.81818181818183,
+   "gated_mean_behavior_of_passing": 43.43434343434343,
    "n_shared_setting": 1
   },
   {
    "author_id": "anthropic/claude-opus-5-5",
    "tier": "opus",
    "n_pairs": 5,
-   "mean_composite": 74.56666666666668,
+   "mean_composite": 72.56666666666668,
    "direction_hits": 4,
    "size_hits": 4,
    "full_hits": 4,
    "demonstrated": 4,
-   "mean_prediction_score": 0.85,
+   "mean_prediction_score": 0.8,
+   "mean_prediction_score_classes_rule": 0.85,
    "mean_abs_effect": 2.0266666666666664,
    "mean_confound_severity": 1.2,
    "mean_originality": 1.6,
@@ -9002,12 +9341,13 @@
    "author_id": "anthropic/claude-sonnet-5-5",
    "tier": "sonnet",
    "n_pairs": 5,
-   "mean_composite": 71.33333333333334,
+   "mean_composite": 65.33333333333334,
    "direction_hits": 3,
    "size_hits": 4,
    "full_hits": 3,
    "demonstrated": 3,
-   "mean_prediction_score": 0.75,
+   "mean_prediction_score": 0.6,
+   "mean_prediction_score_classes_rule": 0.75,
    "mean_abs_effect": 1.3599999999999999,
    "mean_confound_severity": 0.8,
    "mean_originality": 1.2,
@@ -9015,7 +9355,7 @@
    "mean_words_changed": 11.2,
    "n_flagged": 4,
    "gated_passes": 2,
-   "gated_mean_behavior_of_passing": 81.81818181818181,
+   "gated_mean_behavior_of_passing": 63.63636363636363,
    "n_shared_setting": 3
   }
  ]

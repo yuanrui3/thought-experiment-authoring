@@ -2,6 +2,17 @@
 
 *22 November 2026. Numbers come from `out/persona_comparison.csv` and `out/persona_comparison_summary.json`, which `pipeline/compare_persona_panel.py` rebuilds. The published results (`results.html`, `out/pair_scores.csv`) are unchanged. Fable's 10 persona judges will run once its usage limit resets on 26 November; until then the persona panel has three judge models.*
 
+> **Update, 22 November: the prediction score changed** (see `reports/Prediction score change.md`). The numbers below were computed with the original rule. Under the new rule the persona panel still puts Fable first:
+>
+> | Author | Original panel, same three judge models | Persona panel | Gemini panel |
+> |---|---|---|---|
+> | fable | 76.1 | **74.7** | **84.7** |
+> | opus | 72.4 | 72.6 | 80.1 |
+> | sonnet | **81.3** | 65.3 | 73.3 |
+> | haiku | 56.7 | 56.1 | 58.5 |
+>
+> Sonnet falls further than before. Its moral-luck pair now scores nothing under the persona panel, because its gap is no longer confirmed (under the old rule it kept half credit). *Current numbers in `out/persona_comparison_summary.json`.*
+
 ## Bottom line
 
 On the public human data, giving each judge a participant persona made the model panel behave more like people (see `reports/Fixing the panel's overconfidence.md`). Rerunning the pilot that way gives this:

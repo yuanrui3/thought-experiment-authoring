@@ -344,6 +344,31 @@ def vendor_section(R, root, P, fac):
     return S, summ
 
 
+def prediction_rule_note(rules):
+    if rules.get("prediction_rule") != "distance":
+        return ""
+    return ('<p class="prose"><strong>How prediction is scored.</strong> Full credit when the measured gap falls inside the range the prediction names '
+            '(no difference: under %.1f points either way; small: %.1f to %.1f; large: %.1f or more), falling to nothing at %.1f points outside it. '
+            'A pair that is supposed to show a gap, an authored pair or a classic control, earns nothing unless its gap is confirmed in the predicted '
+            'direction, so predicting “no difference” cannot pay off for a pair the author designed to show one. This rule replaced the original one '
+            '(half for direction, half for the size class) on 22 November, after the public human data showed that the original rule rewarded '
+            'caution; where the two differ, the original score is shown in grey.</p>' % (
+                rules["none_below"], rules["none_below"], rules["large_from"], rules["large_from"], rules["distance_scale"]))
+
+
+def prediction_cell(p, rules):
+    c = p["components"]
+    if c["prediction"] is None:
+        return ""
+    out = "%.2f" % c["prediction"]
+    by = p.get("prediction_scores_by_rule")
+    if rules.get("prediction_rule") == "distance" and by and by.get("classes") is not None:
+        old = 0.0 if (p.get("audit") or {}).get("factor_not_realized") else by["classes"]
+        if abs(old - c["prediction"]) > 1e-9:
+            out += '<br><span class="muted">was %.2f</span>' % old
+    return out
+
+
 def panels_pointer(vsumm, psumm):
     parts = []
     if vsumm:
@@ -468,7 +493,8 @@ def build(R, root):
     S.append('<div class="scroll"><div class="forestwrap">%s</div></div><div id="tip" class="tip" hidden></div></section>' % forest_svg(R))
 
     # ---- per-pair table
-    S.append('<section><h2>Per-pair scores</h2><p class="prose">Composite = %d%% prediction + %d%% confounds + %d%% originality + %d%% comprehension. Prediction and comprehension come from the judges\' behavior. Confounds and originality come from blind model auditors and are opinions; treat them as provisional.</p>' % tuple(round(100 * rules["weights"][k]) for k in ("prediction", "confounds", "originality", "comprehension")))
+    S.append('<section><h2>Per-pair scores</h2><p class="prose">Composite = %d%% prediction + %d%% confounds + %d%% originality + %d%% comprehension. Prediction and comprehension come from the judges\' behavior. Confounds and originality come from blind model auditors and are opinions; treat them as provisional.</p>%s' % (
+        tuple(round(100 * rules["weights"][k]) for k in ("prediction", "confounds", "originality", "comprehension")) + (prediction_rule_note(rules),)))
     S.append('<div class="scroll"><table class="data pairs"><thead><tr><th>Pair</th><th>Factor</th><th>Predicted, then observed</th><th class="n">A − B [95% interval]</th><th class="n">Prediction</th><th class="n">Confounds (0–3)</th><th class="n">Originality (0–3)</th><th class="n">Compre&shy;hension</th><th class="n">Composite</th></tr></thead><tbody>')
     order = ranked + [p for p in P if p["pair_type"] == "control_classic"] + [p for p in P if p["pair_type"] == "control_null"]
     last_type = None
@@ -483,16 +509,19 @@ def build(R, root):
             ('<br><span class="flags">%s</span>' % esc("; ".join(p["flags"]))) if p["flags"] else "",
             esc(fac.get(p["factor_id"], "")) if p["factor_id"] != "null" else esc("null: " + (p.get("null_detail") or "")),
             esc(pred_text(p["prediction"])), esc(obs_text(p["observed"])), sgn(e["effect"]), sgn(e["ci_low"]), sgn(e["ci_high"]), e["groups_same_sign"], e["groups_total"],
-            "%.2f" % c["prediction"] if c["prediction"] is not None else "",
+            prediction_cell(p, rules),
             ("%d" % au["confound_severity"]) if au else "–", ("%d" % au["originality"]) if au else "–",
             100 * p["comprehension"]["accuracy"], ("%.0f" % p["composite"]) if p["composite"] is not None else "–"))
     S.append('</tbody></table></div><p class="note">Confounds run from 0 (none) to 3 (severe); the harsher middle grade of the four auditors is used. Originality runs from 0 (a re-skin of a known case) to 3 (fresh); the lower middle grade is used. “Models” counts the judge models whose own gap has the same sign as the overall gap. Control pairs were written by the builder and are scored the same way for comparison.</p></section>')
 
     # ---- authors
-    S.append('<section><h2>Per-author summary</h2><p class="prose">Five pairs per author, one per factor. With five pairs each, differences between authors are descriptive only.</p><div class="scroll"><table class="data"><thead><tr><th>Author</th><th class="n">Mean composite</th><th class="n">Direction right</th><th class="n">Size right</th><th class="n">Both right</th><th class="n">Mean |A − B|</th><th class="n">Confounds (0–3)</th><th class="n">Originality (0–3)</th><th class="n">Compre&shy;hension</th><th class="n">Words changed</th><th class="n">Shared setting</th></tr></thead><tbody>')
+    S.append('<section><h2>Per-author summary</h2><p class="prose">Five pairs per author, one per factor. With five pairs each, differences between authors are descriptive only.</p><div class="scroll"><table class="data"><thead><tr><th>Author</th><th class="n">Mean composite</th><th class="n">Mean prediction score</th><th class="n">Direction right</th><th class="n">Size right</th><th class="n">Both right</th><th class="n">Mean |A − B|</th><th class="n">Confounds (0–3)</th><th class="n">Originality (0–3)</th><th class="n">Compre&shy;hension</th><th class="n">Words changed</th><th class="n">Shared setting</th></tr></thead><tbody>')
     for a in sorted(R["authors"], key=lambda a: TIER_ORDER.index(a["tier"]) if a["tier"] in TIER_ORDER else 9):
-        S.append('<tr><td class="nowrap">%s<br><span class="muted mono">%s</span></td><td class="n strong">%s</td><td class="n">%d / %d</td><td class="n">%d / %d</td><td class="n">%d / %d</td><td class="n">%.2f</td><td class="n">%s</td><td class="n">%s</td><td class="n">%.0f%%</td><td class="n">%.0f</td><td class="n">%d</td></tr>' % (
-            esc(a["tier"]), esc(a["author_id"].split("/")[-1]), ("%.1f" % a["mean_composite"]) if a["mean_composite"] is not None else "–",
+        old_ps = a.get("mean_prediction_score_classes_rule")
+        ps_cell = "%.2f" % a["mean_prediction_score"] + (('<br><span class="muted">was %.2f</span>' % old_ps)
+                                                         if rules.get("prediction_rule") == "distance" and old_ps is not None and abs(old_ps - a["mean_prediction_score"]) > 1e-9 else "")
+        S.append('<tr><td class="nowrap">%s<br><span class="muted mono">%s</span></td><td class="n strong">%s</td><td class="n">%s</td><td class="n">%d / %d</td><td class="n">%d / %d</td><td class="n">%d / %d</td><td class="n">%.2f</td><td class="n">%s</td><td class="n">%s</td><td class="n">%.0f%%</td><td class="n">%.0f</td><td class="n">%d</td></tr>' % (
+            esc(a["tier"]), esc(a["author_id"].split("/")[-1]), ("%.1f" % a["mean_composite"]) if a["mean_composite"] is not None else "–", ps_cell,
             a["direction_hits"], a["n_pairs"], a["size_hits"], a["n_pairs"], a["full_hits"], a["n_pairs"], a["mean_abs_effect"],
             ("%.2f" % a["mean_confound_severity"]) if a["mean_confound_severity"] is not None else "–",
             ("%.2f" % a["mean_originality"]) if a["mean_originality"] is not None else "–",

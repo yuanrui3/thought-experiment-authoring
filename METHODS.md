@@ -10,10 +10,11 @@
 4. **Comprehension.** Three-option multiple choice with a key per version, so it scores mechanically.
 5. **Panel.** The same four tiers, 5 repeats, 2 arms: 40 fresh-context judges at low reasoning effort, each rating one randomly chosen version of all 30 pairs in shuffled order. That is 20 ratings per version.
 6. **What counts as a gap.** At least 0.5 points, a 95% bootstrap interval (10,000 resamples inside each model-by-version cell) that excludes zero, and three of four judge models agreeing on the sign.
-7. **Score.** Prediction (half for direction, half for size) and comprehension come from the judges' behavior. Confounds and originality are graded by four blind model auditors, taking the harsher middle grade; they are opinions. Composite: 40% prediction, 25% confounds, 20% originality, 15% comprehension. The weights are arbitrary. All rules were fixed in `score.py` before any judgment existed.
+7. **Score.** Prediction and comprehension come from the judges' behavior. Prediction (since 22 November; see item 11): full credit when the measured gap falls inside the predicted range, falling to nothing at 1.5 points outside it, and nothing at all for a pair that should show a gap (authored pairs, classic controls) unless the gap is confirmed in the predicted direction. Confounds and originality are graded by four blind model auditors, taking the harsher middle grade; they are opinions. Composite: 40% prediction, 25% confounds, 20% originality, 15% comprehension. The weights are arbitrary. All rules were fixed in `score.py` before any judgment existed.
 8. **Controls.** Classic pairs matched to the five factors, not the five most famous cases; null pairs of graded size, from one changed word to two reworded sentences.
 9. **After the prior-art check** I narrowed the claim, kept direction and size as separate results, and added three pairs with a planted confound to test the auditors.
-10. **After seeing the data** I added diagnostics and flags (shared settings, auditor agreement, same-model effects) and changed no scoring rule.
+10. **After seeing the data** I added diagnostics and flags (shared settings, auditor agreement, same-model effects). Until 22 November I changed no scoring rule.
+11. **On 22 November I changed the prediction score, after seeing these data and public human data.** The original rule gave half for direction and half for the size bin. Tested against real people (`reports/Authors predicting people.md`), it rewarded predicting "no difference": with mostly small human effects, that guess beat every model. The new rule scores the distance between the measured gap and the predicted range, and requires a pair meant to show a gap to show it. It is a post-hoc change, so the original scores are kept beside the new ones on the results page and in `out/pair_scores.csv`; `python3 score.py --prediction-rule classes` reproduces the original results exactly.
 
 ## What the checks showed
 
@@ -21,7 +22,7 @@
 - **Controls.** 5 of 5 classic pairs reproduced; 0 of 5 null pairs crossed the floor (largest 0.30). One null had an interval that excluded zero, and haiku or sonnet alone would each have put 2 of 5 nulls over the floor.
 - **Noise.** Random halves of the same scenario differ by up to 0.46 points (95th percentile).
 - **Auditors.** 12 of 12 planted confounds caught, 19 of 20 classics recognised, no false alarm on nulls; but any two of them gave a real pair the same confound grade only about half the time.
-- **Authored pairs.** 17 of 20 right on direction, 13 of 20 on direction and size.
+- **Authored pairs.** 17 of 20 right on direction, 13 of 20 on direction and size. Under the distance rule, 4 authored pairs score 0 on prediction (one opposite gap, two with no confirmed gap, one 4-point gap predicted as small), and the author order is unchanged: sonnet, fable, opus, haiku.
 
 ## Limitations
 

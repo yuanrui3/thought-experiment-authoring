@@ -25,6 +25,14 @@ RULES = {
     "ci_level": 0.95,            # percentile bootstrap, resampling ratings inside each group x version cell
     "group_agreement": 0.75,     # share of judge groups whose own effect must have the same sign
     "weights": {"prediction": 0.40, "confounds": 0.25, "originality": 0.20, "comprehension": 0.15},
+    # Prediction score ("distance" rule, from 22 November 2026): credit falls with the distance between the measured
+    # gap and the range the prediction names (none: under 0.5 either way; small: 0.5 to 1.5; large: 1.5 or more),
+    # reaching 0 at distance_scale points; and a pair that is supposed to show a gap (authored pairs, classic controls)
+    # earns nothing unless its gap is confirmed in the predicted direction. The earlier rule ("classes": half for
+    # direction, half for the size class) rewarded predicting "no difference" whenever effects were small.
+    "prediction_rule": "distance",
+    "distance_scale": 1.5,
+    "demonstration_required": ["authored", "control_classic"],
     "comprehension_floor": 0.80, # below this a pair is flagged as not understood
     "format_cap": 50.0,          # a pair that breaks a hard format rule cannot score above this
 }
@@ -176,6 +184,27 @@ def prediction_score(pred, obs, effect):
     return {"score": score, "direction_hit": direction_hit, "size_hit": size_gap == 0, "opposite": opposite}
 
 
+def predicted_range(pred):
+    """The range of A-minus-B gaps (1-7 scale) that a direction-and-size prediction names."""
+    lo, hi = RULES["none_below"], RULES["large_from"]
+    if pred["direction"] == "none":
+        return (-lo, lo)
+    r = (lo, hi) if pred["size"] == "small" else (hi, 6.0)
+    return r if pred["direction"] == "A_higher" else (-r[1], -r[0])
+
+
+def prediction_score_distance(pred, obs, effect, pair_type):
+    """0..1. 1 - distance/scale, where distance is how far the measured gap lies outside the predicted range; 0 for a
+    pair that should show a gap (RULES['demonstration_required']) but has no confirmed gap in the predicted direction."""
+    lo, hi = predicted_range(pred)
+    distance = 0.0 if lo <= effect <= hi else min(abs(effect - lo), abs(effect - hi))
+    accuracy = max(0.0, 1.0 - distance / RULES["distance_scale"])
+    required = pair_type in RULES["demonstration_required"]
+    demonstrated = pred["direction"] in ("A_higher", "B_higher") and obs["direction"] == pred["direction"]
+    return {"score": accuracy if (demonstrated or not required) else 0.0, "accuracy": accuracy, "distance": distance,
+            "demonstration_required": required, "demonstrated": demonstrated}
+
+
 # ----------------------------------------------------------------------------- text measures
 
 def text_metrics(a_text, b_text):
@@ -249,7 +278,10 @@ def main():
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--out", default=os.path.join(ROOT, "out"))
     ap.add_argument("--no-report", action="store_true")
+    ap.add_argument("--prediction-rule", choices=["distance", "classes"], default=RULES["prediction_rule"],
+                    help="distance: the current rule; classes: the pilot's original rule (half direction, half size class)")
     args = ap.parse_args()
+    RULES["prediction_rule"] = args.prediction_rule
 
     doc = json.load(open(args.vignettes, encoding="utf-8"))
     pairs = doc["pairs"]
@@ -347,12 +379,16 @@ def main():
             "by_group": {g: mean([1.0 if ok else 0.0 for gg, ok in c_all if gg == g]) for g in groups_all},
         }
         ps = prediction_score(p["prediction"], obs, es["effect"]) if p.get("prediction") else None
+        pd = prediction_score_distance(p["prediction"], obs, es["effect"], p["pair_type"]) if p.get("prediction") else None
         rec["prediction_result"] = ps
+        rec["prediction_distance"] = pd
         aud = aggregate_audits(aud_by_pair.get(pid, []))
         rec["audit"] = aud
         flags = []
-        comps = {"prediction": ps["score"] if ps else None, "comprehension": rec["comprehension"]["accuracy"],
+        main_ps = (pd if RULES["prediction_rule"] == "distance" else ps)
+        comps = {"prediction": main_ps["score"] if main_ps else None, "comprehension": rec["comprehension"]["accuracy"],
                  "confounds": None, "originality": None}
+        rec["prediction_scores_by_rule"] = {"distance": pd["score"] if pd else None, "classes": ps["score"] if ps else None}
         if aud:
             comps["confounds"] = 1 - aud["confound_severity"] / 3
             comps["originality"] = aud["originality"] / 3
@@ -590,6 +626,7 @@ def main():
             "full_hits": sum(1 for r in rs if r["prediction_result"]["direction_hit"] and r["prediction_result"]["size_hit"]),
             "demonstrated": sum(1 for r in rs if r["demonstrated"]),
             "mean_prediction_score": mean([r["components"]["prediction"] for r in rs]),
+            "mean_prediction_score_classes_rule": mean([0.0 if (r["audit"] or {}).get("factor_not_realized") else r["prediction_scores_by_rule"]["classes"] for r in rs]),
             "mean_abs_effect": mean([abs(r["effect"]["effect"]) for r in rs]),
             "mean_confound_severity": mean([r["audit"]["confound_severity"] for r in rs if r["audit"]]) if any(r["audit"] for r in rs) else None,
             "mean_originality": mean([r["audit"]["originality"] for r in rs if r["audit"]]) if any(r["audit"] for r in rs) else None,
@@ -617,7 +654,8 @@ def main():
             "n_a", "n_b", "mean_a", "mean_b", "effect", "ci_low", "ci_high", "cliffs_delta", "std_effect",
             "groups_same_sign", "groups_total", "observed_direction", "observed_size", "direction_hit", "size_hit",
             "prediction_score", "confound_severity", "originality", "comprehension", "words_changed",
-            "share_changed", "composite", "flags", "gated_behavior_score", "gated_passes", "gated_fails_on"]
+            "share_changed", "composite", "flags", "gated_behavior_score", "gated_passes", "gated_fails_on",
+            "prediction_rule", "distance_to_predicted_range", "gap_demonstrated", "prediction_score_classes_rule"]
     with open(os.path.join(args.out, "pair_scores.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(cols)
@@ -632,7 +670,11 @@ def main():
                         au.get("confound_severity", ""), au.get("originality", ""), fmt(r["comprehension"]["accuracy"], 3),
                         r["text"]["words_changed"], fmt(r["text"]["share_changed"], 3), fmt(r["composite"], 1),
                         " | ".join(r["flags"]), fmt((r.get("gated") or {}).get("behavior_score"), 1),
-                        (r.get("gated") or {}).get("passes", ""), "; ".join((r.get("gated") or {}).get("fails_on", []))])
+                        (r.get("gated") or {}).get("passes", ""), "; ".join((r.get("gated") or {}).get("fails_on", [])),
+                        RULES["prediction_rule"], fmt((r.get("prediction_distance") or {}).get("distance")),
+                        (r.get("prediction_distance") or {}).get("demonstrated", ""),
+                        fmt(None if not r.get("prediction_scores_by_rule") else
+                            (0.0 if au.get("factor_not_realized") else r["prediction_scores_by_rule"]["classes"]))])
     with open(os.path.join(args.out, "author_summary.csv"), "w", newline="", encoding="utf-8") as f:
         if authors:
             w = csv.DictWriter(f, fieldnames=list(authors[0].keys()))
