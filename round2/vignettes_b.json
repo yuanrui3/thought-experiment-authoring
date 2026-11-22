@@ -1,0 +1,2101 @@
+{
+ "schema_version": "0.1",
+ "benchmark": "thought-experiment-authoring",
+ "language": "en",
+ "task": {
+  "word_limit_per_version": 150,
+  "word_count_rule": "whitespace-separated tokens",
+  "judgment_scale": [
+   1,
+   7
+  ],
+  "effect_definition": "mean rating of version A minus mean rating of version B, in scale points",
+  "size_bins": {
+   "none": "|diff| < 0.5",
+   "small": "0.5 <= |diff| < 1.5",
+   "large": "|diff| >= 1.5"
+  }
+ },
+ "factors": [
+  {
+   "factor_id": "doing_allowing",
+   "name": "Doing vs. allowing",
+   "description": "Whether a person actively brings about an outcome or merely allows it when they could have prevented it; outcome, knowledge, motive and ease of acting otherwise are held fixed."
+  },
+  {
+   "factor_id": "norm_causation",
+   "name": "Norm violation and causal judgment",
+   "description": "Whether a person's contribution to an outcome broke a rule or was permitted, with the physical contribution held fixed; the judgment is how much that person caused the outcome."
+  },
+  {
+   "factor_id": "inevitable_harm",
+   "name": "Avoidable vs. unavoidable harm",
+   "description": "Whether a harm that follows a person's action would not have happened had they acted otherwise, or would have happened anyway; the action, what the person knows and wants, and the harm are held fixed."
+  },
+  {
+   "factor_id": "knowledge_causation",
+   "name": "Knowing the rule, in causal judgment",
+   "description": "Whether a person who broke a rule, and whose action helped bring about an outcome, knew about the rule; the action, the rule, the outcome and others' contributions are held fixed; the judgment is how much that person caused the outcome."
+  },
+  {
+   "factor_id": "luck_wrongness",
+   "name": "Moral luck in wrongness",
+   "description": "Whether one and the same choice, made with the same knowledge and risk, turns out harmlessly or harmfully; the judgment is how wrong the choice was, not blame or punishment."
+  },
+  {
+   "factor_id": "null",
+   "name": "Null control",
+   "description": "An incidental detail that should not matter (control pairs only)."
+  }
+ ],
+ "release": "round2b-2026-11-22",
+ "pairs": [
+  {
+   "pair_id": "r2_haiku_inevitable_harm",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write",
+     "mcp__claude-code-remote__send_message"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Sluice gate and flooded lane",
+   "versions": {
+    "A": {
+     "text": "Owen runs the night shift at a grain depot beside the Ash River. At nine p.m. the river rises fast. Owen opens the sluice gate on the east canal to ease pressure on the dam, as the manual says. The water runs down the canal into Harrow Lane, and eleven family homes flood, with ruined furniture and two weeks of repairs. Had Owen kept the gate shut, the water would have gone into the empty west field instead, which nobody uses. Nothing else in the system could have carried it there. Owen knew the canal led to Harrow Lane. He opened the gate to protect the dam, and the dam held.",
+     "word_count": 111
+    },
+    "B": {
+     "text": "Owen runs the night shift at a grain depot beside the Ash River. At nine p.m. the river rises fast. Owen opens the sluice gate on the east canal to ease pressure on the dam, as the manual says. The water runs down the canal into Harrow Lane, and eleven family homes flood, with ruined furniture and two weeks of repairs. Had Owen kept the gate shut, the water would still have broken through an old overflow ditch and reached Harrow Lane. Nothing else in the system could have stopped it. Owen knew the canal led to Harrow Lane. He opened the gate to protect the dam, and the dam held.",
+     "word_count": 111
+    }
+   },
+   "intended_difference": "In version A the flood would have gone to an empty field had Owen kept the gate shut, so his action was the only route to the harm; in version B an old overflow ditch would have flooded Harrow Lane regardless of his action.",
+   "judgment_question": {
+    "text": "How much of the flooding of Harrow Lane was Owen's doing? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "None of it",
+    "label_max": "All of it"
+   },
+   "comprehension_question": {
+    "text": "According to the account, what would have happened to Harrow Lane if Owen had kept the gate shut?",
+    "options": {
+     "a": "It would have stayed dry.",
+     "b": "It would have flooded anyway, through an old overflow ditch.",
+     "c": "It would have flooded only if the dam had broken."
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers usually assign more of a harm to an agent when the harm would have been avoided by acting otherwise, but the ditch detail may lower the rating only partly, so I expect a moderate gap."
+   },
+   "originality_note": "A flood sluice with an alternative drainage route and a backup cracked ditch; it is not a trolley, bridge or chairman case.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_knowledge_causation",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write",
+     "mcp__claude-code-remote__send_message"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Solvent room door",
+   "versions": {
+    "A": {
+     "text": "Tomas works the night shift at a print shop that stores solvent in a back room. The room has a rule, printed in bold on the outside of the door: keep it shut at all times. Tomas had read that sign on his first day and clearly remembered it. That night the room grew hot, so he propped the door open with a box to let air in. A ceiling fan had failed the week before, and nobody had fixed it. Around midnight a spark from an old lamp reached the open doorway, and the fumes caught fire. The fire burned the front counter and two walls before the crew arrived.",
+     "word_count": 111
+    },
+    "B": {
+     "text": "Tomas works the night shift at a print shop that stores solvent in a back room. The room has a rule, printed in bold on the outside of the door: keep it shut at all times. Tomas had come in through the side hatch and never seen that sign. That night the room grew hot, so he propped the door open with a box to let air in. A ceiling fan had failed the week before, and nobody had fixed it. Around midnight a spark from an old lamp reached the open doorway, and the fumes caught fire. The fire burned the front counter and two walls before the crew arrived.",
+     "word_count": 111
+    }
+   },
+   "intended_difference": "In version A Tomas had read the rule and remembered it, while in version B he came in through another entrance and never saw the rule; the rule, his action, the fan, the spark and the fire are the same in both.",
+   "judgment_question": {
+    "text": "How much did Tomas's action cause the fire? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Entirely"
+   },
+   "comprehension_question": {
+    "text": "According to the account, had Tomas read the sign about keeping the door shut before that night?",
+    "options": {
+     "a": "Yes, he had read it.",
+     "b": "No, he had never seen it.",
+     "c": "The account does not say."
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Knowing a rule was broken tends to make readers credit the rule-breaker with more of the causal role, but the fan and the spark are vivid rival causes, so I expect a modest effect."
+   },
+   "originality_note": "A solvent storeroom with a rule sign on a door and two rival causes (a failed fan and a spark), with knowledge varied by which entrance the person used; not a chairman or dean case.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_luck_wrongness",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write",
+     "mcp__claude-code-remote__send_message"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Roofer without harness",
+   "versions": {
+    "A": {
+     "text": "Hal is a roofer with fifteen years on the job. On a windy Tuesday he must fix a loose tile on a steep roof, and his safety harness is in the van. He decides to skip it, since the job takes only ten minutes. He knows the wind is strong and that a fall from that height could seriously injure him. He climbs up without the harness. A gust hits the roof. Hal catches the gutter, steadies himself, and climbs down with only a scraped palm.",
+     "word_count": 86
+    },
+    "B": {
+     "text": "Hal is a roofer with fifteen years on the job. On a windy Tuesday he must fix a loose tile on a steep roof, and his safety harness is in the van. He decides to skip it, since the job takes only ten minutes. He knows the wind is strong and that a fall from that height could seriously injure him. He climbs up without the harness. A gust hits the roof. Hal slips, falls to the driveway, breaks his wrist, and is taken to hospital.",
+     "word_count": 86
+    }
+   },
+   "intended_difference": "The same decision to climb without a harness, made with the same knowledge and risk, ends harmlessly in version A when Hal catches the gutter and harmfully in version B when he falls and breaks his wrist.",
+   "judgment_question": {
+    "text": "How wrong was Hal's decision to climb up without the harness? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Very wrong"
+   },
+   "comprehension_question": {
+    "text": "According to the account, what happened to Hal when the gust hit the roof?",
+    "options": {
+     "a": "He caught the gutter and climbed down with a scraped palm.",
+     "b": "He fell to the driveway and broke his wrist.",
+     "c": "The gust did not reach the part of the roof where he was working."
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "small",
+    "rationale": "Readers tend to judge the same risky choice as more wrong when it ends in injury, though many will hold the choice itself fixed, so I expect a moderate gap."
+   },
+   "originality_note": "An everyday workplace choice to skip a safety harness, with a gust as the outcome-deciding luck; not a drunk-driver, surgeon or other standard moral luck case.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_inevitable_harm_2",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Signal box and loose rail",
+   "versions": {
+    "A": {
+     "text": "Sofia works the signal box at Pell Junction. At 7 p.m. a slow freight is ahead on the main line, so she switches the passenger train onto the loop siding, as the timetable allows. The siding has a loose rail that the crew reported two weeks ago, and nobody has fixed it. The train derails on the siding and twenty passengers are injured. Had Sofia kept the train on the main line, it would have waited behind the freight, and nobody would have been hurt. Sofia knew the siding ran over that rail. She chose it to keep the timetable.",
+     "word_count": 100
+    },
+    "B": {
+     "text": "Sofia works the signal box at Pell Junction. At 7 p.m. a slow freight is ahead on the main line, so she switches the passenger train onto the loop siding, as the timetable allows. The siding has a loose rail that the crew reported two weeks ago, and nobody has fixed it. The train derails on the siding and twenty passengers are injured. Had Sofia kept the train on the main line, a washout forming under the embankment would have derailed it there instead. Sofia knew the siding ran over that rail. She chose it to keep the timetable.",
+     "word_count": 99
+    }
+   },
+   "intended_difference": "In version A the main-line alternative would have avoided the derailment entirely; in version B a washout would have derailed the train on the main line anyway.",
+   "judgment_question": {
+    "text": "How much of the derailment was Sofia's doing? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not her doing at all",
+    "label_max": "Entirely her doing"
+   },
+   "comprehension_question": {
+    "text": "Where would the train have gone if Sofia had kept it on the main line?",
+    "options": {
+     "a": "It would have waited safely behind the freight",
+     "b": "A washout would have derailed it on the main line",
+     "c": "It would have reached the station early"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers usually discount blame when the harm would have happened anyway, but the pair still has Sofia choosing the risky siding, so I expect a modest drop in causal attribution in B."
+   },
+   "originality_note": "A railway signal-box switching case with a counterfactual washout; the preemption structure is general, but the setting and harm are invented.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_inevitable_harm_3",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Bus route and rockfall",
+   "versions": {
+    "A": {
+     "text": "Priya dispatches the afternoon bus from the hill town of Sorel. Two routes are open: the valley road and the mountain road. She sends the bus along the mountain road, which is faster by forty minutes. Halfway down, a rockfall from the slope above strikes the bus and injures four passengers. Had Priya sent the bus along the valley road, it would have arrived safely, since no rocks had fallen there that day. Priya knew the mountain road ran under the slope. She chose it to save time.",
+     "word_count": 88
+    },
+    "B": {
+     "text": "Priya dispatches the afternoon bus from the hill town of Sorel. Two routes are open: the valley road and the mountain road. She sends the bus along the mountain road, which is faster by forty minutes. Halfway down, a rockfall from the slope above strikes the bus and injures four passengers. Had Priya sent the bus along the valley road, a second rockfall was already loosening on that slope and would have struck the bus there too. Priya knew the mountain road ran under the slope. She chose it to save time.",
+     "word_count": 92
+    }
+   },
+   "intended_difference": "In version A the valley road would have been safe, so Priya's route choice made the difference; in version B a second rockfall would have hit the bus on the valley road too.",
+   "judgment_question": {
+    "text": "How much of the passengers' injuries were Priya's doing? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not her doing at all",
+    "label_max": "Entirely her doing"
+   },
+   "comprehension_question": {
+    "text": "What would have happened to the bus on the valley road?",
+    "options": {
+     "a": "The bus would have arrived safely",
+     "b": "A rockfall would have struck the bus there too",
+     "c": "The road was closed that day"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "The valley-road alternative in B is only a backup hazard, so readers should attribute somewhat less of the injury to Priya, though her choice of the more dangerous road still counts."
+   },
+   "originality_note": "A mountain-bus route choice with a backup rockfall; the structure is general, and the setting and harm are invented, not a published vignette.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_knowledge_causation_2",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Lab cleaner and rule card",
+   "versions": {
+    "A": {
+     "text": "Ines cleans the chemistry lab at a secondary school. A laminated card on the storeroom wall says: never store the acid cleaner beside the bleach. Ines had trained on this card and knew the rule well. On Tuesday evening she shelved the acid cleaner next to the bleach to free space for a delivery. Later, the janitor Bo stacked boxes against the shelf, knocking both bottles over. The liquids mixed, and fumes drifted into the corridor, sending nine students to the nurse.",
+     "word_count": 82
+    },
+    "B": {
+     "text": "Ines cleans the chemistry lab at a secondary school. A laminated card on the storeroom wall says: never store the acid cleaner beside the bleach. Nobody had ever shown Ines the card, and she had never read it. On Tuesday evening she shelved the acid cleaner next to the bleach to free space for a delivery. Later, the janitor Bo stacked boxes against the shelf, knocking both bottles over. The liquids mixed, and fumes drifted into the corridor, sending nine students to the nurse.",
+     "word_count": 84
+    }
+   },
+   "intended_difference": "In version A Ines knew the storeroom rule because she had trained on the card; in version B she had never seen the card or been told the rule.",
+   "judgment_question": {
+    "text": "How much did Ines's action cause the fumes in the corridor? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Entirely"
+   },
+   "comprehension_question": {
+    "text": "Had Ines read the storeroom card before Tuesday evening?",
+    "options": {
+     "a": "Yes, she had trained on it",
+     "b": "No, she had never seen it",
+     "c": "The scenario does not say"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers may see Ines's shelving as a more culpable cause when she knew the rule, but the causal contribution of her action is largely the same, so the gap should be modest."
+   },
+   "originality_note": "A school chemistry storeroom with a janitor's knock as a second contributor; the rule-knowledge contrast is a generic design, and the scenario is invented.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_knowledge_causation_3",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Ferry ramp and posted rule",
+   "versions": {
+    "A": {
+     "text": "Joon is a deckhand on the Kell River ferry. A posted rule says the bow ramp must stay chained while the ferry is docked. Joon had signed the safety sheet that lists this rule and had read it twice. At the evening landing he left the ramp unchained to speed up the loading of a delivery van. The van's brakes were weak, and when the ramp was lowered the van rolled off and pinned a pedestrian against the rail. The depot had also loaded the van's crates badly, and the driver had released the handbrake early.",
+     "word_count": 96
+    },
+    "B": {
+     "text": "Joon is a deckhand on the Kell River ferry. A posted rule says the bow ramp must stay chained while the ferry is docked. Joon had moved over from the other ferry a week earlier, and nobody had given him the safety sheet, so he had never seen the rule. At the evening landing he left the ramp unchained to speed up the loading of a delivery van. The van's brakes were weak, and when the ramp was lowered the van rolled off and pinned a pedestrian against the rail. The depot had also loaded the van's crates badly, and the driver had released the handbrake early.",
+     "word_count": 107
+    }
+   },
+   "intended_difference": "In version A Joon had signed a safety sheet and read the chained-ramp rule; in version B he had transferred without the sheet and never saw the rule.",
+   "judgment_question": {
+    "text": "How much did Joon's leaving the ramp unchained cause the pedestrian's injury? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Entirely"
+   },
+   "comprehension_question": {
+    "text": "Had Joon read the chained-ramp rule before the evening landing?",
+    "options": {
+     "a": "Yes, he had read it twice",
+     "b": "No, he had never seen it",
+     "c": "The scenario does not say"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Knowing a rule should raise readers' sense that Joon's act was a real cause of the injury, but the mechanical causes are vivid and shared, so I expect a small gap."
+   },
+   "originality_note": "A river ferry ramp with a deckhand transfer and depot loading faults; the knowledge contrast is generic and the scenario is invented.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_luck_wrongness_2",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Kayak crossing at dusk",
+   "versions": {
+    "A": {
+     "text": "Dana is a sea-kayak guide with ten years' experience. Her group must cross a three-kilometre strait at dusk, and the tide is turning. Dana decides to go on rather than wait an hour, because the clients are cold and tired. She knows the current is strong enough to pull a kayak off course, and that a capsized paddler could drift far out to sea. She leads the group across. A sudden squall passes over, and everyone reaches the far beach wet and cold but unhurt.",
+     "word_count": 85
+    },
+    "B": {
+     "text": "Dana is a sea-kayak guide with ten years' experience. Her group must cross a three-kilometre strait at dusk, and the tide is turning. Dana decides to go on rather than wait an hour, because the clients are cold and tired. She knows the current is strong enough to pull a kayak off course, and that a capsized paddler could drift far out to sea. She leads the group across. A sudden squall passes over, and one kayak is swept out by the current. The paddler is rescued two hours later, badly chilled and taken to hospital.",
+     "word_count": 96
+    }
+   },
+   "intended_difference": "The decision, knowledge and squall are identical; in version A the group arrives unhurt, while in version B one paddler is swept out and needs hospital care.",
+   "judgment_question": {
+    "text": "How wrong was Dana's decision to lead the group across at dusk? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Seriously wrong"
+   },
+   "comprehension_question": {
+    "text": "What happened to the group?",
+    "options": {
+     "a": "All reached the far beach unhurt",
+     "b": "One paddler was swept out and rescued later, badly chilled",
+     "c": "The group turned back before the strait"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "large",
+    "rationale": "Readers are strongly swayed by outcome when judging how wrong a risky choice was, so the harmful squall outcome should raise the wrongness rating in B by well over one point."
+   },
+   "originality_note": "A sea-kayak crossing with a squall as the luck factor; the moral-luck structure is familiar but this scenario and its details are invented.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_haiku_luck_wrongness_3",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "haiku",
+    "model": "claude-haiku-5-5",
+    "author_id": "anthropic/claude-haiku-5-5",
+    "requested_alias": "haiku",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Unchilled chicken salad",
+   "versions": {
+    "A": {
+     "text": "Ruth runs a small catering business. She is making a cold chicken salad for a retirement party, and the salad has sat on her counter for two hours in a warm kitchen. Ruth knows the health guidance says it must be chilled within one hour. The party starts in twenty minutes, so she packs the salad unchilled and drives it over. The guests eat it, and by the evening everyone is fine and the party ends with no complaints.",
+     "word_count": 79
+    },
+    "B": {
+     "text": "Ruth runs a small catering business. She is making a cold chicken salad for a retirement party, and the salad has sat on her counter for two hours in a warm kitchen. Ruth knows the health guidance says it must be chilled within one hour. The party starts in twenty minutes, so she packs the salad unchilled and drives it over. The guests eat it, and by the next morning eleven of them are vomiting with food poisoning.",
+     "word_count": 78
+    }
+   },
+   "intended_difference": "The decision, knowledge and risk are identical; in version A nobody falls ill, while in version B eleven guests are poisoned the next morning.",
+   "judgment_question": {
+    "text": "How wrong was Ruth's decision to pack the salad unchilled? Answer from 1 to 7.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Seriously wrong"
+   },
+   "comprehension_question": {
+    "text": "How did the guests fare after eating the salad?",
+    "options": {
+     "a": "None of them was ill",
+     "b": "Eleven were ill the next morning",
+     "c": "The party was cancelled"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "large",
+    "rationale": "Mild carelessness with a harmless result tends to be rated low, while the same choice followed by mass food poisoning should be rated much more wrong, so I expect a large gap."
+   },
+   "originality_note": "A catering food-safety lapse with a poisoning outcome; the structure of luck in outcome is general, and the setting is invented.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_inevitable_harm",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Ladder and greenhouse",
+   "versions": {
+    "A": {
+     "text": "Ken borrowed a long wooden ladder from his neighbor Ruth without asking her, to clear leaves from his gutter. When he finished, he leaned the ladder against the side of Ruth's glass greenhouse and went inside for dinner, meaning to return it later. During the night a strong wind pushed the ladder against one glass panel, and the panel shattered. The panel had been in good condition. Without the ladder, it would have survived the wind. Ruth had to pay for a new panel the next morning.",
+     "word_count": 87
+    },
+    "B": {
+     "text": "Ken borrowed a long wooden ladder from his neighbor Ruth without asking her, to clear leaves from his gutter. When he finished, he leaned the ladder against the side of Ruth's glass greenhouse and went inside for dinner, meaning to return it later. During the night a strong wind pushed the ladder against one glass panel, and the panel shattered. The panel had been loose for weeks. Even without the ladder, it would have blown out in the wind. Ruth had to pay for a new panel the next morning.",
+     "word_count": 90
+    }
+   },
+   "intended_difference": "Whether the panel would have survived the wind without the ladder (A) or would have blown out anyway (B).",
+   "judgment_question": {
+    "text": "How wrong was it of Ken to leave the ladder leaning against the greenhouse?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "Where did Ken leave the ladder?",
+    "options": {
+     "a": "Against the side of Ruth's greenhouse",
+     "b": "Against the wall of his own house",
+     "c": "Inside Ruth's garden shed"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers tend to judge an action as worse when the harm depended on it, but the identical action and identical harm will limit the gap."
+   },
+   "originality_note": "An original everyday borrowed-ladder case, not a re-skin of a known preemption or trolley vignette.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_knowledge_causation",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Office circuit overload",
+   "versions": {
+    "A": {
+     "text": "A small office has a rule: nobody may plug a space heater into the shared power strip, because it can overload the circuit. Sam, who read this rule in the staff handbook, plugged his space heater into the strip on a cold morning. Later that morning Lee plugged an electric kettle into the same strip, which was allowed. Together the heater and the kettle drew too much power, the circuit breaker tripped, and the office computers shut off. Everyone lost the work they had not yet saved.",
+     "word_count": 87
+    },
+    "B": {
+     "text": "A small office has a rule: nobody may plug a space heater into the shared power strip, because it can overload the circuit. Sam, who was never told about this rule and never saw it in the staff handbook, plugged his space heater into the strip on a cold morning. Later that morning Lee plugged an electric kettle into the same strip, which was allowed. Together the heater and the kettle drew too much power, the circuit breaker tripped, and the office computers shut off. Everyone lost the work they had not yet saved.",
+     "word_count": 94
+    }
+   },
+   "intended_difference": "Whether Sam knew about the rule against plugging in space heaters (A) or was never told about it (B).",
+   "judgment_question": {
+    "text": "How much did Sam cause the computers to shut off?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Did not cause it at all",
+    "label_max": "Completely caused it"
+   },
+   "comprehension_question": {
+    "text": "What did Lee plug into the power strip?",
+    "options": {
+     "a": "A space heater",
+     "b": "An electric kettle",
+     "c": "A desk lamp"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Causal ratings are usually higher when the rule-breaker knew the rule, but Sam's action and Lee's contribution are identical, so the gap should be modest."
+   },
+   "originality_note": "An original office power-strip case with two contributors, not a copy of the published pen-taking or similar rule-violation vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_luck_wrongness",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Babysitter shop trip",
+   "versions": {
+    "A": {
+     "text": "Nina was babysitting a four-year-old boy who had fallen asleep upstairs. The parents were out for the evening. Nina realized she had forgotten to buy milk for his breakfast. She knew there was a small chance he might wake up and need her, but she decided to leave him alone and walk to the corner shop, ten minutes round trip. While she was gone, a loud clap of thunder rolled over the house. The boy slept through it, and Nina came back to find him still asleep. Nothing went wrong.",
+     "word_count": 90
+    },
+    "B": {
+     "text": "Nina was babysitting a four-year-old boy who had fallen asleep upstairs. The parents were out for the evening. Nina realized she had forgotten to buy milk for his breakfast. She knew there was a small chance he might wake up and need her, but she decided to leave him alone and walk to the corner shop, ten minutes round trip. While she was gone, a loud clap of thunder rolled over the house. The boy woke up, fell down the stairs, and broke his arm before Nina came back.",
+     "word_count": 89
+    }
+   },
+   "intended_difference": "The boy sleeps through the thunder and is fine (A) or wakes up and breaks his arm in a fall (B).",
+   "judgment_question": {
+    "text": "How wrong was Nina's choice to leave the boy alone and go to the shop?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "Why did Nina go to the corner shop?",
+    "options": {
+     "a": "To buy milk for the boy's breakfast",
+     "b": "To pick up the boy's parents",
+     "c": "To buy medicine for the boy"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "small",
+    "rationale": "Many readers let a bad outcome color their view of the choice even when told the risk was the same, though instructed to judge the choice itself, so I expect a modest gap."
+   },
+   "originality_note": "An original babysitter-and-thunder case, not the drunk-driving or similar standard moral-luck examples.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_inevitable_harm_2",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Bakery cream cakes",
+   "versions": {
+    "A": {
+     "text": "Dana worked the closing shift at a bakery. Her manager had told her to put the cream cakes in the fridge before leaving. Dana was tired and wanted to get home, so she left the cakes on the counter overnight. The next morning the shop sold the cakes, and eleven customers got food poisoning. The cream had been fresh when it was delivered, so if the cakes had been refrigerated, they would have been safe to eat.",
+     "word_count": 77
+    },
+    "B": {
+     "text": "Dana worked the closing shift at a bakery. Her manager had told her to put the cream cakes in the fridge before leaving. Dana was tired and wanted to get home, so she left the cakes on the counter overnight. The next morning the shop sold the cakes, and eleven customers got food poisoning. The cream had been spoiled when it was delivered, so even if the cakes had been refrigerated, they would have made people sick.",
+     "word_count": 77
+    }
+   },
+   "intended_difference": "Whether refrigerating the cakes would have prevented the food poisoning (fresh cream) or not (cream already spoiled).",
+   "judgment_question": {
+    "text": "How wrong was it of Dana to leave the cream cakes on the counter overnight?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all wrong",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "Where did Dana leave the cakes overnight?",
+    "options": {
+     "a": "In the fridge",
+     "b": "On the counter",
+     "c": "In the delivery van"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers usually rate an act as more wrong when the harm depended on it, though the identical act and knowledge keep the gap modest."
+   },
+   "originality_note": "An original food-safety case with its own setting, not a re-skin of any standard vignette.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_inevitable_harm_3",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Hotel bathtub flood",
+   "versions": {
+    "A": {
+     "text": "Jonas was staying in a hotel. He started filling the bathtub, then went down to the lobby to chat with a friend for an hour, leaving the tap running. The tub overflowed, and water soaked through the ceiling of the room below, ruining its carpet and bed. The pipes in the wall were sound, so without the running tap the room below would have stayed dry.",
+     "word_count": 66
+    },
+    "B": {
+     "text": "Jonas was staying in a hotel. He started filling the bathtub, then went down to the lobby to chat with a friend for an hour, leaving the tap running. The tub overflowed, and water soaked through the ceiling of the room below, ruining its carpet and bed. A pipe in the wall had a crack, so even without the running tap the room below would have been soaked.",
+     "word_count": 68
+    }
+   },
+   "intended_difference": "Whether the room below would have stayed dry without Jonas's running tap (sound pipes) or been soaked anyway (cracked pipe).",
+   "judgment_question": {
+    "text": "How wrong was it of Jonas to leave the bathtub tap running while he went to the lobby?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all wrong",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What did Jonas leave running while he went to the lobby?",
+    "options": {
+     "a": "The shower",
+     "b": "The bathtub tap",
+     "c": "The bathroom sink"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "When the flood was unavoidable, readers tend to soften their judgment of the tap-leaving, but Jonas's careless act stays identical so the effect is moderate."
+   },
+   "originality_note": "An original everyday household-damage case with a different harm and setting from the other pairs.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_knowledge_causation_2",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Market lane blocked",
+   "versions": {
+    "A": {
+     "text": "A town market has a rule: nobody may park a vehicle in the lane behind the stalls before ten o'clock, because the lane is narrow. Tariq, who had read this rule on the market notice board, parked his van in the lane at eight. Later that morning the ice truck, which was allowed to park there, pulled in beside it. Together the van and the truck filled the lane, so the fish seller's cart could not get through, and his fish spoiled in the sun.",
+     "word_count": 85
+    },
+    "B": {
+     "text": "A town market has a rule: nobody may park a vehicle in the lane behind the stalls before ten o'clock, because the lane is narrow. Tariq, who had never seen this rule on the market notice board and was never told about it, parked his van in the lane at eight. Later that morning the ice truck, which was allowed to park there, pulled in beside it. Together the van and the truck filled the lane, so the fish seller's cart could not get through, and his fish spoiled in the sun.",
+     "word_count": 92
+    }
+   },
+   "intended_difference": "Whether Tariq had read the parking rule (A) or had never seen or been told about it (B).",
+   "judgment_question": {
+    "text": "How much did Tariq cause the fish seller's fish to spoil?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Entirely"
+   },
+   "comprehension_question": {
+    "text": "What did the ice truck driver's parking do, according to the scenario?",
+    "options": {
+     "a": "It was against the rule",
+     "b": "It was allowed",
+     "c": "It happened before eight o'clock"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers often credit a rule-breaker who knew the rule with more causal responsibility, though the identical action limits the gap."
+   },
+   "originality_note": "An original market-parking scenario unrelated to published rule-knowledge vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_knowledge_causation_3",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Restaurant water pressure",
+   "versions": {
+    "A": {
+     "text": "A restaurant has a rule: nobody may run the dishwasher during the dinner rush, because it drops the water pressure. Marcus, who had read this rule on the kitchen wall chart, ran the dishwasher at seven o'clock. A minute later Elena opened the large tap to fill a stockpot, which was allowed. Together the dishwasher and the tap dropped the pressure so low that the steam oven shut off, and dinner service was delayed by an hour.",
+     "word_count": 77
+    },
+    "B": {
+     "text": "A restaurant has a rule: nobody may run the dishwasher during the dinner rush, because it drops the water pressure. Marcus, who had never seen this rule on the kitchen wall chart and was never told about it, ran the dishwasher at seven o'clock. A minute later Elena opened the large tap to fill a stockpot, which was allowed. Together the dishwasher and the tap dropped the pressure so low that the steam oven shut off, and dinner service was delayed by an hour.",
+     "word_count": 84
+    }
+   },
+   "intended_difference": "Whether Marcus had read the dishwasher rule (A) or had never seen or been told about it (B).",
+   "judgment_question": {
+    "text": "How much did Marcus cause the dinner service to be delayed?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Entirely"
+   },
+   "comprehension_question": {
+    "text": "What did Elena do at about seven o'clock?",
+    "options": {
+     "a": "Filled a stockpot from the large tap",
+     "b": "Turned off the steam oven",
+     "c": "Ran the dishwasher"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Knowledge of the rule tends to raise causal ratings of the person who broke it, as in prior work on norm violation and causation."
+   },
+   "originality_note": "An original kitchen scenario with a different rule, setting and harm than the other pairs.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_luck_wrongness_2",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Brush fire gust",
+   "versions": {
+    "A": {
+     "text": "Lena owned a small farm. On a dry afternoon she decided to burn a pile of cut brush near her fence, even though she knew a gust of wind could carry sparks to the dry grass next door. She judged the chance of that to be small and lit the pile. Later a gust of wind blew across the field. The sparks fell on bare dirt and went out, and Lena's neighbor never knew anything had happened. No damage was done.",
+     "word_count": 81
+    },
+    "B": {
+     "text": "Lena owned a small farm. On a dry afternoon she decided to burn a pile of cut brush near her fence, even though she knew a gust of wind could carry sparks to the dry grass next door. She judged the chance of that to be small and lit the pile. Later a gust of wind blew across the field. The sparks landed in the dry grass and set her neighbor's barn on fire. The barn burned to the ground.",
+     "word_count": 80
+    }
+   },
+   "intended_difference": "Whether the gust carried the sparks to bare dirt where they died (A) or to dry grass that burned the neighbor's barn (B).",
+   "judgment_question": {
+    "text": "How wrong was Lena's choice to burn the brush that afternoon?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all wrong",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What did Lena do on the dry afternoon?",
+    "options": {
+     "a": "She mowed the dry grass",
+     "b": "She burned a pile of cut brush",
+     "c": "She watered her fence line"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "small",
+    "rationale": "Readers usually let a bad outcome inflate wrongness ratings even with identical choice and risk, though instructed to judge the choice, so I expect a modest gap."
+   },
+   "originality_note": "An original rural brush-burning case, distinct from standard drunk-driving or negligence vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_sonnet_luck_wrongness_3",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "sonnet",
+    "model": "claude-sonnet-5-5",
+    "author_id": "anthropic/claude-sonnet-5-5",
+    "requested_alias": "sonnet",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Skipped wiring test",
+   "versions": {
+    "A": {
+     "text": "Greg was an electrician replacing an outlet in a tenant's kitchen. To get home earlier, he skipped the final safety test, even though he knew there was a small chance the wiring was faulty. He chose to leave without testing it. That night a storm caused a power surge in the building. The outlet worked normally, and the tenant never noticed anything. No damage was done.",
+     "word_count": 66
+    },
+    "B": {
+     "text": "Greg was an electrician replacing an outlet in a tenant's kitchen. To get home earlier, he skipped the final safety test, even though he knew there was a small chance the wiring was faulty. He chose to leave without testing it. That night a storm caused a power surge in the building. The outlet sparked and started a fire, and the tenant's kitchen was badly burned.",
+     "word_count": 66
+    }
+   },
+   "intended_difference": "Whether the outlet worked normally during the surge (A) or sparked and burned the kitchen (B).",
+   "judgment_question": {
+    "text": "How wrong was Greg's choice to leave without doing the safety test?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all wrong",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What did Greg skip before leaving?",
+    "options": {
+     "a": "Replacing the outlet",
+     "b": "Telling the tenant",
+     "c": "The final safety test"
+    },
+    "correct": {
+     "A": "c",
+     "B": "c"
+    }
+   },
+   "prediction": {
+    "direction": "B_higher",
+    "size": "small",
+    "rationale": "Outcome bias should make the burned kitchen look like a worse choice even though the choice, knowledge and risk are identical."
+   },
+   "originality_note": "An original tradesperson case with its own setting, not adapted from known moral luck vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_inevitable_harm",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Orchard spray and beehives",
+   "versions": {
+    "A": {
+     "text": "Dana grows apples next to a farm that keeps honeybees. One Friday afternoon she sprays her trees with a pesticide, although the wind is strong and the label warns against spraying in wind. She knows the spray might drift, but she wants the job done before the weekend. The spray drifts over the fence onto her neighbor's hives, and by evening every bee is dead from the pesticide. Later, inspectors test the hives. They find that the hives were free of disease, so if Dana had not sprayed, the bees would have lived on normally.",
+     "word_count": 95
+    },
+    "B": {
+     "text": "Dana grows apples next to a farm that keeps honeybees. One Friday afternoon she sprays her trees with a pesticide, although the wind is strong and the label warns against spraying in wind. She knows the spray might drift, but she wants the job done before the weekend. The spray drifts over the fence onto her neighbor's hives, and by evening every bee is dead from the pesticide. Later, inspectors test the hives. They find that the hives had a hidden disease, so even if Dana had not sprayed, the bees would have died of it by Sunday.",
+     "word_count": 98
+    }
+   },
+   "intended_difference": "In A the hives were healthy so the bees would have lived without Dana's spraying; in B a hidden disease would have killed the bees by Sunday anyway.",
+   "judgment_question": {
+    "text": "How much is Dana to blame for the death of her neighbor's bees?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all to blame",
+    "label_max": "Completely to blame"
+   },
+   "comprehension_question": {
+    "text": "According to the inspectors, what would have happened to the bees if Dana had not sprayed?",
+    "options": {
+     "a": "They would have lived on normally",
+     "b": "They would have died of a disease by Sunday",
+     "c": "They would have been moved to another farm"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers still see Dana's spraying as reckless and as what killed the bees, but learning the bees were doomed by Sunday anyway should lower blame for their death by around a point."
+   },
+   "originality_note": "A new case of pesticide drift with a hidden disease that would have caused the same loss, not a re-skin of the poisoned-canteen or firing-squad cases.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_knowledge_causation",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Farm side gate",
+   "versions": {
+    "A": {
+     "text": "On a small farm, the goats spend each day in a fenced yard with a side gate. The farm has a rule: the side gate must stay latched until evening, because the goats push through it whenever it is loose. Kai started working on the farm that week. Kai knew about this rule. At noon on Tuesday, Kai unlatched the side gate to wheel a cart of hay through, and then left it unlatched. A few minutes later, Rosa, another worker, rattled a bucket of feed just outside the gate, as her job requires every day at noon. The goats rushed toward the sound, pushed the gate open, and ate the vegetables in a neighbor's garden. If the gate had been latched, or if Rosa had not rattled the bucket, the goats would have stayed in the yard.",
+     "word_count": 138
+    },
+    "B": {
+     "text": "On a small farm, the goats spend each day in a fenced yard with a side gate. The farm has a rule: the side gate must stay latched until evening, because the goats push through it whenever it is loose. Kai started working on the farm that week. Kai did not know about this rule. At noon on Tuesday, Kai unlatched the side gate to wheel a cart of hay through, and then left it unlatched. A few minutes later, Rosa, another worker, rattled a bucket of feed just outside the gate, as her job requires every day at noon. The goats rushed toward the sound, pushed the gate open, and ate the vegetables in a neighbor's garden. If the gate had been latched, or if Rosa had not rattled the bucket, the goats would have stayed in the yard.",
+     "word_count": 140
+    }
+   },
+   "intended_difference": "In A Kai knew the rule that the side gate must stay latched; in B Kai did not know about the rule.",
+   "judgment_question": {
+    "text": "To what extent did Kai cause the goats to get into the neighbor's garden?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Very much"
+   },
+   "comprehension_question": {
+    "text": "Did Kai know about the farm's rule that the side gate must stay latched until evening?",
+    "options": {
+     "a": "Yes, Kai knew about the rule",
+     "b": "No, Kai did not know about the rule",
+     "c": "The story does not say"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "People single out a knowing rule-breaker as the cause more than an unknowing one when a routine co-contributor is also needed, but causal wording dampens the shift, so I expect roughly half a point to a point."
+   },
+   "originality_note": "A new farm setting with a physical gate-and-feeding mechanism and a knowledge manipulation, not the pen, computer-login or motion-detector vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_luck_wrongness",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2-2026-11-22"
+   },
+   "title": "Smoke alarm battery",
+   "versions": {
+    "A": {
+     "text": "Owen shares a flat with his friend Priya. Late one night, the hallway smoke alarm starts chirping every minute because its battery is low. There is no spare battery, the shops are shut, and Priya is asleep. To stop the noise, Owen takes the battery out, planning to buy a new one in the morning. He knows the alarm will not work until then. Later that night, a hidden fault in the building's wiring starts a fire. Because the alarm is silent, Priya wakes only when the flat is full of smoke, and she spends a week in hospital.",
+     "word_count": 99
+    },
+    "B": {
+     "text": "Owen shares a flat with his friend Priya. Late one night, the hallway smoke alarm starts chirping every minute because its battery is low. There is no spare battery, the shops are shut, and Priya is asleep. To stop the noise, Owen takes the battery out, planning to buy a new one in the morning. He knows the alarm will not work until then. Later that night, nothing goes wrong in the building. There is no fire, and Priya sleeps soundly until morning. Owen then buys a new battery and puts it in the alarm.",
+     "word_count": 95
+    }
+   },
+   "intended_difference": "In A a hidden wiring fault starts a fire that night and Priya is hospitalized; in B nothing goes wrong and no one is harmed.",
+   "judgment_question": {
+    "text": "How wrong was Owen's choice to take the battery out of the smoke alarm?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "According to the story, what happened later that night?",
+    "options": {
+     "a": "Nothing went wrong and there was no fire",
+     "b": "A hidden wiring fault started a fire",
+     "c": "A burglar broke into the flat"
+    },
+    "correct": {
+     "A": "b",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Wrongness judgments are less outcome-driven than blame, but a serious injury to a flatmate should still make the same understandable choice look noticeably more wrong, by roughly one point."
+   },
+   "originality_note": "An everyday smoke-alarm battery choice in a shared flat, not Nagel's drunk drivers or published negligent-driving or poisoning moral-luck vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_inevitable_harm_2",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Cafe fridge unplugged overnight",
+   "versions": {
+    "A": {
+     "text": "Leo closes a small café at 10 p.m. each night. One night his electric scooter's battery is almost flat, so he unplugs the café's fridge, plugs his scooter charger into its socket, and walks home, leaving the scooter to charge. He knows the café's rule that the fridge must never be unplugged, but he assumes the food will stay cold enough until he plugs the fridge back in at 7 a.m. It does not. By morning the fridge is warm, and the café has to throw away $900 worth of milk, cream and cakes. Later, the owner checks with the power company. It reports that the street had normal power from 10 p.m. until 8 a.m., so if Leo had left the fridge plugged in, the food would have stayed cold.",
+     "word_count": 131
+    },
+    "B": {
+     "text": "Leo closes a small café at 10 p.m. each night. One night his electric scooter's battery is almost flat, so he unplugs the café's fridge, plugs his scooter charger into its socket, and walks home, leaving the scooter to charge. He knows the café's rule that the fridge must never be unplugged, but he assumes the food will stay cold enough until he plugs the fridge back in at 7 a.m. It does not. By morning the fridge is warm, and the café has to throw away $900 worth of milk, cream and cakes. Later, the owner checks with the power company. It reports that a fault cut the street's power from 10 p.m. until 8 a.m., so even if Leo had left the fridge plugged in, the food would have spoiled.",
+     "word_count": 132
+    }
+   },
+   "intended_difference": "In A the street had normal power all night, so the food would have stayed cold had Leo not unplugged the fridge; in B a power cut over the same hours means the food would have spoiled anyway.",
+   "judgment_question": {
+    "text": "How much of the $900 cost of the thrown-away food should Leo have to pay?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "None of it",
+    "label_max": "All of it"
+   },
+   "comprehension_question": {
+    "text": "According to the power company, what was the street's power like that night?",
+    "options": {
+     "a": "Normal from 10 p.m. until 8 a.m.",
+     "b": "Cut by a fault from 10 p.m. until 8 a.m.",
+     "c": "Cut by a fault for ten minutes around midnight"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "large",
+    "rationale": "Whether someone should pay for a loss tracks closely whether the loss would have happened without them, so readers told the power cut would have spoiled the food anyway should cut Leo's share sharply, while still charging him something for breaking the rule."
+   },
+   "originality_note": "An invented workplace case about an unplugged fridge and an unknown street power cut, not based on any published vignette.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_inevitable_harm_3",
+   "pair_type": "authored",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Shopping stop on the way to the airport",
+   "versions": {
+    "A": {
+     "text": "Petra offers to drive her brother Sam to the airport for a noon flight to their grandmother's 90th birthday party in another country. On the way, she insists on stopping at a shopping mall to buy a dress, although Sam warns her it could make him miss the flight. She knows he is right, but she wants the dress before the sale ends. She shops for an hour. They reach the airport after the gate has closed, and Sam misses the flight. There is no other flight until the next day, so he misses the party. That evening, Sam checks the airline's website. It shows that the flight took off on time and landed as planned, so if Petra had not stopped, Sam would have reached the party.",
+     "word_count": 128
+    },
+    "B": {
+     "text": "Petra offers to drive her brother Sam to the airport for a noon flight to their grandmother's 90th birthday party in another country. On the way, she insists on stopping at a shopping mall to buy a dress, although Sam warns her it could make him miss the flight. She knows he is right, but she wants the dress before the sale ends. She shops for an hour. They reach the airport after the gate has closed, and Sam misses the flight. There is no other flight until the next day, so he misses the party. That evening, Sam checks the airline's website. It shows that an engine fault grounded the flight until the next day, so even if Petra had not stopped, Sam would have missed the party.",
+     "word_count": 129
+    }
+   },
+   "intended_difference": "In A the flight left and arrived as planned, so Sam would have reached the party without Petra's stop; in B an engine fault grounded the flight, so he would have missed the party anyway.",
+   "judgment_question": {
+    "text": "How much is Petra to blame for Sam missing his grandmother's birthday party?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all to blame",
+    "label_max": "Completely to blame"
+   },
+   "comprehension_question": {
+    "text": "What does the airline's website show about Sam's noon flight?",
+    "options": {
+     "a": "It took off on time and landed as planned",
+     "b": "An engine fault grounded it until the next day",
+     "c": "It took off two hours late"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "large",
+    "rationale": "Petra's selfish choice is the same in both versions, but the harm asked about is missing the party, and readers who learn it would have been missed anyway should give her much less blame for that particular loss."
+   },
+   "originality_note": "An original everyday family case about a missed flight and a missed party; it does not reuse any known missed-flight or regret vignette, which concern timing rather than whether the loss would have happened anyway.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_knowledge_causation_2",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Museum blinds and gallery heating",
+   "versions": {
+    "A": {
+     "text": "In an art museum, the blinds in Gallery 4 must stay down every afternoon. This is a museum rule, because when afternoon sun falls on the gallery's oldest painting while the heating is on, its paint dries out and cracks. Ben was a guard in his first week at the museum. Ben knew about this rule. At 1:30 one afternoon, Ben raised the blinds in Gallery 4 to read a newspaper by daylight, and left them up. At 2:00, Ines, the building engineer, switched on the gallery heating, as her job requires every afternoon at that time. The sun and the heat together dried out the old painting, and its paint cracked in several places. Repairs will cost $20,000. If the blinds had been down, or if the heating had not been on, the painting would not have cracked.",
+     "word_count": 139
+    },
+    "B": {
+     "text": "In an art museum, the blinds in Gallery 4 must stay down every afternoon. This is a museum rule, because when afternoon sun falls on the gallery's oldest painting while the heating is on, its paint dries out and cracks. Ben was a guard in his first week at the museum. Ben did not know about this rule. At 1:30 one afternoon, Ben raised the blinds in Gallery 4 to read a newspaper by daylight, and left them up. At 2:00, Ines, the building engineer, switched on the gallery heating, as her job requires every afternoon at that time. The sun and the heat together dried out the old painting, and its paint cracked in several places. Repairs will cost $20,000. If the blinds had been down, or if the heating had not been on, the painting would not have cracked.",
+     "word_count": 141
+    }
+   },
+   "intended_difference": "In A Ben knew about the rule that the blinds must stay down; in B he did not know about it.",
+   "judgment_question": {
+    "text": "To what extent did Ben cause the painting to crack?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Very much"
+   },
+   "comprehension_question": {
+    "text": "Did Ben know about the museum's rule on the Gallery 4 blinds?",
+    "options": {
+     "a": "Yes, he knew about it",
+     "b": "No, he did not know about it",
+     "c": "The story does not say"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers usually pick out a knowing rule-breaker as more of a cause than an unknowing one even when the physical contribution is the same, but some readers will hold that knowledge does not change what physically happened, which should keep the gap modest."
+   },
+   "originality_note": "An invented museum case in which sunlight and scheduled heating together damage a painting; it is not a re-skin of the pen, computer-crash or other published joint-cause vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_knowledge_causation_3",
+   "pair_type": "authored",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Grapefruit juice on a hospital ward",
+   "versions": {
+    "A": {
+     "text": "On a hospital ward, patients who take the heart medicine Cardolin must never be served grapefruit juice. This is a ward rule, because Cardolin taken with grapefruit juice makes people dizzy. Nadia was a kitchen assistant in her first week on the ward. Nadia knew about this rule. At 8:30 one morning, Nadia served grapefruit juice with breakfast to Mr. Hale, a patient who takes Cardolin, because the orange juice had run out. At 9:00, Nurse Okafor gave Mr. Hale his Cardolin, as his doctor's orders require every morning at that time. Soon afterwards, Mr. Hale became dizzy, fell while walking to the bathroom, and broke his hip. If he had not had the grapefruit juice, or if he had not had the Cardolin, he would not have become dizzy.",
+     "word_count": 130
+    },
+    "B": {
+     "text": "On a hospital ward, patients who take the heart medicine Cardolin must never be served grapefruit juice. This is a ward rule, because Cardolin taken with grapefruit juice makes people dizzy. Nadia was a kitchen assistant in her first week on the ward. Nadia did not know about this rule. At 8:30 one morning, Nadia served grapefruit juice with breakfast to Mr. Hale, a patient who takes Cardolin, because the orange juice had run out. At 9:00, Nurse Okafor gave Mr. Hale his Cardolin, as his doctor's orders require every morning at that time. Soon afterwards, Mr. Hale became dizzy, fell while walking to the bathroom, and broke his hip. If he had not had the grapefruit juice, or if he had not had the Cardolin, he would not have become dizzy.",
+     "word_count": 132
+    }
+   },
+   "intended_difference": "In A Nadia knew about the rule against serving grapefruit juice to Cardolin patients; in B she did not know about it.",
+   "judgment_question": {
+    "text": "To what extent did Nadia cause Mr. Hale's fall?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Very much"
+   },
+   "comprehension_question": {
+    "text": "Did Nadia know about the ward's rule on grapefruit juice?",
+    "options": {
+     "a": "Yes, she knew about it",
+     "b": "No, she did not know about it",
+     "c": "The story does not say"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "A worker who knowingly serves the forbidden drink should be seen as more of a cause of the fall than one who acted in innocent ignorance, but because the drink plays the same physical role in both versions, many readers will rate her as a real cause either way."
+   },
+   "originality_note": "An original hospital case in which a forbidden drink and a routine medicine dose together cause a fall; it does not adapt any published causal-judgment vignette.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_luck_wrongness_2",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Wading a flooded stream",
+   "versions": {
+    "A": {
+     "text": "Hugo is a hiking guide leading six adults on a paid mountain walk. Late in the afternoon, they reach a stream swollen by heavy rain. The nearest bridge is ninety minutes' walk upstream. Hugo's company advises guides not to wade across streams this high, and Hugo knows that logs carried by fast water can knock people over. But the group is tired and he wants to finish before dark, so he has the group link arms and leads them across on foot. While they cross, a log carried down by the current strikes one hiker, Mei. She is swept against the rocks and breaks her leg.",
+     "word_count": 106
+    },
+    "B": {
+     "text": "Hugo is a hiking guide leading six adults on a paid mountain walk. Late in the afternoon, they reach a stream swollen by heavy rain. The nearest bridge is ninety minutes' walk upstream. Hugo's company advises guides not to wade across streams this high, and Hugo knows that logs carried by fast water can knock people over. But the group is tired and he wants to finish before dark, so he has the group link arms and leads them across on foot. While they cross, no log comes down the current. Everyone reaches the far bank safely, and nobody is hurt in any way.",
+     "word_count": 104
+    }
+   },
+   "intended_difference": "In A a log happens to come down the current and breaks a hiker's leg; in B no log comes down and nobody is hurt.",
+   "judgment_question": {
+    "text": "How wrong was Hugo's choice to lead the group across the stream on foot?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What happened while the group was crossing the stream?",
+    "options": {
+     "a": "A log struck a hiker, and she broke her leg",
+     "b": "Everyone crossed safely and nobody was hurt",
+     "c": "Hugo slipped and lost the group's map"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Readers tend to let a bad outcome color how risky and wrong a choice looks, so the injury version should be rated more wrong, but questions about the wrongness of the choice itself respond less to outcome than blame does."
+   },
+   "originality_note": "An invented outdoor case about a guide wading a flooded stream, unlike the drunk-driving and other standard moral-luck vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "r2_opus_luck_wrongness_3",
+   "pair_type": "authored",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "llm",
+    "vendor": "anthropic",
+    "tier": "opus",
+    "model": "claude-opus-5-5",
+    "author_id": "anthropic/claude-opus-5-5",
+    "requested_alias": "opus",
+    "tool_calls": [
+     "Read",
+     "Write"
+    ],
+    "authoring_run": "round2b-2026-11-22"
+   },
+   "title": "Client file over cafe Wi-Fi",
+   "versions": {
+    "A": {
+     "text": "Farah is an accountant. While waiting at an airport café, she gets an urgent request from a client, Mr. Ortiz, for a copy of his tax file, which includes his bank details and ID number. Her firm's rules say client files must be sent only over a secure connection, because thieves sometimes spy on public Wi-Fi. Farah knows this, but her secure connection is not working, and she does not want to keep Mr. Ortiz waiting until her flight lands, so she sends the file over the café's free Wi-Fi. As it happens, a thief in the café is spying on that network. He copies the file and takes out $8,000 of loans in Mr. Ortiz's name, which take months to sort out.",
+     "word_count": 123
+    },
+    "B": {
+     "text": "Farah is an accountant. While waiting at an airport café, she gets an urgent request from a client, Mr. Ortiz, for a copy of his tax file, which includes his bank details and ID number. Her firm's rules say client files must be sent only over a secure connection, because thieves sometimes spy on public Wi-Fi. Farah knows this, but her secure connection is not working, and she does not want to keep Mr. Ortiz waiting until her flight lands, so she sends the file over the café's free Wi-Fi. As it happens, nobody in the café is spying on that network. The file reaches Mr. Ortiz safely, no one else ever sees his details, and nothing bad comes of it.",
+     "word_count": 121
+    }
+   },
+   "intended_difference": "In A a thief who happens to be on the café network steals the file and misuses the client's details; in B nobody is spying and the file arrives safely.",
+   "judgment_question": {
+    "text": "How wrong was Farah's choice to send the file over the café's free Wi-Fi?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What happened after Farah sent the file?",
+    "options": {
+     "a": "A thief in the café copied it and took out loans in Mr. Ortiz's name",
+     "b": "It reached Mr. Ortiz safely and nobody else saw it",
+     "c": "It never arrived, so she sent it again after landing"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "The stolen-identity outcome should make the same rule-breaking choice look more reckless and wrong, but the choice already looks somewhat wrong when nothing happens, so the gap should be moderate rather than large."
+   },
+   "originality_note": "An original case about a data-security risk and financial harm, with no counterpart among famous thought experiments or published moral-luck vignettes.",
+   "format_problems": []
+  },
+  {
+   "pair_id": "cc_inevitable_harm",
+   "pair_type": "control_classic",
+   "factor_id": "inevitable_harm",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The bike lanes",
+   "versions": {
+    "A": {
+     "text": "Maya, an Architect, faces a moral dilemma. Maya has the opportunity to implement a new bike lane system throughout the city. The new bike lane system encourages residents to cycle more. As a side effect of encouraging residents to cycle more, the implementation of the bike lanes increases the prices for parking cars in the city. If Maya does not implement the bike lane system, the increase in parking prices would not happen. Maya implements the new bike lane system.",
+     "word_count": 80
+    },
+    "B": {
+     "text": "Maya, an Architect, faces a moral dilemma. Maya has the opportunity to implement a new bike lane system throughout the city. The new bike lane system encourages residents to cycle more. As a side effect of encouraging residents to cycle more, the implementation of the bike lanes increases the prices for parking cars in the city. If Maya does not implement the bike lane system, the increase in parking prices would still happen because of a new city ordinance for greener transportation. Maya implements the new bike lane system.",
+     "word_count": 89
+    }
+   },
+   "intended_difference": "Whether the rise in parking prices would happen without Maya's bike lanes: not (A) or anyway, because of a city ordinance (B).",
+   "judgment_question": {
+    "text": "How much did Maya intend the increase in parking prices?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Completely"
+   },
+   "comprehension_question": {
+    "text": "What do the bike lanes do to the price of parking in the city?",
+    "options": {
+     "a": "They raise it",
+     "b": "They lower it",
+     "c": "They leave it unchanged"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Human reference: in OffTheRails Experiment 2 people agreed more that the agent intended the harm when it was avoidable; for this exact pair of texts the gap was +0.71 on a 1-5 scale (about +1.1 on 1-7)."
+   },
+   "reference": {
+    "source": "Fränken, Gandhi et al. (2024), OffTheRails, Experiment 2: public data at github.com/cicl-stanford/moral-evals (MIT licence), scenario 0. The texts are the study's own (side-effect structure, the agent acts), with its two evitability sentences.",
+    "human_result": "Statement 'Maya intended for the negative outcome to occur', 1 = strongly disagree to 5 = strongly agree. This version pair: 2.67 (avoidable, n = 21) against 1.96 (unavoidable, n = 25), gap +0.71 (standard error 0.33). Scenario 0 pooled over its other two features: +0.48, 95% interval +0.23 to +0.73. Across all ten scenarios: +0.34.",
+    "checked": "Computed by this project from the study's public long-format data, 22 November 2026.",
+    "caveat": "The human scale was 1-5 agreement with a statement; here it is a 1-7 question, so only the direction and a rough size carry over."
+   },
+   "format_problems": []
+  },
+  {
+   "pair_id": "cc_knowledge_causation",
+   "pair_type": "control_classic",
+   "factor_id": "knowledge_causation",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The pencil box",
+   "versions": {
+    "A": {
+     "text": "A bear and a hedgehog are shown a box full of coloured pencils. There is a new rule: bears may take pencils, but hedgehogs may not. The hedgehog was there when the rule was announced, so it knows about the rule. The two animals take turns taking pencils out of the box. In the end, the bear and the hedgehog reach into the box at the same moment and each take a pencil. Soon afterwards a polar bear comes to the box looking for a pencil to do its homework, but the box is empty. The polar bear cannot finish its homework.",
+     "word_count": 102
+    },
+    "B": {
+     "text": "A bear and a hedgehog are shown a box full of coloured pencils. There is a new rule: bears may take pencils, but hedgehogs may not. The hedgehog was away when the rule was announced, so it does not know about the rule. The two animals take turns taking pencils out of the box. In the end, the bear and the hedgehog reach into the box at the same moment and each take a pencil. Soon afterwards a polar bear comes to the box looking for a pencil to do its homework, but the box is empty. The polar bear cannot finish its homework.",
+     "word_count": 104
+    }
+   },
+   "intended_difference": "Whether the hedgehog, who breaks the rule, knew about the rule (A) or had missed its announcement and did not know (B).",
+   "judgment_question": {
+    "text": "How much did the hedgehog cause the polar bear's problem?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not at all",
+    "label_max": "Completely"
+   },
+   "comprehension_question": {
+    "text": "Under the new rule, who may take pencils from the box?",
+    "options": {
+     "a": "Only bears",
+     "b": "Only hedgehogs",
+     "c": "Any animal"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Human reference: in MoCa, 88% of people said the hedgehog caused the problem when it knew the rule, against 44% when it did not."
+   },
+   "reference": {
+    "source": "MoCa (Nie et al. 2023), causal dataset, stories 139 and 141 (github.com/cicl-stanford/moca; the repository has no licence file, so the texts here are this project's own paraphrase). MoCa does not record the story's origin; in this project's recognition check, models attributed it to Samland, Josephs, Waldmann & Rakoczy (2016). That attribution has not been checked against the paper.",
+    "human_result": "Yes/no question 'Did the hedgehog cause the problem?', 25 people per story: 88% yes when the hedgehog knew the rule (story 139, which simply states the rule), 44% yes when it was absent when the rule was announced and did not know (story 141). Gap +0.44 in the share answering yes (standard error 0.12).",
+    "checked": "Read from MoCa's public data, 22 November 2026.",
+    "caveat": "Story 139 does not say outright that the hedgehog knew the rule; this paraphrase does. The human measure is a yes/no share, so only the direction carries over to a 1-7 scale."
+   },
+   "format_problems": []
+  },
+  {
+   "pair_id": "cc_luck_wrongness",
+   "pair_type": "control_classic",
+   "factor_id": "luck_wrongness",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The bath",
+   "versions": {
+    "A": {
+     "text": "Anna is giving her two-year-old son a bath, and the tub is full of water. The phone rings in the hallway, and Anna knows it is a friend who wants to chat. She leaves her son sitting beside the full tub and goes out to the hallway, where she talks for five minutes. While she is away, her son climbs into the tub, slips under the water and drowns.",
+     "word_count": 69
+    },
+    "B": {
+     "text": "Anna is giving her two-year-old son a bath, and the tub is full of water. The phone rings in the hallway, and Anna knows it is a friend who wants to chat. She leaves her son sitting beside the full tub and goes out to the hallway, where she talks for five minutes. While she is away, her son plays with a toy on the bathroom floor, and when she comes back he is fine.",
+     "word_count": 75
+    }
+   },
+   "intended_difference": "The same five-minute absence ends with the child drowning (A) or unharmed (B).",
+   "judgment_question": {
+    "text": "How wrong was it of Anna to leave her son alone beside the full tub?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "Not wrong at all",
+    "label_max": "Extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "What happened while Anna was away?",
+    "options": {
+     "a": "Her son drowned in the tub",
+     "b": "Her son played on the floor and was fine",
+     "c": "Her son fell asleep"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Human reference: in Kneer & Machery's bath study, judgments of wrongness were 6.00 when the child drowned against 5.17 when nothing happened, on a 7-point scale."
+   },
+   "reference": {
+    "source": "Kneer & Machery (2019), 'No luck for moral luck', Cognition 182: 331-348, Study 3 (a parent leaves a two-year-old beside a filled bath for five minutes; the child drowns or is fine). Read at source from a copy supplied by the project owner (the reading notes are kept outside this public repository). The text here is this project's own paraphrase.",
+    "human_result": "Wrongness, 7-point scale, between subjects: 6.00 (SD 1.52) when the child drowned against 5.17 (SD 1.66) when it was fine; d = 0.52. Punishment moved more: 4.60 against 3.15.",
+    "checked": "Read at source, 18 November 2026.",
+    "caveat": "The study's own wording and scale labels were not copied; the phone call to a friend is this paraphrase's invention, added to make the five minutes concrete."
+   },
+   "format_problems": []
+  },
+  {
+   "pair_id": "cc_doing_allowing",
+   "pair_type": "control_classic",
+   "factor_id": "doing_allowing",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The house dressing",
+   "versions": {
+    "A": {
+     "text": "Dan, the best player at his tennis club, has reached the final of a tournament against a much stronger visiting player. Dan knows that his opponent is allergic to cayenne pepper and that the club restaurant's house dressing contains cayenne. The night before the match, the two have dinner at the club. Dan hopes his opponent will eat the house dressing, get a stomach ache, and play badly. His opponent is about to order the Italian dressing when Dan recommends the house dressing instead, and his opponent orders it. His opponent eats the salad, gets a stomach ache that night, and loses the final to Dan the next day.",
+     "word_count": 109
+    },
+    "B": {
+     "text": "Dan, the best player at his tennis club, has reached the final of a tournament against a much stronger visiting player. Dan knows that his opponent is allergic to cayenne pepper and that the club restaurant's house dressing contains cayenne. The night before the match, the two have dinner at the club. Dan hopes his opponent will eat the house dressing, get a stomach ache, and play badly. Before Dan has said anything about the menu, his opponent orders the house dressing on his own, and Dan says nothing. His opponent eats the salad, gets a stomach ache that night, and loses the final to Dan the next day.",
+     "word_count": 109
+    }
+   },
+   "intended_difference": "Dan recommends the harmful dressing (A) versus stays silent when the opponent orders it himself (B).",
+   "judgment_question": {
+    "text": "How morally wrong was Dan's behavior at the dinner?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "not wrong at all",
+    "label_max": "extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "How did the opponent come to order the house dressing?",
+    "options": {
+     "a": "Dan recommended it",
+     "b": "He chose it on his own",
+     "c": "The waiter brought it by mistake"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "small",
+    "rationale": "Human reference: between 30% and 65% of people judged the commission worse than the matching omission when shown both; almost none the reverse."
+   },
+   "reference": {
+    "source": "Spranca, Minsk & Baron (1991), ‘Omission and commission in judgment and choice’, Journal of Experimental Social Psychology 27: 76–105, Experiments 1 and 2, the tennis case.",
+    "human_result": "Experiment 1: 57 students rated John's morality from 0 to −100 for six endings shown side by side. 37 of 57 (65%) rated each omission as less bad than either matching commission and one did the reverse; among those who drew a distinction the mean gap was 27.6 points of 100. Experiment 2 showed two endings close to this control's wording and asked whether they were equally immoral: 10 of 33 said the commission was more immoral and none said the omission was.",
+    "adaptation": "Names, stakes and wording changed. Version A follows Experiment 1's third ending (the opponent is about to order Italian dressing when the recommendation comes); version B follows Experiment 2's omission ending (the opponent orders the house dressing first and nothing is said). The original showed the endings side by side on purpose: the authors expected separate readers to ‘infer stronger intention’ in the commission version. Here each reader sees one version, on a 1-7 wrongness scale.",
+    "verification": {
+     "status": "verified",
+     "checked_on": "2026-11-15",
+     "detail": "Experiments 1 and 2 read from a copy of the paper supplied by the project owner. Corrected twice: the first text (‘a sizeable minority rate the commission as worse’) fits Experiment 2 only, and the search-relayed 65% is Experiment 1; both are now given. The meta-analysis cited earlier (Yeung, Yay & Feldman 2022) was never opened and has been dropped."
+    }
+   },
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "cc_norm_causation",
+   "pair_type": "control_classic",
+   "factor_id": "norm_causation",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The pens on the desk",
+   "versions": {
+    "A": {
+     "text": "The receptionist in a university philosophy department keeps a supply of pens on her desk. Administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The receptionist has repeatedly sent emails reminding everyone of this rule. On Monday morning, an administrative assistant and Professor Smith both walk past the receptionist's desk, and each of them takes a pen. Later that day, the receptionist needs to write down an important message, but there are no pens left on her desk.",
+     "word_count": 86
+    },
+    "B": {
+     "text": "The receptionist in a university philosophy department keeps a supply of pens on her desk. Administrative assistants and faculty members are both allowed to take the pens. The receptionist has repeatedly sent emails reminding everyone of this rule. On Monday morning, an administrative assistant and Professor Smith both walk past the receptionist's desk, and each of them takes a pen. Later that day, the receptionist needs to write down an important message, but there are no pens left on her desk.",
+     "word_count": 81
+    }
+   },
+   "intended_difference": "Professor Smith breaks the pen rule (A) versus is allowed to take pens (B); what he does is the same.",
+   "judgment_question": {
+    "text": "How much do you agree with this statement: Professor Smith caused the problem.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "strongly disagree",
+    "label_max": "strongly agree"
+   },
+   "comprehension_question": {
+    "text": "According to the department's rule, who may take pens from the receptionist's desk?",
+    "options": {
+     "a": "Administrative assistants only",
+     "b": "Both administrative assistants and faculty members",
+     "c": "Nobody"
+    },
+    "correct": {
+     "A": "a",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "A_higher",
+    "size": "large",
+    "rationale": "Human reference: a rule-breaking agent is rated more of a cause than a permitted agent in the same story; extended here to one agent across two versions."
+   },
+   "reference": {
+    "source": "Knobe & Fraser (2008), ‘Causal judgment and moral judgment: Two experiments’, in Sinnott-Armstrong (ed.), Moral Psychology, vol. 2 (MIT Press); results as reported in Hitchcock & Knobe (2009), ‘Cause and Norm’, Journal of Philosophy 106(11): 587–612.",
+    "human_result": "Each participant rated one of two statements about the same story on a 1-7 agreement scale. ‘Professor Smith caused the problem’ averaged 5.2; ‘The administrative assistant caused the problem’ averaged 2.8 (p < .001). In a second story reported by Hitchcock & Knobe, a rule-breaking doctor's decision was rated more of a cause than a pharmacist's permitted one (3.9 against 2.5; 3,422 participants).",
+    "adaptation": "The original compares two agents inside one story. Here the professor's permission is varied between versions and only he is asked about, so no human data exist for the version in which he may take pens. The human result supports the expected direction by extension only.",
+    "verification": {
+     "status": "partly verified",
+     "checked_on": "2026-11-15",
+     "detail": "Hitchcock & Knobe read in full (PhilSci Archive preprint); it reproduces the story and reports Knobe & Fraser's numbers. The original chapter is not openly available. Corrected: the earlier text cited Hitchcock & Knobe and Icard, Kominsky & Knobe (2017) for varying norm status across conditions. Hitchcock & Knobe do not do that and Icard et al. could not be opened, so the claim and the citation are removed."
+    }
+   },
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "nc_weekday",
+   "pair_type": "control_null",
+   "factor_id": "null",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The borrowed laptop",
+   "versions": {
+    "A": {
+     "text": "On Tuesday afternoon Priya's laptop crashed an hour before a job-application deadline. Her roommate was out, so Priya borrowed her roommate's laptop without asking and finished the application at the kitchen table. While typing she knocked over a glass of water, and the laptop stopped working. That evening Priya told her roommate what had happened and offered to pay half of the repair bill.",
+     "word_count": 64
+    },
+    "B": {
+     "text": "On Thursday afternoon Priya's laptop crashed an hour before a job-application deadline. Her roommate was out, so Priya borrowed her roommate's laptop without asking and finished the application at the kitchen table. While typing she knocked over a glass of water, and the laptop stopped working. That evening Priya told her roommate what had happened and offered to pay half of the repair bill.",
+     "word_count": 64
+    }
+   },
+   "intended_difference": "Tuesday (A) versus Thursday (B). This should not matter.",
+   "judgment_question": {
+    "text": "How much blame does Priya deserve for the damage to the laptop?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "no blame at all",
+    "label_max": "a great deal of blame"
+   },
+   "comprehension_question": {
+    "text": "Whose laptop was damaged?",
+    "options": {
+     "a": "Priya's own",
+     "b": "Her roommate's",
+     "c": "A library's"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "none",
+    "size": "none",
+    "rationale": "Null control: the day of the week is irrelevant to blame."
+   },
+   "null_detail": "day of the week (one word)",
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "nc_color",
+   "pair_type": "control_null",
+   "factor_id": "null",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The loading zone",
+   "versions": {
+    "A": {
+     "text": "Marcus drives a white delivery van. Running late, he parked the white van in a marked loading zone outside a bakery and left it there for twenty minutes while he carried a heavy order up four flights of stairs to an elderly customer who could not come down. Meanwhile the bakery's flour supplier arrived, found the loading zone blocked, and had to circle the block until Marcus came back.",
+     "word_count": 69
+    },
+    "B": {
+     "text": "Marcus drives a grey delivery van. Running late, he parked the grey van in a marked loading zone outside a bakery and left it there for twenty minutes while he carried a heavy order up four flights of stairs to an elderly customer who could not come down. Meanwhile the bakery's flour supplier arrived, found the loading zone blocked, and had to circle the block until Marcus came back.",
+     "word_count": 69
+    }
+   },
+   "intended_difference": "White van (A) versus grey van (B). This should not matter.",
+   "judgment_question": {
+    "text": "How morally wrong was it for Marcus to park in the loading zone?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "not wrong at all",
+    "label_max": "extremely wrong"
+   },
+   "comprehension_question": {
+    "text": "Why did Marcus leave the van for twenty minutes?",
+    "options": {
+     "a": "To carry an order upstairs to a customer",
+     "b": "To eat lunch",
+     "c": "To buy bread at the bakery"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "none",
+    "size": "none",
+    "rationale": "Null control: the colour of the van is irrelevant to wrongness."
+   },
+   "null_detail": "colour of the van (two mentions)",
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "nc_name",
+   "pair_type": "control_null",
+   "factor_id": "null",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The 7:42 train",
+   "versions": {
+    "A": {
+     "text": "Hannah takes the same commuter train every weekday. Two weeks ago she read on the station's timetable poster that it leaves at 7:42, and she has caught it at 7:42 every weekday since. This morning a tourist on the platform asks when the next train leaves. Without looking at the departure board, Hannah answers, “At 7:42.” The train leaves at 7:42.",
+     "word_count": 61
+    },
+    "B": {
+     "text": "Laura takes the same commuter train every weekday. Two weeks ago she read on the station's timetable poster that it leaves at 7:42, and she has caught it at 7:42 every weekday since. This morning a tourist on the platform asks when the next train leaves. Without looking at the departure board, Laura answers, “At 7:42.” The train leaves at 7:42.",
+     "word_count": 61
+    }
+   },
+   "intended_difference": "The commuter is called Hannah (A) versus Laura (B). This should not matter.",
+   "judgment_question": {
+    "text": "How much do you agree with this statement: When she answered the tourist, the commuter knew that the next train would leave at 7:42.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "strongly disagree",
+    "label_max": "strongly agree"
+   },
+   "comprehension_question": {
+    "text": "Where did the commuter originally get the departure time?",
+    "options": {
+     "a": "From the station's timetable poster",
+     "b": "From the departure board this morning",
+     "c": "From a phone app"
+    },
+    "correct": {
+     "A": "a",
+     "B": "a"
+    }
+   },
+   "prediction": {
+    "direction": "none",
+    "size": "none",
+    "rationale": "Null control: the commuter's first name is irrelevant to whether she knows."
+   },
+   "null_detail": "first name of the protagonist (two mentions)",
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "nc_weather",
+   "pair_type": "control_null",
+   "factor_id": "null",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The lifeguard's phone call",
+   "versions": {
+    "A": {
+     "text": "A lifeguard at an indoor public swimming pool left his chair for four minutes to take a personal phone call, which the pool's rules forbid. Outside, it had been raining since early morning. The pool was nearly empty at the time. While he was away, a nine-year-old swimmer got a cramp in the deep end and began to struggle. Another swimmer noticed and pulled the child to the side. The child coughed up some water but was unharmed.",
+     "word_count": 78
+    },
+    "B": {
+     "text": "A lifeguard at an indoor public swimming pool left his chair for four minutes to take a personal phone call, which the pool's rules forbid. Outside, it had been sunny since early morning. The pool was nearly empty at the time. While he was away, a nine-year-old swimmer got a cramp in the deep end and began to struggle. Another swimmer noticed and pulled the child to the side. The child coughed up some water but was unharmed.",
+     "word_count": 78
+    }
+   },
+   "intended_difference": "Raining outside (A) versus sunny outside (B), at an indoor pool. This should not matter.",
+   "judgment_question": {
+    "text": "How much blame does the lifeguard deserve for leaving his chair?",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "no blame at all",
+    "label_max": "a great deal of blame"
+   },
+   "comprehension_question": {
+    "text": "Who pulled the child to the side of the pool?",
+    "options": {
+     "a": "The lifeguard",
+     "b": "Another swimmer",
+     "c": "The child's parent"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "none",
+    "size": "none",
+    "rationale": "Null control: the weather outside an indoor pool is irrelevant to blame."
+   },
+   "null_detail": "weather outside an indoor pool (one sentence)",
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  },
+  {
+   "pair_id": "nc_paraphrase",
+   "pair_type": "control_null",
+   "factor_id": "null",
+   "author": {
+    "type": "researcher",
+    "vendor": "anthropic",
+    "author_id": "pilot-builder",
+    "note": "Control pairs written by the pilot's builder, an AI system; not an evaluated author."
+   },
+   "title": "The tripped circuit",
+   "versions": {
+    "A": {
+     "text": "Jo and Sam share a flat with old wiring: the circuit trips if more than 3,000 watts are drawn at once. One evening, Jo switched on a 2,000-watt kettle in the kitchen at the same moment that Sam switched on a 2,000-watt hair dryer in the bathroom. Neither knew what the other was doing. The circuit tripped, the power went out, and by morning the food in the freezer had spoiled.",
+     "word_count": 71
+    },
+    "B": {
+     "text": "Jo and Sam share a flat with old wiring: the circuit trips if more than 3,000 watts are drawn at once. One evening, Jo turned on a 2,000-watt kettle in the kitchen at exactly the moment Sam turned on a 2,000-watt hair dryer in the bathroom. Each was unaware of what the other was doing. The circuit tripped, the power went out, and by morning the food in the freezer had spoiled.",
+     "word_count": 72
+    }
+   },
+   "intended_difference": "Two sentences are reworded with the same meaning (‘switched on … at the same moment that’ / ‘turned on … at exactly the moment’; ‘Neither knew’ / ‘Each was unaware’). This should not matter.",
+   "judgment_question": {
+    "text": "How much do you agree with this statement: Jo caused the power outage.",
+    "scale_min": 1,
+    "scale_max": 7,
+    "label_min": "strongly disagree",
+    "label_max": "strongly agree"
+   },
+   "comprehension_question": {
+    "text": "How many watts can the circuit carry before it trips?",
+    "options": {
+     "a": "2,000",
+     "b": "3,000",
+     "c": "4,000"
+    },
+    "correct": {
+     "A": "b",
+     "B": "b"
+    }
+   },
+   "prediction": {
+    "direction": "none",
+    "size": "none",
+    "rationale": "Null control: a meaning-preserving rewording is irrelevant to causal judgment."
+   },
+   "null_detail": "two sentences reworded with the same content",
+   "format_problems": [],
+   "reused_from": "pilot-2026-11-14"
+  }
+ ],
+ "audit_calibration_pairs": [],
+ "note": "Round 2b: each round-2 author wrote two more pairs per new factor, so that an author's score on a factor rests on three pairs. The round-2 pairs on the new factors, all ten controls and the new pairs are judged together in one run; the reused pilot pairs on doing vs. allowing and norm violation are left out."
+}
