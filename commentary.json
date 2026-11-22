@@ -32,6 +32,10 @@
     "**Which panel to believe on those two pairs is open.** On public human data, when one vendor confirmed a gap and the other did not, people backed the Claude-only gaps 0 times out of 9 and the Gemini-only gaps 16 times out of 26. That leans toward Gemini's reading, and so toward Fable first, but those were different stories. Requiring both vendors to agree did not help there: people backed 8 of 19 such gaps. See `reports/Calibration on public human data.md`.",
     "**Doing vs allowing is the least stable factor.** The panels disagree on three of its four authored pairs, and on the size of the classic control. Haiku is last under every scoring."
   ],
+  "persona_note": [
+    "**Personas move first place too.** Sonnet's lead rested on two pairs with small gaps. With personas its doing-vs-allowing pair shows no gap, as with Gemini, and its moral-luck pair is no longer confirmed. Fable's norm-violation pair still shows none. So Fable leads under two of the three alternative panels; only Haiku's place, last, holds under all of them.",
+    "**Persona judges are more cautious about small effects.** On public human data that made them more accurate, cutting false confirmations. Here it also costs one real effect: the classic moral-luck control, which people do show, is no longer confirmed."
+  ],
   "pairs": {
     "au_fable_intent_accident": [
       "**What works.** Ten words change. The act is the same, on the same freezer, and version B is a real mistake and not a different story. Blame falls from 6.9 to 3.75 and every model agrees. B stays well above the floor because readers hold Mara responsible for not checking which freezer she switched off, which is the right residue for an accident.",

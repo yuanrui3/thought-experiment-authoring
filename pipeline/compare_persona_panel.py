@@ -8,7 +8,8 @@ Scores, with score.py's rules and the pilot's audits, into folders under out/:
   out/<base-run>_same_models/   the original panel restricted to those same judge models
 and reads out/ (the published panel) and out/gemini/ (if present). Writes out/persona_comparison.csv
 and out/persona_comparison_summary.json: each pair's verdict under each panel, authors under each,
-and the spread of ratings within each model.
+and the spread of ratings within each model. Finally reruns score.py on the base run, which rebuilds
+results.html with a section on the persona panel.
 """
 import argparse, csv, json, os, statistics, subprocess, sys, tempfile
 from collections import defaultdict
@@ -126,6 +127,9 @@ if "agrees_with_gemini" in summary:
 for c in summary["changed"]:
     print("  %-28s predicted %-14s original %-18s persona %-18s scores %s -> %s" % (c["pair_id"], c["predicted"], c["original_same_models_verdict"],
                                                                                 c["persona_verdict"], c["original_same_models_prediction_score"], c["persona_prediction_score"]))
+# rebuild the main results page so its persona section shows these numbers
+subprocess.run([sys.executable, os.path.join(ROOT, "score.py"), "--run", args.base_run, "--boot", str(args.boot)], check=True, stdout=subprocess.DEVNULL)
+print("rebuilt results.html")
 print("authors (mean composite / full hits):")
 for t, v in summary["authors"].items():
     print("  %-7s " % t + "  ".join("%s %s/%s" % (k, v[k]["mean_composite"], v[k]["full_hits"]) for k, _ in panels))

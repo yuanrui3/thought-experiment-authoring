@@ -5,7 +5,8 @@ Reads two optional hand-written files: commentary.json (headline findings and
 per-pair diagnoses) and METHODS.md (rendered at the bottom of the page).
 If pipeline/compare_vendor_panels.py has been run, it also shows a second judge
 panel from another vendor side by side with the main one (out/vendor_comparison.csv
-and out/vendor_comparison_summary.json), provided those files match this run.
+and out/vendor_comparison_summary.json), provided those files match this run; and
+likewise the persona panel from pipeline/compare_persona_panel.py.
 """
 import csv, difflib, html, json, math, os, re
 
@@ -343,6 +344,75 @@ def vendor_section(R, root, P, fac):
     return S, summ
 
 
+def panels_pointer(vsumm, psumm):
+    parts = []
+    if vsumm:
+        parts.append('a panel from %s (<a href="#vendors">compared here</a>)' % esc(vsumm.get("other_label", "another vendor")))
+    if psumm:
+        parts.append('Claude judges answering as described participants (<a href="#personas">compared here</a>)')
+    if len(parts) == 2:
+        return "Two other panels, %s and %s, both put a different author first." % tuple(parts)
+    return "A second panel, %s, changes which author comes first." % parts[0]
+
+
+def persona_section(R, root, P, fac):
+    """The pilot rejudged by Claude models answering as described participants, or [] if the files are missing or stale."""
+    cpath = os.path.join(root, "out", "persona_comparison.csv")
+    spath = os.path.join(root, "out", "persona_comparison_summary.json")
+    if not (os.path.exists(cpath) and os.path.exists(spath)):
+        return [], None
+    rows = {r["pair_id"]: r for r in csv.DictReader(open(cpath, encoding="utf-8"))}
+    summ = json.load(open(spath, encoding="utf-8"))
+    if any(p["pair_id"] not in rows or abs(float(rows[p["pair_id"]]["published_effect"]) - p["effect"]["effect"]) > 1e-6 for p in P):
+        print("persona comparison skipped: out/persona_comparison.csv does not match this run (rerun pipeline/compare_persona_panel.py)")
+        return [], None
+    judges = [short_group(m) for m in summ["judge_models"]]
+    n_judges = len(judges)
+    S = ['<section id="personas"><h2>Judges answering as participants</h2>']
+    S.append('<p class="prose">On public data with human ratings, model judges vary far less than people do, and giving each judge a described participant to answer as (an age, a job, politics, religiosity and a habit in using rating scales) made a panel behave more like people (<code>reports/Fixing the panel\'s overconfidence.md</code>). Here the pilot is rejudged that way: the same batches, versions and prompt as the panel above, each judge with its own persona. It is compared with the panel above restricted to the same %s judge models (%s); %s. A persona panel is still not people.</p>' % (
+        {3: "three", 4: "four"}.get(n_judges, str(n_judges)), esc(", ".join(judges)),
+        "Fable's persona judges have not run yet, so with three judge groups a gap counts only if all three agree" if "fable" not in judges else "all four judge models are included"))
+    sp_o, sp_p = summ["spread_within_model"]["original"], summ["spread_within_model"]["persona"]
+    widest = max(sp_p, key=lambda m: sp_p[m] - sp_o.get(m, 0))
+    S.append('<div class="tiles">')
+    S.append('<div class="tile"><p class="tl">Spread within one model, %s</p><p class="tv">%.2f <span>from %.2f</span></p><p class="tn">SD of ratings of one version; %s</p></div>' % (
+        esc(short_group(widest)), sp_p[widest], sp_o[widest], esc("; ".join("%s %.2f → %.2f" % (short_group(m), sp_o[m], sp_p[m]) for m in sp_p if m != widest))))
+    S.append('<div class="tile"><p class="tl">Verdicts that change</p><p class="tv">%d <span>of %d pairs</span></p><p class="tn">Effects still correlate %.2f with the panel above</p></div>' % (
+        summ["verdicts_changed"], len(rows), summ["effect_correlation_with_original"]))
+    S.append('<div class="tile"><p class="tl">Classic controls reproduced</p><p class="tv">%d <span>of %d</span></p><p class="tn">Panel above, same judges: %d; null controls with a gap: %d</p></div>' % (
+        summ["classic_controls_in_expected_direction"]["persona"], sum(1 for r in rows.values() if r["pair_type"] == "control_classic"),
+        summ["classic_controls_in_expected_direction"]["original_same_models"], summ["null_controls_with_a_gap"]["persona"]))
+    if "agrees_with_gemini" in summ:
+        S.append('<div class="tile"><p class="tl">Same verdict as the Gemini panel</p><p class="tv">%d <span>of %d</span></p><p class="tn">Panel above, same judges: %d</p></div>' % (
+            summ["agrees_with_gemini"]["persona"], len(rows), summ["agrees_with_gemini"]["original_same_models"]))
+    S.append('</div>')
+    cols = [("published", "Panel above (4 judge models)"), ("original_same_models", "Panel above, same %d judge models" % n_judges),
+            ("persona", "With personas (%d judge models)" % n_judges)]
+    if any("gemini" in v for v in summ["authors"].values()):
+        cols.append(("gemini", "Gemini panel"))
+    tops = {k: max(summ["authors"], key=lambda t: float(summ["authors"][t][k]["mean_composite"])) for k, _ in cols}
+    S.append('<h3>Authors under each panel</h3><div class="scroll"><table class="data"><thead><tr><th>Author</th>%s</tr></thead><tbody>' % "".join(
+        '<th class="n">%s</th>' % esc(lab) for _, lab in cols))
+    for t in sorted(summ["authors"], key=lambda t: TIER_ORDER.index(t) if t in TIER_ORDER else 9):
+        S.append('<tr><td>%s</td>%s</tr>' % (esc(t), "".join('<td class="n%s">%.1f<br><span class="muted">%s of 5 fully right</span></td>' % (
+            " strong" if tops[k] == t else "", float(summ["authors"][t][k]["mean_composite"]), summ["authors"][t][k]["full_hits"]) for k, _ in cols)))
+    S.append('</tbody></table></div><p class="note">Mean composite score; bold marks first place under that panel. Confound and originality grades are the same audits throughout; only the judges change.</p>')
+    changed = [r for r in rows.values() if r["persona_changes_verdict"] == "True"]
+    if changed:
+        by_id = {p["pair_id"]: p for p in P}
+        S.append('<h3>Verdicts that change</h3><div class="scroll"><table class="data pairs"><thead><tr><th>Pair</th><th>Predicted</th><th class="n">Same judges, no personas: A − B</th><th>Verdict</th><th class="n">With personas: A − B</th><th>Verdict</th><th>Gemini verdict</th><th class="n">Prediction score, before → after</th></tr></thead><tbody>')
+        for r in sorted(changed, key=lambda r: (["authored", "control_classic", "control_null"].index(r["pair_type"]), r["pair_id"])):
+            p = by_id[r["pair_id"]]
+            S.append('<tr><td>%s</td><td>%s</td><td class="n">%s<br><span class="muted">%s models agree</span></td><td>%s</td><td class="n">%s<br><span class="muted">%s models agree</span></td><td>%s</td><td>%s</td><td class="n">%s → %s</td></tr>' % (
+                esc(pair_label(p)), esc(pred_text(p["prediction"])),
+                sgn(float(r["original_same_models_effect"])), esc(r["original_same_models_models_agreeing"].replace("/", " of ")), esc(verdict_text(r["original_same_models_verdict"])),
+                sgn(float(r["persona_effect"])), esc(r["persona_models_agreeing"].replace("/", " of ")), esc(verdict_text(r["persona_verdict"])),
+                esc(verdict_text(r["gemini_verdict"])) if "gemini_verdict" in r else "–",
+                r["original_same_models_prediction_score"], r["persona_prediction_score"]))
+        S.append('</tbody></table></div><p class="note">Every pair under each panel is in <code>out/persona_comparison.csv</code>. The persona judges read the prompt from a file at the default effort level; the judges above got it inline at low effort. So this comparison is not about personas alone. The calibration test, where both conditions were delivered the same way, is.</p>')
+    return S, summ
+
+
 def build(R, root):
     rules = R["rules"]
     comm = {}
@@ -366,6 +436,7 @@ def build(R, root):
     comp_all = sum(p["comprehension"]["accuracy"] * (p["effect"]["n_a"] + p["effect"]["n_b"]) for p in P) / sum(p["effect"]["n_a"] + p["effect"]["n_b"] for p in P)
     n_models = len(data["judge_groups"])
     vend, vsumm = vendor_section(R, root, P, fac)
+    pers, psumm = persona_section(R, root, P, fac)
 
     S = []
     # ---- header
@@ -373,7 +444,7 @@ def build(R, root):
     S.append('<p class="lede">Can a language model design a philosophical thought experiment that works? Each author model was given one factor, wrote a pair of short scenarios that differ only in that factor, and predicted how readers would judge them. A panel then rated the scenarios, each judge seeing one version only.</p>')
     S.append('<div class="caveat"><strong>What this pilot measures: whether a model can predict how a panel of Claude models will judge its thought experiment. It does not yet show that the pairs work on people.</strong> No human has judged them; a human run is the next step. Until then, read this as a test of the pipeline. Every judge and every author here is a Claude model, so the panel shares the authors\' blind spots. %s%s</div></header>' % (
         md_inline(comm.get("caveat", "Published work finds that language-model panels exaggerate effect sizes and often find effects where people show none.")),
-        (' A second panel, from %s, is compared <a href="#vendors">further down</a>; it changes which author comes first.' % esc(vsumm.get("other_label", "another vendor"))) if vend else ""))
+        (" " + panels_pointer(vsumm if vend else None, psumm if pers else None)) if (vend or pers) else ""))
 
     # ---- panel checks
     sh = panel["split_half_noise"]
@@ -450,6 +521,13 @@ def build(R, root):
         S.extend(vend)
         if comm.get("vendor_note"):
             S.append("".join('<p class="prose">%s</p>' % md_inline(x) for x in comm["vendor_note"]))
+        S.append("</section>")
+
+    # ---- persona judges (only when the comparison files match this run)
+    if pers:
+        S.extend(pers)
+        if comm.get("persona_note"):
+            S.append("".join('<p class="prose">%s</p>' % md_inline(x) for x in comm["persona_note"]))
         S.append("</section>")
 
     # ---- best / worst
@@ -546,8 +624,9 @@ def build(R, root):
     # ---- methods + files
     if methods_html:
         S.append('<section class="methods" id="methods"><p class="eyebrow">Methods note</p>%s</section>' % methods_html)
-    S.append('<section><h2>Files and how to rerun</h2><ul class="files"><li><code>vignettes.json</code>: all pairs, questions, predictions, authors and the control references.</li><li><code>judgments.csv</code>: one row per judge and scenario, with judge type, vendor, model and group, so other vendors\' models and human judges can be appended.</li><li><code>audits.csv</code>: one row per auditor and pair.</li>%s<li><code>score.py</code>: run <code>python3 score.py</code> to recompute every number and rebuild this page from the files above.</li><li><code>METHODS.md</code>, <code>docs/prior-art.md</code> and <code>docs/control-references.md</code>: the methods note, the prior-art check, and the check of the control references against their sources.</li></ul><p class="note">%s judgments · %d judges · %d judge models · %d bootstrap resamples · seed %d.%s</p></section>' % (
+    S.append('<section><h2>Files and how to rerun</h2><ul class="files"><li><code>vignettes.json</code>: all pairs, questions, predictions, authors and the control references.</li><li><code>judgments.csv</code>: one row per judge and scenario, with judge type, vendor, model and group, so other vendors\' models and human judges can be appended.</li><li><code>audits.csv</code>: one row per auditor and pair.</li>%s%s<li><code>score.py</code>: run <code>python3 score.py</code> to recompute every number and rebuild this page from the files above.</li><li><code>METHODS.md</code>, <code>docs/prior-art.md</code> and <code>docs/control-references.md</code>: the methods note, the prior-art check, and the check of the control references against their sources.</li></ul><p class="note">%s judgments · %d judges · %d judge models · %d bootstrap resamples · seed %d.%s</p></section>' % (
         ('<li><code>pipeline/compare_vendor_panels.py</code>: scores the second panel (run <code>%s</code> in <code>judgments.csv</code>) and rebuilds the side-by-side section; details in <code>reports/Pilot rescored with Gemini.md</code>.</li>' % esc(vsumm.get("other_run", "gemini"))) if vend else "",
+        ('<li><code>pipeline/compare_persona_panel.py</code>: scores the persona panel (run <code>%s</code> in <code>judgments.csv</code>) and rebuilds its section; details in <code>reports/Pilot rescored with persona judges.md</code>.</li>' % esc(psumm.get("new_run", "persona"))) if pers else "",
         format(data["n_judgments"], ","), data["n_judges"], n_models, R["bootstrap"]["resamples"], R["bootstrap"]["seed"],
         (" Data problems: " + esc("; ".join(data["problems"]))) if data["problems"] else ""))
 
