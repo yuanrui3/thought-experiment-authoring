@@ -1,0 +1,86 @@
+{
+ "_note": "Round-2 classic controls, written by the pilot's builder for the three new factors. Each is anchored to a human result read or computed from its source. The other two classic controls and the five null controls are reused unchanged from the pilot (vignettes.json).",
+ "pairs": [
+  {
+   "pair_id": "cc_inevitable_harm",
+   "pair_type": "control_classic",
+   "factor_id": "inevitable_harm",
+   "title": "The bike lanes",
+   "version_a": "Maya, an Architect, faces a moral dilemma. Maya has the opportunity to implement a new bike lane system throughout the city. The new bike lane system encourages residents to cycle more. As a side effect of encouraging residents to cycle more, the implementation of the bike lanes increases the prices for parking cars in the city. If Maya does not implement the bike lane system, the increase in parking prices would not happen. Maya implements the new bike lane system.",
+   "version_b": "Maya, an Architect, faces a moral dilemma. Maya has the opportunity to implement a new bike lane system throughout the city. The new bike lane system encourages residents to cycle more. As a side effect of encouraging residents to cycle more, the implementation of the bike lanes increases the prices for parking cars in the city. If Maya does not implement the bike lane system, the increase in parking prices would still happen because of a new city ordinance for greener transportation. Maya implements the new bike lane system.",
+   "intended_difference": "Whether the rise in parking prices would happen without Maya's bike lanes: not (A) or anyway, because of a city ordinance (B).",
+   "judgment_question": "How much did Maya intend the increase in parking prices?",
+   "scale_label_1": "Not at all",
+   "scale_label_7": "Completely",
+   "comprehension_question": "What do the bike lanes do to the price of parking in the city?",
+   "option_a": "They raise it",
+   "option_b": "They lower it",
+   "option_c": "They leave it unchanged",
+   "correct_option_version_a": "a",
+   "correct_option_version_b": "a",
+   "predicted_direction": "A_higher",
+   "predicted_size": "small",
+   "prediction_rationale": "Human reference: in OffTheRails Experiment 2 people agreed more that the agent intended the harm when it was avoidable; for this exact pair of texts the gap was +0.71 on a 1-5 scale (about +1.1 on 1-7).",
+   "reference": {
+    "source": "Fränken, Gandhi et al. (2024), OffTheRails, Experiment 2: public data at github.com/cicl-stanford/moral-evals (MIT licence), scenario 0. The texts are the study's own (side-effect structure, the agent acts), with its two evitability sentences.",
+    "human_result": "Statement 'Maya intended for the negative outcome to occur', 1 = strongly disagree to 5 = strongly agree. This version pair: 2.67 (avoidable, n = 21) against 1.96 (unavoidable, n = 25), gap +0.71 (standard error 0.33). Scenario 0 pooled over its other two features: +0.48, 95% interval +0.23 to +0.73. Across all ten scenarios: +0.34.",
+    "checked": "Computed by this project from the study's public long-format data, 22 November 2026.",
+    "caveat": "The human scale was 1-5 agreement with a statement; here it is a 1-7 question, so only the direction and a rough size carry over."
+   }
+  },
+  {
+   "pair_id": "cc_knowledge_causation",
+   "pair_type": "control_classic",
+   "factor_id": "knowledge_causation",
+   "title": "The pencil box",
+   "version_a": "A bear and a hedgehog are shown a box full of coloured pencils. There is a new rule: bears may take pencils, but hedgehogs may not. The hedgehog was there when the rule was announced, so it knows about the rule. The two animals take turns taking pencils out of the box. In the end, the bear and the hedgehog reach into the box at the same moment and each take a pencil. Soon afterwards a polar bear comes to the box looking for a pencil to do its homework, but the box is empty. The polar bear cannot finish its homework.",
+   "version_b": "A bear and a hedgehog are shown a box full of coloured pencils. There is a new rule: bears may take pencils, but hedgehogs may not. The hedgehog was away when the rule was announced, so it does not know about the rule. The two animals take turns taking pencils out of the box. In the end, the bear and the hedgehog reach into the box at the same moment and each take a pencil. Soon afterwards a polar bear comes to the box looking for a pencil to do its homework, but the box is empty. The polar bear cannot finish its homework.",
+   "intended_difference": "Whether the hedgehog, who breaks the rule, knew about the rule (A) or had missed its announcement and did not know (B).",
+   "judgment_question": "How much did the hedgehog cause the polar bear's problem?",
+   "scale_label_1": "Not at all",
+   "scale_label_7": "Completely",
+   "comprehension_question": "Under the new rule, who may take pencils from the box?",
+   "option_a": "Only bears",
+   "option_b": "Only hedgehogs",
+   "option_c": "Any animal",
+   "correct_option_version_a": "a",
+   "correct_option_version_b": "a",
+   "predicted_direction": "A_higher",
+   "predicted_size": "small",
+   "prediction_rationale": "Human reference: in MoCa, 88% of people said the hedgehog caused the problem when it knew the rule, against 44% when it did not.",
+   "reference": {
+    "source": "MoCa (Nie et al. 2023), causal dataset, stories 139 and 141 (github.com/cicl-stanford/moca; the repository has no licence file, so the texts here are this project's own paraphrase). MoCa does not record the story's origin; in this project's recognition check, models attributed it to Samland, Josephs, Waldmann & Rakoczy (2016). That attribution has not been checked against the paper.",
+    "human_result": "Yes/no question 'Did the hedgehog cause the problem?', 25 people per story: 88% yes when the hedgehog knew the rule (story 139, which simply states the rule), 44% yes when it was absent when the rule was announced and did not know (story 141). Gap +0.44 in the share answering yes (standard error 0.12).",
+    "checked": "Read from MoCa's public data, 22 November 2026.",
+    "caveat": "Story 139 does not say outright that the hedgehog knew the rule; this paraphrase does. The human measure is a yes/no share, so only the direction carries over to a 1-7 scale."
+   }
+  },
+  {
+   "pair_id": "cc_luck_wrongness",
+   "pair_type": "control_classic",
+   "factor_id": "luck_wrongness",
+   "title": "The bath",
+   "version_a": "Anna is giving her two-year-old son a bath, and the tub is full of water. The phone rings in the hallway, and Anna knows it is a friend who wants to chat. She leaves her son sitting beside the full tub and goes out to the hallway, where she talks for five minutes. While she is away, her son climbs into the tub, slips under the water and drowns.",
+   "version_b": "Anna is giving her two-year-old son a bath, and the tub is full of water. The phone rings in the hallway, and Anna knows it is a friend who wants to chat. She leaves her son sitting beside the full tub and goes out to the hallway, where she talks for five minutes. While she is away, her son plays with a toy on the bathroom floor, and when she comes back he is fine.",
+   "intended_difference": "The same five-minute absence ends with the child drowning (A) or unharmed (B).",
+   "judgment_question": "How wrong was it of Anna to leave her son alone beside the full tub?",
+   "scale_label_1": "Not wrong at all",
+   "scale_label_7": "Extremely wrong",
+   "comprehension_question": "What happened while Anna was away?",
+   "option_a": "Her son drowned in the tub",
+   "option_b": "Her son played on the floor and was fine",
+   "option_c": "Her son fell asleep",
+   "correct_option_version_a": "a",
+   "correct_option_version_b": "b",
+   "predicted_direction": "A_higher",
+   "predicted_size": "small",
+   "prediction_rationale": "Human reference: in Kneer & Machery's bath study, judgments of wrongness were 6.00 when the child drowned against 5.17 when nothing happened, on a 7-point scale.",
+   "reference": {
+    "source": "Kneer & Machery (2019), 'No luck for moral luck', Cognition 182: 331-348, Study 3 (a parent leaves a two-year-old beside a filled bath for five minutes; the child drowns or is fine). Read at source from a copy supplied by the project owner (the reading notes are kept outside this public repository). The text here is this project's own paraphrase.",
+    "human_result": "Wrongness, 7-point scale, between subjects: 6.00 (SD 1.52) when the child drowned against 5.17 (SD 1.66) when it was fine; d = 0.52. Punishment moved more: 4.60 against 3.15.",
+    "checked": "Read at source, 18 November 2026.",
+    "caveat": "The study's own wording and scale labels were not copied; the phone call to a friend is this paraphrase's invention, added to make the five minutes concrete."
+   }
+  }
+ ]
+}
