@@ -41,10 +41,17 @@ ap.add_argument("--out")
 ap.add_argument("--boot", type=int, default=2000)
 ap.add_argument("--splits", type=int, default=200)
 ap.add_argument("--seed", type=int, default=7)
+ap.add_argument("--group", action="append", default=[], metavar="LABEL=DIR",
+                help="an extra judge group (e.g. another vendor's model) whose bNN.json answers in DIR follow the manifest's batches")
+ap.add_argument("--panel", help="comma-separated groups that form the panel (default: the manifest's four Claude models)")
 args = ap.parse_args()
 rng = random.Random(args.seed)
 man = json.load(open(args.manifest))
-MODELS = man["models"]
+EXTRA = dict(g.split("=", 1) for g in args.group)
+MODELS = args.panel.split(",") if args.panel else man["models"]
+for m in MODELS:
+    if m not in man["models"] and m not in EXTRA:
+        raise SystemExit("panel group %s has no answers (add --group %s=DIR)" % (m, m))
 OTR_THRESHOLD = 0.5 * 4 / 6          # the benchmark's 0.5 on a 1-7 scale, as a share of the scale's range, on 1-5
 MOCA_THRESHOLD = 0.25                # yes-share gap treated as "confirmed size" for MoCa (no benchmark analogue)
 HUMAN_CLEAR = 0.30                   # MoCa: human yes-share gap counted as clear for direction agreement
@@ -112,19 +119,34 @@ if args.provenance:
 
 # ------------------------------------------------------------------ panel answers
 P_otr, P_moca = [], []
-for bid in sorted(usable):
+sources = [(info["model"], bid, os.path.join(args.answers, bid + ".json")) for bid, info in sorted(man["batches"].items())
+           if bid in usable]
+for label, d in EXTRA.items():
+    missing = []
+    for bid in sorted(man["batches"]):
+        f = os.path.join(d, bid + ".json")
+        if os.path.exists(f):
+            sources.append((label, label + ":" + bid, f))
+        else:
+            missing.append(bid)
+    if missing:
+        excluded[label] = "no answers for " + " ".join(missing)
+for group, judge, f in sources:
+    if group not in MODELS:
+        continue
+    bid = judge.split(":")[-1]
     info = man["batches"][bid]
-    a = json.load(open(os.path.join(args.answers, bid + ".json")))
+    a = json.load(open(f))
     p1 = {int(x["item"]): x for x in a["part1"]}
     for i, it in enumerate(info["part1"], 1):
         c = it["condition"]
-        P_otr.append({"model": info["model"], "judge": bid, "arm": info["arm"], "s": it["scenario_id"],
+        P_otr.append({"model": group, "judge": judge, "arm": info["arm"], "s": it["scenario_id"],
                       "cs": 1 if c.startswith("cc_") else 0, "ev": 1 if "_evitable_" in c else 0,
                       "ac": 1 if c.endswith("action_yes") else 0,
                       "permissibility": int(p1[i]["statement1"]), "intention": int(p1[i]["statement2"])})
     p2 = {int(x["item"]): x for x in a["part2"]}
     for i, sid in enumerate(info["part2"], 1):
-        P_moca.append({"model": info["model"], "judge": bid, "arm": info["arm"], "story": sid,
+        P_moca.append({"model": group, "judge": judge, "arm": info["arm"], "story": sid,
                        "yes": 1 if str(p2[i]["answer"]).strip().lower() == "yes" else 0})
 
 # ------------------------------------------------------------------ human OffTheRails (Experiment 2)
@@ -347,7 +369,7 @@ otr["rule_variants"] = {
     "threshold 0.67 on 1-5 (= 1.0 on 1-7)": rule_outcomes(threshold_rule(2 * OTR_THRESHOLD)),
     "threshold 1.0 on 1-5 (= 1.5 on 1-7)": rule_outcomes(threshold_rule(3 * OTR_THRESHOLD)),
     "interval with human-sized spread (sd %.2f), threshold 0.33" % human_sd: rule_outcomes(human_noise_rule(human_sd, OTR_THRESHOLD)),
-    "all four models agree, threshold 0.33": rule_outcomes(threshold_rule(OTR_THRESHOLD, agree=1.0)),
+    "all panel groups agree, threshold 0.33": rule_outcomes(threshold_rule(OTR_THRESHOLD, agree=1.0)),
 }
 otr["rates"] = {"panel_confirmed": n_pos,
                 "share_of_confirmed_that_humans_back": r3(table["hit"] / n_pos) if n_pos else None,
@@ -630,7 +652,39 @@ if args.recognition and args.recognition_key:
         split[m] = {k: {"n": len(v), "sign_agreement": r3(mean(v))} for k, v in grp.items()}
     recog["moca_sign_agreement_by_recognition"] = split
 
-out = {"excluded_batches": excluded, "otr": otr, "moca": moca, "recognition": recog,
+# ------------------------------------------------------------------ each group on its own, corrected for its own noise
+# Groups differ in how many judges they have (10 per Claude model, 40 per extra group), so raw correlations
+# with people are not comparable across groups; these are divided by sqrt(group reliability x human reliability).
+per_group = {}
+rel_h_otr = rel["all"]["human"]["spearman_brown"]
+for m in MODELS:
+    js = judges_by_model[m]
+    rows_m = [x for x in P_otr if x["model"] == m]
+    rs_o, rs_m = [], []
+    for _ in range(args.splits):
+        j = js[:]
+        rng.shuffle(j)
+        h1, h2 = set(j[:len(j) // 2]), set(j[len(j) // 2:])
+        g1 = gaps_from(side_means(rows_m, {x: 1 for x in h1}))
+        g2 = gaps_from(side_means(rows_m, {x: 1 for x in h2}))
+        ks = [k for k in all_keys if k in g1 and k in g2]
+        if len(ks) > 3:
+            rs_o.append(pearson([g1[k] for k in ks], [g2[k] for k in ks]))
+        v1 = [moca_pair_gap(a, b, judges=h1)[1].get(m) for a, b in pairs]
+        v2 = [moca_pair_gap(a, b, judges=h2)[1].get(m) for a, b in pairs]
+        ok = [(x, y) for x, y in zip(v1, v2) if x is not None and y is not None]
+        if len(ok) > 3:
+            rs_m.append(pearson([x for x, _ in ok], [y for _, y in ok]))
+    ro, rm = mean(rs_o), mean([r for r in rs_m if not math.isnan(r)])
+    sb_o, sb_m = 2 * ro / (1 + ro), 2 * rm / (1 + rm)
+    raw_o, raw_m = otr["agreement_per_model"][m]["pearson_r"], moca["agreement_per_model"][m]["pearson_r"]
+    per_group[m] = {"judges": len(js),
+                    "otr": {"raw_r": raw_o, "group_reliability": r3(sb_o),
+                            "corrected_r": r3(raw_o / math.sqrt(sb_o * rel_h_otr)) if sb_o > 0 else None},
+                    "moca": {"raw_r": raw_m, "group_reliability": r3(sb_m),
+                             "corrected_r": r3(raw_m / math.sqrt(sb_m * rel_h)) if sb_m > 0 else None}}
+
+out = {"panel": MODELS, "per_group_corrected": per_group, "excluded_batches": excluded, "otr": otr, "moca": moca, "recognition": recog,
        "settings": {"boot": args.boot, "splits": args.splits, "seed": args.seed, "otr_threshold": OTR_THRESHOLD,
                     "moca_threshold": MOCA_THRESHOLD, "moca_human_clear": HUMAN_CLEAR}}
 
@@ -656,7 +710,7 @@ print("  reliability:", json.dumps(rel))
 print("  levels:", json.dumps(otr["levels"]))
 print("  sensitivity:", json.dumps(otr["sensitivity"]))
 for m in MODELS:
-    print("  per model %-6s" % m, json.dumps(otr["agreement_per_model"][m]))
+    print("  per model %-22s" % m, json.dumps(otr["agreement_per_model"][m]))
 print("MoCa: %d pairs, %d panel answers" % (len(moca_rows), len(P_moca)))
 print("  verdicts:", dict(mtab), json.dumps(moca["rates"]))
 print("  agreement:", json.dumps(moca["agreement"]))
@@ -665,10 +719,15 @@ print("  story level:", json.dumps(moca["story_level"]))
 for f, v in moca["by_differing_factor"].items():
     print("  differs in %-24s" % f, json.dumps(v))
 for m in MODELS:
-    print("  per model %-6s" % m, json.dumps(moca["agreement_per_model"][m]), json.dumps(moca["story_level_per_model"][m]))
+    print("  per model %-22s" % m, json.dumps(moca["agreement_per_model"][m]), json.dumps(moca["story_level_per_model"][m]))
 if recog:
     print("Recognition:", json.dumps(recog["per_model"]))
     print("  MoCa sign agreement by recognition:", json.dumps(recog["moca_sign_agreement_by_recognition"]))
+print("Each group alone, corrected for its own noise:")
+for m, v in per_group.items():
+    print("  %-22s judges %2d  OTR r %s (reliability %s, corrected %s)  MoCa r %s (reliability %s, corrected %s)" % (
+        m, v["judges"], v["otr"]["raw_r"], v["otr"]["group_reliability"], v["otr"]["corrected_r"],
+        v["moca"]["raw_r"], v["moca"]["group_reliability"], v["moca"]["corrected_r"]))
 if excluded:
     print("excluded batches:", excluded)
 if args.out:
