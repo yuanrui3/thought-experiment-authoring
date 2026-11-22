@@ -34,6 +34,7 @@ This release is a pilot of the pipeline. All authors and judges are Claude model
 | `out/` | `pair_scores.csv`, `author_summary.csv`, `results.json` (the Claude panel). `out/gemini/`, `out/vendor_groups/` and `out/claude_plus_gemini/` hold the same files under the other panels, and `out/vendor_comparison.csv` sets them side by side. |
 | `reports/Fixing the panel's overconfidence.md` | Whether giving judges participant personas, or more sampling noise, makes the model panel behave more like people on the public human data. Numbers in `reports/calibration_numbers_persona_noise.json`. |
 | `reports/Authors predicting people.md` | A human-grounded score that needs no new participants: author models predict what people answered in two public studies, scored against the real answers and against the model panels. Numbers in `reports/predict_humans_numbers.json`, rebuilt by `pipeline/predict_humans/analyse.py`. |
+| `reports/Pilot rescored with persona judges.md` | The pilot rejudged by Claude models answering as described participants (run `persona` in `judgments.csv`; Fable's judges pending), compared with the original panel on the same judge models and with Gemini. Rebuilt by `pipeline/compare_persona_panel.py`. |
 | `reports/Pilot rescored with Gemini.md` | The pilot rescored with two Gemini models as a second judge group: where the vendors agree, where they differ, and how the author ranking moves. Rebuilt by `pipeline/compare_vendor_panels.py`. |
 | `pipeline/` | How the data was produced: author brief, controls, batch randomisation, panel scripts, ingestion, raw outputs; the survey generator, its private key (`survey_manifest.json`) and `ingest_survey.py`. `pipeline/calibration/` holds the calibration run: batch and recognition builders, the panel's answers, judge provenance and the analysis. `pipeline/predict_humans/` builds and scores the "predict the people" task (predictions, provenance, analysis). `pipeline/api_panel.py` runs another vendor's models as judges through an API (manifest `batches_gemini.json`, answers in `raw/panel_gemini/`). |
 
@@ -46,8 +47,8 @@ python3 score.py
 Python 3.9 or later, standard library only. Options: `--run` (which `run_id` to
 score; several separated by commas), `--audit-run` (which run's audits to use, by
 default the same), `--out`, `--no-report`, `--boot` (bootstrap resamples), `--seed`.
-`judgments.csv` holds the Claude panel as run `main` and the Gemini panel as run
-`gemini`; the default scores `main` only. To refresh the page's side-by-side section
+`judgments.csv` holds the Claude panel as run `main`, the Gemini panel as run
+`gemini` and the persona panel as run `persona`; the default scores `main` only. To refresh the page's side-by-side section
 after either panel changes, run `python3 pipeline/compare_vendor_panels.py`, which
 rescores both panels and rebuilds `results.html`.
 

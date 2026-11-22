@@ -1,0 +1,599 @@
+{
+ "haiku-r2-x": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r2-x.txt"
+   ],
+   [
+    "Write",
+    "haiku-r2-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r5-x": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r5-x.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r5-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r3-y": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r3-y.txt"
+   ],
+   [
+    "Write",
+    "opus-r3-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r1-x": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r1-x.txt"
+   ],
+   [
+    "Write",
+    "opus-r1-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r5-y": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r5-y.txt"
+   ],
+   [
+    "Write",
+    "haiku-r5-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r5-x": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r5-x.txt"
+   ],
+   [
+    "Write",
+    "opus-r5-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r4-y": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r4-y.txt"
+   ],
+   [
+    "Write",
+    "haiku-r4-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r4-y": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r4-y.txt"
+   ],
+   [
+    "Write",
+    "opus-r4-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r3-y": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r3-y.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r3-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r2-y": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r2-y.txt"
+   ],
+   [
+    "Write",
+    "opus-r2-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r1-y": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r1-y.txt"
+   ],
+   [
+    "Write",
+    "haiku-r1-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r1-y": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r1-y.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r1-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r2-x": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r2-x.txt"
+   ],
+   [
+    "Write",
+    "opus-r2-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r1-x": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r1-x.txt"
+   ],
+   [
+    "Write",
+    "haiku-r1-x.json"
+   ],
+   [
+    "ToolSearch",
+    ""
+   ]
+  ],
+  "strictly_clean": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "ToolSearch",
+    ""
+   ]
+  ]
+ },
+ "haiku-r3-x": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r3-x.txt"
+   ],
+   [
+    "Write",
+    "haiku-r3-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r2-x": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r2-x.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r2-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r2-y": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r2-y.txt"
+   ],
+   [
+    "Write",
+    "haiku-r2-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r5-x": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r5-x.txt"
+   ],
+   [
+    "Write",
+    "haiku-r5-x.json"
+   ],
+   [
+    "ToolSearch",
+    ""
+   ]
+  ],
+  "strictly_clean": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "ToolSearch",
+    ""
+   ]
+  ]
+ },
+ "sonnet-r4-x": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r4-x.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r4-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r3-x": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r3-x.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r3-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r2-y": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r2-y.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r2-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r1-x": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r1-x.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r1-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r5-y": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r5-y.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r5-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r4-x": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r4-x.txt"
+   ],
+   [
+    "Write",
+    "opus-r4-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r4-x": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r4-x.txt"
+   ],
+   [
+    "Write",
+    "haiku-r4-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__read_documentation",
+    ""
+   ]
+  ],
+  "strictly_clean": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__read_documentation",
+    ""
+   ]
+  ]
+ },
+ "opus-r3-x": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r3-x.txt"
+   ],
+   [
+    "Write",
+    "opus-r3-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "sonnet-r4-y": {
+  "requested": "claude-sonnet-5-5",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet-r4-y.txt"
+   ],
+   [
+    "Write",
+    "sonnet-r4-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "haiku-r3-y": {
+  "requested": "claude-haiku-5-5",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku-r3-y.txt"
+   ],
+   [
+    "Write",
+    "haiku-r3-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r1-y": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r1-y.txt"
+   ],
+   [
+    "Write",
+    "opus-r1-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "opus-r5-y": {
+  "requested": "claude-opus-5-5",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus-r5-y.txt"
+   ],
+   [
+    "Write",
+    "opus-r5-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ }
+}
