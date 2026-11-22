@@ -1,6 +1,6 @@
 # Calibration of the model panel on public human data
 
-*22 November 2026. All numbers come from `reports/calibration_numbers.json`, which `pipeline/calibration/analyse.py` rebuilds.*
+*22 November 2026. Claude-panel numbers come from `reports/calibration_numbers.json`; the Gemini and mixed panels from `reports/calibration_numbers_other_panels.json`. `pipeline/calibration/analyse.py` rebuilds both.*
 
 ## Bottom line
 
@@ -26,6 +26,14 @@ Because the bias is systematic, more repeats will not fix it, and tightening the
 - Panel verdicts measure agreement with Claude, not with people.
 - Scoring the authored pairs needs the human data.
 - The panel can still serve as a pre-screen, and later as a prior worth roughly 20–25 participants per pair. That prior has a large caveat; see "What this means for the benchmark".
+
+**A second vendor helps the ordering, not the verdicts.** I ran two Gemini models through the same batches (see "A second vendor: Gemini").
+
+- **What improves.** Both rank the contrasts more like people do: OffTheRails r 0.60–0.72 against the Claude panel's 0.51, and MoCa r 0.38–0.44 against 0.23. They also catch two effects the Claude panel misses.
+- **What doesn't.** They share the main failure: they exaggerate means vs side effect and barely vary between repeats. Under the pilot's rule they still confirm 12–15 of the 40 gaps people don't show, and fewer than half of their confirmed gaps are backed.
+- **Mixing doesn't help either.** Adding them to the Claude panel at equal weight leaves the verdicts no better (8 backed, 14 false positives).
+
+So the problem is not specific to Claude.
 
 ## Judgment calls
 
@@ -55,6 +63,11 @@ Because the bias is systematic, more repeats will not fix it, and tightening the
 
    110 of 115 workers match exactly. Dropping the other 5 changes nothing (see "Sensitivity").
 8. **b09 kept.** That judge made one extra tool call after writing its answers: a failed attempt to archive a session. The call could not have shown it anything.
+9. **Gemini run.** The project owner lifted the no-paid-services rule for this, with a $5 budget.
+   - **Models.** `gemini-4-argon` (Google's flagship) and `gemini-3-flash-preview` (a cheap tier).
+   - **Batches.** Each model read all 40 batch files, so each Gemini model alone has as many judges as the whole Claude panel. "Each group alone" below corrects for that difference.
+   - **Format.** One API call per batch, through Google's OpenAI-compatible endpoint, at reasoning effort "low". The system message carried the Claude judges' instruction, changed only to "reply with the JSON" instead of "write a file".
+   - **Cost.** Spending was logged per call in `pipeline/calibration/api_ledger.jsonl`, counted at double the listed prices, against a $4.50 stop. The ledger total is $1.98, about $0.99 at list prices. That holds if the reported token counts include any thinking; none were reported separately.
 
 ## What was run
 
@@ -198,6 +211,93 @@ Each model read all 99 calibration stories in one file. For each it was asked wh
 - **Opus and Fable know both datasets by name.** So recognition can't be compared within those models: they recognised everything.
 - **The haiku and sonnet answers don't vary where it matters.** There are no pairs with a clear human gap that one of these models recognised and another didn't. So recognition can't be tested there either.
 - **What this implies.** Contamination can only push agreement *up*, yet agreement is weak. And Opus and Fable are not clearly better than the two models that didn't know the sources (OffTheRails r 0.39 and 0.57 against 0.39 and 0.50). These numbers are, if anything, optimistic for newly written vignettes.
+- **Gemini knows the sources less, and agrees with people more.** Gemini 4 Argon recognised none of the OffTheRails stories and 37 of 89 MoCa stories, never naming either dataset. Gemini 3 Flash said "yes" to all 10 OffTheRails stories, attributing them to the Knobe effect (wrong, as with haiku), and to 79 MoCa stories, 25 of them with a dated paper. Neither named MoCa or OffTheRails. Yet both agree with people more than the Claude models that named the datasets, which again argues against memory driving agreement.
+
+## A second vendor: Gemini
+
+Same 40 batches, same human data, same rules. "Both Gemini" weights the two models equally. "All six" adds them to the four Claude models, equal weight per model.
+
+### OffTheRails, 60 contrasts, pilot rule
+
+| Panel | r (corrected for reliability) | Panel ÷ human mean \|gap\| | Confirmed | Backed by humans | False positives (of 40 human nulls) | Sign errors | Human gaps found (of 20) |
+|---|---|---|---|---|---|---|---|
+| Claude, four models | 0.51 (0.68) | 1.9× | 24 | 8 | 15 | 1 | 8 |
+| Gemini 4 Argon | 0.60 (0.77) | 2.5× | 22 | 10 | 12 | 0 | 10 |
+| Gemini 3 Flash | 0.72 (0.95) | 2.1× | 29 | 14 | 15 | 0 | 14 |
+| Both Gemini | 0.68 (0.85) | 2.2× | 31 | 15 | 16 | 0 | 15 |
+| All six | 0.59 (0.74) | 2.0× | 23 | 8 | 14 | 1 | 8 |
+
+**On the intention question alone:**
+
+| Panel | r with people |
+|---|---|
+| Claude | −0.09 |
+| Argon | 0.11 |
+| Flash | 0.38 |
+| Both Gemini | 0.24 |
+
+**Main effects** (1–5 scale, as in the first table; 95% intervals):
+
+| Contrast | Question | Humans | Claude panel | Gemini 4 Argon | Gemini 3 Flash |
+|---|---|---|---|---|---|
+| means − side effect | permissible | −0.07 [−0.15, +0.01] | −0.68 | −0.47 [−0.57, −0.36] | −0.51 [−0.64, −0.36] |
+| means − side effect | intended | +0.20 [+0.09, +0.31] | +0.79 | **+1.37** [+1.19, +1.55] | +0.50 [+0.24, +0.78] |
+| evitable − inevitable | permissible | −0.24 [−0.34, −0.14] | −0.39 | −0.47 [−0.57, −0.37] | −0.66 [−0.81, −0.51] |
+| evitable − inevitable | intended | +0.34 [+0.21, +0.46] | +0.08 | **+0.35** [+0.14, +0.56] | **+0.48** [+0.25, +0.72] |
+| acts − does not prevent | permissible | +0.11 [+0.04, +0.19] | −0.09 | −0.04 [−0.16, +0.08] | −0.07 [−0.23, +0.08] |
+| acts − does not prevent | intended | +0.04 [−0.05, +0.12] | +0.21 | +0.25 [+0.09, +0.42] | +0.05 [−0.10, +0.21] |
+
+- **What Gemini gets right that Claude misses.** Both Gemini models pick up that people see an avoidable harm as more intended.
+- **What it shares with Claude.**
+  - It still exaggerates means vs side effect. Argon's gap on intention is seven times the human one.
+  - Like Claude, it leans the opposite way to people on acting vs not preventing.
+  - Most of its false positives are means vs side effect: 9 of Argon's 12 and 8 of Flash's 15.
+- **Spread.** Its ratings vary as little as Claude's within one version of a story: SD 0.21–0.44, against people's 0.79–1.03.
+
+### MoCa, 85 pairs
+
+| Panel | r (corrected) | Panel ÷ human mean \|gap\| | Where human gap ≥ 0.30 (34): same / no gap / opposite | Hit / false positive / miss / correct null |
+|---|---|---|---|---|
+| Claude, four models | 0.23 (0.28) | 0.71× | 44% / 35% / 21% | 4 / 10 / 37 / 34 |
+| Gemini 4 Argon | 0.44 (0.49) | 1.08× | 50% / 50% / 0% | 13 / 17 / 28 / 27 |
+| Gemini 3 Flash | 0.38 (0.45) | 0.64× | 38% / 56% / 6% | 7 / 7 / 34 / 37 |
+| Both Gemini | 0.44 (0.49) | 0.82× | 56% / 44% / 0% | 13 / 11 / 28 / 33 |
+| All six | 0.32 (0.36) | 0.70× | 59% / 24% / 18% | 4 / 8 / 37 / 36 |
+
+- **Norm violations** (30 pairs; people's mean gap 0.36):
+  - Argon: gap 0.31, r 0.65; of the 19 clear human gaps, 10 same direction, 9 no gap, 0 opposite.
+  - Flash: gap 0.17, r 0.64.
+  - Claude panel, for comparison: gap 0.17, r 0.41.
+- **Agent awareness** (12 pairs; people's mean gap 0.29): Argon 0.07, Flash 0.00, Claude 0.03. Every panel is nearly blind to it.
+
+### Each group alone, corrected for its own noise
+
+The Claude models had 10 judges each and the Gemini models 40, so raw correlations aren't comparable. These are divided by the square root of the group's own split-half reliability times the human reliability. The 10-judge corrections are imprecise: the Claude groups' OffTheRails reliability is only 0.48–0.65.
+
+| Group | Judges | OffTheRails corrected r | MoCa corrected r |
+|---|---|---|---|
+| haiku | 10 | 0.69 | 0.24 |
+| sonnet | 10 | 0.80 | −0.05 |
+| opus | 10 | 0.59 | 0.32 |
+| fable | 10 | 0.88 | 0.33 |
+| Gemini 4 Argon | 40 | 0.76 | 0.49 |
+| Gemini 3 Flash | 40 | 0.95 | 0.45 |
+
+- **On OffTheRails:** after correction, the best Claude model (Fable) is close to Flash. The Claude panel's weaker showing comes partly from averaging four models with different biases.
+- **On MoCa:** every Claude model is below both Gemini models.
+
+### Spread of human gaps around each panel (τ)
+
+On OffTheRails, true human gaps scatter around each panel's gaps by τ, on the 1–7 scale:
+
+| Panel | τ |
+|---|---|
+| Claude | 0.58 |
+| Gemini 4 Argon | 0.77 |
+| Gemini 3 Flash | 0.45 |
+| Both Gemini | 0.60 |
+
+Argon's τ is larger despite its better ordering because it exaggerates sizes more. A calibration slope would remove part of that.
 
 ## What this means for the benchmark
 
@@ -230,7 +330,12 @@ Each model read all 99 calibration stories in one file. For each it was asked wh
   - The bias is also factor-specific, so a single calibration slope won't remove it. Calibrate per factor once the survey data exist.
 - **Two rules for any panel-only verdict.**
   1. Build intervals with a human-sized spread, not the panel's. This cut false positives from 15 to 11 here.
-  2. Label the verdict "Claude panel".
+  2. Label the verdict with the models that produced it.
+- **A cross-vendor panel is worth having for ordering, not for verdicts.**
+  - Gemini ranks contrasts more like people do, and gets the evitability and norm-violation effects closer.
+  - As a prior or a screen, a Gemini-plus-Claude panel is a better instrument than Claude alone.
+  - It does not make panel-confirmed gaps trustworthy: fewer than half are backed under any panel tried here.
+  - If the pilot is rescored with a second vendor, report each vendor's verdicts side by side rather than averaging them. The equal-weight six-model average was no better than Claude alone.
 - **Restrict the judges' tools.** One judge tried to archive a session, and one recognition agent created and withdrew a task suggestion. General-purpose agents can reach session and task tools. Future runs should use a judge agent type limited to Read and Write.
 
 ## Reproduce
@@ -264,3 +369,19 @@ python3 pipeline/calibration/analyse.py --answers pipeline/calibration/answers -
 ```
 
 Both build scripts reproduce, byte for byte, the files the judges read. The analysis is seeded: rerunning it gives the same numbers.
+
+**The Gemini run.** The session's network proxy supplied the API key. Elsewhere, set `GEMINI_API_KEY`. Repeat these two commands with `gemini-3-flash-preview`, `--price-in 1 --price-out 6`, for the second model:
+
+```bash
+python3 pipeline/calibration/run_api_judge.py --model gemini-4-argon --batches jb --out pipeline/calibration/answers_gemini/gemini-4-argon --price-in 4 --price-out 20 --cap 4.50 --ledger pipeline/calibration/api_ledger.jsonl
+```
+
+```bash
+python3 pipeline/calibration/run_api_judge.py --model gemini-4-argon --recognition jr/stories.txt --out pipeline/calibration/recognition --price-in 4 --price-out 20 --cap 4.50 --ledger pipeline/calibration/api_ledger.jsonl
+```
+
+To score the other panels, add these arguments to the analysis command above, together with `--panel` (for example `--panel gemini-4-argon,gemini-3-flash-preview`) and a different `--out`:
+
+```bash
+--group gemini-4-argon=pipeline/calibration/answers_gemini/gemini-4-argon --group gemini-3-flash-preview=pipeline/calibration/answers_gemini/gemini-3-flash-preview
+```

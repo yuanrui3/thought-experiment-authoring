@@ -1,4 +1,64 @@
 {
+ "panel": [
+  "haiku",
+  "sonnet",
+  "opus",
+  "fable"
+ ],
+ "per_group_corrected": {
+  "haiku": {
+   "judges": 10,
+   "otr": {
+    "raw_r": 0.392,
+    "group_reliability": 0.487,
+    "corrected_r": 0.688
+   },
+   "moca": {
+    "raw_r": 0.157,
+    "group_reliability": 0.516,
+    "corrected_r": 0.236
+   }
+  },
+  "sonnet": {
+   "judges": 10,
+   "otr": {
+    "raw_r": 0.504,
+    "group_reliability": 0.565,
+    "corrected_r": 0.821
+   },
+   "moca": {
+    "raw_r": -0.026,
+    "group_reliability": 0.306,
+    "corrected_r": -0.051
+   }
+  },
+  "opus": {
+   "judges": 10,
+   "otr": {
+    "raw_r": 0.393,
+    "group_reliability": 0.669,
+    "corrected_r": 0.588
+   },
+   "moca": {
+    "raw_r": 0.263,
+    "group_reliability": 0.811,
+    "corrected_r": 0.316
+   }
+  },
+  "fable": {
+   "judges": 10,
+   "otr": {
+    "raw_r": 0.574,
+    "group_reliability": 0.64,
+    "corrected_r": 0.878
+   },
+   "moca": {
+    "raw_r": 0.3,
+    "group_reliability": 0.949,
+    "corrected_r": 0.333
+   }
+  }
+ },
  "excluded_batches": {},
  "otr": {
   "n_human_workers": 115,
@@ -1709,7 +1769,7 @@
     "human_gaps": 20,
     "human_nulls": 40
    },
-   "all four models agree, threshold 0.33": {
+   "all panel groups agree, threshold 0.33": {
     "confirmed": 20,
     "backed_by_humans": 8,
     "false_positive": 11,
