@@ -8,6 +8,17 @@
     python3 pipeline/round2/build.py check    --transcripts DIR
     python3 pipeline/round2/build.py ingest   --judges DIR --auditors DIR
 
+With --tag b, every step works on the extension instead ("round 2b": two more pairs per author per new factor, judged
+together with the round-2 pairs) and reads and writes its own files (round2/vignettes_b.json, judge_batches_b.json,
+audit_batches_b.json, raw/provenance_b.json, raw/authoring_b/), so run "round2" stays reproducible:
+
+    python3 pipeline/round2/build.py brief    --tag b --out DIR [--tiers haiku sonnet opus]   # one brief per author
+    python3 pipeline/round2/build.py assemble --tag b [--tiers haiku sonnet opus]
+    python3 pipeline/round2/build.py judges   --tag b --out DIR --models haiku sonnet opus --seed 20261127 --run-id round2b
+    python3 pipeline/round2/build.py auditors --tag b --out DIR --models haiku sonnet opus
+    python3 pipeline/round2/build.py check    --tag b --transcripts DIR
+    python3 pipeline/round2/build.py ingest   --tag b --judges DIR --auditors DIR --run-id round2b
+
 Factors in round 2 (round2/vignettes.json):
   kept from the pilot   doing_allowing, norm_causation (the pilot's pairs and classic controls, reused unchanged)
   new                   inevitable_harm, knowledge_causation, luck_wrongness (newly authored pairs, new classic controls)
@@ -39,7 +50,16 @@ ap.add_argument("--judges")
 ap.add_argument("--auditors")
 ap.add_argument("--run-id", default="round2")
 ap.add_argument("--collected-on", default=time.strftime("%Y-%m-%d", time.gmtime()))
+ap.add_argument("--tag", default="", help="b: the extension with two more pairs per author per new factor")
 args = ap.parse_args()
+TAG = args.tag
+SFX = ("_" + TAG) if TAG else ""
+VIGN = os.path.join(R2, "vignettes%s.json" % SFX)
+JB = os.path.join(HERE, "judge_batches%s.json" % SFX)
+AB = os.path.join(HERE, "audit_batches%s.json" % SFX)
+PROV = os.path.join(RAW, "provenance%s.json" % SFX)
+AUTH = os.path.join(RAW, "authoring%s" % SFX)
+PFX = "r2" + TAG  # batch-id prefix, and the prefix of the scratch folders the agents read and write
 MODEL_ID = {"haiku": "claude-haiku-5-5", "sonnet": "claude-sonnet-5-5", "opus": "claude-opus-5-5", "fable": "claude-fable-5-2"}
 
 NEW_FACTORS = [
@@ -131,20 +151,92 @@ def judge_prompt(pairs, items):
 
 
 def load_r2():
-    return json.load(open(os.path.join(R2, "vignettes.json"), encoding="utf-8"))
+    return json.load(open(VIGN, encoding="utf-8"))
+
+
+def brief_more(tier):
+    """Round 2b: the round-2 brief, asking for two more pairs per factor, with the author's own round-2 pairs appended
+    (texts and questions only; no predictions or results) so that it does not write the same scenario again."""
+    t = BRIEF
+    for a, b in (("For each of the three target factors below, write one original vignette pair: three pairs in total, one per factor.",
+                  "For each of the three target factors below, write two new original vignette pairs: six pairs in total, two per factor. "
+                  "You have already written one pair per factor for this benchmark; they are shown below under YOUR EARLIER PAIRS. Each "
+                  "new pair must use a different setting, situation and kind of harm from your earlier pairs and from each other."),
+                 ("Write your three pairs with the Write tool", "Write your six pairs with the Write tool"),
+                 ("... one per factor]}", "... two per factor]}")):
+        assert t.count(a) == 1, a
+        t = t.replace(a, b)
+    base = json.load(open(os.path.join(R2, "vignettes.json"), encoding="utf-8"))
+    mine = [p for p in base["pairs"] if p["pair_type"] == "authored" and p["author"]["tier"] == tier
+            and p["factor_id"] in {f["factor_id"] for f in NEW_FACTORS}]
+    assert len(mine) == 3, (tier, len(mine))
+    parts = []
+    for p in mine:
+        parts.append("Factor: %s. Title: %s\nVersion A: %s\nVersion B: %s\nJudgment question: %s" % (
+            p["factor_id"], p["title"], p["versions"]["A"]["text"], p["versions"]["B"]["text"], p["judgment_question"]["text"]))
+    earlier = ("YOUR EARLIER PAIRS\nFor reference only, so that your new pairs differ from them. Do not copy or adapt their "
+               "settings.\n\n" + "\n\n".join(parts) + "\n\n")
+    assert t.count("YOUR ANSWER\n") == 1
+    return t.replace("YOUR ANSWER\n", earlier + "YOUR ANSWER\n")
 
 
 if args.step == "brief":
-    open(args.out, "w", encoding="utf-8").write(BRIEF)
-    print("wrote", args.out, len(BRIEF.split()), "words")
+    if not TAG:
+        open(args.out, "w", encoding="utf-8").write(BRIEF)
+        print("wrote", args.out, len(BRIEF.split()), "words")
+    else:
+        os.makedirs(args.out, exist_ok=True)
+        for tier in args.tiers:
+            t = brief_more(tier)
+            open(os.path.join(args.out, tier + ".txt"), "w", encoding="utf-8").write(t)
+            print("wrote", os.path.join(args.out, tier + ".txt"), len(t.split()), "words")
+    sys.exit(0)
+
+if args.step == "assemble" and TAG:
+    base = json.load(open(os.path.join(R2, "vignettes.json"), encoding="utf-8"))
+    prov = json.load(open(PROV)) if os.path.exists(PROV) else {}
+    newf = [f["factor_id"] for f in NEW_FACTORS]
+    release = "round2%s-2026-11-22" % TAG
+    pairs = []
+    for tier in args.tiers:
+        f = os.path.join(AUTH, tier + ".json")
+        if not os.path.exists(f):
+            print("no round-2%s pairs yet from %s" % (TAG, tier))
+            continue
+        pairs += [p for p in base["pairs"] if p["pair_type"] == "authored" and p["factor_id"] in newf and p["author"]["tier"] == tier]
+        pv = prov.get("author:" + tier, {})
+        served = (pv.get("served") or [MODEL_ID[tier]])[0]
+        author = {"type": "llm", "vendor": "anthropic", "tier": tier, "model": served, "author_id": "anthropic/%s" % served,
+                  "requested_alias": tier, "tool_calls": [c[0] for c in pv.get("calls", [])], "authoring_run": release}
+        got = json.load(open(f, encoding="utf-8"))["pairs"]
+        count = {x: 0 for x in newf}
+        for p in got:
+            if p["factor_id"] not in count:
+                raise SystemExit("%s: unexpected factor %s" % (tier, p["factor_id"]))
+            count[p["factor_id"]] += 1
+            pairs.append(BV.shape(p, "r2_%s_%s_%d" % (tier, p["factor_id"], count[p["factor_id"]] + 1), "authored", author))
+        if any(n != 2 for n in count.values()):
+            raise SystemExit("%s: pairs per factor %s, expected 2 each" % (tier, count))
+    pairs += [p for p in base["pairs"] if p["pair_type"] in ("control_classic", "control_null")]
+    doc = {k: base[k] for k in ("schema_version", "benchmark", "language", "task", "factors")}
+    doc.update({"release": release, "pairs": pairs, "audit_calibration_pairs": [],
+                "note": "Round 2b: each round-2 author wrote two more pairs per new factor, so that an author's score on a factor rests "
+                        "on three pairs. The round-2 pairs on the new factors, all ten controls and the new pairs are judged together "
+                        "in one run; the reused pilot pairs on doing vs. allowing and norm violation are left out."})
+    json.dump(doc, open(VIGN, "w"), indent=1, ensure_ascii=False)
+    print("wrote %s: %d pairs" % (os.path.relpath(VIGN, ROOT), len(pairs)))
+    for p in pairs:
+        flag = ("  !! " + "; ".join(p["format_problems"])) if p.get("format_problems") else ""
+        print("  %-32s %-16s %-20s A=%3d B=%3d%s" % (p["pair_id"], p["pair_type"], p["factor_id"], p["versions"]["A"]["word_count"],
+                                                     p["versions"]["B"]["word_count"], flag))
     sys.exit(0)
 
 if args.step == "assemble":
     pilot = json.load(open(os.path.join(ROOT, "vignettes.json"), encoding="utf-8"))
-    prov = json.load(open(os.path.join(RAW, "provenance.json"))) if os.path.exists(os.path.join(RAW, "provenance.json")) else {}
+    prov = json.load(open(PROV)) if os.path.exists(PROV) else {}
     pairs = []
     for tier in args.tiers:
-        f = os.path.join(RAW, "authoring", tier + ".json")
+        f = os.path.join(AUTH, tier + ".json")
         if not os.path.exists(f):
             print("no round-2 pairs yet from", tier)
             continue
@@ -177,7 +269,7 @@ if args.step == "assemble":
                    "got their direction right) with three contested factors. Pairs for doing vs. allowing and norm violation, their "
                    "classic controls and the null controls are reused from the pilot unchanged."}
     os.makedirs(R2, exist_ok=True)
-    json.dump(doc, open(os.path.join(R2, "vignettes.json"), "w"), indent=1, ensure_ascii=False)
+    json.dump(doc, open(VIGN, "w"), indent=1, ensure_ascii=False)
     print("wrote round2/vignettes.json:", len(pairs), "pairs")
     for p in pairs:
         flag = ("  !! " + "; ".join(p["format_problems"])) if p.get("format_problems") else ""
@@ -199,7 +291,7 @@ if args.step == "judges":
             for arm in ("x", "y"):
                 items = [(pid, "A" if ((pid in x_gets_a) == (arm == "x")) else "B") for pid in ids]
                 rng.shuffle(items)
-                batches.append({"batch_id": "r2-%s-r%d-%s" % (model, rep, arm), "model_alias": model, "repeat": rep, "arm": arm,
+                batches.append({"batch_id": "%s-%s-r%d-%s" % (PFX, model, rep, arm), "model_alias": model, "repeat": rep, "arm": arm,
                                 "items": [{"position": i + 1, "pair_id": pid, "version": v} for i, (pid, v) in enumerate(items)]})
     tmp = os.path.join(args.out, "_personas.json")
     os.makedirs(args.out, exist_ok=True)
@@ -212,13 +304,15 @@ if args.step == "judges":
         open(os.path.join(args.out, b["batch_id"] + ".txt"), "w", encoding="utf-8").write(
             judge_prompt(pairs, [(it["pair_id"], it["version"]) for it in b["items"]]) + JUDGE_CLOSING)
     json.dump({"run_id": args.run_id, "seed": args.seed, "persona_seed": args.seed, "instruction": PERSONA_INSTRUCTION, "batches": batches},
-              open(os.path.join(HERE, "judge_batches.json"), "w"), indent=1)
+              open(JB, "w"), indent=1)
     print("wrote %d judge batches of %d items to %s" % (len(batches), len(ids), args.out))
     sys.exit(0)
 
 if args.step == "auditors":
     doc = load_r2()
     new = [p for p in doc["pairs"] if p["factor_id"] in {f["factor_id"] for f in NEW_FACTORS}]
+    if TAG:  # round 2b: only the pairs written for it; the round-2 pairs and controls keep their round-2 audits
+        new = [p for p in new if p.get("author", {}).get("authoring_run") == doc["release"]]
     fac = {f["factor_id"]: f for f in doc["factors"]}
     rng = random.Random(args.seed + 1)
     intro = audit_intro()
@@ -242,7 +336,7 @@ if args.step == "auditors":
         text = intro.format(n=len(codes)) + "\n\n" + "\n\n==========\n\n".join(parts) + AUDIT_CLOSING
         open(os.path.join(args.out, "audit-%s.txt" % model), "w", encoding="utf-8").write(text)
         man["auditors"][model] = codes
-    json.dump(man, open(os.path.join(HERE, "audit_batches.json"), "w"), indent=1)
+    json.dump(man, open(AB, "w"), indent=1)
     print("wrote %d auditor files of %d pairs to %s" % (len(args.models), len(new), args.out))
     sys.exit(0)
 
@@ -256,8 +350,9 @@ if args.step == "check":
             continue
         c = first["message"]["content"]
         t = c if isinstance(c, str) else " ".join(x.get("text", "") for x in c if isinstance(x, dict))
-        for kind, rx in (("author", r"/r2brief/brief\.txt.*?/r2a/(\w+)\.json"), ("auditor", r"/r2aud/audit-(\w+)\.txt.*?/r2aa/"),
-                         ("judge", r"/r2j/(r2-\w+-r\d-[xy])\.txt.*?/r2ja/")):
+        for kind, rx in (("author", r"/%sbrief/\w+\.txt.*?/%sa/(\w+)\.json" % (PFX, PFX)),
+                         ("auditor", r"/%saud/audit-(\w+)\.txt.*?/%saa/" % (PFX, PFX)),
+                         ("judge", r"/%sj/(%s-\w+-r\d-[xy])\.txt.*?/%sja/" % (PFX, PFX, PFX))):
             m = re.search(rx, t, re.S)
             if not m:
                 continue
@@ -286,15 +381,15 @@ if args.step == "check":
                         "usable": wrote_at is not None and calls[wrote_at][1] == own and clean_read
                                   and all(cl[1] == own for cl in later_writes),
                         "stray_calls_after_answering": after}
-    json.dump(out, open(os.path.join(RAW, "provenance.json"), "w"), indent=1)
+    json.dump(out, open(PROV, "w"), indent=1)
     for k in sorted(out):
         r = out[k]
         print("%-26s served %-22s usable %-5s calls %s" % (k, ",".join(r["served"]), r["usable"], [c[0] for c in r["calls"]]))
     sys.exit(0)
 
 if args.step == "ingest":
-    man = json.load(open(os.path.join(HERE, "judge_batches.json")))
-    prov = json.load(open(os.path.join(RAW, "provenance.json")))
+    man = json.load(open(JB))
+    prov = json.load(open(PROV))
     path = os.path.join(ROOT, "judgments.csv")
     with open(path, newline="", encoding="utf-8") as f:
         rd = csv.DictReader(f)
@@ -323,7 +418,7 @@ if args.step == "ingest":
         w.writeheader()
         w.writerows(keep + new)
     print("judgments.csv: %d rows for run %r%s" % (len(new), args.run_id, ("; not ingested: " + " ".join(missing)) if missing else ""))
-    am = json.load(open(os.path.join(HERE, "audit_batches.json")))
+    am = json.load(open(AB))
     apath = os.path.join(ROOT, "audits.csv")
     with open(apath, newline="", encoding="utf-8") as f:
         rd = csv.DictReader(f)
@@ -338,7 +433,7 @@ if args.step == "ingest":
         mid = MODEL_ID[model]
         for a in json.load(open(f))["audits"]:
             pid = codes[a["pair"]]
-            anew.append({"run_id": args.run_id, "auditor_id": "anthropic/%s/audit-%s-r2" % (mid, model), "auditor_type": "llm",
+            anew.append({"run_id": args.run_id, "auditor_id": "anthropic/%s/audit-%s-r2%s" % (mid, model, TAG), "auditor_type": "llm",
                          "auditor_vendor": "anthropic", "auditor_model": mid, "auditor_group": "anthropic/" + mid, "pair_id": pid,
                          "pair_code": a["pair"], "factor_realized": a["factor_realized"], "confound_severity": int(a["confound_severity"]),
                          "originality": int(a["originality"]), "closest_known_case": a["closest_known_case"],
