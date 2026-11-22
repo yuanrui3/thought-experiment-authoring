@@ -74,6 +74,13 @@
    "sign error": 1,
    "miss (human gap below threshold)": 5
   },
+  "interval_coverage": {
+   "panel_interval_contains_human_gap": 30,
+   "intervals_overlap": 47,
+   "of": 60,
+   "mean_panel_interval_width": 0.601,
+   "mean_human_interval_width": 0.533
+  },
   "contrasts": [
    {
     "scenario": 0,
@@ -2026,6 +2033,11 @@
    "false positive": 10,
    "miss": 37,
    "correct null": 34
+  },
+  "interval_coverage": {
+   "panel_interval_contains_human_gap": 18,
+   "of": 85,
+   "mean_panel_interval_width": 0.213
   },
   "pairs": [
    {

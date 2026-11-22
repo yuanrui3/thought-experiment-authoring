@@ -33,6 +33,9 @@ ap.add_argument("--ledger", required=True)
 ap.add_argument("--reasoning-effort", default="low")
 ap.add_argument("--endpoint", default="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions")
 ap.add_argument("--first-call-guess", type=float, default=0.25, help="assumed cost of a call before any is measured")
+ap.add_argument("--temperature", type=float, help="sampling temperature (default: the API's own default)")
+ap.add_argument("--personas", help="personas.json: each judge bNN answers as the persona drawn for bNN")
+ap.add_argument("--condition", default="", help="label recorded in the ledger, e.g. persona or temp2")
 args = ap.parse_args()
 
 SYSTEM_JUDGE = ("You are a participant in a study of how people judge everyday situations. Read the text and follow its "
@@ -57,10 +60,19 @@ def next_call_guess():
     return max(mine) * 1.5 if mine else args.first_call_guess
 
 
+PERSONAS = json.load(open(args.personas))["personas"] if args.personas else {}
+SYSTEM_PERSONA = ("You are taking part in a study of how people judge everyday situations, as the participant described here. {persona} "
+                  "Answer every question as this person honestly would: people differ, and there are no right or wrong answers. "
+                  "Read the text and follow its instructions. You have no tools and cannot write files: instead, reply with only "
+                  "the JSON object the text asks for, and nothing else.")
+
+
 def call(system, text):
     body = {"model": args.model, "messages": [{"role": "system", "content": system}, {"role": "user", "content": text}]}
     if args.reasoning_effort != "default":
         body["reasoning_effort"] = args.reasoning_effort
+    if args.temperature is not None:
+        body["temperature"] = args.temperature
     req = urllib.request.Request(args.endpoint, data=json.dumps(body).encode(), method="POST",
                                  headers={"Content-Type": "application/json",
                                           "Authorization": "Bearer " + os.environ.get("GEMINI_API_KEY", "proxy-injected")})
@@ -119,7 +131,8 @@ else:
     for f in sorted(os.listdir(args.batches)):
         bid = f[:-4]
         if f.endswith(".txt") and (not args.only or bid in args.only):
-            jobs.append((bid, os.path.join(args.batches, f), os.path.join(args.out, bid + ".json"), SYSTEM_JUDGE, valid_batch))
+            system = SYSTEM_PERSONA.format(persona=PERSONAS[bid]["text"]) if PERSONAS else SYSTEM_JUDGE
+            jobs.append((bid, os.path.join(args.batches, f), os.path.join(args.out, bid + ".json"), system, valid_batch))
 os.makedirs(args.out, exist_ok=True)
 for job, path, out, system, check in jobs:
     if os.path.exists(out):
@@ -139,7 +152,7 @@ for job, path, out, system, check in jobs:
     a = parse_json(content)
     ok = a is not None and check(a, text)
     row = {"time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "model": args.model, "served_model": r.get("model"),
-           "job": job, "reasoning_effort": args.reasoning_effort, "usage": u, "price_in": args.price_in,
+           "job": job, "condition": args.condition, "temperature": args.temperature, "reasoning_effort": args.reasoning_effort, "usage": u, "price_in": args.price_in,
            "price_out": args.price_out, "cost_estimate": round(cost, 5), "seconds": round(time.time() - t0, 1), "answers_ok": ok}
     with open(args.ledger, "a") as f:
         f.write(json.dumps(row) + "\n")

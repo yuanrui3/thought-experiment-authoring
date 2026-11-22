@@ -1,0 +1,667 @@
+{
+ "b01": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b01.txt"
+   ],
+   [
+    "Write",
+    "b01.json"
+   ]
+  ]
+ },
+ "b02": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b02.txt"
+   ],
+   [
+    "Write",
+    "b02.json"
+   ]
+  ]
+ },
+ "b03": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b03.txt"
+   ],
+   [
+    "Write",
+    "b03.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "b04": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b04.txt"
+   ],
+   [
+    "Write",
+    "b04.json"
+   ],
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ]
+ },
+ "b05": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b05.txt"
+   ],
+   [
+    "Write",
+    "b05.json"
+   ]
+  ]
+ },
+ "b06": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b06.txt"
+   ],
+   [
+    "Write",
+    "b06.json"
+   ]
+  ]
+ },
+ "b07": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b07.txt"
+   ],
+   [
+    "Write",
+    "b07.json"
+   ]
+  ]
+ },
+ "b08": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b08.txt"
+   ],
+   [
+    "Write",
+    "b08.json"
+   ]
+  ]
+ },
+ "b09": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b09.txt"
+   ],
+   [
+    "Write",
+    "b09.json"
+   ]
+  ]
+ },
+ "b10": {
+  "requested": "haiku",
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ],
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b10.txt"
+   ],
+   [
+    "Write",
+    "b10.json"
+   ],
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ],
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ]
+ },
+ "b11": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b11.txt"
+   ],
+   [
+    "Write",
+    "b11.json"
+   ]
+  ]
+ },
+ "b12": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b12.txt"
+   ],
+   [
+    "Write",
+    "b12.json"
+   ]
+  ]
+ },
+ "b13": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b13.txt"
+   ],
+   [
+    "Write",
+    "b13.json"
+   ]
+  ]
+ },
+ "b14": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b14.txt"
+   ],
+   [
+    "Write",
+    "b14.json"
+   ]
+  ]
+ },
+ "b15": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b15.txt"
+   ],
+   [
+    "Write",
+    "b15.json"
+   ]
+  ]
+ },
+ "b16": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b16.txt"
+   ],
+   [
+    "Write",
+    "b16.json"
+   ]
+  ]
+ },
+ "b17": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b17.txt"
+   ],
+   [
+    "Write",
+    "b17.json"
+   ]
+  ]
+ },
+ "b18": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b18.txt"
+   ],
+   [
+    "Write",
+    "b18.json"
+   ]
+  ]
+ },
+ "b19": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b19.txt"
+   ],
+   [
+    "Write",
+    "b19.json"
+   ]
+  ]
+ },
+ "b20": {
+  "requested": "sonnet",
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b20.txt"
+   ],
+   [
+    "Write",
+    "b20.json"
+   ]
+  ]
+ },
+ "b21": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b21.txt"
+   ],
+   [
+    "Write",
+    "b21.json"
+   ]
+  ]
+ },
+ "b22": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b22.txt"
+   ],
+   [
+    "Write",
+    "b22.json"
+   ]
+  ]
+ },
+ "b23": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b23.txt"
+   ],
+   [
+    "Write",
+    "b23.json"
+   ]
+  ]
+ },
+ "b24": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b24.txt"
+   ],
+   [
+    "Write",
+    "b24.json"
+   ]
+  ]
+ },
+ "b25": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b25.txt"
+   ],
+   [
+    "Write",
+    "b25.json"
+   ]
+  ]
+ },
+ "b26": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b26.txt"
+   ],
+   [
+    "Write",
+    "b26.json"
+   ]
+  ]
+ },
+ "b27": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b27.txt"
+   ],
+   [
+    "Write",
+    "b27.json"
+   ]
+  ]
+ },
+ "b28": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b28.txt"
+   ],
+   [
+    "Write",
+    "b28.json"
+   ]
+  ]
+ },
+ "b29": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b29.txt"
+   ],
+   [
+    "Write",
+    "b29.json"
+   ]
+  ]
+ },
+ "b30": {
+  "requested": "opus",
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b30.txt"
+   ],
+   [
+    "Write",
+    "b30.json"
+   ]
+  ]
+ }
+}

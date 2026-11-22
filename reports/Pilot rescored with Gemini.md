@@ -96,7 +96,7 @@ Two pairs cause the swing:
   - Within one model: 0.28 (Argon) and 0.40 (Flash), against 0.19–0.54 for the Claude models.
   - Pooled by vendor: Gemini 0.45, Claude 0.73.
 
-  Either way, much less than the spread among people in the calibration datasets. The confidence intervals here are therefore just as narrow as the Claude panel's, and "interval excludes zero" means little.
+  Either way, much less than the spread among people in the calibration datasets. The intervals here are therefore narrower than a sample of people of the same size would give, as with the Claude panel. The calibration found that bias, more than width, is what makes panel verdicts unreliable.
 - **Provenance:** all 20 calls were served by the model requested, and every answer is saved in `pipeline/raw/panel_gemini/`.
 
 ## What this means

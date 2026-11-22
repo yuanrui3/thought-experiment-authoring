@@ -32,6 +32,13 @@
     "miss (human gap below threshold)": 5,
     "miss (human gap at or above threshold)": 5
    },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 32,
+    "intervals_overlap": 45,
+    "of": 60,
+    "mean_panel_interval_width": 0.745,
+    "mean_human_interval_width": 0.533
+   },
    "contrasts": [
     {
      "scenario": 0,
@@ -1735,6 +1742,11 @@
     "false positive": 17,
     "miss": 28,
     "correct null": 27
+   },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 15,
+    "of": 85,
+    "mean_panel_interval_width": 0.197
    },
    "pairs": [
     {
@@ -4791,6 +4803,13 @@
     "miss (human gap below threshold)": 3,
     "miss (human gap at or above threshold)": 3
    },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 40,
+    "intervals_overlap": 49,
+    "of": 60,
+    "mean_panel_interval_width": 0.754,
+    "mean_human_interval_width": 0.533
+   },
    "contrasts": [
     {
      "scenario": 0,
@@ -6494,6 +6513,11 @@
     "correct null": 37,
     "miss": 34,
     "false positive": 7
+   },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 32,
+    "of": 85,
+    "mean_panel_interval_width": 0.305
    },
    "pairs": [
     {
@@ -9564,6 +9588,13 @@
     "miss (human gap below threshold)": 2,
     "miss (human gap at or above threshold)": 3
    },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 29,
+    "intervals_overlap": 43,
+    "of": 60,
+    "mean_panel_interval_width": 0.539,
+    "mean_human_interval_width": 0.533
+   },
    "contrasts": [
     {
      "scenario": 0,
@@ -11348,6 +11379,11 @@
     "correct null": 33,
     "false positive": 11,
     "miss": 28
+   },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 15,
+    "of": 85,
+    "mean_panel_interval_width": 0.205
    },
    "pairs": [
     {
@@ -14944,6 +14980,13 @@
     "sign error": 1,
     "miss (human gap below threshold)": 5
    },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 24,
+    "intervals_overlap": 44,
+    "of": 60,
+    "mean_panel_interval_width": 0.441,
+    "mean_human_interval_width": 0.533
+   },
    "contrasts": [
     {
      "scenario": 0,
@@ -17058,6 +17101,11 @@
     "false positive": 8,
     "miss": 37,
     "correct null": 36
+   },
+   "interval_coverage": {
+    "panel_interval_contains_human_gap": 15,
+    "of": 85,
+    "mean_panel_interval_width": 0.175
    },
    "pairs": [
     {

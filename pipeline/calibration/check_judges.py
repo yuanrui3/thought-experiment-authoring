@@ -16,6 +16,8 @@ ap.add_argument("--transcripts", required=True)
 ap.add_argument("--answers", required=True)
 ap.add_argument("--manifest", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "manifest.json"))
 ap.add_argument("--out")
+ap.add_argument("--writes-to", default="ja", help="only transcripts whose instructions write answers into this folder name "
+                                                  "(ja = the original judges, jp = the persona judges)")
 args = ap.parse_args()
 man = json.load(open(args.manifest))
 
@@ -28,7 +30,7 @@ for f in glob.glob(os.path.join(args.transcripts, "agent-*.jsonl")):
     content = first["message"]["content"]
     text = content if isinstance(content, str) else " ".join(c.get("text", "") for c in content if isinstance(c, dict))
     m = re.search(r"/jb/(b\d\d)\.txt", text)
-    if not m:
+    if not m or ("/%s/%s.json" % (args.writes_to, m.group(1))) not in text:
         continue
     bid = m.group(1)
     models, calls = set(), []

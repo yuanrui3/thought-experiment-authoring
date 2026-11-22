@@ -301,11 +301,18 @@ def otr_agreement(keys, per_model=None):
     return agreement(panel, [hg[k] for k in keys], [human_verdict(k) != "0" for k in keys])
 
 
+# does the panel's own 95% interval contain people's gap? A calibrated panel would, about 95% of the time
+# (less, since people's gap is itself estimated with noise).
+otr_cover = {"panel_interval_contains_human_gap": sum(1 for r in rows_out if r["panel_ci"][0] <= r["human_gap"] <= r["panel_ci"][1]),
+             "intervals_overlap": sum(1 for r in rows_out if r["panel_ci"][0] <= r["human_ci"][1] and r["human_ci"][0] <= r["panel_ci"][1]),
+             "of": len(rows_out),
+             "mean_panel_interval_width": r3(mean([r["panel_ci"][1] - r["panel_ci"][0] for r in rows_out])),
+             "mean_human_interval_width": r3(mean([r["human_ci"][1] - r["human_ci"][0] for r in rows_out]))}
 all_keys = [(s, f, q) for s, f, _, q in CONTRASTS]
 otr = {"n_human_workers": len(workers), "n_human_ratings": len(H),
        "human_workers_matching_their_batch": sum(worker_match.values()),
        "n_panel_ratings": len(P_otr), "threshold_on_1_to_5_scale": round(OTR_THRESHOLD, 3),
-       "verdict_table": dict(table), "contrasts": rows_out,
+       "verdict_table": dict(table), "interval_coverage": otr_cover, "contrasts": rows_out,
        "agreement": {"all": otr_agreement(all_keys)}}
 for q in QUESTIONS:
     otr["agreement"][q] = otr_agreement([k for k in all_keys if k[2] == q])
@@ -543,6 +550,8 @@ for a, b in pairs:
                       "panel_n": {m: [len(ans.get((a, m), [])), len(ans.get((b, m), []))] for m in MODELS},
                       "panel_verdict": pv, "human_verdict": hv})
 
+moca_cover = {"panel_interval_contains_human_gap": sum(1 for r in moca_rows if r["panel_ci"][0] <= r["human_gap"] <= r["panel_ci"][1]),
+              "of": len(moca_rows), "mean_panel_interval_width": r3(mean([r["panel_ci"][1] - r["panel_ci"][0] for r in moca_rows]))}
 mtab = defaultdict(int)
 for r in moca_rows:
     pv, hv = r["panel_verdict"], r["human_verdict"]
@@ -551,7 +560,7 @@ for r in moca_rows:
     mtab[cls] += 1
 mp = [r["panel_gap"] for r in moca_rows]
 mh = [r["human_gap"] for r in moca_rows]
-moca = {"n_pairs": len(moca_rows), "n_panel_answers": len(P_moca), "verdict_table": dict(mtab), "pairs": moca_rows,
+moca = {"n_pairs": len(moca_rows), "n_panel_answers": len(P_moca), "verdict_table": dict(mtab), "interval_coverage": moca_cover, "pairs": moca_rows,
         "agreement": agreement(mp, mh, [abs(h) >= HUMAN_CLEAR for h in mh]),
         "agreement_human_significant": agreement(mp, mh, [r["human_verdict"] != "0" for r in moca_rows]),
         "agreement_per_model": {}}
@@ -697,6 +706,7 @@ for e in otr["main_effects"]:
         e["factor"], e["question"], e["human"], *e["human_ci"], e["panel"], *e["panel_ci"],
         " ".join("%s %+.2f" % (m, v) for m, v in e["per_model"].items())))
 print("  60 scenario contrasts:", dict(table))
+print("  interval coverage:", json.dumps(otr_cover))
 print("  false positives:", json.dumps(otr["false_positives"]))
 print("  verdicts by factor:", json.dumps(otr["verdicts_by_factor"]))
 print("  cell-level means:", json.dumps(otr["cell_level_means"]))
@@ -713,6 +723,7 @@ for m in MODELS:
     print("  per model %-22s" % m, json.dumps(otr["agreement_per_model"][m]))
 print("MoCa: %d pairs, %d panel answers" % (len(moca_rows), len(P_moca)))
 print("  verdicts:", dict(mtab), json.dumps(moca["rates"]))
+print("  interval coverage:", json.dumps(moca_cover))
 print("  agreement:", json.dumps(moca["agreement"]))
 print("  reliability:", json.dumps(moca["reliability"]))
 print("  story level:", json.dumps(moca["story_level"]))

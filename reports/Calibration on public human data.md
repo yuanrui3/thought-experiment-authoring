@@ -19,7 +19,7 @@ The errors depend on the factor, and they run in both directions:
 Because the bias is systematic, more repeats will not fix it, and tightening the rule doesn't either:
 
 - Doubling the threshold leaves 8 false positives against 7 backed gaps.
-- The panel's ratings are 2–7 times less spread than people's, so its intervals are far too narrow. "Interval excludes zero" is almost automatic.
+- The panel's ratings are 2–7 times less spread than people's. Even so, its intervals come out about as wide as people's here (0.60 against 0.53 points), because it has about 20 ratings per side to people's 92. The bigger problem is where they sit. A panel with these widths and no bias would contain people's gap about 50 times in 60; this one does 30 times. *(Corrected 22 November: an earlier version said the intervals were "far too narrow".)*
 
 **For the benchmark:**
 
@@ -34,6 +34,8 @@ Because the bias is systematic, more repeats will not fix it, and tightening the
 - **Mixing doesn't help either.** Adding them to the Claude panel at equal weight leaves the verdicts no better (8 backed, 14 false positives).
 
 So the problem is not specific to Claude.
+
+**Personas help; randomness alone doesn't.** Giving each judge a described participant to answer as doubles each model's rating spread. For the Claude models it improves every measure: false positives fall from 12 to 7 of 40, and people's gap falls inside the panel's interval 44 times in 60 instead of 35. It doesn't remove the bias. Running Gemini with more randomness changes almost nothing. Details in `reports/Fixing the panel's overconfidence.md`.
 
 **Correction (22 November 2026).** An earlier version of this report treated OffTheRails' "means vs side effect" contrast as a clean change of one factor. It isn't. In every scenario, the "means" and "side effect" versions describe a different plan, benefit and harm for the same character; they share about 30% of their words. The other two factors are near-minimal edits (75–93% shared). The comparison of panel with people still holds, since both read the same texts. What changes is the interpretation: the means/side-effect gaps below compare two different stories, not just two causal structures. The statements about evitability and acting vs not preventing are unaffected.
 
@@ -151,7 +153,7 @@ Gap in mean rating, in scale points on 1–5, averaged over the 10 scenarios. A 
   | Permissibility | 0.79 | 0.44 | 0.14 |
   | Intention | 1.03 | 0.30 | 0.15 |
 
-  This is why the panel's intervals are so narrow. Resampling repeats of one model measures that model's sampling noise, not how much people differ.
+  So the panel's intervals are narrower than a sample of people of the same size would give: resampling repeats of one model measures that model's sampling noise, not how much people differ. In this calibration they still come out about as wide as people's (0.60 against 0.53 points), because the panel has about 20 ratings per side to people's 92. Bias, not width, is the larger problem.
 
 ### Could a different rule fix it?
 
