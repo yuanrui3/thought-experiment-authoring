@@ -1,0 +1,164 @@
+{
+ "batch_id": "argon-r4-y",
+ "api_model": "gemini-4-argon",
+ "served_model": "gemini-4-argon",
+ "structured_output": true,
+ "reasoning_effort": "low",
+ "usage": {
+  "completion_tokens": 580,
+  "prompt_tokens": 6417,
+  "total_tokens": 6997
+ },
+ "answers": [
+  {
+   "item": 1,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 2,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 3,
+   "rating": 5,
+   "check": "b"
+  },
+  {
+   "item": 4,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 5,
+   "rating": 6,
+   "check": "a"
+  },
+  {
+   "item": 6,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 7,
+   "rating": 5,
+   "check": "c"
+  },
+  {
+   "item": 8,
+   "rating": 3,
+   "check": "a"
+  },
+  {
+   "item": 9,
+   "rating": 6,
+   "check": "a"
+  },
+  {
+   "item": 10,
+   "rating": 4,
+   "check": "b"
+  },
+  {
+   "item": 11,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 12,
+   "rating": 2,
+   "check": "b"
+  },
+  {
+   "item": 13,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 14,
+   "rating": 1,
+   "check": "a"
+  },
+  {
+   "item": 15,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 16,
+   "rating": 5,
+   "check": "b"
+  },
+  {
+   "item": 17,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 18,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 19,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 20,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 21,
+   "rating": 2,
+   "check": "b"
+  },
+  {
+   "item": 22,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 23,
+   "rating": 6,
+   "check": "a"
+  },
+  {
+   "item": 24,
+   "rating": 1,
+   "check": "a"
+  },
+  {
+   "item": 25,
+   "rating": 1,
+   "check": "b"
+  },
+  {
+   "item": 26,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 27,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 28,
+   "rating": 6,
+   "check": "a"
+  },
+  {
+   "item": 29,
+   "rating": 5,
+   "check": "b"
+  },
+  {
+   "item": 30,
+   "rating": 5,
+   "check": "b"
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "batch_id": "flash-r4-x",
+ "api_model": "gemini-3-flash-preview",
+ "served_model": "gemini-3-flash-preview",
+ "structured_output": true,
+ "reasoning_effort": "low",
+ "usage": {
+  "completion_tokens": 565,
+  "prompt_tokens": 6140,
+  "total_tokens": 6705
+ },
+ "answers": [
+  {
+   "item": 1,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 2,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 3,
+   "rating": 7,
+   "check": "b"
+  },
+  {
+   "item": 4,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 5,
+   "rating": 3,
+   "check": "b"
+  },
+  {
+   "item": 6,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 7,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 8,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 9,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 10,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 11,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 12,
+   "rating": 5,
+   "check": "b"
+  },
+  {
+   "item": 13,
+   "rating": 3,
+   "check": "a"
+  },
+  {
+   "item": 14,
+   "rating": 2,
+   "check": "b"
+  },
+  {
+   "item": 15,
+   "rating": 1,
+   "check": "a"
+  },
+  {
+   "item": 16,
+   "rating": 5,
+   "check": "c"
+  },
+  {
+   "item": 17,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 18,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 19,
+   "rating": 7,
+   "check": "b"
+  },
+  {
+   "item": 20,
+   "rating": 4,
+   "check": "b"
+  },
+  {
+   "item": 21,
+   "rating": 4,
+   "check": "b"
+  },
+  {
+   "item": 22,
+   "rating": 2,
+   "check": "b"
+  },
+  {
+   "item": 23,
+   "rating": 4,
+   "check": "a"
+  },
+  {
+   "item": 24,
+   "rating": 5,
+   "check": "a"
+  },
+  {
+   "item": 25,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 26,
+   "rating": 3,
+   "check": "b"
+  },
+  {
+   "item": 27,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 28,
+   "rating": 7,
+   "check": "a"
+  },
+  {
+   "item": 29,
+   "rating": 6,
+   "check": "b"
+  },
+  {
+   "item": 30,
+   "rating": 4,
+   "check": "b"
+  }
+ ]
+}

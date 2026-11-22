@@ -31,8 +31,9 @@ This release is a pilot of the pipeline. All authors and judges are Claude model
 | `report.py` | Page builder, called by `score.py`. |
 | `commentary.json` | Hand-written findings and diagnoses shown on the page. |
 | `annotations.json` | Hand-made flags for pairs that share a setting; they change no score. |
-| `out/` | `pair_scores.csv`, `author_summary.csv`, `results.json`. |
-| `pipeline/` | How the data was produced: author brief, controls, batch randomisation, panel scripts, ingestion, raw outputs; the survey generator, its private key (`survey_manifest.json`) and `ingest_survey.py`. `pipeline/calibration/` holds the calibration run: batch and recognition builders, the panel's answers, judge provenance and the analysis. |
+| `out/` | `pair_scores.csv`, `author_summary.csv`, `results.json` (the Claude panel). `out/gemini/`, `out/vendor_groups/` and `out/claude_plus_gemini/` hold the same files under the other panels, and `out/vendor_comparison.csv` sets them side by side. |
+| `reports/Pilot rescored with Gemini.md` | The pilot rescored with two Gemini models as a second judge group: where the vendors agree, where they differ, and how the author ranking moves. Rebuilt by `pipeline/compare_vendor_panels.py`. |
+| `pipeline/` | How the data was produced: author brief, controls, batch randomisation, panel scripts, ingestion, raw outputs; the survey generator, its private key (`survey_manifest.json`) and `ingest_survey.py`. `pipeline/calibration/` holds the calibration run: batch and recognition builders, the panel's answers, judge provenance and the analysis. `pipeline/api_panel.py` runs another vendor's models as judges through an API (manifest `batches_gemini.json`, answers in `raw/panel_gemini/`). |
 
 ## Rerun
 
@@ -41,7 +42,10 @@ python3 score.py
 ```
 
 Python 3.9 or later, standard library only. Options: `--run` (which `run_id` to
-score), `--boot` (bootstrap resamples), `--seed`.
+score; several separated by commas), `--audit-run` (which run's audits to use, by
+default the same), `--out`, `--no-report`, `--boot` (bootstrap resamples), `--seed`.
+`judgments.csv` holds the Claude panel as run `main` and the Gemini panel as run
+`gemini`; the default scores `main` only.
 
 ## Adding judges or authors
 
@@ -49,7 +53,9 @@ score), `--boot` (bootstrap resamples), `--seed`.
   Set `judge_type` (`llm` or `human`), `judge_vendor`, `judge_model`, a `judge_group`
   (the stratum that gets equal weight, for example `openai/<model>` or
   `human/prolific-us`) and a unique `judge_id` per rater. A judge must never see both
-  versions of a pair; `score.py` checks this.
+  versions of a pair; `score.py` checks this. `pipeline/api_panel.py` does all of this for
+  any model behind an OpenAI-compatible endpoint, with the Claude judges' prompt and a
+  spending cap.
 - **More authors:** add pairs to `vignettes.json` with a new `author` block and
   collect judgments for them.
 - **More auditors:** append rows to `audits.csv`.

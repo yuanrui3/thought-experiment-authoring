@@ -37,7 +37,7 @@ def load_judgments(path, run):
     rows = []
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            if run and r["run_id"] != run:
+            if run and r["run_id"] not in run.split(","):
                 continue
             r["rating"] = int(r["rating"])
             r["position"] = int(r["position"]) if r.get("position") else None
@@ -51,7 +51,7 @@ def load_audits(path, run):
     rows = []
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            if run and r["run_id"] != run:
+            if run and r["run_id"] not in run.split(","):
                 continue
             r["confound_severity"] = int(r["confound_severity"])
             r["originality"] = int(r["originality"])
@@ -242,7 +242,9 @@ def main():
     ap.add_argument("--vignettes", default=os.path.join(ROOT, "vignettes.json"))
     ap.add_argument("--judgments", default=os.path.join(ROOT, "judgments.csv"))
     ap.add_argument("--audits", default=os.path.join(ROOT, "audits.csv"))
-    ap.add_argument("--run", default="main", help="run_id to score (empty string = all rows)")
+    ap.add_argument("--run", default="main", help="run_id to score; several separated by commas (empty string = all rows)")
+    ap.add_argument("--audit-run", help="run_id of the audits to use (default: the same as --run), e.g. to score another "
+                                        "vendor's judges against the pilot's confound and originality audits")
     ap.add_argument("--boot", type=int, default=10000)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--out", default=os.path.join(ROOT, "out"))
@@ -253,7 +255,7 @@ def main():
     pairs = doc["pairs"]
     calib = doc.get("audit_calibration_pairs", [])
     J = load_judgments(args.judgments, args.run)
-    AU = load_audits(args.audits, args.run)
+    AU = load_audits(args.audits, args.run if args.audit_run is None else args.audit_run)
     if not J:
         raise SystemExit("no judgments for run_id=%r in %s" % (args.run, args.judgments))
     os.makedirs(args.out, exist_ok=True)
