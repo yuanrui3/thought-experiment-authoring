@@ -1,0 +1,6382 @@
+{
+ "excluded_batches": {},
+ "otr": {
+  "n_human_workers": 115,
+  "n_human_ratings": 1840,
+  "human_workers_matching_their_batch": 110,
+  "n_panel_ratings": 400,
+  "threshold_on_1_to_5_scale": 0.333,
+  "verdict_table": {
+   "false positive": 15,
+   "hit": 8,
+   "miss (human gap at or above threshold)": 6,
+   "correct null": 25,
+   "sign error": 1,
+   "miss (human gap below threshold)": 5
+  },
+  "contrasts": [
+   {
+    "scenario": 0,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": 0.024,
+    "human_ci": [
+     -0.215,
+     0.261
+    ],
+    "panel_gap": -0.338,
+    "panel_ci": [
+     -0.588,
+     -0.088
+    ],
+    "panel_per_model": {
+     "haiku": -0.4,
+     "sonnet": -0.2,
+     "opus": -0.167,
+     "fable": -0.583
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 1,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": 0.029,
+    "human_ci": [
+     -0.191,
+     0.243
+    ],
+    "panel_gap": -0.654,
+    "panel_ci": [
+     -1.017,
+     -0.317
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": -0.667,
+     "opus": -1.083,
+     "fable": -0.2
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 2,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": -0.051,
+    "human_ci": [
+     -0.362,
+     0.249
+    ],
+    "panel_gap": -1.083,
+    "panel_ci": [
+     -1.292,
+     -0.833
+    ],
+    "panel_per_model": {
+     "haiku": -1.0,
+     "sonnet": -1.333,
+     "opus": -1.5,
+     "fable": -0.5
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 3,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": 0.025,
+    "human_ci": [
+     -0.228,
+     0.288
+    ],
+    "panel_gap": -1.146,
+    "panel_ci": [
+     -1.479,
+     -0.812
+    ],
+    "panel_per_model": {
+     "haiku": -1.25,
+     "sonnet": -1.167,
+     "opus": -1.333,
+     "fable": -0.833
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 4,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": -0.298,
+    "human_ci": [
+     -0.502,
+     -0.092
+    ],
+    "panel_gap": -0.817,
+    "panel_ci": [
+     -0.992,
+     -0.642
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": -0.6,
+     "opus": -1.0,
+     "fable": -1.0
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit"
+   },
+   {
+    "scenario": 5,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": -0.415,
+    "human_ci": [
+     -0.598,
+     -0.236
+    ],
+    "panel_gap": -0.317,
+    "panel_ci": [
+     -0.45,
+     -0.175
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -0.667,
+     "fable": -0.6
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 6,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": 0.257,
+    "human_ci": [
+     -0.004,
+     0.517
+    ],
+    "panel_gap": -0.146,
+    "panel_ci": [
+     -0.333,
+     0.062
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.583,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 7,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": 0.25,
+    "human_ci": [
+     0.035,
+     0.462
+    ],
+    "panel_gap": -0.533,
+    "panel_ci": [
+     -0.846,
+     -0.25
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": -0.8,
+     "opus": -0.583,
+     "fable": -0.083
+    },
+    "panel_verdict": "-",
+    "human_verdict": "+",
+    "class": "sign error"
+   },
+   {
+    "scenario": 8,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": -0.021,
+    "human_ci": [
+     -0.288,
+     0.235
+    ],
+    "panel_gap": -0.333,
+    "panel_ci": [
+     -0.517,
+     -0.15
+    ],
+    "panel_per_model": {
+     "haiku": -1.0,
+     "sonnet": -0.167,
+     "opus": -0.167,
+     "fable": 0.0
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 9,
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human_gap": -0.488,
+    "human_ci": [
+     -0.752,
+     -0.236
+    ],
+    "panel_gap": -1.379,
+    "panel_ci": [
+     -1.667,
+     -1.071
+    ],
+    "panel_per_model": {
+     "haiku": -1.6,
+     "sonnet": -1.75,
+     "opus": -1.0,
+     "fable": -1.167
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit"
+   },
+   {
+    "scenario": 0,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": -0.05,
+    "human_ci": [
+     -0.365,
+     0.27
+    ],
+    "panel_gap": 0.775,
+    "panel_ci": [
+     0.5,
+     1.05
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.8,
+     "opus": 0.75,
+     "fable": 0.75
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 1,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.09,
+    "human_ci": [
+     -0.199,
+     0.368
+    ],
+    "panel_gap": 0.804,
+    "panel_ci": [
+     0.629,
+     0.992
+    ],
+    "panel_per_model": {
+     "haiku": 0.25,
+     "sonnet": 0.833,
+     "opus": 1.333,
+     "fable": 0.8
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 2,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.415,
+    "human_ci": [
+     0.091,
+     0.756
+    ],
+    "panel_gap": 0.75,
+    "panel_ci": [
+     0.521,
+     1.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.083,
+     "sonnet": 0.583,
+     "opus": 1.333,
+     "fable": 1.0
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit"
+   },
+   {
+    "scenario": 3,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.214,
+    "human_ci": [
+     -0.116,
+     0.527
+    ],
+    "panel_gap": 0.896,
+    "panel_ci": [
+     0.646,
+     1.188
+    ],
+    "panel_per_model": {
+     "haiku": 0.75,
+     "sonnet": 0.583,
+     "opus": 1.25,
+     "fable": 1.0
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 4,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.479,
+    "human_ci": [
+     0.247,
+     0.727
+    ],
+    "panel_gap": 0.95,
+    "panel_ci": [
+     0.85,
+     1.0
+    ],
+    "panel_per_model": {
+     "haiku": 1.0,
+     "sonnet": 0.8,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit"
+   },
+   {
+    "scenario": 5,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.277,
+    "human_ci": [
+     0.042,
+     0.515
+    ],
+    "panel_gap": 0.617,
+    "panel_ci": [
+     0.408,
+     0.833
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.5,
+     "opus": 0.833,
+     "fable": 0.8
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit"
+   },
+   {
+    "scenario": 6,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.294,
+    "human_ci": [
+     -0.092,
+     0.679
+    ],
+    "panel_gap": 0.771,
+    "panel_ci": [
+     0.458,
+     1.062
+    ],
+    "panel_per_model": {
+     "haiku": 0.417,
+     "sonnet": 0.417,
+     "opus": 1.25,
+     "fable": 1.0
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 7,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": -0.039,
+    "human_ci": [
+     -0.313,
+     0.238
+    ],
+    "panel_gap": 0.658,
+    "panel_ci": [
+     0.463,
+     0.833
+    ],
+    "panel_per_model": {
+     "haiku": 0.25,
+     "sonnet": 0.8,
+     "opus": 0.833,
+     "fable": 0.75
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 8,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.109,
+    "human_ci": [
+     -0.202,
+     0.424
+    ],
+    "panel_gap": 0.825,
+    "panel_ci": [
+     0.525,
+     1.113
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.25,
+     "opus": 1.25,
+     "fable": 1.0
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 9,
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human_gap": 0.235,
+    "human_ci": [
+     -0.081,
+     0.539
+    ],
+    "panel_gap": 0.887,
+    "panel_ci": [
+     0.583,
+     1.208
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.75,
+     "opus": 1.25,
+     "fable": 0.75
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 0,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.256,
+    "human_ci": [
+     -0.454,
+     -0.052
+    ],
+    "panel_gap": -0.258,
+    "panel_ci": [
+     -0.492,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.2,
+     "opus": -0.25,
+     "fable": -0.583
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss (human gap below threshold)"
+   },
+   {
+    "scenario": 1,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.214,
+    "human_ci": [
+     -0.434,
+     -0.01
+    ],
+    "panel_gap": -0.683,
+    "panel_ci": [
+     -1.025,
+     -0.342
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": -0.4,
+     "opus": -0.667,
+     "fable": -1.0
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit"
+   },
+   {
+    "scenario": 2,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.355,
+    "human_ci": [
+     -0.607,
+     -0.102
+    ],
+    "panel_gap": -0.692,
+    "panel_ci": [
+     -1.042,
+     -0.325
+    ],
+    "panel_per_model": {
+     "haiku": -0.583,
+     "sonnet": -0.917,
+     "opus": -0.667,
+     "fable": -0.6
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit"
+   },
+   {
+    "scenario": 3,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.278,
+    "human_ci": [
+     -0.476,
+     -0.079
+    ],
+    "panel_gap": -0.717,
+    "panel_ci": [
+     -1.163,
+     -0.242
+    ],
+    "panel_per_model": {
+     "haiku": -0.833,
+     "sonnet": -0.6,
+     "opus": -0.6,
+     "fable": -0.833
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit"
+   },
+   {
+    "scenario": 4,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.371,
+    "human_ci": [
+     -0.604,
+     -0.139
+    ],
+    "panel_gap": -0.063,
+    "panel_ci": [
+     -0.354,
+     0.225
+    ],
+    "panel_per_model": {
+     "haiku": -0.25,
+     "sonnet": -0.2,
+     "opus": 0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 5,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.245,
+    "human_ci": [
+     -0.435,
+     -0.053
+    ],
+    "panel_gap": -0.15,
+    "panel_ci": [
+     -0.35,
+     0.05
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -0.4,
+     "fable": -0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss (human gap below threshold)"
+   },
+   {
+    "scenario": 6,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.257,
+    "human_ci": [
+     -0.463,
+     -0.057
+    ],
+    "panel_gap": -0.25,
+    "panel_ci": [
+     -0.479,
+     -0.042
+    ],
+    "panel_per_model": {
+     "haiku": -0.417,
+     "sonnet": -0.583,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss (human gap below threshold)"
+   },
+   {
+    "scenario": 7,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.184,
+    "human_ci": [
+     -0.411,
+     0.032
+    ],
+    "panel_gap": -0.367,
+    "panel_ci": [
+     -0.7,
+     -0.05
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": 0.0,
+     "opus": -0.4,
+     "fable": -0.4
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 8,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.09,
+    "human_ci": [
+     -0.322,
+     0.15
+    ],
+    "panel_gap": -0.163,
+    "panel_ci": [
+     -0.425,
+     0.05
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": -0.2,
+     "opus": -0.25,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 9,
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human_gap": -0.143,
+    "human_ci": [
+     -0.405,
+     0.117
+    ],
+    "panel_gap": -0.6,
+    "panel_ci": [
+     -1.05,
+     -0.1
+    ],
+    "panel_per_model": {
+     "haiku": -0.8,
+     "sonnet": 0.2,
+     "opus": -1.0,
+     "fable": -0.8
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 0,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.476,
+    "human_ci": [
+     0.228,
+     0.729
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     -0.354,
+     0.35
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -0.333,
+     "fable": 0.333
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 1,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.434,
+    "human_ci": [
+     0.111,
+     0.751
+    ],
+    "panel_gap": 0.029,
+    "panel_ci": [
+     -0.3,
+     0.358
+    ],
+    "panel_per_model": {
+     "haiku": -0.167,
+     "sonnet": 0.2,
+     "opus": 0.083,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 2,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.32,
+    "human_ci": [
+     0.041,
+     0.607
+    ],
+    "panel_gap": 0.188,
+    "panel_ci": [
+     -0.171,
+     0.55
+    ],
+    "panel_per_model": {
+     "haiku": 0.5,
+     "sonnet": 0.167,
+     "opus": 0.083,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap below threshold)"
+   },
+   {
+    "scenario": 3,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.235,
+    "human_ci": [
+     -0.009,
+     0.48
+    ],
+    "panel_gap": 0.296,
+    "panel_ci": [
+     -0.067,
+     0.675
+    ],
+    "panel_per_model": {
+     "haiku": 0.75,
+     "sonnet": 0.4,
+     "opus": 0.2,
+     "fable": -0.167
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 4,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.512,
+    "human_ci": [
+     0.179,
+     0.83
+    ],
+    "panel_gap": 0.092,
+    "panel_ci": [
+     -0.204,
+     0.392
+    ],
+    "panel_per_model": {
+     "haiku": 0.167,
+     "sonnet": 0.4,
+     "opus": -0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 5,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.319,
+    "human_ci": [
+     0.088,
+     0.554
+    ],
+    "panel_gap": 0.054,
+    "panel_ci": [
+     -0.238,
+     0.363
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.083,
+     "opus": -0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap below threshold)"
+   },
+   {
+    "scenario": 6,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.318,
+    "human_ci": [
+     -0.011,
+     0.653
+    ],
+    "panel_gap": -0.104,
+    "panel_ci": [
+     -0.471,
+     0.283
+    ],
+    "panel_per_model": {
+     "haiku": -0.417,
+     "sonnet": 0.417,
+     "opus": -0.417,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 7,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.391,
+    "human_ci": [
+     0.122,
+     0.647
+    ],
+    "panel_gap": 0.058,
+    "panel_ci": [
+     -0.192,
+     0.308
+    ],
+    "panel_per_model": {
+     "haiku": -0.167,
+     "sonnet": 0.4,
+     "opus": -0.2,
+     "fable": 0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss (human gap at or above threshold)"
+   },
+   {
+    "scenario": 8,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.247,
+    "human_ci": [
+     -0.045,
+     0.527
+    ],
+    "panel_gap": 0.096,
+    "panel_ci": [
+     -0.263,
+     0.458
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.8,
+     "opus": -0.417,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 9,
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human_gap": 0.113,
+    "human_ci": [
+     -0.178,
+     0.405
+    ],
+    "panel_gap": 0.1,
+    "panel_ci": [
+     -0.3,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.2,
+     "fable": 0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 0,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": -0.002,
+    "human_ci": [
+     -0.242,
+     0.229
+    ],
+    "panel_gap": -0.35,
+    "panel_ci": [
+     -0.55,
+     -0.149
+    ],
+    "panel_per_model": {
+     "haiku": -0.4,
+     "sonnet": 0.2,
+     "opus": -0.8,
+     "fable": -0.4
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive"
+   },
+   {
+    "scenario": 1,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.166,
+    "human_ci": [
+     -0.028,
+     0.364
+    ],
+    "panel_gap": -0.25,
+    "panel_ci": [
+     -0.65,
+     0.15
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": 0.0,
+     "opus": -0.6,
+     "fable": -0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 2,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.005,
+    "human_ci": [
+     -0.265,
+     0.271
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     -0.45,
+     0.45
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -0.2,
+     "fable": 0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 3,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.194,
+    "human_ci": [
+     -0.081,
+     0.463
+    ],
+    "panel_gap": -0.2,
+    "panel_ci": [
+     -0.7,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": -0.8,
+     "sonnet": 0.2,
+     "opus": -0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 4,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.166,
+    "human_ci": [
+     -0.081,
+     0.411
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     -0.05,
+     0.55
+    ],
+    "panel_per_model": {
+     "haiku": 0.6,
+     "sonnet": 0.2,
+     "opus": 0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 5,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.197,
+    "human_ci": [
+     -0.045,
+     0.439
+    ],
+    "panel_gap": -0.05,
+    "panel_ci": [
+     -0.25,
+     0.15
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": -0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 6,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.15,
+    "human_ci": [
+     -0.03,
+     0.328
+    ],
+    "panel_gap": -0.1,
+    "panel_ci": [
+     -0.35,
+     0.15
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.4,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 7,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": -0.083,
+    "human_ci": [
+     -0.308,
+     0.14
+    ],
+    "panel_gap": -0.05,
+    "panel_ci": [
+     -0.4,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 8,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.094,
+    "human_ci": [
+     -0.188,
+     0.378
+    ],
+    "panel_gap": -0.05,
+    "panel_ci": [
+     -0.3,
+     0.151
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": 0.2,
+     "opus": -0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 9,
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human_gap": 0.255,
+    "human_ci": [
+     -0.029,
+     0.554
+    ],
+    "panel_gap": -0.1,
+    "panel_ci": [
+     -0.65,
+     0.4
+    ],
+    "panel_per_model": {
+     "haiku": -0.8,
+     "sonnet": 0.2,
+     "opus": 0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 0,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.006,
+    "human_ci": [
+     -0.298,
+     0.326
+    ],
+    "panel_gap": 0.3,
+    "panel_ci": [
+     -0.0,
+     0.65
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.0,
+     "opus": 0.2,
+     "fable": 0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 1,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.01,
+    "human_ci": [
+     -0.284,
+     0.298
+    ],
+    "panel_gap": 0.2,
+    "panel_ci": [
+     -0.1,
+     0.55
+    ],
+    "panel_per_model": {
+     "haiku": 0.2,
+     "sonnet": 0.2,
+     "opus": 0.4,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 2,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.008,
+    "human_ci": [
+     -0.287,
+     0.316
+    ],
+    "panel_gap": 0.15,
+    "panel_ci": [
+     -0.2,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.6,
+     "sonnet": -0.4,
+     "opus": 0.4,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 3,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": -0.193,
+    "human_ci": [
+     -0.518,
+     0.138
+    ],
+    "panel_gap": 0.3,
+    "panel_ci": [
+     -0.1,
+     0.7
+    ],
+    "panel_per_model": {
+     "haiku": 0.6,
+     "sonnet": 0.4,
+     "opus": 0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 4,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.133,
+    "human_ci": [
+     -0.176,
+     0.452
+    ],
+    "panel_gap": 0.05,
+    "panel_ci": [
+     -0.25,
+     0.35
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.4,
+     "opus": -0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 5,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": -0.067,
+    "human_ci": [
+     -0.398,
+     0.268
+    ],
+    "panel_gap": 0.2,
+    "panel_ci": [
+     -0.1,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.4,
+     "sonnet": 0.2,
+     "opus": 0.2,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 6,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.027,
+    "human_ci": [
+     -0.202,
+     0.258
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     -0.1,
+     0.65
+    ],
+    "panel_per_model": {
+     "haiku": 0.2,
+     "sonnet": 0.2,
+     "opus": 0.6,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 7,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.201,
+    "human_ci": [
+     -0.12,
+     0.517
+    ],
+    "panel_gap": 0.15,
+    "panel_ci": [
+     -0.1,
+     0.4
+    ],
+    "panel_per_model": {
+     "haiku": 0.2,
+     "sonnet": 0.4,
+     "opus": 0.2,
+     "fable": -0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 8,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.144,
+    "human_ci": [
+     -0.228,
+     0.492
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     -0.1,
+     0.6
+    ],
+    "panel_per_model": {
+     "haiku": 0.4,
+     "sonnet": 0.0,
+     "opus": 0.6,
+     "fable": 0.0
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   },
+   {
+    "scenario": 9,
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human_gap": 0.079,
+    "human_ci": [
+     -0.247,
+     0.378
+    ],
+    "panel_gap": 0.3,
+    "panel_ci": [
+     -0.05,
+     0.65
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.4,
+     "opus": 0.2,
+     "fable": -0.2
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null"
+   }
+  ],
+  "agreement": {
+   "all": {
+    "n": 60,
+    "pearson_r": 0.514,
+    "slope_panel_on_human": 1.11,
+    "slope_through_origin": 1.024,
+    "mean_abs_gap_panel": 0.386,
+    "mean_abs_gap_human": 0.2,
+    "inflation_mean_abs": 1.93,
+    "n_human_clear": 20,
+    "where_human_clear": {
+     "same_sign": 0.9,
+     "panel_zero": 0.05,
+     "opposite": 0.05
+    }
+   },
+   "permissibility": {
+    "n": 30,
+    "pearson_r": 0.418,
+    "slope_panel_on_human": 0.72,
+    "slope_through_origin": 1.157,
+    "mean_abs_gap_panel": 0.403,
+    "mean_abs_gap_human": 0.185,
+    "inflation_mean_abs": 2.178,
+    "n_human_clear": 11,
+    "where_human_clear": {
+     "same_sign": 0.909,
+     "panel_zero": 0.0,
+     "opposite": 0.091
+    }
+   },
+   "intention": {
+    "n": 30,
+    "pearson_r": -0.087,
+    "slope_panel_on_human": -0.156,
+    "slope_through_origin": 0.927,
+    "mean_abs_gap_panel": 0.37,
+    "mean_abs_gap_human": 0.215,
+    "inflation_mean_abs": 1.721,
+    "n_human_clear": 9,
+    "where_human_clear": {
+     "same_sign": 0.889,
+     "panel_zero": 0.111,
+     "opposite": 0.0
+    }
+   },
+   "means_minus_side_effect": {
+    "n": 20,
+    "pearson_r": 0.63,
+    "slope_panel_on_human": 2.001,
+    "slope_through_origin": 1.926,
+    "mean_abs_gap_panel": 0.734,
+    "mean_abs_gap_human": 0.203,
+    "inflation_mean_abs": 3.616,
+    "n_human_clear": 7,
+    "where_human_clear": {
+     "same_sign": 0.857,
+     "panel_zero": 0.0,
+     "opposite": 0.143
+    }
+   },
+   "evitable_minus_inevitable": {
+    "n": 20,
+    "pearson_r": 0.726,
+    "slope_panel_on_human": 0.717,
+    "slope_through_origin": 0.619,
+    "mean_abs_gap_panel": 0.248,
+    "mean_abs_gap_human": 0.288,
+    "inflation_mean_abs": 0.861,
+    "n_human_clear": 13,
+    "where_human_clear": {
+     "same_sign": 0.923,
+     "panel_zero": 0.077,
+     "opposite": 0.0
+    }
+   },
+   "action_minus_omission": {
+    "n": 20,
+    "pearson_r": -0.331,
+    "slope_panel_on_human": -0.576,
+    "slope_through_origin": -0.142,
+    "mean_abs_gap_panel": 0.178,
+    "mean_abs_gap_human": 0.109,
+    "inflation_mean_abs": 1.633,
+    "n_human_clear": 0
+   }
+  },
+  "agreement_per_model": {
+   "haiku": {
+    "n": 60,
+    "pearson_r": 0.392,
+    "slope_panel_on_human": 0.952,
+    "slope_through_origin": 0.836,
+    "mean_abs_gap_panel": 0.451,
+    "mean_abs_gap_human": 0.2,
+    "inflation_mean_abs": 2.255,
+    "n_human_clear": 20,
+    "where_human_clear": {
+     "same_sign": 0.65,
+     "panel_zero": 0.2,
+     "opposite": 0.15
+    }
+   },
+   "sonnet": {
+    "n": 60,
+    "pearson_r": 0.504,
+    "slope_panel_on_human": 1.13,
+    "slope_through_origin": 1.079,
+    "mean_abs_gap_panel": 0.396,
+    "mean_abs_gap_human": 0.2,
+    "inflation_mean_abs": 1.98,
+    "n_human_clear": 20,
+    "where_human_clear": {
+     "same_sign": 0.8,
+     "panel_zero": 0.15,
+     "opposite": 0.05
+    }
+   },
+   "opus": {
+    "n": 60,
+    "pearson_r": 0.393,
+    "slope_panel_on_human": 1.11,
+    "slope_through_origin": 1.028,
+    "mean_abs_gap_panel": 0.516,
+    "mean_abs_gap_human": 0.2,
+    "inflation_mean_abs": 2.58,
+    "n_human_clear": 20,
+    "where_human_clear": {
+     "same_sign": 0.65,
+     "panel_zero": 0.05,
+     "opposite": 0.3
+    }
+   },
+   "fable": {
+    "n": 60,
+    "pearson_r": 0.574,
+    "slope_panel_on_human": 1.249,
+    "slope_through_origin": 1.152,
+    "mean_abs_gap_panel": 0.346,
+    "mean_abs_gap_human": 0.2,
+    "inflation_mean_abs": 1.73,
+    "n_human_clear": 20,
+    "where_human_clear": {
+     "same_sign": 0.65,
+     "panel_zero": 0.3,
+     "opposite": 0.05
+    }
+   }
+  },
+  "false_positives": {
+   "n": 15,
+   "mean_abs_panel_gap": 0.699,
+   "mean_abs_human_gap": 0.101,
+   "human_gap_same_sign_as_panel": 10,
+   "by_factor": {
+    "means_minus_side_effect": 12,
+    "evitable_minus_inevitable": 2,
+    "action_minus_omission": 1
+   }
+  },
+  "verdicts_by_factor": {
+   "means_minus_side_effect": {
+    "permissibility": {
+     "correct null": 1,
+     "false positive": 5,
+     "hit": 2,
+     "miss (human gap at or above threshold)": 1,
+     "miss (human gap below threshold)": 0,
+     "sign error": 1
+    },
+    "intention": {
+     "correct null": 0,
+     "false positive": 7,
+     "hit": 3,
+     "miss (human gap at or above threshold)": 0,
+     "miss (human gap below threshold)": 0,
+     "sign error": 0
+    }
+   },
+   "evitable_minus_inevitable": {
+    "permissibility": {
+     "correct null": 1,
+     "false positive": 2,
+     "hit": 3,
+     "miss (human gap at or above threshold)": 1,
+     "miss (human gap below threshold)": 3,
+     "sign error": 0
+    },
+    "intention": {
+     "correct null": 4,
+     "false positive": 0,
+     "hit": 0,
+     "miss (human gap at or above threshold)": 4,
+     "miss (human gap below threshold)": 2,
+     "sign error": 0
+    }
+   },
+   "action_minus_omission": {
+    "permissibility": {
+     "correct null": 9,
+     "false positive": 1,
+     "hit": 0,
+     "miss (human gap at or above threshold)": 0,
+     "miss (human gap below threshold)": 0,
+     "sign error": 0
+    },
+    "intention": {
+     "correct null": 10,
+     "false positive": 0,
+     "hit": 0,
+     "miss (human gap at or above threshold)": 0,
+     "miss (human gap below threshold)": 0,
+     "sign error": 0
+    }
+   }
+  },
+  "rule_variants": {
+   "benchmark rule (threshold 0.33 on 1-5 = 0.5 on 1-7)": {
+    "confirmed": 24,
+    "backed_by_humans": 8,
+    "false_positive": 15,
+    "sign_error": 1,
+    "human_gaps_found": 8,
+    "human_gaps": 20,
+    "human_nulls": 40
+   },
+   "threshold 0.67 on 1-5 (= 1.0 on 1-7)": {
+    "confirmed": 15,
+    "backed_by_humans": 7,
+    "false_positive": 8,
+    "sign_error": 0,
+    "human_gaps_found": 7,
+    "human_gaps": 20,
+    "human_nulls": 40
+   },
+   "threshold 1.0 on 1-5 (= 1.5 on 1-7)": {
+    "confirmed": 3,
+    "backed_by_humans": 1,
+    "false_positive": 2,
+    "sign_error": 0,
+    "human_gaps_found": 1,
+    "human_gaps": 20,
+    "human_nulls": 40
+   },
+   "interval with human-sized spread (sd 0.97), threshold 0.33": {
+    "confirmed": 19,
+    "backed_by_humans": 8,
+    "false_positive": 11,
+    "sign_error": 0,
+    "human_gaps_found": 8,
+    "human_gaps": 20,
+    "human_nulls": 40
+   },
+   "all four models agree, threshold 0.33": {
+    "confirmed": 20,
+    "backed_by_humans": 8,
+    "false_positive": 11,
+    "sign_error": 1,
+    "human_gaps_found": 8,
+    "human_gaps": 20,
+    "human_nulls": 40
+   }
+  },
+  "rates": {
+   "panel_confirmed": 24,
+   "share_of_confirmed_that_humans_back": 0.333,
+   "false_positive_rate_among_human_nulls": 0.375,
+   "human_nulls": 40,
+   "sign_errors": 1,
+   "share_of_human_gaps_the_panel_confirms": 0.4
+  },
+  "main_effects": [
+   {
+    "factor": "means_minus_side_effect",
+    "question": "permissibility",
+    "human": -0.069,
+    "human_ci": [
+     -0.155,
+     0.014
+    ],
+    "panel": -0.675,
+    "panel_ci": [
+     -0.773,
+     -0.57
+    ],
+    "per_model": {
+     "haiku": -0.725,
+     "sonnet": -0.727,
+     "opus": -0.75,
+     "fable": -0.497
+    }
+   },
+   {
+    "factor": "means_minus_side_effect",
+    "question": "intention",
+    "human": 0.202,
+    "human_ci": [
+     0.094,
+     0.309
+    ],
+    "panel": 0.793,
+    "panel_ci": [
+     0.665,
+     0.916
+    ],
+    "per_model": {
+     "haiku": 0.548,
+     "sonnet": 0.632,
+     "opus": 1.108,
+     "fable": 0.885
+    }
+   },
+   {
+    "factor": "evitable_minus_inevitable",
+    "question": "permissibility",
+    "human": -0.239,
+    "human_ci": [
+     -0.34,
+     -0.137
+    ],
+    "panel": -0.394,
+    "panel_ci": [
+     -0.522,
+     -0.263
+    ],
+    "per_model": {
+     "haiku": -0.442,
+     "sonnet": -0.29,
+     "opus": -0.403,
+     "fable": -0.442
+    }
+   },
+   {
+    "factor": "evitable_minus_inevitable",
+    "question": "intention",
+    "human": 0.337,
+    "human_ci": [
+     0.212,
+     0.459
+    ],
+    "panel": 0.081,
+    "panel_ci": [
+     -0.055,
+     0.209
+    ],
+    "per_model": {
+     "haiku": 0.1,
+     "sonnet": 0.287,
+     "opus": -0.12,
+     "fable": 0.057
+    }
+   },
+   {
+    "factor": "action_minus_omission",
+    "question": "permissibility",
+    "human": 0.114,
+    "human_ci": [
+     0.041,
+     0.189
+    ],
+    "panel": -0.09,
+    "panel_ci": [
+     -0.202,
+     0.023
+    ],
+    "per_model": {
+     "haiku": -0.2,
+     "sonnet": 0.06,
+     "opus": -0.16,
+     "fable": -0.06
+    }
+   },
+   {
+    "factor": "action_minus_omission",
+    "question": "intention",
+    "human": 0.035,
+    "human_ci": [
+     -0.052,
+     0.123
+    ],
+    "panel": 0.215,
+    "panel_ci": [
+     0.112,
+     0.328
+    ],
+    "per_model": {
+     "haiku": 0.42,
+     "sonnet": 0.18,
+     "opus": 0.28,
+     "fable": -0.02
+    }
+   }
+  ],
+  "cell_level_means": {
+   "permissibility": {
+    "n": 80,
+    "pearson_r": 0.461
+   },
+   "intention": {
+    "n": 80,
+    "pearson_r": 0.366
+   }
+  },
+  "levels": {
+   "human": {
+    "permissibility": {
+     "mean": 4.074,
+     "within_cell_sd": 0.794
+    },
+    "intention": {
+     "mean": 2.196,
+     "within_cell_sd": 1.031
+    }
+   },
+   "panel": {
+    "permissibility": {
+     "mean": 3.915,
+     "within_cell_sd": 0.436
+    },
+    "intention": {
+     "mean": 1.478,
+     "within_cell_sd": 0.297
+    }
+   },
+   "panel_within_model": {
+    "permissibility": {
+     "mean": 3.915,
+     "within_cell_sd": 0.138
+    },
+    "intention": {
+     "mean": 1.478,
+     "within_cell_sd": 0.15
+    }
+   }
+  },
+  "sensitivity": {
+   "human_first_exposure_only": {
+    "n_ratings": 1129,
+    "pearson_r_with_full_human": 0.91,
+    "pearson_r_with_panel": 0.471,
+    "main_effects": {
+     "means_minus_side_effect/permissibility": -0.089,
+     "means_minus_side_effect/intention": 0.237,
+     "evitable_minus_inevitable/permissibility": -0.292,
+     "evitable_minus_inevitable/intention": 0.339,
+     "action_minus_omission/permissibility": 0.089,
+     "action_minus_omission/intention": 0.04
+    }
+   },
+   "human_rows_matching_batch_only": {
+    "n_ratings": 1760,
+    "pearson_r_with_full_human": 0.993,
+    "pearson_r_with_panel": 0.555,
+    "main_effects": {
+     "means_minus_side_effect/permissibility": -0.09,
+     "means_minus_side_effect/intention": 0.213,
+     "evitable_minus_inevitable/permissibility": -0.25,
+     "evitable_minus_inevitable/intention": 0.338,
+     "action_minus_omission/permissibility": 0.091,
+     "action_minus_omission/intention": 0.052
+    }
+   }
+  },
+  "reliability": {
+   "all": {
+    "human": {
+     "half_r": 0.5,
+     "spearman_brown": 0.667
+    },
+    "panel": {
+     "half_r": 0.763,
+     "spearman_brown": 0.866
+    },
+    "raw_r": 0.514,
+    "disattenuated_r": 0.676
+   },
+   "permissibility": {
+    "human": {
+     "half_r": 0.551,
+     "spearman_brown": 0.711
+    },
+    "panel": {
+     "half_r": 0.612,
+     "spearman_brown": 0.759
+    },
+    "raw_r": 0.418,
+    "disattenuated_r": 0.569
+   },
+   "intention": {
+    "human": {
+     "half_r": 0.219,
+     "spearman_brown": 0.359
+    },
+    "panel": {
+     "half_r": 0.535,
+     "spearman_brown": 0.697
+    },
+    "raw_r": -0.087,
+    "disattenuated_r": -0.174
+   }
+  }
+ },
+ "moca": {
+  "n_pairs": 85,
+  "n_panel_answers": 1000,
+  "verdict_table": {
+   "hit": 4,
+   "false positive": 10,
+   "miss": 37,
+   "correct null": 34
+  },
+  "pairs": [
+   {
+    "a": "c000",
+    "b": "c001",
+    "human_yes": [
+     0.92,
+     0.08
+    ],
+    "human_gap": 0.84,
+    "human_se": 0.077,
+    "panel_yes": [
+     1.0,
+     0.15
+    ],
+    "panel_gap": 0.85,
+    "panel_ci": [
+     0.7,
+     0.95
+    ],
+    "panel_per_model": {
+     "haiku": 0.8,
+     "sonnet": 0.6,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c010",
+    "b": "c011",
+    "human_yes": [
+     0.48,
+     0.36
+    ],
+    "human_gap": 0.12,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.7,
+     0.05
+    ],
+    "panel_gap": 0.65,
+    "panel_ci": [
+     0.5,
+     0.8
+    ],
+    "panel_per_model": {
+     "haiku": 0.4,
+     "sonnet": 0.2,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c012",
+    "b": "c013",
+    "human_yes": [
+     0.24,
+     0.96
+    ],
+    "human_gap": -0.72,
+    "human_se": 0.094,
+    "panel_yes": [
+     0.0,
+     0.25
+    ],
+    "panel_gap": -0.25,
+    "panel_ci": [
+     -0.25,
+     -0.25
+    ],
+    "panel_per_model": {
+     "haiku": -1.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c022",
+    "b": "c024",
+    "human_yes": [
+     0.64,
+     0.88
+    ],
+    "human_gap": -0.24,
+    "human_se": 0.116,
+    "panel_yes": [
+     0.583,
+     1.0
+    ],
+    "panel_gap": -0.417,
+    "panel_ci": [
+     -0.5,
+     -0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.667,
+     "opus": 0.0,
+     "fable": -1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c023",
+    "b": "c025",
+    "human_yes": [
+     0.24,
+     0.28
+    ],
+    "human_gap": -0.04,
+    "human_se": 0.124,
+    "panel_yes": [
+     0.0,
+     0.208
+    ],
+    "panel_gap": -0.208,
+    "panel_ci": [
+     -0.417,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.333,
+     "opus": -0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c026",
+    "b": "c028",
+    "human_yes": [
+     0.44,
+     0.32
+    ],
+    "human_gap": 0.12,
+    "human_se": 0.136,
+    "panel_yes": [
+     0.167,
+     1.0
+    ],
+    "panel_gap": -0.833,
+    "panel_ci": [
+     -1.0,
+     -0.667
+    ],
+    "panel_per_model": {
+     "haiku": -0.667,
+     "sonnet": -1.0,
+     "opus": -0.667,
+     "fable": -1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c027",
+    "b": "c029",
+    "human_yes": [
+     0.2,
+     0.72
+    ],
+    "human_gap": -0.52,
+    "human_se": 0.12,
+    "panel_yes": [
+     0.0,
+     0.125
+    ],
+    "panel_gap": -0.125,
+    "panel_ci": [
+     -0.25,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c030",
+    "b": "c032",
+    "human_yes": [
+     0.32,
+     0.6
+    ],
+    "human_gap": -0.28,
+    "human_se": 0.135,
+    "panel_yes": [
+     0.0,
+     0.917
+    ],
+    "panel_gap": -0.917,
+    "panel_ci": [
+     -1.0,
+     -0.75
+    ],
+    "panel_per_model": {
+     "haiku": -1.0,
+     "sonnet": -0.667,
+     "opus": -1.0,
+     "fable": -1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "-",
+    "human_verdict": "-",
+    "class": "hit",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c031",
+    "b": "c033",
+    "human_yes": [
+     0.52,
+     0.28
+    ],
+    "human_gap": 0.24,
+    "human_se": 0.134,
+    "panel_yes": [
+     0.0,
+     0.25
+    ],
+    "panel_gap": -0.25,
+    "panel_ci": [
+     -0.25,
+     -0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": -1.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c034",
+    "b": "c035",
+    "human_yes": [
+     0.24,
+     0.8
+    ],
+    "human_gap": -0.56,
+    "human_se": 0.117,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c034",
+    "b": "c036",
+    "human_yes": [
+     0.24,
+     0.6
+    ],
+    "human_gap": -0.36,
+    "human_se": 0.13,
+    "panel_yes": [
+     1.0,
+     0.75
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     0.25,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 1.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c035",
+    "b": "c037",
+    "human_yes": [
+     0.8,
+     0.84
+    ],
+    "human_gap": -0.04,
+    "human_se": 0.109,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c038",
+    "b": "c039",
+    "human_yes": [
+     0.2,
+     0.68
+    ],
+    "human_gap": -0.48,
+    "human_se": 0.123,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c038",
+    "b": "c040",
+    "human_yes": [
+     0.2,
+     0.16
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.109,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness",
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c038",
+    "b": "c041",
+    "human_yes": [
+     0.2,
+     0.52
+    ],
+    "human_gap": -0.32,
+    "human_se": 0.128,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      3,
+      3
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness",
+     "causal_structure",
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c039",
+    "b": "c040",
+    "human_yes": [
+     0.68,
+     0.16
+    ],
+    "human_gap": 0.52,
+    "human_se": 0.119,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness",
+     "causal_structure",
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c039",
+    "b": "c041",
+    "human_yes": [
+     0.68,
+     0.52
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.137,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness",
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c040",
+    "b": "c041",
+    "human_yes": [
+     0.16,
+     0.52
+    ],
+    "human_gap": -0.36,
+    "human_se": 0.124,
+    "panel_yes": [
+     0.917,
+     1.0
+    ],
+    "panel_gap": -0.083,
+    "panel_ci": [
+     -0.25,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": -0.333,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c044",
+    "b": "c045",
+    "human_yes": [
+     0.32,
+     0.32
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.132,
+    "panel_yes": [
+     0.8,
+     0.85
+    ],
+    "panel_gap": -0.05,
+    "panel_ci": [
+     -0.25,
+     0.15
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": -0.2,
+     "opus": 0.0,
+     "fable": 0.2
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c046",
+    "b": "c047",
+    "human_yes": [
+     0.28,
+     0.36
+    ],
+    "human_gap": -0.08,
+    "human_se": 0.131,
+    "panel_yes": [
+     0.083,
+     0.125
+    ],
+    "panel_gap": -0.042,
+    "panel_ci": [
+     -0.25,
+     0.167
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.167,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c048",
+    "b": "c049",
+    "human_yes": [
+     0.76,
+     0.76
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.121,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c048",
+    "b": "c050",
+    "human_yes": [
+     0.76,
+     0.4
+    ],
+    "human_gap": 0.36,
+    "human_se": 0.13,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.333,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c048",
+    "b": "c051",
+    "human_yes": [
+     0.76,
+     0.24
+    ],
+    "human_gap": 0.52,
+    "human_se": 0.121,
+    "panel_yes": [
+     1.0,
+     0.458
+    ],
+    "panel_gap": 0.542,
+    "panel_ci": [
+     0.333,
+     0.75
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.667,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit",
+    "differing_factors": [
+     "causal_structure",
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c049",
+    "b": "c050",
+    "human_yes": [
+     0.76,
+     0.4
+    ],
+    "human_gap": 0.36,
+    "human_se": 0.13,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.333,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "causal_structure",
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c049",
+    "b": "c051",
+    "human_yes": [
+     0.76,
+     0.24
+    ],
+    "human_gap": 0.52,
+    "human_se": 0.121,
+    "panel_yes": [
+     1.0,
+     0.458
+    ],
+    "panel_gap": 0.542,
+    "panel_ci": [
+     0.333,
+     0.75
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.667,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "+",
+    "class": "hit",
+    "differing_factors": [
+     "causal_structure"
+    ]
+   },
+   {
+    "a": "c050",
+    "b": "c051",
+    "human_yes": [
+     0.4,
+     0.24
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.13,
+    "panel_yes": [
+     0.917,
+     0.458
+    ],
+    "panel_gap": 0.458,
+    "panel_ci": [
+     0.208,
+     0.667
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.167,
+     "opus": 0.667,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      3
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c052",
+    "b": "c053",
+    "human_yes": [
+     0.2,
+     0.32
+    ],
+    "human_gap": -0.12,
+    "human_se": 0.123,
+    "panel_yes": [
+     0.35,
+     0.45
+    ],
+    "panel_gap": -0.1,
+    "panel_ci": [
+     -0.35,
+     0.15
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": 0.2,
+     "opus": -0.4,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c076",
+    "b": "c077",
+    "human_yes": [
+     0.52,
+     0.72
+    ],
+    "human_gap": -0.2,
+    "human_se": 0.134,
+    "panel_yes": [
+     1.0,
+     0.542
+    ],
+    "panel_gap": 0.458,
+    "panel_ci": [
+     0.25,
+     0.667
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.333,
+     "opus": 0.5,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": []
+   },
+   {
+    "a": "c088",
+    "b": "c089",
+    "human_yes": [
+     0.44,
+     0.36
+    ],
+    "human_gap": 0.08,
+    "human_se": 0.138,
+    "panel_yes": [
+     0.45,
+     1.0
+    ],
+    "panel_gap": -0.55,
+    "panel_ci": [
+     -0.75,
+     -0.4
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": -0.4,
+     "opus": -0.6,
+     "fable": -1.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c090",
+    "b": "c091",
+    "human_yes": [
+     0.52,
+     0.12
+    ],
+    "human_gap": 0.4,
+    "human_se": 0.119,
+    "panel_yes": [
+     0.25,
+     0.292
+    ],
+    "panel_gap": -0.042,
+    "panel_ci": [
+     -0.25,
+     0.167
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": -0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c093",
+    "b": "c094",
+    "human_yes": [
+     1.0,
+     0.52
+    ],
+    "human_gap": 0.48,
+    "human_se": 0.1,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c096",
+    "b": "c097",
+    "human_yes": [
+     0.64,
+     0.48
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.139,
+    "panel_yes": [
+     1.0,
+     0.5
+    ],
+    "panel_gap": 0.5,
+    "panel_ci": [
+     0.5,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c098",
+    "b": "c099",
+    "human_yes": [
+     0.72,
+     0.08
+    ],
+    "human_gap": 0.64,
+    "human_se": 0.105,
+    "panel_yes": [
+     0.4,
+     0.3
+    ],
+    "panel_gap": 0.1,
+    "panel_ci": [
+     -0.1,
+     0.3
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": -0.2,
+     "opus": 0.4,
+     "fable": 0.4
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c100",
+    "b": "c102",
+    "human_yes": [
+     1.0,
+     0.64
+    ],
+    "human_gap": 0.36,
+    "human_se": 0.096,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c100",
+    "b": "c104",
+    "human_yes": [
+     1.0,
+     0.4
+    ],
+    "human_gap": 0.6,
+    "human_se": 0.098,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness",
+     "time"
+    ]
+   },
+   {
+    "a": "c100",
+    "b": "c106",
+    "human_yes": [
+     1.0,
+     0.48
+    ],
+    "human_gap": 0.52,
+    "human_se": 0.1,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness"
+    ]
+   },
+   {
+    "a": "c101",
+    "b": "c103",
+    "human_yes": [
+     0.6,
+     0.56
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c101",
+    "b": "c105",
+    "human_yes": [
+     0.6,
+     0.4
+    ],
+    "human_gap": 0.2,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c101",
+    "b": "c107",
+    "human_yes": [
+     0.6,
+     0.48
+    ],
+    "human_gap": 0.12,
+    "human_se": 0.14,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c102",
+    "b": "c104",
+    "human_yes": [
+     0.64,
+     0.4
+    ],
+    "human_gap": 0.24,
+    "human_se": 0.137,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness",
+     "time"
+    ]
+   },
+   {
+    "a": "c102",
+    "b": "c106",
+    "human_yes": [
+     0.64,
+     0.48
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.139,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness"
+    ]
+   },
+   {
+    "a": "c103",
+    "b": "c105",
+    "human_yes": [
+     0.56,
+     0.4
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c103",
+    "b": "c107",
+    "human_yes": [
+     0.56,
+     0.48
+    ],
+    "human_gap": 0.08,
+    "human_se": 0.141,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c104",
+    "b": "c106",
+    "human_yes": [
+     0.4,
+     0.48
+    ],
+    "human_gap": -0.08,
+    "human_se": 0.14,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness",
+     "time"
+    ]
+   },
+   {
+    "a": "c105",
+    "b": "c107",
+    "human_yes": [
+     0.4,
+     0.48
+    ],
+    "human_gap": -0.08,
+    "human_se": 0.14,
+    "panel_yes": [
+     0.0,
+     0.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c108",
+    "b": "c109",
+    "human_yes": [
+     0.88,
+     0.28
+    ],
+    "human_gap": 0.6,
+    "human_se": 0.111,
+    "panel_yes": [
+     0.25,
+     0.458
+    ],
+    "panel_gap": -0.208,
+    "panel_ci": [
+     -0.542,
+     0.125
+    ],
+    "panel_per_model": {
+     "haiku": -0.333,
+     "sonnet": -0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c108",
+    "b": "c110",
+    "human_yes": [
+     0.88,
+     0.6
+    ],
+    "human_gap": 0.28,
+    "human_se": 0.118,
+    "panel_yes": [
+     0.25,
+     0.5
+    ],
+    "panel_gap": -0.25,
+    "panel_ci": [
+     -0.542,
+     0.042
+    ],
+    "panel_per_model": {
+     "haiku": -0.333,
+     "sonnet": -0.167,
+     "opus": -0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c108",
+    "b": "c111",
+    "human_yes": [
+     0.88,
+     0.64
+    ],
+    "human_gap": 0.24,
+    "human_se": 0.116,
+    "panel_yes": [
+     0.25,
+     0.25
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     -0.333,
+     0.333
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.167,
+     "opus": 0.167,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c109",
+    "b": "c110",
+    "human_yes": [
+     0.28,
+     0.6
+    ],
+    "human_gap": -0.32,
+    "human_se": 0.133,
+    "panel_yes": [
+     0.458,
+     0.5
+    ],
+    "panel_gap": -0.042,
+    "panel_ci": [
+     -0.333,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.333,
+     "opus": -0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c109",
+    "b": "c111",
+    "human_yes": [
+     0.28,
+     0.64
+    ],
+    "human_gap": -0.36,
+    "human_se": 0.131,
+    "panel_yes": [
+     0.458,
+     0.25
+    ],
+    "panel_gap": 0.208,
+    "panel_ci": [
+     -0.083,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.333,
+     "opus": 0.167,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c110",
+    "b": "c111",
+    "human_yes": [
+     0.6,
+     0.64
+    ],
+    "human_gap": -0.04,
+    "human_se": 0.137,
+    "panel_yes": [
+     0.5,
+     0.25
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     0.0,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.333,
+     "sonnet": 0.0,
+     "opus": 0.667,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      3,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c112",
+    "b": "c113",
+    "human_yes": [
+     0.08,
+     0.52
+    ],
+    "human_gap": -0.44,
+    "human_se": 0.114,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      1
+     ],
+     "opus": [
+      1,
+      1
+     ],
+     "fable": [
+      1,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c112",
+    "b": "c114",
+    "human_yes": [
+     0.08,
+     0.36
+    ],
+    "human_gap": -0.28,
+    "human_se": 0.11,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      1
+     ],
+     "sonnet": [
+      2,
+      1
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      1,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": []
+   },
+   {
+    "a": "c112",
+    "b": "c115",
+    "human_yes": [
+     0.08,
+     0.72
+    ],
+    "human_gap": -0.64,
+    "human_se": 0.105,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      1
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      1,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c112",
+    "b": "c116",
+    "human_yes": [
+     0.08,
+     0.2
+    ],
+    "human_gap": -0.12,
+    "human_se": 0.097,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.5
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      1,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c112",
+    "b": "c117",
+    "human_yes": [
+     0.08,
+     0.64
+    ],
+    "human_gap": -0.56,
+    "human_se": 0.11,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      1,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c113",
+    "b": "c114",
+    "human_yes": [
+     0.52,
+     0.36
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.139,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      1
+     ],
+     "sonnet": [
+      1,
+      1
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c113",
+    "b": "c115",
+    "human_yes": [
+     0.52,
+     0.72
+    ],
+    "human_gap": -0.2,
+    "human_se": 0.134,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      1
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c113",
+    "b": "c116",
+    "human_yes": [
+     0.52,
+     0.2
+    ],
+    "human_gap": 0.32,
+    "human_se": 0.128,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.5
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c113",
+    "b": "c117",
+    "human_yes": [
+     0.52,
+     0.64
+    ],
+    "human_gap": -0.12,
+    "human_se": 0.139,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      1,
+      2
+     ],
+     "fable": [
+      2,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c114",
+    "b": "c115",
+    "human_yes": [
+     0.36,
+     0.72
+    ],
+    "human_gap": -0.36,
+    "human_se": 0.131,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      1
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c114",
+    "b": "c116",
+    "human_yes": [
+     0.36,
+     0.2
+    ],
+    "human_gap": 0.16,
+    "human_se": 0.125,
+    "panel_yes": [
+     1.0,
+     0.875
+    ],
+    "panel_gap": 0.125,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.5
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      2
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c114",
+    "b": "c117",
+    "human_yes": [
+     0.36,
+     0.64
+    ],
+    "human_gap": -0.28,
+    "human_se": 0.136,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      2
+     ],
+     "sonnet": [
+      1,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c115",
+    "b": "c116",
+    "human_yes": [
+     0.72,
+     0.2
+    ],
+    "human_gap": 0.52,
+    "human_se": 0.12,
+    "panel_yes": [
+     0.875,
+     0.875
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     -0.25,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.5,
+     "opus": 0.0,
+     "fable": 0.5
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c115",
+    "b": "c117",
+    "human_yes": [
+     0.72,
+     0.64
+    ],
+    "human_gap": 0.08,
+    "human_se": 0.131,
+    "panel_yes": [
+     0.875,
+     1.0
+    ],
+    "panel_gap": -0.125,
+    "panel_ci": [
+     -0.25,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.5,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      1,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "c116",
+    "b": "c117",
+    "human_yes": [
+     0.2,
+     0.64
+    ],
+    "human_gap": -0.44,
+    "human_se": 0.125,
+    "panel_yes": [
+     0.875,
+     1.0
+    ],
+    "panel_gap": -0.125,
+    "panel_ci": [
+     -0.25,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": -0.5
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      1
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c118",
+    "b": "c119",
+    "human_yes": [
+     0.48,
+     0.36
+    ],
+    "human_gap": 0.12,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.85,
+     1.0
+    ],
+    "panel_gap": -0.15,
+    "panel_ci": [
+     -0.25,
+     -0.05
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": -0.6
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c124",
+    "b": "c125",
+    "human_yes": [
+     0.16,
+     0.16
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.104,
+    "panel_yes": [
+     0.2,
+     0.35
+    ],
+    "panel_gap": -0.15,
+    "panel_ci": [
+     -0.3,
+     -0.05
+    ],
+    "panel_per_model": {
+     "haiku": -0.2,
+     "sonnet": -0.4,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c126",
+    "b": "c127",
+    "human_yes": [
+     0.6,
+     0.32
+    ],
+    "human_gap": 0.28,
+    "human_se": 0.135,
+    "panel_yes": [
+     0.667,
+     0.167
+    ],
+    "panel_gap": 0.5,
+    "panel_ci": [
+     0.333,
+     0.667
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c128",
+    "b": "c129",
+    "human_yes": [
+     0.64,
+     0.6
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.137,
+    "panel_yes": [
+     0.917,
+     0.083
+    ],
+    "panel_gap": 0.833,
+    "panel_ci": [
+     0.667,
+     1.0
+    ],
+    "panel_per_model": {
+     "haiku": 1.0,
+     "sonnet": 0.333,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c130",
+    "b": "c132",
+    "human_yes": [
+     0.28,
+     0.68
+    ],
+    "human_gap": -0.4,
+    "human_se": 0.129,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c130",
+    "b": "c133",
+    "human_yes": [
+     0.28,
+     0.2
+    ],
+    "human_gap": 0.08,
+    "human_se": 0.12,
+    "panel_yes": [
+     1.0,
+     0.75
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     0.0,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c131",
+    "b": "c134",
+    "human_yes": [
+     0.92,
+     0.92
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.077,
+    "panel_yes": [
+     1.0,
+     1.0
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c132",
+    "b": "c133",
+    "human_yes": [
+     0.68,
+     0.2
+    ],
+    "human_gap": 0.48,
+    "human_se": 0.123,
+    "panel_yes": [
+     1.0,
+     0.75
+    ],
+    "panel_gap": 0.25,
+    "panel_ci": [
+     0.0,
+     0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.5,
+     "opus": 0.5,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "time"
+    ]
+   },
+   {
+    "a": "c138",
+    "b": "c139",
+    "human_yes": [
+     0.36,
+     0.88
+    ],
+    "human_gap": -0.52,
+    "human_se": 0.116,
+    "panel_yes": [
+     0.792,
+     0.917
+    ],
+    "panel_gap": -0.125,
+    "panel_ci": [
+     -0.417,
+     0.125
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": -0.5
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      3,
+      2
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "-",
+    "class": "miss",
+    "differing_factors": [
+     "event_normality"
+    ]
+   },
+   {
+    "a": "c139",
+    "b": "c140",
+    "human_yes": [
+     0.88,
+     0.48
+    ],
+    "human_gap": 0.4,
+    "human_se": 0.119,
+    "panel_yes": [
+     0.917,
+     1.0
+    ],
+    "panel_gap": -0.083,
+    "panel_ci": [
+     -0.25,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.333,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness"
+    ]
+   },
+   {
+    "a": "c139",
+    "b": "c141",
+    "human_yes": [
+     0.88,
+     0.44
+    ],
+    "human_gap": 0.44,
+    "human_se": 0.119,
+    "panel_yes": [
+     0.917,
+     0.917
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     -0.167,
+     0.167
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.333,
+     "opus": 0.333,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "+",
+    "class": "miss",
+    "differing_factors": [
+     "agent_awareness"
+    ]
+   },
+   {
+    "a": "c140",
+    "b": "c141",
+    "human_yes": [
+     0.48,
+     0.44
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.141,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.333,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      3,
+      2
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": [
+     "agent_awareness"
+    ]
+   },
+   {
+    "a": "m000",
+    "b": "m008",
+    "human_yes": [
+     0.64,
+     0.64
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.136,
+    "panel_yes": [
+     0.9,
+     0.85
+    ],
+    "panel_gap": 0.05,
+    "panel_ci": [
+     -0.1,
+     0.2
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.2,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      5,
+      5
+     ],
+     "sonnet": [
+      5,
+      5
+     ],
+     "opus": [
+      5,
+      5
+     ],
+     "fable": [
+      5,
+      5
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "m012",
+    "b": "m013",
+    "human_yes": [
+     0.64,
+     0.6
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.137,
+    "panel_yes": [
+     1.0,
+     0.25
+    ],
+    "panel_gap": 0.75,
+    "panel_ci": [
+     0.75,
+     0.75
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 1.0,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      2,
+      2
+     ],
+     "opus": [
+      2,
+      2
+     ],
+     "fable": [
+      2,
+      2
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": []
+   },
+   {
+    "a": "m012",
+    "b": "m014",
+    "human_yes": [
+     0.64,
+     0.72
+    ],
+    "human_gap": -0.08,
+    "human_se": 0.131,
+    "panel_yes": [
+     1.0,
+     0.917
+    ],
+    "panel_gap": 0.083,
+    "panel_ci": [
+     0.0,
+     0.25
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.333,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "m012",
+    "b": "m015",
+    "human_yes": [
+     0.64,
+     0.6
+    ],
+    "human_gap": 0.04,
+    "human_se": 0.137,
+    "panel_yes": [
+     1.0,
+     0.25
+    ],
+    "panel_gap": 0.75,
+    "panel_ci": [
+     0.75,
+     0.75
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 1.0,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      3,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": []
+   },
+   {
+    "a": "m013",
+    "b": "m014",
+    "human_yes": [
+     0.6,
+     0.72
+    ],
+    "human_gap": -0.12,
+    "human_se": 0.133,
+    "panel_yes": [
+     0.25,
+     0.917
+    ],
+    "panel_gap": -0.667,
+    "panel_ci": [
+     -0.75,
+     -0.5
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": -0.667,
+     "opus": -1.0,
+     "fable": -1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      2
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "-",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": []
+   },
+   {
+    "a": "m013",
+    "b": "m015",
+    "human_yes": [
+     0.6,
+     0.6
+    ],
+    "human_gap": 0.0,
+    "human_se": 0.139,
+    "panel_yes": [
+     0.25,
+     0.25
+    ],
+    "panel_gap": 0.0,
+    "panel_ci": [
+     0.0,
+     0.0
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.0,
+     "opus": 0.0,
+     "fable": 0.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      2,
+      3
+     ],
+     "opus": [
+      2,
+      3
+     ],
+     "fable": [
+      2,
+      3
+     ]
+    },
+    "panel_verdict": "0",
+    "human_verdict": "0",
+    "class": "correct null",
+    "differing_factors": []
+   },
+   {
+    "a": "m014",
+    "b": "m015",
+    "human_yes": [
+     0.72,
+     0.6
+    ],
+    "human_gap": 0.12,
+    "human_se": 0.133,
+    "panel_yes": [
+     0.917,
+     0.25
+    ],
+    "panel_gap": 0.667,
+    "panel_ci": [
+     0.5,
+     0.75
+    ],
+    "panel_per_model": {
+     "haiku": 0.0,
+     "sonnet": 0.667,
+     "opus": 1.0,
+     "fable": 1.0
+    },
+    "panel_n": {
+     "haiku": [
+      2,
+      3
+     ],
+     "sonnet": [
+      3,
+      3
+     ],
+     "opus": [
+      3,
+      3
+     ],
+     "fable": [
+      3,
+      3
+     ]
+    },
+    "panel_verdict": "+",
+    "human_verdict": "0",
+    "class": "false positive",
+    "differing_factors": []
+   }
+  ],
+  "agreement": {
+   "n": 85,
+   "pearson_r": 0.233,
+   "slope_panel_on_human": 0.216,
+   "slope_through_origin": 0.23,
+   "mean_abs_gap_panel": 0.187,
+   "mean_abs_gap_human": 0.264,
+   "inflation_mean_abs": 0.708,
+   "n_human_clear": 34,
+   "where_human_clear": {
+    "same_sign": 0.441,
+    "panel_zero": 0.353,
+    "opposite": 0.206
+   }
+  },
+  "agreement_human_significant": {
+   "n": 85,
+   "pearson_r": 0.233,
+   "slope_panel_on_human": 0.216,
+   "slope_through_origin": 0.23,
+   "mean_abs_gap_panel": 0.187,
+   "mean_abs_gap_human": 0.264,
+   "inflation_mean_abs": 0.708,
+   "n_human_clear": 41,
+   "where_human_clear": {
+    "same_sign": 0.439,
+    "panel_zero": 0.366,
+    "opposite": 0.195
+   }
+  },
+  "agreement_per_model": {
+   "haiku": {
+    "n": 85,
+    "pearson_r": 0.157,
+    "slope_panel_on_human": 0.13,
+    "slope_through_origin": 0.13,
+    "mean_abs_gap_panel": 0.112,
+    "mean_abs_gap_human": 0.264,
+    "inflation_mean_abs": 0.424,
+    "n_human_clear": 34,
+    "where_human_clear": {
+     "same_sign": 0.147,
+     "panel_zero": 0.735,
+     "opposite": 0.118
+    }
+   },
+   "sonnet": {
+    "n": 85,
+    "pearson_r": -0.026,
+    "slope_panel_on_human": -0.026,
+    "slope_through_origin": -0.018,
+    "mean_abs_gap_panel": 0.207,
+    "mean_abs_gap_human": 0.264,
+    "inflation_mean_abs": 0.784,
+    "n_human_clear": 34,
+    "where_human_clear": {
+     "same_sign": 0.176,
+     "panel_zero": 0.529,
+     "opposite": 0.294
+    }
+   },
+   "opus": {
+    "n": 85,
+    "pearson_r": 0.263,
+    "slope_panel_on_human": 0.338,
+    "slope_through_origin": 0.36,
+    "mean_abs_gap_panel": 0.238,
+    "mean_abs_gap_human": 0.264,
+    "inflation_mean_abs": 0.902,
+    "n_human_clear": 34,
+    "where_human_clear": {
+     "same_sign": 0.235,
+     "panel_zero": 0.735,
+     "opposite": 0.029
+    }
+   },
+   "fable": {
+    "n": 85,
+    "pearson_r": 0.3,
+    "slope_panel_on_human": 0.422,
+    "slope_through_origin": 0.447,
+    "mean_abs_gap_panel": 0.249,
+    "mean_abs_gap_human": 0.264,
+    "inflation_mean_abs": 0.943,
+    "n_human_clear": 34,
+    "where_human_clear": {
+     "same_sign": 0.235,
+     "panel_zero": 0.765,
+     "opposite": 0.0
+    }
+   }
+  },
+  "by_differing_factor": {
+   "event_normality": {
+    "pairs": 30,
+    "human_clear": 19,
+    "mean_abs_gap_human": 0.357,
+    "mean_abs_gap_panel": 0.169,
+    "pearson_r": 0.408,
+    "where_human_clear": {
+     "same_sign": 10,
+     "panel_zero": 6,
+     "opposite": 3
+    }
+   },
+   "(no annotated difference)": {
+    "pairs": 29,
+    "human_clear": 5,
+    "mean_abs_gap_human": 0.172,
+    "mean_abs_gap_panel": 0.176,
+    "pearson_r": -0.047,
+    "where_human_clear": {
+     "same_sign": 1,
+     "panel_zero": 2,
+     "opposite": 2
+    }
+   },
+   "causal_structure": {
+    "pairs": 16,
+    "human_clear": 8,
+    "mean_abs_gap_human": 0.29,
+    "mean_abs_gap_panel": 0.276,
+    "pearson_r": 0.447,
+    "where_human_clear": {
+     "same_sign": 6,
+     "panel_zero": 1,
+     "opposite": 1
+    }
+   },
+   "agent_awareness": {
+    "pairs": 12,
+    "human_clear": 6,
+    "mean_abs_gap_human": 0.293,
+    "mean_abs_gap_panel": 0.028,
+    "pearson_r": -0.143,
+    "where_human_clear": {
+     "same_sign": 1,
+     "panel_zero": 4,
+     "opposite": 1
+    }
+   },
+   "time": {
+    "pairs": 9,
+    "human_clear": 3,
+    "mean_abs_gap_human": 0.244,
+    "mean_abs_gap_panel": 0.204,
+    "pearson_r": 0.085,
+    "where_human_clear": {
+     "same_sign": 1,
+     "panel_zero": 2,
+     "opposite": 0
+    }
+   }
+  },
+  "rates": {
+   "panel_confirmed": 14,
+   "false_positive_rate_among_human_nulls": 0.227,
+   "human_nulls": 44,
+   "sign_errors": 0
+  },
+  "reliability": {
+   "human_from_sampling_error": 0.856,
+   "panel_half_r": 0.685,
+   "panel_spearman_brown": 0.813,
+   "raw_r": 0.233,
+   "disattenuated_r": 0.279
+  },
+  "story_level": {
+   "n": 89,
+   "pearson_r": 0.307,
+   "majority_agreement": 0.621,
+   "mean_yes_panel": 0.627,
+   "mean_yes_human": 0.499
+  },
+  "story_level_per_model": {
+   "haiku": {
+    "n": 89,
+    "pearson_r": 0.236,
+    "majority_agreement": 0.562
+   },
+   "sonnet": {
+    "n": 89,
+    "pearson_r": 0.186,
+    "majority_agreement": 0.554
+   },
+   "opus": {
+    "n": 89,
+    "pearson_r": 0.331,
+    "majority_agreement": 0.614
+   },
+   "fable": {
+    "n": 89,
+    "pearson_r": 0.312,
+    "majority_agreement": 0.621
+   }
+  }
+ },
+ "recognition": {
+  "items": 99,
+  "per_model": {
+   "haiku": {
+    "otr": {
+     "n": 10,
+     "recognised": 10,
+     "names_a_specific_source": 10,
+     "names_the_dataset": 0
+    },
+    "moca": {
+     "n": 89,
+     "recognised": 8,
+     "names_a_specific_source": 8,
+     "names_the_dataset": 0
+    }
+   },
+   "sonnet": {
+    "otr": {
+     "n": 10,
+     "recognised": 0,
+     "names_a_specific_source": 0,
+     "names_the_dataset": 0
+    },
+    "moca": {
+     "n": 89,
+     "recognised": 89,
+     "names_a_specific_source": 2,
+     "names_the_dataset": 0
+    }
+   },
+   "opus": {
+    "otr": {
+     "n": 10,
+     "recognised": 10,
+     "names_a_specific_source": 10,
+     "names_the_dataset": 10
+    },
+    "moca": {
+     "n": 89,
+     "recognised": 89,
+     "names_a_specific_source": 89,
+     "names_the_dataset": 45
+    }
+   },
+   "fable": {
+    "otr": {
+     "n": 10,
+     "recognised": 10,
+     "names_a_specific_source": 10,
+     "names_the_dataset": 10
+    },
+    "moca": {
+     "n": 89,
+     "recognised": 89,
+     "names_a_specific_source": 89,
+     "names_the_dataset": 34
+    }
+   }
+  },
+  "moca_sign_agreement_by_recognition": {
+   "haiku": {
+    "neither recognised": {
+     "n": 34,
+     "sign_agreement": 0.147
+    }
+   },
+   "sonnet": {
+    "both recognised": {
+     "n": 34,
+     "sign_agreement": 0.176
+    }
+   },
+   "opus": {
+    "both recognised": {
+     "n": 34,
+     "sign_agreement": 0.235
+    }
+   },
+   "fable": {
+    "both recognised": {
+     "n": 34,
+     "sign_agreement": 0.235
+    }
+   }
+  }
+ },
+ "settings": {
+  "boot": 4000,
+  "splits": 400,
+  "seed": 7,
+  "otr_threshold": 0.3333333333333333,
+  "moca_threshold": 0.25,
+  "moca_human_clear": 0.3
+ }
+}

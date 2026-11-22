@@ -1,0 +1,3425 @@
+{
+ "seed": 20261122,
+ "arms": 10,
+ "models": [
+  "haiku",
+  "sonnet",
+  "opus",
+  "fable"
+ ],
+ "otr_conditions": [
+  "cc_evitable_action_yes",
+  "cc_evitable_prevention_no",
+  "cc_inevitable_action_yes",
+  "cc_inevitable_prevention_no",
+  "coc_evitable_action_yes",
+  "coc_evitable_prevention_no",
+  "coc_inevitable_action_yes",
+  "coc_inevitable_prevention_no"
+ ],
+ "moca_pairs": [
+  [
+   "c000",
+   "c001"
+  ],
+  [
+   "c010",
+   "c011"
+  ],
+  [
+   "c012",
+   "c013"
+  ],
+  [
+   "c022",
+   "c024"
+  ],
+  [
+   "c023",
+   "c025"
+  ],
+  [
+   "c026",
+   "c028"
+  ],
+  [
+   "c027",
+   "c029"
+  ],
+  [
+   "c030",
+   "c032"
+  ],
+  [
+   "c031",
+   "c033"
+  ],
+  [
+   "c034",
+   "c035"
+  ],
+  [
+   "c034",
+   "c036"
+  ],
+  [
+   "c035",
+   "c037"
+  ],
+  [
+   "c038",
+   "c039"
+  ],
+  [
+   "c038",
+   "c040"
+  ],
+  [
+   "c038",
+   "c041"
+  ],
+  [
+   "c039",
+   "c040"
+  ],
+  [
+   "c039",
+   "c041"
+  ],
+  [
+   "c040",
+   "c041"
+  ],
+  [
+   "c044",
+   "c045"
+  ],
+  [
+   "c046",
+   "c047"
+  ],
+  [
+   "c048",
+   "c049"
+  ],
+  [
+   "c048",
+   "c050"
+  ],
+  [
+   "c048",
+   "c051"
+  ],
+  [
+   "c049",
+   "c050"
+  ],
+  [
+   "c049",
+   "c051"
+  ],
+  [
+   "c050",
+   "c051"
+  ],
+  [
+   "c052",
+   "c053"
+  ],
+  [
+   "c076",
+   "c077"
+  ],
+  [
+   "c088",
+   "c089"
+  ],
+  [
+   "c090",
+   "c091"
+  ],
+  [
+   "c093",
+   "c094"
+  ],
+  [
+   "c096",
+   "c097"
+  ],
+  [
+   "c098",
+   "c099"
+  ],
+  [
+   "c100",
+   "c102"
+  ],
+  [
+   "c100",
+   "c104"
+  ],
+  [
+   "c100",
+   "c106"
+  ],
+  [
+   "c101",
+   "c103"
+  ],
+  [
+   "c101",
+   "c105"
+  ],
+  [
+   "c101",
+   "c107"
+  ],
+  [
+   "c102",
+   "c104"
+  ],
+  [
+   "c102",
+   "c106"
+  ],
+  [
+   "c103",
+   "c105"
+  ],
+  [
+   "c103",
+   "c107"
+  ],
+  [
+   "c104",
+   "c106"
+  ],
+  [
+   "c105",
+   "c107"
+  ],
+  [
+   "c108",
+   "c109"
+  ],
+  [
+   "c108",
+   "c110"
+  ],
+  [
+   "c108",
+   "c111"
+  ],
+  [
+   "c109",
+   "c110"
+  ],
+  [
+   "c109",
+   "c111"
+  ],
+  [
+   "c110",
+   "c111"
+  ],
+  [
+   "c112",
+   "c113"
+  ],
+  [
+   "c112",
+   "c114"
+  ],
+  [
+   "c112",
+   "c115"
+  ],
+  [
+   "c112",
+   "c116"
+  ],
+  [
+   "c112",
+   "c117"
+  ],
+  [
+   "c113",
+   "c114"
+  ],
+  [
+   "c113",
+   "c115"
+  ],
+  [
+   "c113",
+   "c116"
+  ],
+  [
+   "c113",
+   "c117"
+  ],
+  [
+   "c114",
+   "c115"
+  ],
+  [
+   "c114",
+   "c116"
+  ],
+  [
+   "c114",
+   "c117"
+  ],
+  [
+   "c115",
+   "c116"
+  ],
+  [
+   "c115",
+   "c117"
+  ],
+  [
+   "c116",
+   "c117"
+  ],
+  [
+   "c118",
+   "c119"
+  ],
+  [
+   "c124",
+   "c125"
+  ],
+  [
+   "c126",
+   "c127"
+  ],
+  [
+   "c128",
+   "c129"
+  ],
+  [
+   "c130",
+   "c132"
+  ],
+  [
+   "c130",
+   "c133"
+  ],
+  [
+   "c131",
+   "c134"
+  ],
+  [
+   "c132",
+   "c133"
+  ],
+  [
+   "c138",
+   "c139"
+  ],
+  [
+   "c139",
+   "c140"
+  ],
+  [
+   "c139",
+   "c141"
+  ],
+  [
+   "c140",
+   "c141"
+  ],
+  [
+   "m000",
+   "m008"
+  ],
+  [
+   "m012",
+   "m013"
+  ],
+  [
+   "m012",
+   "m014"
+  ],
+  [
+   "m012",
+   "m015"
+  ],
+  [
+   "m013",
+   "m014"
+  ],
+  [
+   "m013",
+   "m015"
+  ],
+  [
+   "m014",
+   "m015"
+  ]
+ ],
+ "moca_components": [
+  [
+   "c000",
+   "c001"
+  ],
+  [
+   "c010",
+   "c011"
+  ],
+  [
+   "c022",
+   "c023",
+   "c024",
+   "c025"
+  ],
+  [
+   "c026",
+   "c027",
+   "c028",
+   "c029"
+  ],
+  [
+   "c030",
+   "c031",
+   "c032",
+   "c033"
+  ],
+  [
+   "c034",
+   "c035",
+   "c036",
+   "c037"
+  ],
+  [
+   "c038",
+   "c039",
+   "c040",
+   "c041"
+  ],
+  [
+   "c044",
+   "c045"
+  ],
+  [
+   "c048",
+   "c049",
+   "c050",
+   "c051"
+  ],
+  [
+   "c052",
+   "c053"
+  ],
+  [
+   "c046",
+   "c047",
+   "c076",
+   "c077"
+  ],
+  [
+   "c088",
+   "c089"
+  ],
+  [
+   "c090",
+   "c091",
+   "c093",
+   "c094"
+  ],
+  [
+   "c096",
+   "c097"
+  ],
+  [
+   "c098",
+   "c099"
+  ],
+  [
+   "c012",
+   "c013",
+   "c100",
+   "c101",
+   "c102",
+   "c103",
+   "c104",
+   "c105",
+   "c106",
+   "c107"
+  ],
+  [
+   "c108",
+   "c109",
+   "c110",
+   "c111"
+  ],
+  [
+   "c112",
+   "c113",
+   "c114",
+   "c115",
+   "c116",
+   "c117"
+  ],
+  [
+   "c118",
+   "c119"
+  ],
+  [
+   "c124",
+   "c125"
+  ],
+  [
+   "c126",
+   "c127",
+   "c128",
+   "c129"
+  ],
+  [
+   "c130",
+   "c131",
+   "c132",
+   "c133",
+   "c134"
+  ],
+  [
+   "c138",
+   "c139",
+   "c140",
+   "c141"
+  ],
+  [
+   "m000",
+   "m008"
+  ],
+  [
+   "m012",
+   "m013",
+   "m014",
+   "m015"
+  ]
+ ],
+ "batches": {
+  "b01": {
+   "model": "haiku",
+   "arm": 0,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c032",
+    "c091",
+    "c126",
+    "c049",
+    "c011",
+    "c029",
+    "c000",
+    "c130",
+    "c109",
+    "c037",
+    "c105",
+    "c053",
+    "c045",
+    "c089",
+    "c125",
+    "m015",
+    "c116",
+    "c076",
+    "c141",
+    "c024",
+    "c098",
+    "c040",
+    "c119",
+    "c097",
+    "m008"
+   ]
+  },
+  "b02": {
+   "model": "haiku",
+   "arm": 1,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c131",
+    "c124",
+    "c026",
+    "c050",
+    "c025",
+    "c138",
+    "c001",
+    "c110",
+    "m000",
+    "m012",
+    "c088",
+    "c010",
+    "c117",
+    "c077",
+    "c096",
+    "c106",
+    "c118",
+    "c127",
+    "c033",
+    "c093",
+    "c034",
+    "c044",
+    "c099",
+    "c041",
+    "c052"
+   ]
+  },
+  "b03": {
+   "model": "haiku",
+   "arm": 2,
+   "part1": [
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c119",
+    "m008",
+    "c089",
+    "m013",
+    "c053",
+    "c038",
+    "c030",
+    "c125",
+    "c098",
+    "c111",
+    "c094",
+    "c035",
+    "c027",
+    "c132",
+    "c000",
+    "c051",
+    "c112",
+    "c097",
+    "c022",
+    "c046",
+    "c107",
+    "c045",
+    "c011",
+    "c128",
+    "c139"
+   ]
+  },
+  "b04": {
+   "model": "haiku",
+   "arm": 3,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c031",
+    "c023",
+    "c129",
+    "c108",
+    "c088",
+    "c118",
+    "c124",
+    "c036",
+    "c140",
+    "c012",
+    "c090",
+    "c113",
+    "c133",
+    "c099",
+    "c044",
+    "c048",
+    "c047",
+    "c001",
+    "c052",
+    "c039",
+    "m000",
+    "c028",
+    "c096",
+    "m014",
+    "c010"
+   ]
+  },
+  "b05": {
+   "model": "haiku",
+   "arm": 4,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c089",
+    "c049",
+    "c053",
+    "c040",
+    "c109",
+    "c024",
+    "c125",
+    "c037",
+    "c032",
+    "c119",
+    "c097",
+    "c126",
+    "c011",
+    "c029",
+    "c098",
+    "c076",
+    "c141",
+    "c000",
+    "c091",
+    "m008",
+    "c134",
+    "c114",
+    "m015",
+    "c045",
+    "c013"
+   ]
+  },
+  "b06": {
+   "model": "haiku",
+   "arm": 5,
+   "part1": [
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c010",
+    "c088",
+    "c110",
+    "c052",
+    "c130",
+    "c034",
+    "m000",
+    "c100",
+    "c124",
+    "c093",
+    "c138",
+    "c099",
+    "m012",
+    "c041",
+    "c050",
+    "c033",
+    "c118",
+    "c025",
+    "c115",
+    "c127",
+    "c044",
+    "c096",
+    "c077",
+    "c001",
+    "c026"
+   ]
+  },
+  "b07": {
+   "model": "haiku",
+   "arm": 6,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c097",
+    "m013",
+    "c022",
+    "m008",
+    "c089",
+    "c125",
+    "c131",
+    "c027",
+    "c128",
+    "c045",
+    "c111",
+    "c011",
+    "c139",
+    "c094",
+    "c000",
+    "c038",
+    "c035",
+    "c053",
+    "c030",
+    "c116",
+    "c098",
+    "c051",
+    "c101",
+    "c119",
+    "c046"
+   ]
+  },
+  "b08": {
+   "model": "haiku",
+   "arm": 7,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c088",
+    "c096",
+    "c010",
+    "c052",
+    "c031",
+    "c102",
+    "c023",
+    "c090",
+    "c117",
+    "c124",
+    "c001",
+    "m000",
+    "c129",
+    "c132",
+    "m014",
+    "c039",
+    "c036",
+    "c108",
+    "c048",
+    "c118",
+    "c047",
+    "c140",
+    "c099",
+    "c028",
+    "c044"
+   ]
+  },
+  "b09": {
+   "model": "haiku",
+   "arm": 8,
+   "part1": [
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c037",
+    "c097",
+    "c091",
+    "c045",
+    "c029",
+    "c119",
+    "c125",
+    "c103",
+    "c032",
+    "c011",
+    "c024",
+    "c076",
+    "m008",
+    "c133",
+    "c141",
+    "c089",
+    "c126",
+    "c040",
+    "c000",
+    "c049",
+    "m015",
+    "c112",
+    "c098",
+    "c053",
+    "c109"
+   ]
+  },
+  "b10": {
+   "model": "haiku",
+   "arm": 9,
+   "part1": [
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c001",
+    "c026",
+    "c052",
+    "c104",
+    "c077",
+    "c033",
+    "m000",
+    "c093",
+    "c010",
+    "c118",
+    "c044",
+    "c050",
+    "c110",
+    "c127",
+    "c124",
+    "c113",
+    "c041",
+    "c138",
+    "m012",
+    "c025",
+    "c096",
+    "c134",
+    "c088",
+    "c099",
+    "c034"
+   ]
+  },
+  "b11": {
+   "model": "sonnet",
+   "arm": 0,
+   "part1": [
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c130",
+    "c077",
+    "c031",
+    "m014",
+    "c028",
+    "c118",
+    "c105",
+    "c049",
+    "c115",
+    "c088",
+    "c128",
+    "c094",
+    "c138",
+    "c096",
+    "c124",
+    "c044",
+    "c110",
+    "c010",
+    "c041",
+    "c098",
+    "c053",
+    "m008",
+    "c025",
+    "c000",
+    "c037"
+   ]
+  },
+  "b12": {
+   "model": "sonnet",
+   "arm": 1,
+   "part1": [
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c125",
+    "c001",
+    "c099",
+    "c029",
+    "c129",
+    "m000",
+    "c139",
+    "m015",
+    "c011",
+    "c090",
+    "c052",
+    "c106",
+    "c089",
+    "c022",
+    "c045",
+    "c050",
+    "c032",
+    "c097",
+    "c119",
+    "c034",
+    "c131",
+    "c111",
+    "c038",
+    "c116",
+    "c046"
+   ]
+  },
+  "b13": {
+   "model": "sonnet",
+   "arm": 2,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c026",
+    "m008",
+    "c118",
+    "c096",
+    "c039",
+    "c132",
+    "c088",
+    "c124",
+    "c044",
+    "c091",
+    "c126",
+    "c023",
+    "c047",
+    "c108",
+    "m012",
+    "c000",
+    "c033",
+    "c140",
+    "c098",
+    "c035",
+    "c051",
+    "c053",
+    "c107",
+    "c117",
+    "c010"
+   ]
+  },
+  "b14": {
+   "model": "sonnet",
+   "arm": 3,
+   "part1": [
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c001",
+    "c036",
+    "c040",
+    "c048",
+    "c011",
+    "c133",
+    "c141",
+    "c012",
+    "c030",
+    "c097",
+    "c127",
+    "c125",
+    "c027",
+    "c093",
+    "c076",
+    "c112",
+    "c099",
+    "c089",
+    "c024",
+    "c119",
+    "m000",
+    "m013",
+    "c052",
+    "c045",
+    "c109"
+   ]
+  },
+  "b15": {
+   "model": "sonnet",
+   "arm": 4,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c128",
+    "c134",
+    "c138",
+    "c044",
+    "c000",
+    "c010",
+    "c096",
+    "c049",
+    "c113",
+    "c028",
+    "c118",
+    "c025",
+    "c110",
+    "c013",
+    "c041",
+    "c053",
+    "c094",
+    "c088",
+    "c031",
+    "c037",
+    "c124",
+    "m014",
+    "c098",
+    "m008",
+    "c077"
+   ]
+  },
+  "b16": {
+   "model": "sonnet",
+   "arm": 5,
+   "part1": [
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c114",
+    "c032",
+    "c038",
+    "c097",
+    "c050",
+    "c046",
+    "c090",
+    "c099",
+    "c119",
+    "c029",
+    "c111",
+    "c034",
+    "c100",
+    "c139",
+    "c130",
+    "c001",
+    "c052",
+    "c045",
+    "c129",
+    "c011",
+    "m015",
+    "c125",
+    "c089",
+    "c022",
+    "m000"
+   ]
+  },
+  "b17": {
+   "model": "sonnet",
+   "arm": 6,
+   "part1": [
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c126",
+    "c098",
+    "c039",
+    "c115",
+    "c091",
+    "c010",
+    "c033",
+    "c026",
+    "c051",
+    "c035",
+    "c118",
+    "c096",
+    "c023",
+    "c108",
+    "c044",
+    "m008",
+    "c088",
+    "c000",
+    "c047",
+    "c101",
+    "m012",
+    "c131",
+    "c124",
+    "c140",
+    "c053"
+   ]
+  },
+  "b18": {
+   "model": "sonnet",
+   "arm": 7,
+   "part1": [
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c141",
+    "c001",
+    "c093",
+    "c076",
+    "c116",
+    "c119",
+    "c089",
+    "m013",
+    "c048",
+    "c099",
+    "c027",
+    "c127",
+    "c011",
+    "c102",
+    "c024",
+    "c097",
+    "c109",
+    "c125",
+    "m000",
+    "c045",
+    "c132",
+    "c036",
+    "c040",
+    "c030",
+    "c052"
+   ]
+  },
+  "b19": {
+   "model": "sonnet",
+   "arm": 8,
+   "part1": [
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c118",
+    "c010",
+    "c117",
+    "c096",
+    "m014",
+    "c000",
+    "c077",
+    "c088",
+    "c044",
+    "c025",
+    "c028",
+    "c103",
+    "c128",
+    "c138",
+    "c124",
+    "c094",
+    "c049",
+    "c031",
+    "m008",
+    "c110",
+    "c098",
+    "c037",
+    "c133",
+    "c041",
+    "c053"
+   ]
+  },
+  "b20": {
+   "model": "sonnet",
+   "arm": 9,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "m015",
+    "c111",
+    "c112",
+    "m000",
+    "c052",
+    "c104",
+    "c034",
+    "c038",
+    "c119",
+    "c099",
+    "c097",
+    "c129",
+    "c029",
+    "c046",
+    "c134",
+    "c022",
+    "c045",
+    "c001",
+    "c050",
+    "c139",
+    "c125",
+    "c089",
+    "c032",
+    "c011",
+    "c090"
+   ]
+  },
+  "b21": {
+   "model": "opus",
+   "arm": 0,
+   "part1": [
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c032",
+    "c096",
+    "c041",
+    "c047",
+    "c107",
+    "c037",
+    "c094",
+    "c010",
+    "c053",
+    "c099",
+    "c125",
+    "c131",
+    "c110",
+    "m008",
+    "c129",
+    "c114",
+    "c141",
+    "c119",
+    "m014",
+    "c000",
+    "c023",
+    "c050",
+    "c045",
+    "c088",
+    "c026"
+   ]
+  },
+  "b22": {
+   "model": "opus",
+   "arm": 1,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "m000",
+    "c118",
+    "c033",
+    "c097",
+    "c024",
+    "c034",
+    "c076",
+    "c124",
+    "c115",
+    "m015",
+    "c052",
+    "c027",
+    "c089",
+    "c111",
+    "c132",
+    "c038",
+    "c098",
+    "c011",
+    "c001",
+    "c044",
+    "c138",
+    "c126",
+    "c090",
+    "c051",
+    "c012"
+   ]
+  },
+  "b23": {
+   "model": "opus",
+   "arm": 2,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c077",
+    "c116",
+    "m012",
+    "c013",
+    "c053",
+    "c028",
+    "c045",
+    "c091",
+    "c127",
+    "c088",
+    "c133",
+    "c010",
+    "c099",
+    "c025",
+    "c039",
+    "c000",
+    "m008",
+    "c139",
+    "c096",
+    "c108",
+    "c048",
+    "c125",
+    "c035",
+    "c030",
+    "c119"
+   ]
+  },
+  "b24": {
+   "model": "opus",
+   "arm": 3,
+   "part1": [
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c100",
+    "c093",
+    "c134",
+    "c097",
+    "c001",
+    "c011",
+    "c089",
+    "c109",
+    "c140",
+    "m013",
+    "c117",
+    "c049",
+    "c052",
+    "c031",
+    "c036",
+    "c044",
+    "c128",
+    "c040",
+    "c029",
+    "c118",
+    "c046",
+    "c098",
+    "m000",
+    "c124",
+    "c022"
+   ]
+  },
+  "b25": {
+   "model": "opus",
+   "arm": 4,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c129",
+    "c088",
+    "c096",
+    "c112",
+    "c130",
+    "c141",
+    "c119",
+    "c099",
+    "c010",
+    "c047",
+    "m014",
+    "c125",
+    "c000",
+    "c023",
+    "c026",
+    "c041",
+    "c037",
+    "c101",
+    "m008",
+    "c050",
+    "c094",
+    "c045",
+    "c032",
+    "c110",
+    "c053"
+   ]
+  },
+  "b26": {
+   "model": "opus",
+   "arm": 5,
+   "part1": [
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c131",
+    "c038",
+    "m000",
+    "c113",
+    "c102",
+    "c001",
+    "c118",
+    "c044",
+    "c011",
+    "c097",
+    "c126",
+    "c111",
+    "c089",
+    "c076",
+    "c138",
+    "c051",
+    "c034",
+    "c027",
+    "c033",
+    "m015",
+    "c052",
+    "c124",
+    "c090",
+    "c098",
+    "c024"
+   ]
+  },
+  "b27": {
+   "model": "opus",
+   "arm": 6,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c000",
+    "c125",
+    "c139",
+    "c103",
+    "c088",
+    "c039",
+    "c025",
+    "c048",
+    "c114",
+    "m008",
+    "c030",
+    "c045",
+    "c099",
+    "c096",
+    "c119",
+    "m012",
+    "c028",
+    "c091",
+    "c132",
+    "c077",
+    "c053",
+    "c035",
+    "c108",
+    "c010",
+    "c127"
+   ]
+  },
+  "b28": {
+   "model": "opus",
+   "arm": 7,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c022",
+    "c089",
+    "c133",
+    "c140",
+    "c044",
+    "c001",
+    "c052",
+    "c031",
+    "c097",
+    "c040",
+    "c118",
+    "c036",
+    "c093",
+    "c115",
+    "m013",
+    "c104",
+    "c011",
+    "m000",
+    "c029",
+    "c124",
+    "c128",
+    "c109",
+    "c098",
+    "c049",
+    "c046"
+   ]
+  },
+  "b29": {
+   "model": "opus",
+   "arm": 8,
+   "part1": [
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c096",
+    "c026",
+    "c045",
+    "c141",
+    "c037",
+    "c129",
+    "m008",
+    "c116",
+    "c134",
+    "m014",
+    "c125",
+    "c094",
+    "c041",
+    "c119",
+    "c047",
+    "c023",
+    "c053",
+    "c050",
+    "c110",
+    "c000",
+    "c032",
+    "c099",
+    "c088",
+    "c010",
+    "c105"
+   ]
+  },
+  "b30": {
+   "model": "opus",
+   "arm": 9,
+   "part1": [
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c138",
+    "c051",
+    "c126",
+    "c090",
+    "c052",
+    "c011",
+    "c124",
+    "c038",
+    "c024",
+    "c027",
+    "c130",
+    "c117",
+    "c098",
+    "c044",
+    "c076",
+    "m000",
+    "c033",
+    "c001",
+    "c034",
+    "c106",
+    "m015",
+    "c111",
+    "c089",
+    "c097",
+    "c118"
+   ]
+  },
+  "b31": {
+   "model": "fable",
+   "arm": 0,
+   "part1": [
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "m008",
+    "c118",
+    "c010",
+    "c103",
+    "c050",
+    "c089",
+    "c039",
+    "c047",
+    "c097",
+    "c030",
+    "c001",
+    "m014",
+    "c094",
+    "c133",
+    "c045",
+    "c023",
+    "c124",
+    "c053",
+    "c113",
+    "c099",
+    "c111",
+    "c026",
+    "c128",
+    "c139",
+    "c037"
+   ]
+  },
+  "b32": {
+   "model": "fable",
+   "arm": 1,
+   "part1": [
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c104",
+    "c096",
+    "m000",
+    "c052",
+    "c034",
+    "c088",
+    "c108",
+    "c114",
+    "c011",
+    "c090",
+    "c098",
+    "c129",
+    "c076",
+    "c024",
+    "c119",
+    "c051",
+    "m015",
+    "c140",
+    "c134",
+    "c044",
+    "c125",
+    "c040",
+    "c031",
+    "c027",
+    "c000"
+   ]
+  },
+  "b33": {
+   "model": "fable",
+   "arm": 2,
+   "part1": [
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c035",
+    "c001",
+    "c089",
+    "c010",
+    "c109",
+    "c124",
+    "c028",
+    "c097",
+    "c045",
+    "c115",
+    "c099",
+    "c105",
+    "c025",
+    "c141",
+    "c126",
+    "m012",
+    "c053",
+    "c048",
+    "c032",
+    "c041",
+    "c091",
+    "c118",
+    "c130",
+    "c077",
+    "m008"
+   ]
+  },
+  "b34": {
+   "model": "fable",
+   "arm": 3,
+   "part1": [
+    {
+     "scenario_id": 0,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c096",
+    "m000",
+    "c036",
+    "c116",
+    "c022",
+    "c033",
+    "c011",
+    "c044",
+    "c110",
+    "c093",
+    "c127",
+    "c138",
+    "c125",
+    "c049",
+    "c131",
+    "c098",
+    "c029",
+    "c046",
+    "c000",
+    "c088",
+    "m013",
+    "c038",
+    "c052",
+    "c119",
+    "c106"
+   ]
+  },
+  "b35": {
+   "model": "fable",
+   "arm": 4,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c037",
+    "c023",
+    "c097",
+    "c039",
+    "c001",
+    "c124",
+    "c132",
+    "c111",
+    "c047",
+    "c026",
+    "c094",
+    "c118",
+    "c010",
+    "m008",
+    "c139",
+    "c128",
+    "c099",
+    "c030",
+    "c045",
+    "c089",
+    "c117",
+    "c053",
+    "c107",
+    "c050",
+    "m014"
+   ]
+  },
+  "b36": {
+   "model": "fable",
+   "arm": 5,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c052",
+    "c108",
+    "c119",
+    "c040",
+    "c129",
+    "m015",
+    "c031",
+    "c125",
+    "c012",
+    "c098",
+    "c112",
+    "c000",
+    "c044",
+    "m000",
+    "c051",
+    "c011",
+    "c096",
+    "c133",
+    "c140",
+    "c027",
+    "c034",
+    "c088",
+    "c024",
+    "c076",
+    "c090"
+   ]
+  },
+  "b37": {
+   "model": "fable",
+   "arm": 6,
+   "part1": [
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "cc_inevitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c001",
+    "c113",
+    "c091",
+    "c045",
+    "c126",
+    "c032",
+    "c109",
+    "c099",
+    "c010",
+    "c035",
+    "c141",
+    "m012",
+    "c013",
+    "c048",
+    "c053",
+    "c028",
+    "c124",
+    "c097",
+    "m008",
+    "c041",
+    "c118",
+    "c134",
+    "c077",
+    "c025",
+    "c089"
+   ]
+  },
+  "b38": {
+   "model": "fable",
+   "arm": 7,
+   "part1": [
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "coc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c033",
+    "c046",
+    "c000",
+    "m013",
+    "c096",
+    "c114",
+    "c036",
+    "c011",
+    "c098",
+    "c088",
+    "m000",
+    "c029",
+    "c093",
+    "c038",
+    "c127",
+    "c022",
+    "c125",
+    "c044",
+    "c130",
+    "c049",
+    "c110",
+    "c119",
+    "c138",
+    "c052",
+    "c100"
+   ]
+  },
+  "b39": {
+   "model": "fable",
+   "arm": 8,
+   "part1": [
+    {
+     "scenario_id": 5,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "cc_inevitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 7,
+     "condition": "cc_evitable_prevention_no"
+    }
+   ],
+   "part2": [
+    "c115",
+    "c023",
+    "c101",
+    "c094",
+    "c111",
+    "c039",
+    "c010",
+    "c030",
+    "c053",
+    "c118",
+    "c128",
+    "c026",
+    "m014",
+    "c131",
+    "c089",
+    "c037",
+    "c050",
+    "c045",
+    "m008",
+    "c097",
+    "c047",
+    "c099",
+    "c124",
+    "c139",
+    "c001"
+   ]
+  },
+  "b40": {
+   "model": "fable",
+   "arm": 9,
+   "part1": [
+    {
+     "scenario_id": 7,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 2,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 5,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 0,
+     "condition": "cc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 9,
+     "condition": "cc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 4,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 3,
+     "condition": "coc_evitable_prevention_no"
+    },
+    {
+     "scenario_id": 1,
+     "condition": "coc_evitable_action_yes"
+    },
+    {
+     "scenario_id": 8,
+     "condition": "coc_inevitable_action_yes"
+    },
+    {
+     "scenario_id": 6,
+     "condition": "coc_inevitable_action_yes"
+    }
+   ],
+   "part2": [
+    "c102",
+    "c140",
+    "c027",
+    "c034",
+    "c116",
+    "c090",
+    "c024",
+    "c076",
+    "m000",
+    "c132",
+    "m015",
+    "c011",
+    "c052",
+    "c125",
+    "c129",
+    "c098",
+    "c000",
+    "c088",
+    "c108",
+    "c119",
+    "c096",
+    "c051",
+    "c044",
+    "c031",
+    "c040"
+   ]
+  }
+ }
+}
