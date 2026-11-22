@@ -1,0 +1,12 @@
+{
+  "title": "Thought-Experiment Authoring: Model-Panel Pilot",
+  "version": "v0.1.0",
+  "description": "<p>Code, materials, methods and results for the model-panel pilot on writing and rating paired philosophical scenarios.</p><p>The MIT-licensed archive includes the human-study methods and excludes the deployment pages and scoring key.</p>",
+  "creators": [
+    {
+      "name": "Chen, Yuanrui"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software"
+}

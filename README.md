@@ -1,6 +1,8 @@
 # Thought-experiment authoring (pilot)
 
-**Status, 15 November 2026: paused, waiting for human participants.** The model-panel pilot is complete. The human survey is built and tested but nobody has taken it. To resume, follow `docs/human-survey.md`.
+**Status, 15 November 2026.** The model-panel pilot is complete. The human study awaits
+participants. This release archives the model-panel work and the human-study methods. The
+human survey deployment files and scoring key are excluded.
 
 A small benchmark: an author model gets one philosophical factor, writes a pair of
 short scenarios that differ only in that factor, and predicts how readers will judge
@@ -18,10 +20,9 @@ This release is a pilot of the pipeline. All authors and judges are Claude model
 | `METHODS.md` | One-page methods note: judgment calls, limitations, next steps. |
 | `docs/prior-art.md` | Prior-art check and verdict. |
 | `docs/control-references.md` | Check of the classic controls' references against their source papers. |
-| `docs/human-survey.md` | How to run the human survey, and the analysis plan fixed in advance. |
-| `survey/survey.html` | The human survey as a single file. `survey/survey_page.html` is the same page for publishing. |
+| `docs/human-survey.md` | Human survey design and the analysis plan fixed in advance. |
 | `compare_panels.py` | Compares the human panel with the model panel once human data exists. |
-| `reports/Mathematical analysis of the benchmark.md` | What the pilot data imply about factor choice, the prediction score, human sample sizes, the calibration bar and the survey design. Rebuilt by `pipeline/math_analysis.py`. |
+| `reports/Mathematical analysis of the benchmark.md` | What the pilot data imply about factor choice, the prediction score, human sample sizes, the calibration bar and the survey design. Rebuilding the survey section with `pipeline/math_analysis.py` requires the separate survey manifest. |
 | `reports/Calibration on public human data.md` | The model panel run on two public datasets with human ratings (OffTheRails, MoCa) and scored with the pilot's own gap rule: how often its verdicts match people's, factor by factor; plus two Gemini models as a second vendor. Numbers in `reports/calibration_numbers.json` and `reports/calibration_numbers_other_panels.json`, rebuilt by `pipeline/calibration/analyse.py`. |
 | `reports/Statistical methods for vignette benchmarks.md` | Review of recent statistics (2023–2026) that could fix the problems the analysis found, with each citation's verification status. |
 | `vignettes.json` | All pairs, questions, predictions, authors, control references. |
@@ -40,7 +41,7 @@ This release is a pilot of the pipeline. All authors and judges are Claude model
 | `reports/Round 2b three pairs per factor.md` | Round 2b: Haiku, Sonnet and Opus each wrote two more pairs per new factor; all 27 judged together by a second persona panel. Author order on three pairs per factor, a permutation test, rerun fragility, and a test-retest that corrects round 2. Pairs in `round2/vignettes_b.json`; run `round2b`; scores in `out/round2b/`; numbers in `reports/round2b_numbers.json`, rebuilt by `pipeline/round2/analyse_b.py`. |
 | `reports/Round 2 contested factors.md` | Round 2: three contested factors (inevitable harm, knowledge and causation, luck and wrongness) replace the pilot's three easy ones. New pairs from Haiku, Sonnet and Opus, new classic controls anchored to public human data, a persona panel, a test-retest on the reused pairs and a rerun-fragility check. Pairs in `round2/vignettes.json`; run `round2` in `judgments.csv` and `audits.csv`; scores in `out/round2/`; numbers in `reports/round2_numbers.json`, rebuilt by `pipeline/round2/analyse.py`. `pipeline/round2/` holds the builder (brief, controls, batches, provenance check, ingestion) and the raw answers. |
 | `reports/Pilot rescored with Gemini.md` | The pilot rescored with two Gemini models as a second judge group: where the vendors agree, where they differ, and how the author ranking moves. Rebuilt by `pipeline/compare_vendor_panels.py`. |
-| `pipeline/` | How the data was produced: author brief, controls, batch randomisation, panel scripts, ingestion, raw outputs; the survey generator, its private key (`survey_manifest.json`) and `ingest_survey.py`. `pipeline/calibration/` holds the calibration run: batch and recognition builders, the panel's answers, judge provenance and the analysis. `pipeline/predict_humans/` builds and scores the "predict the people" task (predictions, provenance, analysis). `pipeline/api_panel.py` runs another vendor's models as judges through an API (manifest `batches_gemini.json`, answers in `raw/panel_gemini/`). |
+| `pipeline/` | Author brief, controls, batch randomisation, panel scripts, ingestion, and raw outputs. The human response importer requires the separate survey manifest. `pipeline/calibration/` holds the calibration run: batch and recognition builders, the panel's answers, judge provenance and the analysis. `pipeline/predict_humans/` builds and scores the "predict the people" task (predictions, provenance, analysis). `pipeline/api_panel.py` runs another vendor's models as judges through an API (manifest `batches_gemini.json`, answers in `raw/panel_gemini/`). |
 
 ## Rerun
 

@@ -1,4 +1,4 @@
-# Human survey: how to run it and how it will be analysed
+# Human survey design and analysis plan
 
 Prepared on 15 November 2026. No person has taken it yet. The project is paused until participants are found.
 
@@ -29,12 +29,10 @@ This is deliberate. The publishing platform's data store accepts writes only fro
 
 The code holds the answers, time per scenario, the three optional background answers and a random participant code. It holds no name, email, device or account information. The channel a code arrives by does tell you who sent it, so keep the codes in a file without names if you want the answers unlinked from people.
 
-## How to hand it out
+## Form assignment
 
-1. **Published page.** The survey is also published as a private page (its link is kept out of this public repository). It stays private until the owner shares it from the page's Share menu; who can open it then depends on the sharing options of the owner's plan.
-2. **Or the file.** `survey/survey.html` is the same survey as a single file. It opens in any browser and can be emailed or hosted anywhere.
-3. **Keep the versions balanced.** There are 20 forms, `f01` to `f20`, in complementary pairs. Add the form to the end of the link, for example `…#f01`, and hand them out in order: first person `#f01`, second `#f02`, and so on, starting again after `#f20`. Without a form in the link the page picks one at random, which also works but balances less well with few people.
-4. **To take it again on the same device** (for a test), open the link ending in `#reset`.
+Participants are assigned to 20 complementary forms in rotation. The deployment
+files and scoring key are outside this model-panel archive.
 
 ## How many people
 
@@ -48,7 +46,8 @@ These figures assume forms are handed out in order. People who stop early count 
 
 ## When codes come back
 
-Paste the codes into a text file, one per line (other lines are ignored), then run these in the project folder:
+When the study runs, the response importer requires the separate survey manifest.
+The planned workflow reads one completed code per line and then runs these commands:
 
 ```bash
 python3 pipeline/ingest_survey.py codes.txt
@@ -88,4 +87,5 @@ The whole path was dry-run on invented participants in a scratch copy, which was
 - Nothing stops one person taking it twice; each attempt gets a new random code.
 - The page's source contains both versions of every scenario. A participant who goes looking can find them.
 - People judge 30 scenarios in one sitting, several on the same theme, as the model judges did.
-- Answers are tied to this exact set of scenarios. If `vignettes.json` changes, rebuild the survey with `python3 pipeline/make_survey.py`; codes from the old survey are then no longer valid for the new one.
+- Answers are tied to a specific set of scenarios and its manifest. A new survey build
+requires its own manifest and codes.
