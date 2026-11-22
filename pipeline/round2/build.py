@@ -19,6 +19,14 @@ audit_batches_b.json, raw/provenance_b.json, raw/authoring_b/), so run "round2" 
     python3 pipeline/round2/build.py check    --tag b --transcripts DIR
     python3 pipeline/round2/build.py ingest   --tag b --judges DIR --auditors DIR --run-id round2b
 
+With --panel 2 (and --tag b), the judges, check and ingest steps build and read a second, independent judge panel on
+the same pairs (new personas and batch orders from its own seed), with its own manifest (judge_batches_b_p2.json),
+provenance (raw/provenance_b_p2.json) and batch-id prefix; the pairs and their audits are those of the tag:
+
+    python3 pipeline/round2/build.py judges   --tag b --panel 2 --out DIR --models haiku sonnet opus --seed 20261128 --run-id round2b-p2
+    python3 pipeline/round2/build.py check    --tag b --panel 2 --transcripts DIR
+    python3 pipeline/round2/build.py ingest   --tag b --panel 2 --judges DIR --run-id round2b-p2
+
 Factors in round 2 (round2/vignettes.json):
   kept from the pilot   doing_allowing, norm_causation (the pilot's pairs and classic controls, reused unchanged)
   new                   inevitable_harm, knowledge_causation, luck_wrongness (newly authored pairs, new classic controls)
@@ -51,6 +59,7 @@ ap.add_argument("--auditors")
 ap.add_argument("--run-id", default="round2")
 ap.add_argument("--collected-on", default=time.strftime("%Y-%m-%d", time.gmtime()))
 ap.add_argument("--tag", default="", help="b: the extension with two more pairs per author per new factor")
+ap.add_argument("--panel", default="", help="2: a second, independent judge panel on the tag's pairs")
 args = ap.parse_args()
 TAG = args.tag
 SFX = ("_" + TAG) if TAG else ""
@@ -60,6 +69,10 @@ AB = os.path.join(HERE, "audit_batches%s.json" % SFX)
 PROV = os.path.join(RAW, "provenance%s.json" % SFX)
 AUTH = os.path.join(RAW, "authoring%s" % SFX)
 PFX = "r2" + TAG  # batch-id prefix, and the prefix of the scratch folders the agents read and write
+if args.panel:
+    PFX += "p" + args.panel
+    JB = os.path.join(HERE, "judge_batches%s_p%s.json" % (SFX, args.panel))
+    PROV = os.path.join(RAW, "provenance%s_p%s.json" % (SFX, args.panel))
 MODEL_ID = {"haiku": "claude-haiku-5-5", "sonnet": "claude-sonnet-5-5", "opus": "claude-opus-5-5", "fable": "claude-fable-5-2"}
 
 NEW_FACTORS = [
@@ -418,6 +431,9 @@ if args.step == "ingest":
         w.writeheader()
         w.writerows(keep + new)
     print("judgments.csv: %d rows for run %r%s" % (len(new), args.run_id, ("; not ingested: " + " ".join(missing)) if missing else ""))
+    if args.panel:
+        print("audits.csv: unchanged (panel %s reuses the audits of the tag's pairs)" % args.panel)
+        sys.exit(0)
     am = json.load(open(AB))
     apath = os.path.join(ROOT, "audits.csv")
     with open(apath, newline="", encoding="utf-8") as f:
