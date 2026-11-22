@@ -4,7 +4,7 @@
 
 > **Update, 22 November: round 2b corrects this report** (`reports/Round 2b three pairs per factor.md`). Each author wrote two more pairs per new factor, and all 27 were judged together by a second persona panel of the same design.
 > - **The nine pairs below were judged again.** Their mean prediction score went from 0.44 to 0.73, and 5 of 9 changed by more than a quarter point.
-> - **The claim that the new factors are harder is withdrawn.** It compared scores across panel runs, and a run's own shift is as large as the difference claimed.
+> - **The claim that the new factors are harder is withdrawn.** The same pairs scored 0.44 here and 0.91 when two later panels were pooled. A one-panel score has too much threshold noise to compare factors. A two-panel check (`reports/Round 2b two panels.md`) found the gaps themselves reproducible within sampling noise.
 > - **The author order held:** Opus, Sonnet, Haiku. On nine pairs each, only Haiku against Opus is a clear difference.
 > - **The rerun simulation below understates real reruns** about threefold. It predicted about 1.6 score changes on these nine pairs, and the second run produced 5.
 

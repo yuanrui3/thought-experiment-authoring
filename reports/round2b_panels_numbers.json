@@ -1,0 +1,1394 @@
+{
+ "panel1_vs_panel2": {
+  "n_pairs": 37,
+  "effect_correlation": 0.941,
+  "mean_abs_effect_difference": 0.28,
+  "noise_ratio": 1.07,
+  "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
+  "verdict_changes": [
+   "r2_haiku_inevitable_harm_2",
+   "r2_haiku_inevitable_harm_3",
+   "r2_haiku_luck_wrongness_2",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness_3",
+   "cc_luck_wrongness",
+   "nc_weather"
+  ],
+  "score_changes_over_0.25": [
+   "r2_haiku_inevitable_harm_2",
+   "r2_haiku_inevitable_harm_3",
+   "r2_haiku_luck_wrongness_2",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness_3",
+   "cc_luck_wrongness"
+  ],
+  "n_scored": 32
+ },
+ "panel1_vs_panel2_authored_only": {
+  "n_pairs": 27,
+  "effect_correlation": 0.961,
+  "mean_abs_effect_difference": 0.26,
+  "noise_ratio": 0.93,
+  "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
+  "verdict_changes": [
+   "r2_haiku_inevitable_harm_2",
+   "r2_haiku_inevitable_harm_3",
+   "r2_haiku_luck_wrongness_2",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness_3"
+  ],
+  "score_changes_over_0.25": [
+   "r2_haiku_inevitable_harm_2",
+   "r2_haiku_inevitable_harm_3",
+   "r2_haiku_luck_wrongness_2",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness_3"
+  ],
+  "n_scored": 27
+ },
+ "round2_vs_panel1": {
+  "n_pairs": 19,
+  "effect_correlation": 0.909,
+  "mean_abs_effect_difference": 0.31,
+  "noise_ratio": 1.0,
+  "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
+  "verdict_changes": [
+   "r2_haiku_knowledge_causation",
+   "r2_sonnet_inevitable_harm",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness",
+   "cc_doing_allowing"
+  ],
+  "score_changes_over_0.25": [
+   "r2_haiku_inevitable_harm",
+   "r2_haiku_knowledge_causation",
+   "r2_sonnet_inevitable_harm",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_luck_wrongness",
+   "cc_doing_allowing"
+  ],
+  "n_scored": 14
+ },
+ "round2_vs_panel2": {
+  "n_pairs": 19,
+  "effect_correlation": 0.923,
+  "mean_abs_effect_difference": 0.27,
+  "noise_ratio": 0.8,
+  "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
+  "verdict_changes": [
+   "r2_haiku_knowledge_causation",
+   "r2_sonnet_inevitable_harm",
+   "r2_opus_luck_wrongness",
+   "cc_luck_wrongness",
+   "cc_doing_allowing",
+   "nc_weather"
+  ],
+  "score_changes_over_0.25": [
+   "r2_haiku_inevitable_harm",
+   "r2_haiku_knowledge_causation",
+   "r2_sonnet_inevitable_harm",
+   "r2_opus_luck_wrongness",
+   "cc_luck_wrongness",
+   "cc_doing_allowing"
+  ],
+  "n_scored": 14
+ },
+ "pairs": {
+  "r2_haiku_inevitable_harm": {
+   "type": "authored",
+   "effect": [
+    2.13,
+    2.07,
+    2.1
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    0.58,
+    0.62,
+    0.6
+   ],
+   "round2": {
+    "effect": 2.67,
+    "verdict": "A_higher",
+    "score": 0.22
+   }
+  },
+  "r2_haiku_knowledge_causation": {
+   "type": "authored",
+   "effect": [
+    1.0,
+    1.2,
+    1.1
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 0.67,
+    "verdict": "unclear",
+    "score": 0.0
+   }
+  },
+  "r2_haiku_luck_wrongness": {
+   "type": "authored",
+   "effect": [
+    -0.33,
+    -0.47,
+    -0.4
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    3,
+    2,
+    2
+   ],
+   "score": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "round2": {
+    "effect": -0.47,
+    "verdict": "none",
+    "score": 0.0
+   }
+  },
+  "r2_haiku_inevitable_harm_2": {
+   "type": "authored",
+   "effect": [
+    1.67,
+    1.07,
+    1.37
+   ],
+   "verdict": [
+    "A_higher",
+    "unclear",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    2,
+    3
+   ],
+   "score": [
+    0.89,
+    0.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_haiku_inevitable_harm_3": {
+   "type": "authored",
+   "effect": [
+    1.27,
+    1.53,
+    1.4
+   ],
+   "verdict": [
+    "unclear",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    2,
+    3,
+    3
+   ],
+   "score": [
+    0.0,
+    0.98,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_haiku_knowledge_causation_2": {
+   "type": "authored",
+   "effect": [
+    1.27,
+    1.73,
+    1.5
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    0.84,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_haiku_knowledge_causation_3": {
+   "type": "authored",
+   "effect": [
+    1.4,
+    1.27,
+    1.33
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_haiku_luck_wrongness_2": {
+   "type": "authored",
+   "effect": [
+    -0.73,
+    -0.8,
+    -0.77
+   ],
+   "verdict": [
+    "B_higher",
+    "unclear",
+    "B_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    2,
+    3
+   ],
+   "score": [
+    0.49,
+    0.0,
+    0.51
+   ],
+   "round2": null
+  },
+  "r2_haiku_luck_wrongness_3": {
+   "type": "authored",
+   "effect": [
+    -1.47,
+    -1.33,
+    -1.4
+   ],
+   "verdict": [
+    "B_higher",
+    "B_higher",
+    "B_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    0.98,
+    0.89,
+    0.93
+   ],
+   "round2": null
+  },
+  "r2_sonnet_inevitable_harm": {
+   "type": "authored",
+   "effect": [
+    0.73,
+    0.67,
+    0.7
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 0.33,
+    "verdict": "none",
+    "score": 0.0
+   }
+  },
+  "r2_sonnet_knowledge_causation": {
+   "type": "authored",
+   "effect": [
+    1.4,
+    1.27,
+    1.33
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.87,
+    "verdict": "A_higher",
+    "score": 0.76
+   }
+  },
+  "r2_sonnet_luck_wrongness": {
+   "type": "authored",
+   "effect": [
+    -0.4,
+    -1.07,
+    -0.73
+   ],
+   "verdict": [
+    "none",
+    "B_higher",
+    "B_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    0.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": -0.93,
+    "verdict": "B_higher",
+    "score": 1.0
+   }
+  },
+  "r2_sonnet_inevitable_harm_2": {
+   "type": "authored",
+   "effect": [
+    1.2,
+    1.27,
+    1.23
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_sonnet_inevitable_harm_3": {
+   "type": "authored",
+   "effect": [
+    0.67,
+    0.93,
+    0.8
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_sonnet_knowledge_causation_2": {
+   "type": "authored",
+   "effect": [
+    1.0,
+    1.33,
+    1.17
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_sonnet_knowledge_causation_3": {
+   "type": "authored",
+   "effect": [
+    1.6,
+    1.87,
+    1.73
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    0.93,
+    0.76,
+    0.84
+   ],
+   "round2": null
+  },
+  "r2_sonnet_luck_wrongness_2": {
+   "type": "authored",
+   "effect": [
+    -1.13,
+    -1.33,
+    -1.23
+   ],
+   "verdict": [
+    "B_higher",
+    "B_higher",
+    "B_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_sonnet_luck_wrongness_3": {
+   "type": "authored",
+   "effect": [
+    -1.13,
+    -1.27,
+    -1.2
+   ],
+   "verdict": [
+    "B_higher",
+    "B_higher",
+    "B_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_opus_inevitable_harm": {
+   "type": "authored",
+   "effect": [
+    1.07,
+    1.27,
+    1.17
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.13,
+    "verdict": "A_higher",
+    "score": 1.0
+   }
+  },
+  "r2_opus_knowledge_causation": {
+   "type": "authored",
+   "effect": [
+    1.33,
+    1.67,
+    1.5
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    0.89,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.53,
+    "verdict": "A_higher",
+    "score": 0.98
+   }
+  },
+  "r2_opus_luck_wrongness": {
+   "type": "authored",
+   "effect": [
+    1.07,
+    1.53,
+    1.3
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    0.98,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.4,
+    "verdict": "unclear",
+    "score": 0.0
+   }
+  },
+  "r2_opus_inevitable_harm_2": {
+   "type": "authored",
+   "effect": [
+    3.07,
+    2.8,
+    2.93
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_opus_inevitable_harm_3": {
+   "type": "authored",
+   "effect": [
+    1.93,
+    1.6,
+    1.77
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_opus_knowledge_causation_2": {
+   "type": "authored",
+   "effect": [
+    1.73,
+    1.6,
+    1.67
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    0.84,
+    0.93,
+    0.89
+   ],
+   "round2": null
+  },
+  "r2_opus_knowledge_causation_3": {
+   "type": "authored",
+   "effect": [
+    1.4,
+    1.87,
+    1.63
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    0.76,
+    0.91
+   ],
+   "round2": null
+  },
+  "r2_opus_luck_wrongness_2": {
+   "type": "authored",
+   "effect": [
+    1.0,
+    0.8,
+    0.9
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "r2_opus_luck_wrongness_3": {
+   "type": "authored",
+   "effect": [
+    1.27,
+    0.73,
+    1.0
+   ],
+   "verdict": [
+    "A_higher",
+    "unclear",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    2,
+    3
+   ],
+   "score": [
+    1.0,
+    0.0,
+    1.0
+   ],
+   "round2": null
+  },
+  "cc_inevitable_harm": {
+   "type": "control_classic",
+   "effect": [
+    -0.27,
+    0.0,
+    -0.13
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    2,
+    0,
+    2
+   ],
+   "score": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "round2": {
+    "effect": 0.2,
+    "verdict": "none",
+    "score": 0.0
+   }
+  },
+  "cc_knowledge_causation": {
+   "type": "control_classic",
+   "effect": [
+    1.07,
+    1.6,
+    1.33
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    0.93,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.47,
+    "verdict": "A_higher",
+    "score": 1.0
+   }
+  },
+  "cc_luck_wrongness": {
+   "type": "control_classic",
+   "effect": [
+    0.93,
+    0.47,
+    0.7
+   ],
+   "verdict": [
+    "A_higher",
+    "none",
+    "unclear"
+   ],
+   "groups_same_sign": [
+    3,
+    2,
+    2
+   ],
+   "score": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "round2": {
+    "effect": 0.8,
+    "verdict": "A_higher",
+    "score": 1.0
+   }
+  },
+  "cc_doing_allowing": {
+   "type": "control_classic",
+   "effect": [
+    1.07,
+    0.93,
+    1.0
+   ],
+   "verdict": [
+    "unclear",
+    "unclear",
+    "unclear"
+   ],
+   "groups_same_sign": [
+    2,
+    2,
+    2
+   ],
+   "score": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "round2": {
+    "effect": 0.93,
+    "verdict": "A_higher",
+    "score": 1.0
+   }
+  },
+  "cc_norm_causation": {
+   "type": "control_classic",
+   "effect": [
+    1.73,
+    1.8,
+    1.77
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ],
+   "groups_same_sign": [
+    3,
+    3,
+    3
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 1.73,
+    "verdict": "A_higher",
+    "score": 1.0
+   }
+  },
+  "nc_weekday": {
+   "type": "control_null",
+   "effect": [
+    0.2,
+    0.33,
+    0.27
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    2,
+    1,
+    1
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": -0.27,
+    "verdict": "none",
+    "score": 1.0
+   }
+  },
+  "nc_color": {
+   "type": "control_null",
+   "effect": [
+    0.07,
+    0.4,
+    0.23
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    1,
+    1,
+    2
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": -0.0,
+    "verdict": "none",
+    "score": 1.0
+   }
+  },
+  "nc_name": {
+   "type": "control_null",
+   "effect": [
+    0.2,
+    0.27,
+    0.23
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    2,
+    2,
+    2
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 0.0,
+    "verdict": "none",
+    "score": 1.0
+   }
+  },
+  "nc_weather": {
+   "type": "control_null",
+   "effect": [
+    -0.4,
+    0.6,
+    0.1
+   ],
+   "verdict": [
+    "none",
+    "A_higher",
+    "none"
+   ],
+   "groups_same_sign": [
+    2,
+    3,
+    2
+   ],
+   "score": [
+    1.0,
+    0.93,
+    1.0
+   ],
+   "round2": {
+    "effect": 0.47,
+    "verdict": "none",
+    "score": 1.0
+   }
+  },
+  "nc_paraphrase": {
+   "type": "control_null",
+   "effect": [
+    0.2,
+    -0.07,
+    0.07
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ],
+   "groups_same_sign": [
+    2,
+    1,
+    1
+   ],
+   "score": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "round2": {
+    "effect": 0.4,
+    "verdict": "none",
+    "score": 1.0
+   }
+  }
+ },
+ "pairs_note": "lists are [panel 1, panel 2, pooled]",
+ "common_shift": {
+  "panel1": {
+   "mean_score_authored": 0.841,
+   "mean_abs_effect_authored": 1.27,
+   "authored_all_models_agree": 26,
+   "authored_demonstrated": 24
+  },
+  "panel2": {
+   "mean_score_authored": 0.802,
+   "mean_abs_effect_authored": 1.35,
+   "authored_all_models_agree": 23,
+   "authored_demonstrated": 23
+  },
+  "pooled": {
+   "mean_score_authored": 0.914,
+   "mean_abs_effect_authored": 1.31,
+   "authored_all_models_agree": 26,
+   "authored_demonstrated": 26
+  }
+ },
+ "authors": {
+  "panel1": {
+   "haiku": {
+    "mean_prediction_score": 0.66,
+    "mean_composite": 65.5,
+    "demonstrated": 7,
+    "full_marks": 3,
+    "by_factor": {
+     "inevitable_harm": 0.49,
+     "knowledge_causation": 1.0,
+     "luck_wrongness": 0.49
+    }
+   },
+   "sonnet": {
+    "mean_prediction_score": 0.881,
+    "mean_composite": 76.5,
+    "demonstrated": 8,
+    "full_marks": 7,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.977,
+     "luck_wrongness": 0.667
+    }
+   },
+   "opus": {
+    "mean_prediction_score": 0.982,
+    "mean_composite": 83.4,
+    "demonstrated": 9,
+    "full_marks": 8,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.947,
+     "luck_wrongness": 1.0
+    }
+   }
+  },
+  "panel2": {
+   "haiku": {
+    "mean_prediction_score": 0.592,
+    "mean_composite": 62.9,
+    "demonstrated": 6,
+    "full_marks": 2,
+    "by_factor": {
+     "inevitable_harm": 0.533,
+     "knowledge_causation": 0.947,
+     "luck_wrongness": 0.297
+    }
+   },
+   "sonnet": {
+    "mean_prediction_score": 0.973,
+    "mean_composite": 80.3,
+    "demonstrated": 9,
+    "full_marks": 8,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.92,
+     "luck_wrongness": 1.0
+    }
+   },
+   "opus": {
+    "mean_prediction_score": 0.84,
+    "mean_composite": 77.6,
+    "demonstrated": 8,
+    "full_marks": 4,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.86,
+     "luck_wrongness": 0.66
+    }
+   }
+  },
+  "pooled": {
+   "haiku": {
+    "mean_prediction_score": 0.782,
+    "mean_composite": 70.4,
+    "demonstrated": 8,
+    "full_marks": 5,
+    "by_factor": {
+     "inevitable_harm": 0.867,
+     "knowledge_causation": 1.0,
+     "luck_wrongness": 0.48
+    }
+   },
+   "sonnet": {
+    "mean_prediction_score": 0.982,
+    "mean_composite": 80.6,
+    "demonstrated": 9,
+    "full_marks": 8,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.947,
+     "luck_wrongness": 1.0
+    }
+   },
+   "opus": {
+    "mean_prediction_score": 0.978,
+    "mean_composite": 83.2,
+    "demonstrated": 9,
+    "full_marks": 7,
+    "by_factor": {
+     "inevitable_harm": 1.0,
+     "knowledge_causation": 0.933,
+     "luck_wrongness": 1.0
+    }
+   }
+  }
+ },
+ "author_order": {
+  "panel1": "opus > sonnet > haiku",
+  "panel2": "sonnet > opus > haiku",
+  "pooled": "sonnet > opus > haiku"
+ },
+ "author_panel_difference": {
+  "haiku": -0.068,
+  "sonnet": 0.092,
+  "opus": -0.142
+ },
+ "judge_level_resampling": {
+  "method": "repeats (an x and a y judge of one model) resampled with replacement within each model; 300 resamples, 400-draw interval inside each",
+  "panel1": {
+   "author_mean_sd": {
+    "haiku": 0.168,
+    "sonnet": 0.139,
+    "opus": 0.161
+   },
+   "author_order": {
+    "opus > sonnet > haiku": 0.437,
+    "sonnet > opus > haiku": 0.297,
+    "opus > haiku > sonnet": 0.173,
+    "haiku > opus > sonnet": 0.047,
+    "sonnet > haiku > opus": 0.04,
+    "haiku > sonnet > opus": 0.007
+   },
+   "first": {
+    "haiku": 0.053,
+    "sonnet": 0.337,
+    "opus": 0.61
+   },
+   "last": {
+    "haiku": 0.733,
+    "sonnet": 0.22,
+    "opus": 0.047
+   },
+   "authored_pairs_kept_below_0.8": 15,
+   "expected_score_changes_in_a_rerun_authored": 5.7,
+   "actual_score_changes_in_panel2_authored": 5
+  },
+  "pooled": {
+   "author_mean_sd": {
+    "haiku": 0.089,
+    "sonnet": 0.076,
+    "opus": 0.092
+   },
+   "author_order": {
+    "sonnet > opus > haiku": 0.63,
+    "opus > sonnet > haiku": 0.197,
+    "sonnet > haiku > opus": 0.1,
+    "opus > haiku > sonnet": 0.037,
+    "haiku > sonnet > opus": 0.023,
+    "haiku > opus > sonnet": 0.013
+   },
+   "first": {
+    "haiku": 0.037,
+    "sonnet": 0.73,
+    "opus": 0.233
+   },
+   "last": {
+    "haiku": 0.827,
+    "sonnet": 0.05,
+    "opus": 0.123
+   },
+   "authored_pairs_kept_below_0.8": 6,
+   "expected_score_changes_in_a_rerun_authored": 2.6
+  }
+ },
+ "pooled_pairwise_permutation": {
+  "haiku - sonnet": {
+   "difference": -0.2,
+   "permutation_p": 0.1269
+  },
+  "haiku - opus": {
+   "difference": -0.196,
+   "permutation_p": 0.1638
+  },
+  "sonnet - opus": {
+   "difference": 0.004,
+   "permutation_p": 1.0
+  }
+ },
+ "controls": {
+  "cc_inevitable_harm": {
+   "effect": [
+    -0.27,
+    0.0,
+    -0.13
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ]
+  },
+  "cc_knowledge_causation": {
+   "effect": [
+    1.07,
+    1.6,
+    1.33
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ]
+  },
+  "cc_luck_wrongness": {
+   "effect": [
+    0.93,
+    0.47,
+    0.7
+   ],
+   "verdict": [
+    "A_higher",
+    "none",
+    "unclear"
+   ]
+  },
+  "cc_doing_allowing": {
+   "effect": [
+    1.07,
+    0.93,
+    1.0
+   ],
+   "verdict": [
+    "unclear",
+    "unclear",
+    "unclear"
+   ]
+  },
+  "cc_norm_causation": {
+   "effect": [
+    1.73,
+    1.8,
+    1.77
+   ],
+   "verdict": [
+    "A_higher",
+    "A_higher",
+    "A_higher"
+   ]
+  },
+  "nc_weekday": {
+   "effect": [
+    0.2,
+    0.33,
+    0.27
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ]
+  },
+  "nc_color": {
+   "effect": [
+    0.07,
+    0.4,
+    0.23
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ]
+  },
+  "nc_name": {
+   "effect": [
+    0.2,
+    0.27,
+    0.23
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ]
+  },
+  "nc_weather": {
+   "effect": [
+    -0.4,
+    0.6,
+    0.1
+   ],
+   "verdict": [
+    "none",
+    "A_higher",
+    "none"
+   ]
+  },
+  "nc_paraphrase": {
+   "effect": [
+    0.2,
+    -0.07,
+    0.07
+   ],
+   "verdict": [
+    "none",
+    "none",
+    "none"
+   ]
+  }
+ }
+}
