@@ -1,5 +1,7 @@
 # Thought-experiment authoring (pilot)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24448806.svg)](https://doi.org/10.5281/zenodo.24448806)
+
 **Status, 15 November 2026: paused, waiting for human participants.** The model-panel pilot is complete. The human survey is built and tested but nobody has taken it. To resume, follow `docs/human-survey.md`.
 
 A small benchmark: an author model gets one philosophical factor, writes a pair of
