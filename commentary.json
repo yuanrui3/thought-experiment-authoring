@@ -27,6 +27,11 @@
   "diagnostics_note": [
     "Opus and fable are close to deterministic at this setting: in more than half of the scenarios all five repeats gave the same rating. Five repeats of such a model are not five independent readings, so the main interval is narrower than the evidence warrants. That is why a gap also has to reach half a point and appear in at least three of the four models before it counts."
   ],
+  "vendor_note": [
+    "**First place depends on the panel.** Two pairs decide it. On Sonnet's doing-vs-allowing pair, Claude finds the small gap Sonnet predicted and Gemini finds none. On Fable's norm-violation pair it is the reverse. Both are small effects close to the 0.5-point line, where model panels are least reliable.",
+    "**Which panel to believe on those two pairs is open.** On public human data, when one vendor confirmed a gap and the other did not, people backed the Claude-only gaps 0 times out of 9 and the Gemini-only gaps 16 times out of 26. That leans toward Gemini's reading, and so toward Fable first, but those were different stories. Requiring both vendors to agree did not help there: people backed 8 of 19 such gaps. See `reports/Calibration on public human data.md`.",
+    "**Doing vs allowing is the least stable factor.** The panels disagree on three of its four authored pairs, and on the size of the classic control. Haiku is last under every scoring."
+  ],
   "pairs": {
     "au_fable_intent_accident": [
       "**What works.** Ten words change. The act is the same, on the same freezer, and version B is a real mistake and not a different story. Blame falls from 6.9 to 3.75 and every model agrees. B stays well above the floor because readers hold Mara responsible for not checking which freezer she switched off, which is the right residue for an accident.",

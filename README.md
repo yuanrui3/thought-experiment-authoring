@@ -45,7 +45,9 @@ Python 3.9 or later, standard library only. Options: `--run` (which `run_id` to
 score; several separated by commas), `--audit-run` (which run's audits to use, by
 default the same), `--out`, `--no-report`, `--boot` (bootstrap resamples), `--seed`.
 `judgments.csv` holds the Claude panel as run `main` and the Gemini panel as run
-`gemini`; the default scores `main` only.
+`gemini`; the default scores `main` only. To refresh the page's side-by-side section
+after either panel changes, run `python3 pipeline/compare_vendor_panels.py`, which
+rescores both panels and rebuilds `results.html`.
 
 ## Adding judges or authors
 

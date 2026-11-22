@@ -9,7 +9,8 @@ Runs score.py (same rules, same audits) four ways, each into its own folder unde
   out/vendor_groups/         two judge groups, one per vendor: each vendor's ratings pooled, the effect
                              averaged over the two vendors, and a gap confirmed only if both agree in sign
   out/claude_plus_gemini/    all six models as six equal judge groups
-and writes out/vendor_comparison.csv with each pair's verdict under each.
+and writes out/vendor_comparison.csv with each pair's verdict under each. Finally it reruns
+score.py on the Claude run, which rebuilds results.html with a side-by-side section.
 """
 import argparse, csv, json, os, statistics, subprocess, sys, tempfile
 
@@ -18,6 +19,7 @@ ROOT = os.path.dirname(HERE)
 ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 ap.add_argument("--claude-run", default="main")
 ap.add_argument("--other-run", default="gemini")
+ap.add_argument("--other-label", default="Gemini", help="name of the other vendor's panel on the results page")
 ap.add_argument("--boot", type=int, default=10000)
 args = ap.parse_args()
 OUT = os.path.join(ROOT, "out")
@@ -77,7 +79,8 @@ def pearson(x, y):
 
 
 au = [r for r in out_rows if r["pair_type"] == "authored"]
-summary = {"pairs": len(out_rows),
+other_models = sorted({r["judge_model"] for r in rows if r["run_id"] == args.other_run})
+summary = {"other_run": args.other_run, "other_label": args.other_label, "other_models": other_models, "pairs": len(out_rows),
            "verdicts_agree": sum(r["vendors_agree"] for r in out_rows),
            "directions_agree": sum(r["vendors_agree_on_direction"] for r in out_rows),
            "authored_verdicts_agree": sum(r["vendors_agree"] for r in au), "authored": len(au),
@@ -106,3 +109,5 @@ print("authors (mean composite | mean prediction score | full hits of 5):")
 for t, v in summary["authors"].items():
     print("  %-7s " % t + "  ".join("%s %s | %s | %s" % (k, v[k]["mean_composite"], v[k]["mean_prediction_score"], v[k]["full_hits"]) for k, _ in PANELS))
 print("wrote out/vendor_comparison.csv, out/vendor_comparison_summary.json and out/{gemini,vendor_groups,claude_plus_gemini}/")
+# rebuild the main results page so its side-by-side section shows these numbers
+subprocess.run([sys.executable, os.path.join(ROOT, "score.py"), "--run", args.claude_run, "--boot", str(args.boot)], check=True)

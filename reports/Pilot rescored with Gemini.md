@@ -1,6 +1,6 @@
 # The pilot rescored with Gemini as a second judge group
 
-*22 November 2026. Numbers come from `out/vendor_comparison.csv` and `out/vendor_comparison_summary.json`, which `pipeline/compare_vendor_panels.py` rebuilds. The published pilot results (`results.html`, `out/pair_scores.csv`) are unchanged: they remain the Claude panel's.*
+*22 November 2026. Numbers come from `out/vendor_comparison.csv` and `out/vendor_comparison_summary.json`, which `pipeline/compare_vendor_panels.py` rebuilds. The pilot's own scores (`out/pair_scores.csv`, and every section of `results.html` above the new one) are unchanged and remain the Claude panel's. `results.html` now has a section, "A second judge panel: Gemini", that shows this comparison side by side.*
 
 ## Bottom line
 

@@ -1,4 +1,10 @@
 {
+ "other_run": "gemini",
+ "other_label": "Gemini",
+ "other_models": [
+  "gemini-3-flash-preview",
+  "gemini-4-argon"
+ ],
  "pairs": 30,
  "verdicts_agree": 22,
  "directions_agree": 26,
