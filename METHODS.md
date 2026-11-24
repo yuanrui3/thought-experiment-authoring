@@ -44,7 +44,7 @@
 
 1. Run the same pairs on people and re-set the size bins on that data. The survey and its analysis plan are ready (`docs/human-survey.md`); the project is paused until participants are found.
 2. Add judges from other vendors; `judgments.csv` already carries type, vendor, model and group.
-3. Replace easy factors with contested ones (done in round 2), and have authors hit a target size (not yet). Round 2b added pairs per author and a second panel. Next: settle the agreement rule (one model at the scale's ceiling vetoes real gaps), and sharpen the prediction target, since Sonnet and Opus are at the ceiling.
+3. Replace easy factors with contested ones (done in round 2), and have authors hit a target size (not yet). Round 2b added pairs per author and a second panel. The agreement rule was settled on 24 November (item 14). A points target was then tested on the round-2b pairs (`reports/Point predictions.md`): on their own nine pairs Sonnet and Opus did not separate, but on all 37 shared items Opus was clearly the best predictor. That suggests scoring prediction on a shared pool, next to the authoring score.
 4. Score originality across the whole set, so shared settings count against a pair.
 5. Add trained human auditors and placebo questions, so confounds are measured by behavior.
 6. Anchor classic controls to public human data (OffTheRails, MoCa, replication archives).

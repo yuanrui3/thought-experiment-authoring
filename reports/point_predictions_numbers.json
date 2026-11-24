@@ -1,0 +1,335 @@
+{
+ "design": "see the docstring of pipeline/round2/point_predictions.py (committed before collection)",
+ "authors": {
+  "haiku": {
+   "own_pairs_mae": 0.6,
+   "own_pairs_point_score": 0.6,
+   "own_pairs_mean_signed_error": -0.548,
+   "class_midpoint_baseline_mae": 0.581,
+   "noise_floor_mae": 0.13,
+   "by_factor_mae": {
+    "inevitable_harm": 0.311,
+    "knowledge_causation": 0.444,
+    "luck_wrongness": 1.044
+   },
+   "pairs": {
+    "r2_haiku_inevitable_harm": {
+     "predicted": 1.4,
+     "measured": 2.1,
+     "error": -0.7,
+     "class_midpoint": 1.0,
+     "reason": "Without the gate, the flood would still have reached Harrow Lane in B, which lowers Owen's perceived share."
+    },
+    "r2_haiku_inevitable_harm_2": {
+     "predicted": 1.5,
+     "measured": 1.37,
+     "error": 0.13,
+     "class_midpoint": 1.0,
+     "reason": "Without the siding, the train would have derailed on the main line in B, which lowers Sofia's perceived responsibility."
+    },
+    "r2_haiku_inevitable_harm_3": {
+     "predicted": 1.5,
+     "measured": 1.4,
+     "error": 0.1,
+     "class_midpoint": 1.0,
+     "reason": "In B a second rockfall would have hit the valley route anyway, which reduces Priya's perceived responsibility."
+    },
+    "r2_haiku_knowledge_causation": {
+     "predicted": 1.0,
+     "measured": 1.1,
+     "error": -0.1,
+     "class_midpoint": 1.0,
+     "reason": "Tomas knew the door rule in A, so his propping it open reads as a somewhat clearer cause of the fire."
+    },
+    "r2_haiku_knowledge_causation_2": {
+     "predicted": 0.8,
+     "measured": 1.5,
+     "error": -0.7,
+     "class_midpoint": 1.0,
+     "reason": "Ines ignored a card she had trained on in A, which raises her perceived causal role relative to never having seen it."
+    },
+    "r2_haiku_knowledge_causation_3": {
+     "predicted": 0.8,
+     "measured": 1.33,
+     "error": -0.53,
+     "class_midpoint": 1.0,
+     "reason": "Joon knowingly breaking a signed-off rule should read as more causal than not knowing it."
+    },
+    "r2_haiku_luck_wrongness": {
+     "predicted": -1.5,
+     "measured": -0.4,
+     "error": -1.1,
+     "class_midpoint": -1.0,
+     "reason": "Hal's broken wrist in B makes the unharnessed climb read as much more wrong than the harmless outcome in A."
+    },
+    "r2_haiku_luck_wrongness_2": {
+     "predicted": -1.5,
+     "measured": -0.77,
+     "error": -0.73,
+     "class_midpoint": -2.0,
+     "reason": "The paddler's hospitalization in B makes the crossing decision read as much more seriously wrong than the safe outcome in A."
+    },
+    "r2_haiku_luck_wrongness_3": {
+     "predicted": -2.7,
+     "measured": -1.4,
+     "error": -1.3,
+     "class_midpoint": -2.0,
+     "reason": "Eleven guests vomiting in B makes packing the salad unchilled read as far more wrong than the harmless outcome in A."
+    }
+   }
+  },
+  "sonnet": {
+   "own_pairs_mae": 0.522,
+   "own_pairs_point_score": 0.652,
+   "own_pairs_mean_signed_error": -0.522,
+   "class_midpoint_baseline_mae": 0.296,
+   "noise_floor_mae": 0.136,
+   "by_factor_mae": {
+    "inevitable_harm": 0.278,
+    "knowledge_causation": 0.411,
+    "luck_wrongness": 0.878
+   },
+   "pairs": {
+    "r2_sonnet_inevitable_harm": {
+     "predicted": 0.6,
+     "measured": 0.7,
+     "error": -0.1,
+     "class_midpoint": 1.0,
+     "reason": "Wrongness slightly higher when ladder mattered."
+    },
+    "r2_sonnet_inevitable_harm_2": {
+     "predicted": 0.8,
+     "measured": 1.23,
+     "error": -0.43,
+     "class_midpoint": 1.0,
+     "reason": "Wrongness only mildly affected by counterfactual."
+    },
+    "r2_sonnet_inevitable_harm_3": {
+     "predicted": 0.5,
+     "measured": 0.8,
+     "error": -0.3,
+     "class_midpoint": 1.0,
+     "reason": "Wrongness only slightly affected."
+    },
+    "r2_sonnet_knowledge_causation": {
+     "predicted": 1.0,
+     "measured": 1.33,
+     "error": -0.33,
+     "class_midpoint": 1.0,
+     "reason": "Knowing the rule raises causal attribution."
+    },
+    "r2_sonnet_knowledge_causation_2": {
+     "predicted": 1.0,
+     "measured": 1.17,
+     "error": -0.17,
+     "class_midpoint": 1.0,
+     "reason": "Rule knowledge raises causation."
+    },
+    "r2_sonnet_knowledge_causation_3": {
+     "predicted": 1.0,
+     "measured": 1.73,
+     "error": -0.73,
+     "class_midpoint": 1.0,
+     "reason": "Rule knowledge raises causation."
+    },
+    "r2_sonnet_luck_wrongness": {
+     "predicted": -1.8,
+     "measured": -0.73,
+     "error": -1.07,
+     "class_midpoint": -1.0,
+     "reason": "Injury in B raises wrongness."
+    },
+    "r2_sonnet_luck_wrongness_2": {
+     "predicted": -2.0,
+     "measured": -1.23,
+     "error": -0.77,
+     "class_midpoint": -1.0,
+     "reason": "Barn burning raises wrongness."
+    },
+    "r2_sonnet_luck_wrongness_3": {
+     "predicted": -2.0,
+     "measured": -1.2,
+     "error": -0.8,
+     "class_midpoint": -1.0,
+     "reason": "No harm in A lowers wrongness."
+    }
+   }
+  },
+  "opus": {
+   "own_pairs_mae": 0.393,
+   "own_pairs_point_score": 0.738,
+   "own_pairs_mean_signed_error": -0.119,
+   "class_midpoint_baseline_mae": 0.393,
+   "noise_floor_mae": 0.14,
+   "by_factor_mae": {
+    "inevitable_harm": 0.411,
+    "knowledge_causation": 0.7,
+    "luck_wrongness": 0.067
+   },
+   "pairs": {
+    "r2_opus_inevitable_harm": {
+     "predicted": 1.1,
+     "measured": 1.17,
+     "error": -0.07,
+     "class_midpoint": 1.0,
+     "reason": "The disease that would have killed the bees anyway lowers blame somewhat, though her spray did kill them."
+    },
+    "r2_opus_inevitable_harm_2": {
+     "predicted": 2.8,
+     "measured": 2.93,
+     "error": -0.13,
+     "class_midpoint": 2.0,
+     "reason": "With a power cut that would have spoiled the food anyway, readers sharply cut what Leo should pay."
+    },
+    "r2_opus_inevitable_harm_3": {
+     "predicted": 2.8,
+     "measured": 1.77,
+     "error": 1.03,
+     "class_midpoint": 2.0,
+     "reason": "With the flight grounded anyway, Petra did not cause the missed party, so blame falls sharply."
+    },
+    "r2_opus_knowledge_causation": {
+     "predicted": 0.9,
+     "measured": 1.5,
+     "error": -0.6,
+     "class_midpoint": 1.0,
+     "reason": "Knowing the rule raises causal ratings."
+    },
+    "r2_opus_knowledge_causation_2": {
+     "predicted": 0.9,
+     "measured": 1.67,
+     "error": -0.77,
+     "class_midpoint": 1.0,
+     "reason": "Knowing the rule raises causal ratings."
+    },
+    "r2_opus_knowledge_causation_3": {
+     "predicted": 0.9,
+     "measured": 1.63,
+     "error": -0.73,
+     "class_midpoint": 1.0,
+     "reason": "Knowing the rule raises causal ratings."
+    },
+    "r2_opus_luck_wrongness": {
+     "predicted": 1.3,
+     "measured": 1.3,
+     "error": 0.0,
+     "class_midpoint": 1.0,
+     "reason": "Outcome bias: the fire and hospital stay raise wrongness ratings for the same choice."
+    },
+    "r2_opus_luck_wrongness_2": {
+     "predicted": 1.1,
+     "measured": 0.9,
+     "error": 0.2,
+     "class_midpoint": 1.0,
+     "reason": "Outcome bias: Mei's injury in A raises wrongness."
+    },
+    "r2_opus_luck_wrongness_3": {
+     "predicted": 1.0,
+     "measured": 1.0,
+     "error": 0.0,
+     "class_midpoint": 1.0,
+     "reason": "Outcome bias: the identity theft in A raises wrongness."
+    }
+   }
+  }
+ },
+ "predictors_all_items": {
+  "haiku": {
+   "mae": 0.577,
+   "point_score": 0.616,
+   "correlation": 0.885,
+   "mean_signed_error": -0.148,
+   "mae_on_authored_27": 0.646
+  },
+  "sonnet": {
+   "mae": 0.614,
+   "point_score": 0.63,
+   "correlation": 0.811,
+   "mean_signed_error": -0.434,
+   "mae_on_authored_27": 0.685
+  },
+  "opus": {
+   "mae": 0.342,
+   "point_score": 0.772,
+   "correlation": 0.928,
+   "mean_signed_error": -0.223,
+   "mae_on_authored_27": 0.394
+  }
+ },
+ "noise_floor_all_items_mae": 0.139,
+ "judge_level_resampling": {
+  "n": 2000,
+  "own_pairs_order_by_mae": {
+   "opus < sonnet < haiku": 0.738,
+   "opus < haiku < sonnet": 0.129,
+   "sonnet < opus < haiku": 0.122,
+   "sonnet < haiku < opus": 0.008,
+   "haiku < opus < sonnet": 0.002,
+   "haiku < sonnet < opus": 0.001
+  },
+  "all_items_order_by_mae": {
+   "opus < haiku < sonnet": 0.989,
+   "opus < sonnet < haiku": 0.011
+  },
+  "pairs": {
+   "haiku vs sonnet": {
+    "own_mae_difference": 0.078,
+    "same_sign_share": 0.869,
+    "own_mae_sd": {
+     "haiku": 0.051,
+     "sonnet": 0.065
+    }
+   },
+   "haiku vs opus": {
+    "own_mae_difference": 0.207,
+    "same_sign_share": 0.99,
+    "own_mae_sd": {
+     "haiku": 0.051,
+     "opus": 0.072
+    }
+   },
+   "sonnet vs opus": {
+    "own_mae_difference": 0.13,
+    "same_sign_share": 0.869,
+    "own_mae_sd": {
+     "sonnet": 0.065,
+     "opus": 0.072
+    }
+   }
+  }
+ },
+ "own_pairs_permutation": {
+  "haiku vs sonnet": {
+   "own_mae_difference": 0.078,
+   "permutation_p": 0.5395
+  },
+  "haiku vs opus": {
+   "own_mae_difference": 0.207,
+   "permutation_p": 0.319
+  },
+  "sonnet vs opus": {
+   "own_mae_difference": 0.13,
+   "permutation_p": 0.486
+  }
+ },
+ "all_items_paired": {
+  "haiku vs sonnet": {
+   "mean_error_difference": -0.038,
+   "sign_flip_p": 0.7276
+  },
+  "haiku vs opus": {
+   "mean_error_difference": 0.234,
+   "sign_flip_p": 0.0029
+  },
+  "sonnet vs opus": {
+   "mean_error_difference": 0.272,
+   "sign_flip_p": 0.0093
+  }
+ },
+ "pass_mark": {
+  "rule": "own-pair MAE of Sonnet and Opus differ in the same direction in >= 90% of judge-level resamples AND permutation p < 0.05",
+  "same_sign_share": 0.869,
+  "permutation_p": 0.486,
+  "separates": false
+ }
+}

@@ -7,9 +7,13 @@
    [
     "Read",
     "opus.txt"
+   ],
+   [
+    "Write",
+    "opus.json"
    ]
   ],
-  "usable": false
+  "usable": true
  },
  "points:haiku": {
   "served": [
