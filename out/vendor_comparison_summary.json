@@ -119,10 +119,10 @@
     "full_hits": "5"
    },
    "six_models": {
-    "mean_composite": "76.667",
-    "mean_prediction_score": "0.8",
-    "direction_hits": "4",
-    "full_hits": "4"
+    "mean_composite": "84.667",
+    "mean_prediction_score": "1.0",
+    "direction_hits": "5",
+    "full_hits": "5"
    }
   },
   "haiku": {

@@ -174,4 +174,7 @@ def main(n_outer=300, n_inner=400, seed=20261122):
 
 
 if __name__ == "__main__":
+    # --agreement-rule three_quarters rebuilds the numbers as first published (rescore the out/ folders the same way first)
+    if "--agreement-rule" in sys.argv:
+        score.set_agreement_rule(sys.argv[sys.argv.index("--agreement-rule") + 1])
     main()

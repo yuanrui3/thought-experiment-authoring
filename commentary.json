@@ -33,7 +33,7 @@
     "**Doing vs allowing is the least stable factor.** The panels disagree on three of its four authored pairs, and on the size of the classic control. Haiku is last under every scoring."
   ],
   "persona_note": [
-    "**Personas move first place too.** Sonnet's lead rested on two pairs with small gaps. With personas its doing-vs-allowing pair shows no gap, as with Gemini, and its moral-luck pair is no longer confirmed. Fable's norm-violation pair still shows none. Fable leads under the Gemini panel, the two-vendor scoring and the persona panel; Sonnet leads under the original panel and the six-model average, which is mostly Claude. Only Haiku's place, last, holds under all of them.",
+    "**Personas move first place too.** Sonnet's lead rested on two pairs with small gaps. With personas its doing-vs-allowing pair shows no gap, as with Gemini. Fable's norm-violation pair still shows none under personas. Fable leads under the Gemini panel, the two-vendor scoring, the six-model average and, narrowly, the persona panel (74.7 against Sonnet's 73.3); Sonnet leads only under the original panel. Only Haiku's place, last, holds under all of them.",
     "**Persona judges are more cautious about small effects.** On public human data that made them more accurate, cutting false confirmations. Here it also costs one real effect: the classic moral-luck control, which people do show, is no longer confirmed."
   ],
   "pairs": {

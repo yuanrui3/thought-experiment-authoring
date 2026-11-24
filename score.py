@@ -23,7 +23,12 @@ RULES = {
     "none_below": 0.5,           # |effect| < 0.5            -> size "none"
     "large_from": 1.5,           # |effect| >= 1.5           -> size "large"; in between "small"
     "ci_level": 0.95,            # percentile bootstrap, resampling ratings inside each group x version cell
-    "group_agreement": 0.75,     # share of judge groups whose own effect must have the same sign
+    # Share of judge groups whose own effect must have the same sign as the averaged effect; the number needed is
+    # rounded up. "two_thirds" (from 24 November 2026): 2 of 3 groups, 3 of 4, 4 of 6. "three_quarters" (the pilot's
+    # rule): 3 of 3, 3 of 4, 5 of 6. With three judge models the old rule let one model at the scale's ceiling veto a
+    # gap the other two showed clearly. The two rules differ only for three and six groups.
+    "agreement_rule": "two_thirds",
+    "group_agreement": 2 / 3,
     "weights": {"prediction": 0.40, "confounds": 0.25, "originality": 0.20, "comprehension": 0.15},
     # Prediction score ("distance" rule, from 22 November 2026): credit falls with the distance between the measured
     # gap and the range the prediction names (none: under 0.5 either way; small: 0.5 to 1.5; large: 1.5 or more),
@@ -37,6 +42,13 @@ RULES = {
     "format_cap": 50.0,          # a pair that breaks a hard format rule cannot score above this
 }
 SIZE_ORDER = {"none": 0, "small": 1, "large": 2}
+AGREEMENT_RULES = {"two_thirds": 2 / 3, "three_quarters": 0.75}
+
+
+def set_agreement_rule(name):
+    """Switch the judge-agreement rule (also for scripts that import this module and call classify directly)."""
+    RULES["agreement_rule"] = name
+    RULES["group_agreement"] = AGREEMENT_RULES[name]
 
 
 # ----------------------------------------------------------------------------- loading
@@ -160,7 +172,7 @@ def classify(es):
     ad = abs(d)
     size = "none" if ad < RULES["none_below"] else ("large" if ad >= RULES["large_from"] else "small")
     ci_excludes_zero = es["ci_low"] > 0 or es["ci_high"] < 0
-    need = math.ceil(RULES["group_agreement"] * es["groups_total"])
+    need = math.ceil(RULES["group_agreement"] * es["groups_total"] - 1e-9)
     groups_agree = es["groups_same_sign"] >= need
     if size == "none":
         direction = "none"
@@ -280,8 +292,12 @@ def main():
     ap.add_argument("--no-report", action="store_true")
     ap.add_argument("--prediction-rule", choices=["distance", "classes"], default=RULES["prediction_rule"],
                     help="distance: the current rule; classes: the pilot's original rule (half direction, half size class)")
+    ap.add_argument("--agreement-rule", choices=sorted(AGREEMENT_RULES), default=RULES["agreement_rule"],
+                    help="two_thirds: the current rule (2 of 3 judge groups, 3 of 4); three_quarters: the pilot's rule "
+                         "(3 of 3, 3 of 4)")
     args = ap.parse_args()
     RULES["prediction_rule"] = args.prediction_rule
+    set_agreement_rule(args.agreement_rule)
 
     doc = json.load(open(args.vignettes, encoding="utf-8"))
     pairs = doc["pairs"]

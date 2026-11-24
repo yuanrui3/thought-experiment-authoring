@@ -150,9 +150,9 @@
    },
    "moral_luck": {
     "n_authors": 4,
-    "mean_prediction_score": 0.55,
-    "sd_prediction_score": 0.375,
-    "share_full_marks": 0.25,
+    "mean_prediction_score": 0.8,
+    "sd_prediction_score": 0.23,
+    "share_full_marks": 0.5,
     "mean_abs_effect": 1.01,
     "by_author": {
      "haiku": {
@@ -161,9 +161,9 @@
       "observed": "B_higher/small"
      },
      "sonnet": {
-      "prediction_score": 0.0,
+      "prediction_score": 1.0,
       "effect": -0.53,
-      "observed": "unclear/small"
+      "observed": "B_higher/small"
      },
      "opus": {
       "prediction_score": 1.0,
@@ -265,15 +265,15 @@
    },
    "knowledge_causation": {
     "n_authors": 3,
-    "mean_prediction_score": 0.58,
-    "sd_prediction_score": 0.42,
-    "share_full_marks": 0.0,
+    "mean_prediction_score": 0.913,
+    "sd_prediction_score": 0.109,
+    "share_full_marks": 0.333,
     "mean_abs_effect": 1.36,
     "by_author": {
      "haiku": {
-      "prediction_score": 0.0,
+      "prediction_score": 1.0,
       "effect": 0.67,
-      "observed": "unclear/small"
+      "observed": "A_higher/small"
      },
      "sonnet": {
       "prediction_score": 0.76,
@@ -289,9 +289,9 @@
    },
    "luck_wrongness": {
     "n_authors": 3,
-    "mean_prediction_score": 0.333,
+    "mean_prediction_score": 0.667,
     "sd_prediction_score": 0.471,
-    "share_full_marks": 0.333,
+    "share_full_marks": 0.667,
     "mean_abs_effect": 0.93,
     "by_author": {
      "haiku": {
@@ -305,9 +305,9 @@
       "observed": "B_higher/small"
      },
      "opus": {
-      "prediction_score": 0.0,
+      "prediction_score": 1.0,
       "effect": 1.4,
-      "observed": "unclear/small"
+      "observed": "A_higher/small"
      }
     }
    }
@@ -376,9 +376,9 @@
  "three_authors": {
   "easy_factors_pilot_persona_panel": {
    "n_pairs": 9,
-   "mean_prediction_score": 0.716,
-   "share_full_marks": 0.667,
-   "share_zero": 0.222
+   "mean_prediction_score": 0.827,
+   "share_full_marks": 0.778,
+   "share_zero": 0.111
   },
   "easy_factors_pilot_main_panel": {
    "n_pairs": 9,
@@ -388,16 +388,16 @@
   },
   "new_factors_round2": {
    "n_pairs": 9,
-   "mean_prediction_score": 0.44,
-   "share_full_marks": 0.222,
-   "share_zero": 0.444
+   "mean_prediction_score": 0.662,
+   "share_full_marks": 0.444,
+   "share_zero": 0.222
   }
  },
  "authors_new_factors": {
   "haiku": {
-   "mean_prediction_score": 0.073,
-   "mean_composite": 43.0,
-   "demonstrated": 1,
+   "mean_prediction_score": 0.407,
+   "mean_composite": 56.3,
+   "demonstrated": 2,
    "mean_confound_severity": 1.33,
    "mean_originality": 1.67
   },
@@ -409,9 +409,9 @@
    "mean_originality": 1.33
   },
   "opus": {
-   "mean_prediction_score": 0.66,
-   "mean_composite": 71.9,
-   "demonstrated": 2,
+   "mean_prediction_score": 0.993,
+   "mean_composite": 85.3,
+   "demonstrated": 3,
    "mean_confound_severity": 0.67,
    "mean_originality": 1.67
   }
@@ -633,40 +633,40 @@
     "share_demonstrated": 1.0
    },
    "r2_haiku_knowledge_causation": {
-    "observed_score": 0.0,
-    "mean_resampled_score": 0.16,
-    "share_within_0.25_of_observed": 0.84,
-    "share_demonstrated": 0.16
+    "observed_score": 1.0,
+    "mean_resampled_score": 0.7,
+    "share_within_0.25_of_observed": 0.7,
+    "share_demonstrated": 0.7
    },
    "r2_haiku_luck_wrongness": {
+    "observed_score": 0.0,
+    "mean_resampled_score": 0.4,
+    "share_within_0.25_of_observed": 0.6,
+    "share_demonstrated": 0.4
+   },
+   "r2_sonnet_inevitable_harm": {
     "observed_score": 0.0,
     "mean_resampled_score": 0.23,
     "share_within_0.25_of_observed": 0.77,
     "share_demonstrated": 0.23
    },
-   "r2_sonnet_inevitable_harm": {
-    "observed_score": 0.0,
-    "mean_resampled_score": 0.04,
-    "share_within_0.25_of_observed": 0.96,
-    "share_demonstrated": 0.04
-   },
    "r2_sonnet_knowledge_causation": {
     "observed_score": 0.76,
-    "mean_resampled_score": 0.73,
-    "share_within_0.25_of_observed": 0.86,
+    "mean_resampled_score": 0.74,
+    "share_within_0.25_of_observed": 0.87,
     "share_demonstrated": 1.0
    },
    "r2_sonnet_luck_wrongness": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.54,
-    "share_within_0.25_of_observed": 0.54,
-    "share_demonstrated": 0.54
+    "mean_resampled_score": 0.9,
+    "share_within_0.25_of_observed": 0.91,
+    "share_demonstrated": 0.91
    },
    "r2_opus_inevitable_harm": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.91,
-    "share_within_0.25_of_observed": 0.92,
-    "share_demonstrated": 0.92
+    "mean_resampled_score": 0.98,
+    "share_within_0.25_of_observed": 0.99,
+    "share_demonstrated": 0.99
    },
    "r2_opus_knowledge_causation": {
     "observed_score": 0.98,
@@ -675,28 +675,28 @@
     "share_demonstrated": 1.0
    },
    "r2_opus_luck_wrongness": {
-    "observed_score": 0.0,
-    "mean_resampled_score": 0.29,
-    "share_within_0.25_of_observed": 0.68,
-    "share_demonstrated": 0.32
+    "observed_score": 1.0,
+    "mean_resampled_score": 0.94,
+    "share_within_0.25_of_observed": 0.94,
+    "share_demonstrated": 0.99
    },
    "cc_inevitable_harm": {
     "observed_score": 0.0,
-    "mean_resampled_score": 0.0,
-    "share_within_0.25_of_observed": 1.0,
-    "share_demonstrated": 0.0
+    "mean_resampled_score": 0.07,
+    "share_within_0.25_of_observed": 0.93,
+    "share_demonstrated": 0.07
    },
    "cc_knowledge_causation": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.77,
-    "share_within_0.25_of_observed": 0.76,
-    "share_demonstrated": 0.84
+    "mean_resampled_score": 0.93,
+    "share_within_0.25_of_observed": 0.92,
+    "share_demonstrated": 0.99
    },
    "cc_luck_wrongness": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.62,
-    "share_within_0.25_of_observed": 0.62,
-    "share_demonstrated": 0.62
+    "mean_resampled_score": 0.95,
+    "share_within_0.25_of_observed": 0.95,
+    "share_demonstrated": 0.95
    },
    "au_haiku_doing_allowing": {
     "observed_score": 0.0,
@@ -706,71 +706,69 @@
    },
    "au_haiku_norm_causation": {
     "observed_score": 0.98,
-    "mean_resampled_score": 0.46,
-    "share_within_0.25_of_observed": 0.44,
-    "share_demonstrated": 0.54
+    "mean_resampled_score": 0.91,
+    "share_within_0.25_of_observed": 0.89,
+    "share_demonstrated": 1.0
    },
    "au_sonnet_doing_allowing": {
     "observed_score": 0.0,
-    "mean_resampled_score": 0.13,
-    "share_within_0.25_of_observed": 0.87,
-    "share_demonstrated": 0.13
+    "mean_resampled_score": 0.14,
+    "share_within_0.25_of_observed": 0.86,
+    "share_demonstrated": 0.14
    },
    "au_sonnet_norm_causation": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.79,
-    "share_within_0.25_of_observed": 0.81,
-    "share_demonstrated": 0.82
+    "mean_resampled_score": 0.96,
+    "share_within_0.25_of_observed": 0.98,
+    "share_demonstrated": 0.99
    },
    "au_opus_doing_allowing": {
     "observed_score": 0.0,
-    "mean_resampled_score": 0.17,
-    "share_within_0.25_of_observed": 0.83,
-    "share_demonstrated": 0.17
+    "mean_resampled_score": 0.29,
+    "share_within_0.25_of_observed": 0.71,
+    "share_demonstrated": 0.29
    },
    "au_opus_norm_causation": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.98,
-    "share_within_0.25_of_observed": 0.98,
-    "share_demonstrated": 0.98
+    "mean_resampled_score": 1.0,
+    "share_within_0.25_of_observed": 1.0,
+    "share_demonstrated": 1.0
    },
    "au_fable_doing_allowing": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.67,
-    "share_within_0.25_of_observed": 0.67,
-    "share_demonstrated": 0.67
+    "mean_resampled_score": 0.88,
+    "share_within_0.25_of_observed": 0.88,
+    "share_demonstrated": 0.88
    },
    "au_fable_norm_causation": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.64,
-    "share_within_0.25_of_observed": 0.64,
-    "share_demonstrated": 0.64
+    "mean_resampled_score": 0.8,
+    "share_within_0.25_of_observed": 0.8,
+    "share_demonstrated": 0.8
    },
    "cc_doing_allowing": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.53,
-    "share_within_0.25_of_observed": 0.53,
-    "share_demonstrated": 0.53
+    "mean_resampled_score": 0.9,
+    "share_within_0.25_of_observed": 0.9,
+    "share_demonstrated": 0.9
    },
    "cc_norm_causation": {
     "observed_score": 1.0,
-    "mean_resampled_score": 0.59,
-    "share_within_0.25_of_observed": 0.59,
-    "share_demonstrated": 0.59
+    "mean_resampled_score": 0.96,
+    "share_within_0.25_of_observed": 0.95,
+    "share_demonstrated": 1.0
    }
   },
   "author_order_new_factors_by_mean_prediction_score": {
-   "opus > sonnet > haiku": 0.703,
-   "opus > haiku > sonnet": 0.177,
-   "sonnet > opus > haiku": 0.093,
-   "haiku > opus > sonnet": 0.01,
-   "sonnet > haiku > opus": 0.01,
-   "haiku > sonnet > opus": 0.007
+   "opus > sonnet > haiku": 0.697,
+   "opus > haiku > sonnet": 0.227,
+   "sonnet > opus > haiku": 0.07,
+   "haiku > opus > sonnet": 0.007
   },
   "author_mean_sd_across_reruns": {
-   "haiku": 0.195,
-   "sonnet": 0.189,
-   "opus": 0.166
+   "haiku": 0.225,
+   "sonnet": 0.175,
+   "opus": 0.062
   }
  }
 }

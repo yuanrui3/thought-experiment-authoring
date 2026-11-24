@@ -2,6 +2,8 @@
 
 *22 November 2026. Pairs in `round2/vignettes_b.json`; judgments and audits are run `round2b` in `judgments.csv` and `audits.csv`; scores in `out/round2b/`, from `python3 score.py --vignettes round2/vignettes_b.json --run round2b --audit-run main,round2,round2b --out out/round2b --no-report`. Every number below is rebuilt by `python3 pipeline/round2/analyse_b.py` into `reports/round2b_numbers.json`. Fable is missing (usage limit until 26 November).*
 
+> **Update, 24 November: the agreement rule changed** (`reports/Agreement rule change.md`). A gap now needs two of three judge models to agree instead of all three; with four models nothing changes. In this panel, Haiku's rockfall pair and the doing-vs-allowing control are now confirmed; Haiku rises from 0.66 to 0.77; Opus (0.98) and Sonnet (0.88) are unchanged. The numbers in this report's body are under the old rule; `--agreement-rule three_quarters` rebuilds them.
+
 > **Correction, 22 November: see `reports/Round 2b two panels.md`.** A second, independent panel judged the same batches.
 > - **No extra per-run shift.** The gaps of the two panels differ by exactly what sampling noise predicts. Round 2 against this run also comes out within noise.
 > - **The real cause is the scoring rule.** Its thresholds turn ordinary gap noise into all-or-nothing score changes. Rating-level resampling understated how often that happens, and judge-level resampling gets it right.

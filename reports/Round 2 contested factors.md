@@ -2,6 +2,8 @@
 
 *22 November 2026. Pairs in `round2/vignettes.json`; judgments are run `round2` in `judgments.csv` and audits are run `round2` in `audits.csv`; scores in `out/round2/`, from `python3 score.py --vignettes round2/vignettes.json --run round2 --audit-run main,round2 --out out/round2 --no-report`. Every number below is rebuilt by `python3 pipeline/round2/analyse.py` into `reports/round2_numbers.json`. Fable is missing from round 2 (usage limit until 26 November); the published pilot results are unchanged.*
 
+> **Update, 24 November: the agreement rule changed** (`reports/Agreement rule change.md`). A gap now needs two of three judge models to agree instead of all three; with four models nothing changes. Here Haiku's solvent-room pair and Opus's smoke-alarm pair are now confirmed. On the new factors Opus now scores 0.99, Sonnet 0.59 and Haiku 0.41. The numbers in this report's body are under the old rule; `--agreement-rule three_quarters` rebuilds them.
+
 > **Update, 22 November: round 2b corrects this report** (`reports/Round 2b three pairs per factor.md`). Each author wrote two more pairs per new factor, and all 27 were judged together by a second persona panel of the same design.
 > - **The nine pairs below were judged again.** Their mean prediction score went from 0.44 to 0.73, and 5 of 9 changed by more than a quarter point.
 > - **The claim that the new factors are harder is withdrawn.** The same pairs scored 0.44 here and 0.91 when two later panels were pooled. A one-panel score has too much threshold noise to compare factors. A two-panel check (`reports/Round 2b two panels.md`) found the gaps themselves reproducible within sampling noise.

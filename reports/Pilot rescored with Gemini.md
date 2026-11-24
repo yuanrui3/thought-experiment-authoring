@@ -13,6 +13,8 @@
 >
 > *Mean composite score under the new rule; current numbers in `out/vendor_comparison_summary.json`.*
 
+> **Update, 24 November: the agreement rule changed** (`reports/Agreement rule change.md`). A gap now needs two of three judge models to agree instead of all three; with four models nothing changes. With six judge groups (4 Claude + 2 Gemini) it needs 4 of 6 instead of 5: Fable's norm pair is now confirmed and Fable is first there too (84.7 against Sonnet's 81.3). The Gemini panel and the two-vendor scoring are unchanged. The numbers in this report's body are under the old rule; `--agreement-rule three_quarters` rebuilds them.
+
 ## Bottom line
 
 **The two vendors broadly agree, but not on the pairs that decide which author comes first.**

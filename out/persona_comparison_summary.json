@@ -22,8 +22,8 @@
   "original": 0.993,
   "persona": 0.993
  },
- "verdicts_changed": 6,
- "verdicts_changed_authored": 4,
+ "verdicts_changed": 5,
+ "verdicts_changed_authored": 3,
  "effect_correlation_with_original": 0.979,
  "mean_abs_effect_authored": {
   "published": 2.0,
@@ -57,14 +57,6 @@
    "predicted": "A_higher/small",
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "none/none",
-   "original_same_models_prediction_score": "1.0",
-   "persona_prediction_score": "0.0"
-  },
-  {
-   "pair_id": "au_sonnet_moral_luck",
-   "predicted": "B_higher/small",
-   "original_same_models_verdict": "B_higher/small",
-   "persona_verdict": "unclear/small",
    "original_same_models_prediction_score": "1.0",
    "persona_prediction_score": "0.0"
   },
@@ -172,9 +164,9 @@
     "full_hits": "5"
    },
    "persona": {
-    "mean_composite": "65.333",
-    "mean_prediction_score": "0.6",
-    "full_hits": "3"
+    "mean_composite": "73.333",
+    "mean_prediction_score": "0.8",
+    "full_hits": "4"
    },
    "gemini": {
     "mean_composite": "73.333",
@@ -185,6 +177,6 @@
  },
  "agrees_with_gemini": {
   "original_same_models": 20,
-  "persona": 21
+  "persona": 22
  }
 }

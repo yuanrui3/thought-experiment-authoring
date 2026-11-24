@@ -1,4 +1,4 @@
 author_id,tier,n_pairs,mean_composite,direction_hits,size_hits,full_hits,demonstrated,mean_prediction_score,mean_prediction_score_classes_rule,mean_abs_effect,mean_confound_severity,mean_originality,mean_comprehension,mean_words_changed,n_flagged,gated_passes,gated_mean_behavior_of_passing,n_shared_setting
-anthropic/claude-haiku-5-5,haiku,9,62.87,6,3,2,6,0.593,0.667,1.274,1.222,1.444,0.981,16.778,2,6,61.414,0
-anthropic/claude-opus-5-5,opus,9,77.654,8,5,4,8,0.84,0.833,1.541,0.667,1.444,1.0,14.889,1,9,88.328,0
+anthropic/claude-haiku-5-5,haiku,9,69.685,8,3,3,8,0.763,0.778,1.274,1.222,1.444,0.981,16.778,2,6,80.0,0
+anthropic/claude-opus-5-5,opus,9,82.099,9,5,5,9,0.951,0.889,1.541,0.667,1.444,1.0,14.889,1,9,96.409,0
 anthropic/claude-sonnet-5-5,sonnet,9,80.284,9,8,8,9,0.973,0.972,1.222,0.889,1.333,0.993,11.889,0,8,97.551,0

@@ -5,10 +5,10 @@
     "pairs": {
      "r2_haiku_inevitable_harm": 0.58,
      "r2_haiku_inevitable_harm_2": 0.89,
-     "r2_haiku_inevitable_harm_3": 0.0
+     "r2_haiku_inevitable_harm_3": 1.0
     },
-    "mean_prediction_score": 0.49,
-    "demonstrated": 2
+    "mean_prediction_score": 0.823,
+    "demonstrated": 3
    },
    "knowledge_causation": {
     "pairs": {
@@ -91,10 +91,10 @@
  "by_author": {
   "haiku": {
    "n_pairs": 9,
-   "mean_prediction_score": 0.66,
-   "mean_composite": 65.5,
-   "demonstrated": 7,
-   "full_marks": 3,
+   "mean_prediction_score": 0.771,
+   "mean_composite": 69.9,
+   "demonstrated": 8,
+   "full_marks": 4,
    "mean_confound_severity": 1.22,
    "mean_originality": 1.44,
    "predicted_sizes": {
@@ -138,10 +138,10 @@
   "haiku/inevitable_harm": {
    "round2_single_pair": 0.22,
    "same_pair_in_round2b": 0.58,
-   "three_pair_mean_round2b": 0.49
+   "three_pair_mean_round2b": 0.823
   },
   "haiku/knowledge_causation": {
-   "round2_single_pair": 0.0,
+   "round2_single_pair": 1.0,
    "same_pair_in_round2b": 1.0,
    "three_pair_mean_round2b": 1.0
   },
@@ -176,14 +176,14 @@
    "three_pair_mean_round2b": 0.947
   },
   "opus/luck_wrongness": {
-   "round2_single_pair": 0.0,
+   "round2_single_pair": 1.0,
    "same_pair_in_round2b": 1.0,
    "three_pair_mean_round2b": 1.0
   }
  },
  "round2_pairs_in_both_runs": {
   "mean_prediction_score": {
-   "round2": 0.44,
+   "round2": 0.662,
    "round2b": 0.731
   },
   "mean_abs_effect": {
@@ -196,7 +196,7 @@
   },
   "by_author": {
    "haiku": {
-    "round2": 0.073,
+    "round2": 0.407,
     "round2b": 0.527
    },
    "sonnet": {
@@ -204,29 +204,29 @@
     "round2b": 0.667
    },
    "opus": {
-    "round2": 0.66,
+    "round2": 0.993,
     "round2b": 1.0
    }
   }
  },
  "new_pairs_all_three_models_agree": 17,
  "variance": {
-  "share_explained_by_author": 0.175,
-  "share_explained_by_factor": 0.106,
-  "share_explained_by_author_and_factor_cell": 0.437,
-  "pair_sd_of_prediction_score": 0.322,
-  "author_spread": 0.322,
-  "permutation_p_author_spread": 0.0678,
+  "share_explained_by_author": 0.097,
+  "share_explained_by_factor": 0.167,
+  "share_explained_by_author_and_factor_cell": 0.393,
+  "pair_sd_of_prediction_score": 0.277,
+  "author_spread": 0.211,
+  "permutation_p_author_spread": 0.2305,
   "permutation_note": "authors shuffled among the nine pairs of each factor, 20000 times; p = share of shuffles whose best-minus-worst author mean is at least the observed one"
  },
  "pairwise_author_differences": {
   "haiku - sonnet": {
-   "difference": -0.221,
-   "permutation_p": 0.1976
+   "difference": -0.11,
+   "permutation_p": 0.4387
   },
   "haiku - opus": {
-   "difference": -0.322,
-   "permutation_p": 0.0406
+   "difference": -0.211,
+   "permutation_p": 0.1086
   },
   "sonnet - opus": {
    "difference": -0.101,
@@ -236,62 +236,59 @@
  "fragility": {
   "method": "as in round 2: 300 simulated reruns, 400-draw bootstrap interval inside each",
   "author_order": {
-   "opus > sonnet > haiku": 0.483,
-   "sonnet > opus > haiku": 0.273,
-   "opus > haiku > sonnet": 0.157,
-   "sonnet > haiku > opus": 0.047,
-   "haiku > sonnet > opus": 0.023,
-   "haiku > opus > sonnet": 0.017
+   "opus > sonnet > haiku": 0.717,
+   "opus > haiku > sonnet": 0.143,
+   "sonnet > opus > haiku": 0.14
   },
   "first": {
-   "haiku": 0.04,
-   "sonnet": 0.32,
-   "opus": 0.64
+   "haiku": 0.0,
+   "sonnet": 0.14,
+   "opus": 0.86
   },
   "last": {
-   "haiku": 0.757,
-   "sonnet": 0.173,
-   "opus": 0.07
+   "haiku": 0.857,
+   "sonnet": 0.143,
+   "opus": 0.0
   },
   "pair_kept_within_0.25": {
-   "r2_haiku_inevitable_harm": 0.84,
-   "r2_haiku_knowledge_causation": 0.91,
-   "r2_haiku_luck_wrongness": 0.84,
-   "r2_haiku_inevitable_harm_2": 0.85,
-   "r2_haiku_inevitable_harm_3": 0.68,
-   "r2_haiku_knowledge_causation_2": 0.71,
-   "r2_haiku_knowledge_causation_3": 0.85,
-   "r2_haiku_luck_wrongness_2": 0.77,
+   "r2_haiku_inevitable_harm": 0.85,
+   "r2_haiku_knowledge_causation": 0.99,
+   "r2_haiku_luck_wrongness": 0.81,
+   "r2_haiku_inevitable_harm_2": 0.92,
+   "r2_haiku_inevitable_harm_3": 0.98,
+   "r2_haiku_knowledge_causation_2": 1.0,
+   "r2_haiku_knowledge_causation_3": 0.98,
+   "r2_haiku_luck_wrongness_2": 0.89,
    "r2_haiku_luck_wrongness_3": 0.99,
-   "r2_sonnet_inevitable_harm": 0.76,
-   "r2_sonnet_knowledge_causation": 0.92,
-   "r2_sonnet_luck_wrongness": 0.71,
-   "r2_sonnet_inevitable_harm_2": 0.9,
-   "r2_sonnet_inevitable_harm_3": 0.6,
-   "r2_sonnet_knowledge_causation_2": 0.66,
+   "r2_sonnet_inevitable_harm": 0.88,
+   "r2_sonnet_knowledge_causation": 0.99,
+   "r2_sonnet_luck_wrongness": 0.67,
+   "r2_sonnet_inevitable_harm_2": 1.0,
+   "r2_sonnet_inevitable_harm_3": 0.8,
+   "r2_sonnet_knowledge_causation_2": 0.96,
    "r2_sonnet_knowledge_causation_3": 0.96,
-   "r2_sonnet_luck_wrongness_2": 0.77,
-   "r2_sonnet_luck_wrongness_3": 0.98,
-   "r2_opus_inevitable_harm": 0.93,
-   "r2_opus_knowledge_causation": 0.97,
-   "r2_opus_luck_wrongness": 0.82,
+   "r2_sonnet_luck_wrongness_2": 1.0,
+   "r2_sonnet_luck_wrongness_3": 1.0,
+   "r2_opus_inevitable_harm": 0.99,
+   "r2_opus_knowledge_causation": 1.0,
+   "r2_opus_luck_wrongness": 0.98,
    "r2_opus_inevitable_harm_2": 1.0,
-   "r2_opus_inevitable_harm_3": 0.97,
-   "r2_opus_knowledge_causation_2": 0.78,
-   "r2_opus_knowledge_causation_3": 0.54,
-   "r2_opus_luck_wrongness_2": 0.63,
-   "r2_opus_luck_wrongness_3": 0.84,
+   "r2_opus_inevitable_harm_3": 1.0,
+   "r2_opus_knowledge_causation_2": 0.95,
+   "r2_opus_knowledge_causation_3": 0.96,
+   "r2_opus_luck_wrongness_2": 1.0,
+   "r2_opus_luck_wrongness_3": 1.0,
    "cc_inevitable_harm": 1.0,
-   "cc_knowledge_causation": 0.55,
-   "cc_luck_wrongness": 0.98,
-   "cc_doing_allowing": 0.83,
-   "cc_norm_causation": 0.9
+   "cc_knowledge_causation": 0.92,
+   "cc_luck_wrongness": 0.99,
+   "cc_doing_allowing": 0.97,
+   "cc_norm_causation": 0.98
   },
-  "authored_pairs_kept_below_0.8": 11,
+  "authored_pairs_kept_below_0.8": 1,
   "author_mean_sd_across_reruns": {
-   "haiku": 0.107,
-   "sonnet": 0.115,
-   "opus": 0.112
+   "haiku": 0.054,
+   "sonnet": 0.078,
+   "opus": 0.03
   }
  },
  "test_retest": {
@@ -312,9 +309,9 @@
     "pair_type": "authored",
     "round2_effect": 0.67,
     "round2b_effect": 1.0,
-    "round2_verdict": "unclear",
+    "round2_verdict": "A_higher",
     "round2b_verdict": "A_higher",
-    "round2_score": 0.0,
+    "round2_score": 1.0,
     "round2b_score": 1.0
    },
    {
@@ -382,9 +379,9 @@
     "pair_type": "authored",
     "round2_effect": 1.4,
     "round2b_effect": 1.07,
-    "round2_verdict": "unclear",
+    "round2_verdict": "A_higher",
     "round2b_verdict": "A_higher",
-    "round2_score": 0.0,
+    "round2_score": 1.0,
     "round2b_score": 1.0
    },
    {
@@ -423,9 +420,9 @@
     "round2_effect": 0.93,
     "round2b_effect": 1.07,
     "round2_verdict": "A_higher",
-    "round2b_verdict": "unclear",
+    "round2b_verdict": "A_higher",
     "round2_score": 1.0,
-    "round2b_score": 0.0
+    "round2b_score": 1.0
    },
    {
     "pair_id": "cc_norm_causation",
@@ -492,19 +489,13 @@
   "mean_abs_effect_difference": 0.31,
   "max_abs_effect_difference": 0.87,
   "verdict_changes": [
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness",
-   "cc_doing_allowing"
+   "r2_sonnet_luck_wrongness"
   ],
   "score_changes_over_0.25": [
    "r2_haiku_inevitable_harm",
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness",
-   "cc_doing_allowing"
+   "r2_sonnet_luck_wrongness"
   ]
  },
  "controls": {
@@ -548,7 +539,7 @@
     1.47
    ],
    "groups_same_sign": 2,
-   "observed": "unclear/small",
+   "observed": "A_higher/small",
    "mean_a": 6.13,
    "mean_b": 5.07
   },

@@ -2,6 +2,8 @@
 
 *22 November 2026. A second persona panel (run `round2b-p2`) judged exactly the round-2b batches' items: the same 37 pairs, with new personas and new random orders and version assignments. Scores: `out/round2b/` (panel 1), `out/round2b_p2/` (panel 2), `out/round2b_pooled/` (both panels' ratings together; under the unchanged rules that is one panel with 10 ratings per model and version instead of 5). Every number below is rebuilt by `python3 pipeline/round2/analyse_panels.py` into `reports/round2b_panels_numbers.json`.*
 
+> **Update, 24 November: the agreement rule changed** (`reports/Agreement rule change.md`). A gap now needs two of three judge models to agree instead of all three; with four models nothing changes. The pooled author scores don't change (Sonnet 0.98, Opus 0.98, Haiku 0.78). The bath and doing-vs-allowing controls are now reproduced, and the panels agree much more: authored pairs whose score differs between them fall from 5 to 1 of 27, and the rerun spread of an author's mean from about 0.16 to 0.06. The cost, on public human data, is twice as many confirmed gaps that people don't show. The numbers in this report's body are under the old rule; `--agreement-rule three_quarters` rebuilds them.
+
 ## Bottom line
 
 - **The two panels agree on the gaps, to within sampling noise.**

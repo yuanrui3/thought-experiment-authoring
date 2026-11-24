@@ -6,20 +6,12 @@
   "noise_ratio": 1.07,
   "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
   "verdict_changes": [
-   "r2_haiku_inevitable_harm_2",
-   "r2_haiku_inevitable_harm_3",
-   "r2_haiku_luck_wrongness_2",
    "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness_3",
    "cc_luck_wrongness",
    "nc_weather"
   ],
   "score_changes_over_0.25": [
-   "r2_haiku_inevitable_harm_2",
-   "r2_haiku_inevitable_harm_3",
-   "r2_haiku_luck_wrongness_2",
    "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness_3",
    "cc_luck_wrongness"
   ],
   "n_scored": 32
@@ -31,18 +23,10 @@
   "noise_ratio": 0.93,
   "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
   "verdict_changes": [
-   "r2_haiku_inevitable_harm_2",
-   "r2_haiku_inevitable_harm_3",
-   "r2_haiku_luck_wrongness_2",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness_3"
+   "r2_sonnet_luck_wrongness"
   ],
   "score_changes_over_0.25": [
-   "r2_haiku_inevitable_harm_2",
-   "r2_haiku_inevitable_harm_3",
-   "r2_haiku_luck_wrongness_2",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness_3"
+   "r2_sonnet_luck_wrongness"
   ],
   "n_scored": 27
  },
@@ -53,19 +37,13 @@
   "noise_ratio": 1.0,
   "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
   "verdict_changes": [
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness",
-   "cc_doing_allowing"
+   "r2_sonnet_luck_wrongness"
   ],
   "score_changes_over_0.25": [
    "r2_haiku_inevitable_harm",
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_sonnet_luck_wrongness",
-   "r2_opus_luck_wrongness",
-   "cc_doing_allowing"
+   "r2_sonnet_luck_wrongness"
   ],
   "n_scored": 14
  },
@@ -76,20 +54,14 @@
   "noise_ratio": 0.8,
   "noise_ratio_note": "sum of squared gap differences / sum of (SE1^2 + SE2^2); about 1 if the runs differ by sampling noise only",
   "verdict_changes": [
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_opus_luck_wrongness",
    "cc_luck_wrongness",
-   "cc_doing_allowing",
    "nc_weather"
   ],
   "score_changes_over_0.25": [
    "r2_haiku_inevitable_harm",
-   "r2_haiku_knowledge_causation",
    "r2_sonnet_inevitable_harm",
-   "r2_opus_luck_wrongness",
-   "cc_luck_wrongness",
-   "cc_doing_allowing"
+   "cc_luck_wrongness"
   ],
   "n_scored": 14
  },
@@ -146,8 +118,8 @@
    ],
    "round2": {
     "effect": 0.67,
-    "verdict": "unclear",
-    "score": 0.0
+    "verdict": "A_higher",
+    "score": 1.0
    }
   },
   "r2_haiku_luck_wrongness": {
@@ -187,7 +159,7 @@
    ],
    "verdict": [
     "A_higher",
-    "unclear",
+    "A_higher",
     "A_higher"
    ],
    "groups_same_sign": [
@@ -197,7 +169,7 @@
    ],
    "score": [
     0.89,
-    0.0,
+    1.0,
     1.0
    ],
    "round2": null
@@ -210,7 +182,7 @@
     1.4
    ],
    "verdict": [
-    "unclear",
+    "A_higher",
     "A_higher",
     "A_higher"
    ],
@@ -220,7 +192,7 @@
     3
    ],
    "score": [
-    0.0,
+    1.0,
     0.98,
     1.0
    ],
@@ -283,7 +255,7 @@
    ],
    "verdict": [
     "B_higher",
-    "unclear",
+    "B_higher",
     "B_higher"
    ],
    "groups_same_sign": [
@@ -293,7 +265,7 @@
    ],
    "score": [
     0.49,
-    0.0,
+    0.53,
     0.51
    ],
    "round2": null
@@ -630,8 +602,8 @@
    ],
    "round2": {
     "effect": 1.4,
-    "verdict": "unclear",
-    "score": 0.0
+    "verdict": "A_higher",
+    "score": 1.0
    }
   },
   "r2_opus_inevitable_harm_2": {
@@ -763,7 +735,7 @@
    ],
    "verdict": [
     "A_higher",
-    "unclear",
+    "A_higher",
     "A_higher"
    ],
    "groups_same_sign": [
@@ -773,7 +745,7 @@
    ],
    "score": [
     1.0,
-    0.0,
+    1.0,
     1.0
    ],
    "round2": null
@@ -844,7 +816,7 @@
    "verdict": [
     "A_higher",
     "none",
-    "unclear"
+    "A_higher"
    ],
    "groups_same_sign": [
     3,
@@ -854,7 +826,7 @@
    "score": [
     1.0,
     0.0,
-    0.0
+    1.0
    ],
    "round2": {
     "effect": 0.8,
@@ -870,9 +842,9 @@
     1.0
    ],
    "verdict": [
-    "unclear",
-    "unclear",
-    "unclear"
+    "A_higher",
+    "A_higher",
+    "A_higher"
    ],
    "groups_same_sign": [
     2,
@@ -880,9 +852,9 @@
     2
    ],
    "score": [
-    0.0,
-    0.0,
-    0.0
+    1.0,
+    1.0,
+    1.0
    ],
    "round2": {
     "effect": 0.93,
@@ -1062,16 +1034,16 @@
  "pairs_note": "lists are [panel 1, panel 2, pooled]",
  "common_shift": {
   "panel1": {
-   "mean_score_authored": 0.841,
+   "mean_score_authored": 0.878,
    "mean_abs_effect_authored": 1.27,
    "authored_all_models_agree": 26,
-   "authored_demonstrated": 24
+   "authored_demonstrated": 25
   },
   "panel2": {
-   "mean_score_authored": 0.802,
+   "mean_score_authored": 0.896,
    "mean_abs_effect_authored": 1.35,
    "authored_all_models_agree": 23,
-   "authored_demonstrated": 23
+   "authored_demonstrated": 26
   },
   "pooled": {
    "mean_score_authored": 0.914,
@@ -1083,12 +1055,12 @@
  "authors": {
   "panel1": {
    "haiku": {
-    "mean_prediction_score": 0.66,
-    "mean_composite": 65.5,
-    "demonstrated": 7,
-    "full_marks": 3,
+    "mean_prediction_score": 0.771,
+    "mean_composite": 69.9,
+    "demonstrated": 8,
+    "full_marks": 4,
     "by_factor": {
-     "inevitable_harm": 0.49,
+     "inevitable_harm": 0.823,
      "knowledge_causation": 1.0,
      "luck_wrongness": 0.49
     }
@@ -1118,14 +1090,14 @@
   },
   "panel2": {
    "haiku": {
-    "mean_prediction_score": 0.592,
-    "mean_composite": 62.9,
-    "demonstrated": 6,
-    "full_marks": 2,
+    "mean_prediction_score": 0.762,
+    "mean_composite": 69.7,
+    "demonstrated": 8,
+    "full_marks": 3,
     "by_factor": {
-     "inevitable_harm": 0.533,
+     "inevitable_harm": 0.867,
      "knowledge_causation": 0.947,
-     "luck_wrongness": 0.297
+     "luck_wrongness": 0.473
     }
    },
    "sonnet": {
@@ -1140,14 +1112,14 @@
     }
    },
    "opus": {
-    "mean_prediction_score": 0.84,
-    "mean_composite": 77.6,
-    "demonstrated": 8,
-    "full_marks": 4,
+    "mean_prediction_score": 0.951,
+    "mean_composite": 82.1,
+    "demonstrated": 9,
+    "full_marks": 5,
     "by_factor": {
      "inevitable_harm": 1.0,
      "knowledge_causation": 0.86,
-     "luck_wrongness": 0.66
+     "luck_wrongness": 0.993
     }
    }
   },
@@ -1193,66 +1165,63 @@
   "pooled": "sonnet > opus > haiku"
  },
  "author_panel_difference": {
-  "haiku": -0.068,
+  "haiku": -0.009,
   "sonnet": 0.092,
-  "opus": -0.142
+  "opus": -0.031
  },
  "judge_level_resampling": {
   "method": "repeats (an x and a y judge of one model) resampled with replacement within each model; 300 resamples, 400-draw interval inside each",
   "panel1": {
    "author_mean_sd": {
-    "haiku": 0.168,
-    "sonnet": 0.139,
-    "opus": 0.161
+    "haiku": 0.066,
+    "sonnet": 0.081,
+    "opus": 0.038
    },
    "author_order": {
-    "opus > sonnet > haiku": 0.437,
-    "sonnet > opus > haiku": 0.297,
-    "opus > haiku > sonnet": 0.173,
-    "haiku > opus > sonnet": 0.047,
-    "sonnet > haiku > opus": 0.04,
-    "haiku > sonnet > opus": 0.007
+    "opus > sonnet > haiku": 0.72,
+    "opus > haiku > sonnet": 0.147,
+    "sonnet > opus > haiku": 0.127,
+    "sonnet > haiku > opus": 0.003,
+    "haiku > opus > sonnet": 0.003
    },
    "first": {
-    "haiku": 0.053,
-    "sonnet": 0.337,
-    "opus": 0.61
+    "haiku": 0.003,
+    "sonnet": 0.13,
+    "opus": 0.867
    },
    "last": {
-    "haiku": 0.733,
-    "sonnet": 0.22,
-    "opus": 0.047
+    "haiku": 0.847,
+    "sonnet": 0.15,
+    "opus": 0.003
    },
-   "authored_pairs_kept_below_0.8": 15,
-   "expected_score_changes_in_a_rerun_authored": 5.7,
-   "actual_score_changes_in_panel2_authored": 5
+   "authored_pairs_kept_below_0.8": 1,
+   "expected_score_changes_in_a_rerun_authored": 1.6,
+   "actual_score_changes_in_panel2_authored": 1
   },
   "pooled": {
    "author_mean_sd": {
-    "haiku": 0.089,
-    "sonnet": 0.076,
-    "opus": 0.092
+    "haiku": 0.053,
+    "sonnet": 0.051,
+    "opus": 0.025
    },
    "author_order": {
-    "sonnet > opus > haiku": 0.63,
-    "opus > sonnet > haiku": 0.197,
-    "sonnet > haiku > opus": 0.1,
-    "opus > haiku > sonnet": 0.037,
-    "haiku > sonnet > opus": 0.023,
-    "haiku > opus > sonnet": 0.013
+    "sonnet > opus > haiku": 0.503,
+    "opus > sonnet > haiku": 0.427,
+    "opus > haiku > sonnet": 0.057,
+    "sonnet > haiku > opus": 0.013
    },
    "first": {
-    "haiku": 0.037,
-    "sonnet": 0.73,
-    "opus": 0.233
+    "haiku": 0.0,
+    "sonnet": 0.517,
+    "opus": 0.483
    },
    "last": {
-    "haiku": 0.827,
-    "sonnet": 0.05,
-    "opus": 0.123
+    "haiku": 0.93,
+    "sonnet": 0.057,
+    "opus": 0.013
    },
-   "authored_pairs_kept_below_0.8": 6,
-   "expected_score_changes_in_a_rerun_authored": 2.6
+   "authored_pairs_kept_below_0.8": 1,
+   "expected_score_changes_in_a_rerun_authored": 0.7
   }
  },
  "pooled_pairwise_permutation": {
@@ -1303,7 +1272,7 @@
    "verdict": [
     "A_higher",
     "none",
-    "unclear"
+    "A_higher"
    ]
   },
   "cc_doing_allowing": {
@@ -1313,9 +1282,9 @@
     1.0
    ],
    "verdict": [
-    "unclear",
-    "unclear",
-    "unclear"
+    "A_higher",
+    "A_higher",
+    "A_higher"
    ]
   },
   "cc_norm_causation": {

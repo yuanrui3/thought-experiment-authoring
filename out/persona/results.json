@@ -6,7 +6,8 @@
   "none_below": 0.5,
   "large_from": 1.5,
   "ci_level": 0.95,
-  "group_agreement": 0.75,
+  "agreement_rule": "two_thirds",
+  "group_agreement": 0.6666666666666666,
   "weights": {
    "prediction": 0.4,
    "confounds": 0.25,
@@ -1987,7 +1988,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -2562,10 +2563,10 @@
     "n_excluded": 0
    },
    "observed": {
-    "direction": "unclear",
+    "direction": "B_higher",
     "size": "small",
     "ci_excludes_zero": true,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -2579,17 +2580,17 @@
     }
    },
    "prediction_result": {
-    "score": 0.5,
-    "direction_hit": false,
+    "score": 1.0,
+    "direction_hit": true,
     "size_hit": true,
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.0,
+    "score": 1.0,
     "accuracy": 1.0,
     "distance": 0.0,
     "demonstration_required": true,
-    "demonstrated": false
+    "demonstrated": true
    },
    "audit": {
     "n_auditors": 4,
@@ -2662,18 +2663,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.0,
-    "classes": 0.5
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
-    "prediction": 0.0,
+    "prediction": 1.0,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 46.666666666666664,
+   "composite": 86.66666666666667,
    "gated": {
-    "behavior_score": 27.27272727272727,
+    "behavior_score": 100.0,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -2681,10 +2682,9 @@
     "fails_on": []
    },
    "flags": [
-    "gap not confirmed (interval includes 0 or judge groups disagree)",
     "not every judge model shows the gap"
    ],
-   "demonstrated": false
+   "demonstrated": true
   },
   {
    "pair_id": "au_sonnet_norm_causation",
@@ -8551,7 +8551,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -8775,7 +8775,9 @@
    }
   },
   "model_level_interval": {
-   "gaps_no_longer_confirmed": [],
+   "gaps_no_longer_confirmed": [
+    "au_sonnet_moral_luck"
+   ],
    "nulls_excluding_zero": 0
   },
   "classics": [
@@ -8959,7 +8961,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     }
    }
@@ -9341,13 +9343,13 @@
    "author_id": "anthropic/claude-sonnet-5-5",
    "tier": "sonnet",
    "n_pairs": 5,
-   "mean_composite": 65.33333333333334,
-   "direction_hits": 3,
+   "mean_composite": 73.33333333333334,
+   "direction_hits": 4,
    "size_hits": 4,
-   "full_hits": 3,
-   "demonstrated": 3,
-   "mean_prediction_score": 0.6,
-   "mean_prediction_score_classes_rule": 0.75,
+   "full_hits": 4,
+   "demonstrated": 4,
+   "mean_prediction_score": 0.8,
+   "mean_prediction_score_classes_rule": 0.85,
    "mean_abs_effect": 1.3599999999999999,
    "mean_confound_severity": 0.8,
    "mean_originality": 1.2,
@@ -9355,7 +9357,7 @@
    "mean_words_changed": 11.2,
    "n_flagged": 4,
    "gated_passes": 2,
-   "gated_mean_behavior_of_passing": 63.63636363636363,
+   "gated_mean_behavior_of_passing": 100.0,
    "n_shared_setting": 3
   }
  ]

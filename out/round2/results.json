@@ -6,7 +6,8 @@
   "none_below": 0.5,
   "large_from": 1.5,
   "ci_level": 0.95,
-  "group_agreement": 0.75,
+  "agreement_rule": "two_thirds",
+  "group_agreement": 0.6666666666666666,
   "weights": {
    "prediction": 0.4,
    "confounds": 0.25,
@@ -502,10 +503,10 @@
     "n_excluded": 0
    },
    "observed": {
-    "direction": "unclear",
+    "direction": "A_higher",
     "size": "small",
     "ci_excludes_zero": true,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -519,17 +520,17 @@
     }
    },
    "prediction_result": {
-    "score": 0.5,
-    "direction_hit": false,
+    "score": 1.0,
+    "direction_hit": true,
     "size_hit": true,
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.0,
+    "score": 1.0,
     "accuracy": 1.0,
     "distance": 0.0,
     "demonstration_required": true,
-    "demonstrated": false
+    "demonstrated": true
    },
    "audit": {
     "n_auditors": 3,
@@ -596,18 +597,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.0,
-    "classes": 0.5
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
-    "prediction": 0.0,
+    "prediction": 1.0,
     "comprehension": 1.0,
     "confounds": 0.6666666666666667,
     "originality": 0.6666666666666666
    },
-   "composite": 45.0,
+   "composite": 85.00000000000001,
    "gated": {
-    "behavior_score": 27.27272727272727,
+    "behavior_score": 100.0,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -615,10 +616,9 @@
     "fails_on": []
    },
    "flags": [
-    "gap not confirmed (interval includes 0 or judge groups disagree)",
     "not every judge model shows the gap"
    ],
-   "demonstrated": false
+   "demonstrated": true
   },
   {
    "pair_id": "r2_haiku_luck_wrongness",
@@ -776,7 +776,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -1045,7 +1045,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -2374,10 +2374,10 @@
     "n_excluded": 0
    },
    "observed": {
-    "direction": "unclear",
+    "direction": "A_higher",
     "size": "small",
     "ci_excludes_zero": true,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -2391,17 +2391,17 @@
     }
    },
    "prediction_result": {
-    "score": 0.5,
-    "direction_hit": false,
+    "score": 1.0,
+    "direction_hit": true,
     "size_hit": true,
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.0,
+    "score": 1.0,
     "accuracy": 1.0,
     "distance": 0.0,
     "demonstration_required": true,
-    "demonstrated": false
+    "demonstrated": true
    },
    "audit": {
     "n_auditors": 3,
@@ -2469,18 +2469,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.0,
-    "classes": 0.5
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
-    "prediction": 0.0,
+    "prediction": 1.0,
     "comprehension": 1.0,
     "confounds": 0.6666666666666667,
     "originality": 0.6666666666666666
    },
-   "composite": 45.0,
+   "composite": 85.00000000000001,
    "gated": {
-    "behavior_score": 27.27272727272727,
+    "behavior_score": 100.0,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -2488,10 +2488,9 @@
     "fails_on": []
    },
    "flags": [
-    "gap not confirmed (interval includes 0 or judge groups disagree)",
     "not every judge model shows the gap"
    ],
-   "demonstrated": false
+   "demonstrated": true
   },
   {
    "pair_id": "cc_inevitable_harm",
@@ -2654,7 +2653,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -4643,7 +4642,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -6388,7 +6387,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -6660,7 +6659,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -7204,7 +7203,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -7476,7 +7475,7 @@
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": false,
+    "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -7700,7 +7699,9 @@
    }
   },
   "model_level_interval": {
-   "gaps_no_longer_confirmed": [],
+   "gaps_no_longer_confirmed": [
+    "r2_haiku_knowledge_causation"
+   ],
    "nulls_excluding_zero": 0
   },
   "classics": [
@@ -7720,7 +7721,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     },
     "reproduced": false
@@ -7824,7 +7825,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     }
    },
@@ -7839,7 +7840,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     }
    },
@@ -7869,7 +7870,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     }
    },
@@ -7884,7 +7885,7 @@
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": false,
+     "groups_agree": true,
      "equivalence_supported": false
     }
    }
@@ -8129,13 +8130,13 @@
    "author_id": "anthropic/claude-haiku-5-5",
    "tier": "haiku",
    "n_pairs": 5,
-   "mean_composite": 46.93333333333334,
-   "direction_hits": 2,
+   "mean_composite": 54.93333333333334,
+   "direction_hits": 3,
    "size_hits": 2,
-   "full_hits": 0,
-   "demonstrated": 2,
-   "mean_prediction_score": 0.24000000000000005,
-   "mean_prediction_score_classes_rule": 0.45,
+   "full_hits": 1,
+   "demonstrated": 3,
+   "mean_prediction_score": 0.44000000000000006,
+   "mean_prediction_score_classes_rule": 0.55,
    "mean_abs_effect": 1.2933333333333334,
    "mean_confound_severity": 1.6,
    "mean_originality": 1.6,
@@ -8143,20 +8144,20 @@
    "mean_words_changed": 15.4,
    "n_flagged": 3,
    "gated_passes": 2,
-   "gated_mean_behavior_of_passing": 27.27272727272727,
+   "gated_mean_behavior_of_passing": 63.63636363636363,
    "n_shared_setting": 1
   },
   {
    "author_id": "anthropic/claude-opus-5-5",
    "tier": "opus",
    "n_pairs": 5,
-   "mean_composite": 66.15555555555555,
-   "direction_hits": 3,
+   "mean_composite": 74.15555555555557,
+   "direction_hits": 4,
    "size_hits": 3,
-   "full_hits": 2,
-   "demonstrated": 3,
-   "mean_prediction_score": 0.5955555555555556,
-   "mean_prediction_score_classes_rule": 0.7,
+   "full_hits": 3,
+   "demonstrated": 4,
+   "mean_prediction_score": 0.7955555555555556,
+   "mean_prediction_score_classes_rule": 0.8,
    "mean_abs_effect": 1.3199999999999998,
    "mean_confound_severity": 1.0,
    "mean_originality": 1.6,
@@ -8164,7 +8165,7 @@
    "mean_words_changed": 12.2,
    "n_flagged": 3,
    "gated_passes": 3,
-   "gated_mean_behavior_of_passing": 75.21885521885521,
+   "gated_mean_behavior_of_passing": 99.46127946127945,
    "n_shared_setting": 2
   },
   {

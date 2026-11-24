@@ -43,6 +43,10 @@ ap.add_argument("--splits", type=int, default=200)
 ap.add_argument("--seed", type=int, default=7)
 ap.add_argument("--group", action="append", default=[], metavar="LABEL=DIR",
                 help="an extra judge group (e.g. another vendor's model) whose bNN.json answers in DIR follow the manifest's batches")
+ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds"], default="three_quarters",
+                help="share of panel groups that must agree on a gap's sign: three_quarters (the pilot's rule, and the "
+                     "default here so the published calibration numbers rebuild unchanged) or two_thirds (the benchmark's "
+                     "rule from 24 November 2026: 2 of 3 groups, 3 of 4)")
 ap.add_argument("--panel", help="comma-separated groups that form the panel (default: the manifest's four Claude models)")
 args = ap.parse_args()
 rng = random.Random(args.seed)
@@ -54,6 +58,14 @@ for m in MODELS:
         raise SystemExit("panel group %s has no answers (add --group %s=DIR)" % (m, m))
 OTR_THRESHOLD = 0.5 * 4 / 6          # the benchmark's 0.5 on a 1-7 scale, as a share of the scale's range, on 1-5
 MOCA_THRESHOLD = 0.25                # yes-share gap treated as "confirmed size" for MoCa (no benchmark analogue)
+AGREE_SHARE = {"three_quarters": 0.75, "two_thirds": 2 / 3}[args.agreement_rule]
+
+
+def agrees(same, n):
+    """Enough panel groups share the sign: the share, rounded up to whole groups, as in score.py."""
+    return same >= math.ceil(AGREE_SHARE * n - 1e-9)
+
+
 HUMAN_CLEAR = 0.30                   # MoCa: human yes-share gap counted as clear for direction agreement
 FACTORS = [("means_minus_side_effect", "cs"), ("evitable_minus_inevitable", "ev"), ("action_minus_omission", "ac")]
 QUESTIONS = ["permissibility", "intention"]
@@ -260,7 +272,7 @@ def panel_verdict(key):
     d = pg[key]
     lo, hi = pci[key]
     same = sum(1 for v in pg_per[key].values() if v * d > 0)
-    if abs(d) >= OTR_THRESHOLD and (lo > 0 or hi < 0) and same / len(pg_per[key]) >= 0.75:
+    if abs(d) >= OTR_THRESHOLD and (lo > 0 or hi < 0) and agrees(same, len(pg_per[key])):
         return "+" if d > 0 else "-"
     return "0"
 
@@ -346,12 +358,12 @@ def rule_outcomes(verdict_fn):
     return dict(c)
 
 
-def threshold_rule(t, ci=True, agree=0.75):
+def threshold_rule(t, ci=True, agree=None):
     def v(k):
         d = pg[k]
         lo, hi = pci[k]
         same = sum(1 for x in pg_per[k].values() if x * d > 0)
-        ok = abs(d) >= t and (not ci or lo > 0 or hi < 0) and same / len(pg_per[k]) >= agree
+        ok = abs(d) >= t and (not ci or lo > 0 or hi < 0) and (agrees(same, len(pg_per[k])) if agree is None else same / len(pg_per[k]) >= agree)
         return ("+" if d > 0 else "-") if ok else "0"
     return v
 
@@ -366,7 +378,7 @@ def human_noise_rule(sd, t):
         half = 1.96 * sd * math.sqrt(1 / na + 1 / nb)
         d = pg[k]
         same = sum(1 for x in pg_per[k].values() if x * d > 0)
-        return ("+" if d > 0 else "-") if abs(d) >= t and abs(d) > half and same / len(pg_per[k]) >= 0.75 else "0"
+        return ("+" if d > 0 else "-") if abs(d) >= t and abs(d) > half and agrees(same, len(pg_per[k])) else "0"
     return v
 
 
@@ -539,7 +551,7 @@ for a, b in pairs:
     boots = sorted(moca_pair_gap(a, b, rng)[0] for _ in range(args.boot))
     lo, hi = pct(boots, 0.025), pct(boots, 0.975)
     same = sum(1 for v in per.values() if g and v * g > 0)
-    pv = ("+" if g > 0 else "-") if abs(g) >= MOCA_THRESHOLD and (lo > 0 or hi < 0) and per and same / len(per) >= 0.75 else "0"
+    pv = ("+" if g > 0 else "-") if abs(g) >= MOCA_THRESHOLD and (lo > 0 or hi < 0) and per and agrees(same, len(per)) else "0"
     hv = "0" if abs(hgap) < 1.96 * se or se == 0 and hgap == 0 else ("+" if hgap > 0 else "-")
     if se == 0 and hgap != 0:
         hv = "+" if hgap > 0 else "-"
@@ -695,7 +707,8 @@ for m in MODELS:
 
 out = {"panel": MODELS, "per_group_corrected": per_group, "excluded_batches": excluded, "otr": otr, "moca": moca, "recognition": recog,
        "settings": {"boot": args.boot, "splits": args.splits, "seed": args.seed, "otr_threshold": OTR_THRESHOLD,
-                    "moca_threshold": MOCA_THRESHOLD, "moca_human_clear": HUMAN_CLEAR}}
+                    "moca_threshold": MOCA_THRESHOLD, "moca_human_clear": HUMAN_CLEAR,
+                    **({"agreement_rule": args.agreement_rule} if args.agreement_rule != "three_quarters" else {})}}
 
 # ------------------------------------------------------------------ print
 print("OffTheRails: %d human ratings from %d workers (%d match their batch file); %d panel ratings" % (

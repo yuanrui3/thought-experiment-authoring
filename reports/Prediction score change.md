@@ -34,7 +34,7 @@ The ranges are the pilot's own bins on the 1–7 scale: no difference is under 0
 | haiku | 0.65 → 0.47 | 63.7 → 56.6 |
 
 The order is unchanged under every panel:
-- Sonnet first under the Claude panel and the six-model average.
+- Sonnet first under the Claude panel and the six-model average. Since the agreement-rule change of 24 November (`reports/Agreement rule change.md`), Fable is first under the six-model average too.
 - Fable first under Gemini, the two-vendor scoring and the persona panel.
 - Haiku last everywhere.
 

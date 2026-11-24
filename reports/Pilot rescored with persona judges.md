@@ -13,6 +13,8 @@
 >
 > Sonnet falls further than before. Its moral-luck pair now scores nothing under the persona panel, because its gap is no longer confirmed (under the old rule it kept half credit). *Current numbers in `out/persona_comparison_summary.json`.*
 
+> **Update, 24 November: the agreement rule changed** (`reports/Agreement rule change.md`). A gap now needs two of three judge models to agree instead of all three; with four models nothing changes. On the persona panel, Sonnet's moral-luck pair is now confirmed and Sonnet rises from 65.3 to 73.3. Fable stays first, narrowly (74.7). The numbers in this report's body are under the old rule; `--agreement-rule three_quarters` rebuilds them.
+
 ## Bottom line
 
 On the public human data, giving each judge a participant persona made the model panel behave more like people (see `reports/Fixing the panel's overconfidence.md`). Rerunning the pilot that way gives this:

@@ -273,6 +273,13 @@ def pair_card(p, R, rank_label, note):
     return "\n".join(o)
 
 
+def agreement_text(rules):
+    """How many judge groups must agree on a gap's sign, in words, for the rule in force."""
+    if rules.get("agreement_rule", "three_quarters") == "two_thirds":
+        return "at least two-thirds of a panel\'s models agree (2 of 3, 3 of 4)"
+    return "at least 75% of a panel\'s models agree (3 of 3, 3 of 4)"
+
+
 def verdict_text(v):
     d, z = v.split("/")
     return obs_text({"direction": d, "size": z})
@@ -340,7 +347,7 @@ def vendor_section(R, root, P, fac):
             sgn(float(r["gemini_effect"])), esc(r["gemini_ci"]), esc(verdict_text(r["gemini_verdict"])),
             esc(verdict_text(r["vendor_groups_verdict"])),
             r["claude_prediction_score"], r["gemini_prediction_score"], r["vendor_groups_prediction_score"]))
-    S.append('</tbody></table></div><p class="note">Effects are mean rating of version A minus version B on the 1–7 scale. A verdict needs a gap of at least %.1f points whose 95%% interval excludes zero and on which at least 75%% of a panel\'s models agree; otherwise it is “no difference”, or “not confirmed” if the models split. The full table is <code>out/vendor_comparison.csv</code>.</p>' % R["rules"]["none_below"])
+    S.append('</tbody></table></div><p class="note">Effects are mean rating of version A minus version B on the 1–7 scale. A verdict needs a gap of at least %.1f points whose 95%% interval excludes zero and on which %s; otherwise it is “no difference”, or “not confirmed” if the models split. The full table is <code>out/vendor_comparison.csv</code>.</p>' % (R["rules"]["none_below"], agreement_text(R["rules"])))
     return S, summ
 
 
@@ -396,7 +403,9 @@ def persona_section(R, root, P, fac):
     S = ['<section id="personas"><h2>Judges answering as participants</h2>']
     S.append('<p class="prose">On public data with human ratings, model judges vary far less than people do, and giving each judge a described participant to answer as (an age, a job, politics, religiosity and a habit in using rating scales) made a panel behave more like people (<code>reports/Fixing the panel\'s overconfidence.md</code>). Here the pilot is rejudged that way: the same batches, versions and prompt as the panel above, each judge with its own persona. It is compared with the panel above restricted to the same %s judge models (%s); %s. A persona panel is still not people.</p>' % (
         {3: "three", 4: "four"}.get(n_judges, str(n_judges)), esc(", ".join(judges)),
-        "Fable's persona judges have not run yet, so with three judge groups a gap counts only if all three agree" if "fable" not in judges else "all four judge models are included"))
+        ("Fable's persona judges have not run yet, so the panel has three judge groups and a gap counts only if %s agree"
+         % ("two of them" if R["rules"].get("agreement_rule") == "two_thirds" else "all three")) if "fable" not in judges
+        else "all four judge models are included"))
     sp_o, sp_p = summ["spread_within_model"]["original"], summ["spread_within_model"]["persona"]
     widest = max(sp_p, key=lambda m: sp_p[m] - sp_o.get(m, 0))
     S.append('<div class="tiles">')
