@@ -1,0 +1,54 @@
+{
+ "points:opus": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus.txt"
+   ]
+  ],
+  "usable": false
+ },
+ "points:haiku": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku.txt"
+   ],
+   [
+    "Write",
+    "haiku.json"
+   ],
+   [
+    "mcp__claude-code-remote__read_documentation",
+    ""
+   ],
+   [
+    "mcp__claude-code-remote__read_documentation",
+    ""
+   ]
+  ],
+  "usable": true
+ },
+ "points:sonnet": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet.txt"
+   ],
+   [
+    "Write",
+    "sonnet.json"
+   ]
+  ],
+  "usable": true
+ }
+}
