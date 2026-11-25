@@ -1,0 +1,67 @@
+{
+ "definition": "pipeline/shared_pool.py docstring",
+ "runs": "round2b,round2b-p2",
+ "manifest": "pipeline/round2/point_manifest.json",
+ "n_items": 37,
+ "predictors": {
+  "haiku": {
+   "shared_pool_score": 62.1,
+   "mae_others": 0.569,
+   "n_others": 28,
+   "mae_all": 0.577,
+   "mae_own": 0.6,
+   "n_own": 9,
+   "correlation_all": 0.885,
+   "mean_signed_error_all": -0.148
+  },
+  "opus": {
+   "shared_pool_score": 78.3,
+   "mae_others": 0.326,
+   "n_others": 28,
+   "mae_all": 0.342,
+   "mae_own": 0.393,
+   "n_own": 9,
+   "correlation_all": 0.928,
+   "mean_signed_error_all": -0.223
+  },
+  "sonnet": {
+   "shared_pool_score": 62.3,
+   "mae_others": 0.644,
+   "n_others": 28,
+   "mae_all": 0.614,
+   "mae_own": 0.522,
+   "n_own": 9,
+   "correlation_all": 0.811,
+   "mean_signed_error_all": -0.434
+  }
+ },
+ "judge_level_resampling": {
+  "n": 2000,
+  "score_sd": {
+   "haiku": 2.92,
+   "opus": 2.61,
+   "sonnet": 2.65
+  },
+  "order_by_shared_pool_score": {
+   "opus > haiku > sonnet": 0.579,
+   "opus > sonnet > haiku": 0.421
+  }
+ },
+ "paired_comparisons": {
+  "haiku vs opus": {
+   "items_written_by_neither": 19,
+   "mae_difference": 0.232,
+   "sign_flip_p": 0.0387
+  },
+  "haiku vs sonnet": {
+   "items_written_by_neither": 19,
+   "mae_difference": -0.212,
+   "sign_flip_p": 0.2617
+  },
+  "opus vs sonnet": {
+   "items_written_by_neither": 19,
+   "mae_difference": -0.163,
+   "sign_flip_p": 0.0515
+  }
+ }
+}
