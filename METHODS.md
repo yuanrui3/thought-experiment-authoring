@@ -36,6 +36,13 @@
     - A null control is confirmed in round 2b's panel 2 under every rule, so this criterion couldn't separate them. I should have written it relative to the current rule.
 
     The two-thirds rule stays. The test also corrects item 14: of the ten gaps confirmed with one model dissenting, the dissenter was at or near the top of the scale in five. In the other five it sat mid-scale and saw no gap. Details: `reports/Ceiling abstention test.md`.
+19. **On 26 November I tested weighting judge models by how well they track people, and rejected it.** Each model's weight was max(0, its average raw correlation with the human gaps on OffTheRails and MoCa). A gap then needs the models agreeing in sign to carry two-thirds of the weight. The criteria were committed first, and it failed two of three:
+    - Out of sample (weights from one dataset scoring the other), 45% of the persona panel's confirmed gaps are backed by people. That's better than two-thirds (39%) but short of the 50% bar. It does confirm the most real human gaps: 14.
+    - Stability is as poor as the old rule: 6 of 27 round-2b scores change between panels, and 5.7 are expected in a rerun.
+    - The reason is that Haiku, the usual dissenter, tracks people as well as the others, so it gets 40% of the weight and its veto returns.
+    - In sample the rule looks better (57%), but that's the weights fitting their own data.
+
+    Three replacement rules have now been tested. None gives both stable verdicts and verdicts people back, so the two-thirds rule stays. Details: `reports/Judge weighting test.md`.
 
 ## What the checks showed
 

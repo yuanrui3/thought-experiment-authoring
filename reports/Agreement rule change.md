@@ -82,3 +82,8 @@ The ceiling problem has a narrower fix that may not cost as much validity: leave
 - It costs nearly as much validity as the two-thirds rule (41% of confirmed gaps backed by people), because on MoCa's yes/no questions most models sit at a bound and abstain.
 - It doesn't fix the flips.
 - The test also showed that the vetoes on authored pairs mostly came from a model that saw no gap in the middle of the scale, not from one at the ceiling. The sentence above about "Haiku at the top of the scale" holds for the two classic controls only.
+
+*Update, 26 November: weighting models by how well they track people was also tested and rejected (`reports/Judge weighting test.md`).*
+- Out of sample, 45% of the persona panel's confirmed gaps are backed by people.
+- Stability is as poor as the pilot rule's, because Haiku, the usual dissenter, tracks people as well as the others and keeps its veto.
+- The two-thirds rule stays.

@@ -1,0 +1,1331 @@
+{
+ "rule": "weighted",
+ "definition": "pipeline/test_judge_weights.py docstring",
+ "weights": {
+  "Claude: haiku, sonnet, opus, with personas": {
+   "r_otr_moca": {
+    "haiku-persona": [
+     0.39,
+     0.344
+    ],
+    "sonnet-persona": [
+     0.401,
+     -0.005
+    ],
+    "opus-persona": [
+     0.451,
+     0.245
+    ]
+   },
+   "both": {
+    "haiku-persona": 0.367,
+    "sonnet-persona": 0.198,
+    "opus-persona": 0.348
+   },
+   "otr": {
+    "haiku-persona": 0.39,
+    "sonnet-persona": 0.401,
+    "opus-persona": 0.451
+   },
+   "moca": {
+    "haiku-persona": 0.344,
+    "sonnet-persona": 0.0,
+    "opus-persona": 0.245
+   }
+  },
+  "Claude: haiku, sonnet, opus": {
+   "r_otr_moca": {
+    "haiku": [
+     0.392,
+     0.157
+    ],
+    "sonnet": [
+     0.504,
+     -0.026
+    ],
+    "opus": [
+     0.393,
+     0.263
+    ]
+   },
+   "both": {
+    "haiku": 0.2745,
+    "sonnet": 0.239,
+    "opus": 0.328
+   },
+   "otr": {
+    "haiku": 0.392,
+    "sonnet": 0.504,
+    "opus": 0.393
+   },
+   "moca": {
+    "haiku": 0.157,
+    "sonnet": 0.0,
+    "opus": 0.263
+   }
+  },
+  "Claude: haiku, sonnet, opus, fable": {
+   "r_otr_moca": {
+    "haiku": [
+     0.392,
+     0.157
+    ],
+    "sonnet": [
+     0.504,
+     -0.026
+    ],
+    "opus": [
+     0.393,
+     0.263
+    ],
+    "fable": [
+     0.574,
+     0.3
+    ]
+   },
+   "both": {
+    "haiku": 0.2745,
+    "sonnet": 0.239,
+    "opus": 0.328,
+    "fable": 0.437
+   },
+   "otr": {
+    "haiku": 0.392,
+    "sonnet": 0.504,
+    "opus": 0.393,
+    "fable": 0.574
+   },
+   "moca": {
+    "haiku": 0.157,
+    "sonnet": 0.0,
+    "opus": 0.263,
+    "fable": 0.3
+   }
+  },
+  "score.py, persona": {
+   "anthropic/claude-haiku-5-5": 0.367,
+   "anthropic/claude-sonnet-5-5": 0.198,
+   "anthropic/claude-opus-5-5": 0.348
+  },
+  "score.py, plain4": {
+   "anthropic/claude-haiku-5-5": 0.2745,
+   "anthropic/claude-sonnet-5-5": 0.239,
+   "anthropic/claude-opus-5-5": 0.328,
+   "anthropic/claude-fable-5-2": 0.437
+  }
+ },
+ "calibration": {
+  "Claude: haiku, sonnet, opus, with personas": {
+   "three_quarters": {
+    "confirmed": 22,
+    "hits": 12,
+    "false_positives": 10,
+    "sign_errors": 0,
+    "share_backed_by_people": 0.545,
+    "otr": {
+     "confirmed": 15,
+     "hits": 8,
+     "false_positives": 7,
+     "sign_errors": 0
+    },
+    "moca": {
+     "confirmed": 7,
+     "hits": 4,
+     "false_positives": 3,
+     "sign_errors": 0
+    }
+   },
+   "two_thirds": {
+    "confirmed": 33,
+    "hits": 13,
+    "false_positives": 20,
+    "sign_errors": 0,
+    "share_backed_by_people": 0.394,
+    "otr": {
+     "confirmed": 18,
+     "hits": 8,
+     "false_positives": 10,
+     "sign_errors": 0
+    },
+    "moca": {
+     "confirmed": 15,
+     "hits": 5,
+     "false_positives": 10,
+     "sign_errors": 0
+    }
+   },
+   "weighted, out of sample": {
+    "confirmed": 31,
+    "hits": 14,
+    "false_positives": 17,
+    "sign_errors": 0,
+    "share_backed_by_people": 0.452,
+    "otr": {
+     "confirmed": 17,
+     "hits": 8,
+     "false_positives": 9,
+     "sign_errors": 0
+    },
+    "moca": {
+     "confirmed": 14,
+     "hits": 6,
+     "false_positives": 8,
+     "sign_errors": 0
+    }
+   },
+   "weighted, in sample": {
+    "confirmed": 23,
+    "hits": 13,
+    "false_positives": 10,
+    "sign_errors": 0,
+    "share_backed_by_people": 0.565,
+    "otr": {
+     "confirmed": 16,
+     "hits": 8,
+     "false_positives": 8,
+     "sign_errors": 0
+    },
+    "moca": {
+     "confirmed": 7,
+     "hits": 5,
+     "false_positives": 2,
+     "sign_errors": 0
+    }
+   }
+  },
+  "Claude: haiku, sonnet, opus": {
+   "three_quarters": {
+    "confirmed": 27,
+    "hits": 10,
+    "false_positives": 16,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.37,
+    "otr": {
+     "confirmed": 21,
+     "hits": 8,
+     "false_positives": 12,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 6,
+     "hits": 2,
+     "false_positives": 4,
+     "sign_errors": 0
+    }
+   },
+   "two_thirds": {
+    "confirmed": 34,
+    "hits": 13,
+    "false_positives": 20,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.382,
+    "otr": {
+     "confirmed": 22,
+     "hits": 9,
+     "false_positives": 12,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 12,
+     "hits": 4,
+     "false_positives": 8,
+     "sign_errors": 0
+    }
+   },
+   "weighted, out of sample": {
+    "confirmed": 33,
+    "hits": 11,
+    "false_positives": 21,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.333,
+    "otr": {
+     "confirmed": 21,
+     "hits": 7,
+     "false_positives": 13,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 12,
+     "hits": 4,
+     "false_positives": 8,
+     "sign_errors": 0
+    }
+   },
+   "weighted, in sample": {
+    "confirmed": 36,
+    "hits": 12,
+    "false_positives": 23,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.333,
+    "otr": {
+     "confirmed": 23,
+     "hits": 8,
+     "false_positives": 14,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 13,
+     "hits": 4,
+     "false_positives": 9,
+     "sign_errors": 0
+    }
+   }
+  },
+  "Claude: haiku, sonnet, opus, fable": {
+   "three_quarters": {
+    "confirmed": 38,
+    "hits": 12,
+    "false_positives": 25,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.316,
+    "otr": {
+     "confirmed": 24,
+     "hits": 8,
+     "false_positives": 15,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 14,
+     "hits": 4,
+     "false_positives": 10,
+     "sign_errors": 0
+    }
+   },
+   "two_thirds": {
+    "confirmed": 38,
+    "hits": 12,
+    "false_positives": 25,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.316,
+    "otr": {
+     "confirmed": 24,
+     "hits": 8,
+     "false_positives": 15,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 14,
+     "hits": 4,
+     "false_positives": 10,
+     "sign_errors": 0
+    }
+   },
+   "weighted, out of sample": {
+    "confirmed": 38,
+    "hits": 13,
+    "false_positives": 24,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.342,
+    "otr": {
+     "confirmed": 24,
+     "hits": 9,
+     "false_positives": 14,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 14,
+     "hits": 4,
+     "false_positives": 10,
+     "sign_errors": 0
+    }
+   },
+   "weighted, in sample": {
+    "confirmed": 37,
+    "hits": 12,
+    "false_positives": 24,
+    "sign_errors": 1,
+    "share_backed_by_people": 0.324,
+    "otr": {
+     "confirmed": 23,
+     "hits": 8,
+     "false_positives": 14,
+     "sign_errors": 1
+    },
+    "moca": {
+     "confirmed": 14,
+     "hits": 4,
+     "false_positives": 10,
+     "sign_errors": 0
+    }
+   }
+  }
+ },
+ "panels": {
+  "pilot, Claude panel (4 judge models)": {
+   "published_folder": "out",
+   "weights": "plain4",
+   "changed_vs_current_rule": [
+    {
+     "pair": "au_haiku_moral_luck",
+     "type": "authored",
+     "effect": [
+      -0.95,
+      -0.93
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.63,
+      0.62
+     ]
+    },
+    {
+     "pair": "au_haiku_norm_causation",
+     "type": "authored",
+     "effect": [
+      1.9,
+      1.86
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.73,
+      0.76
+     ]
+    }
+   ],
+   "classic_controls_reproduced": [
+    5,
+    5
+   ],
+   "nulls_confirmed": [
+    0,
+    0
+   ],
+   "authors": {
+    "fable": {
+     "prediction": [
+      0.8,
+      0.8
+     ],
+     "composite": [
+      76.7,
+      76.7
+     ]
+    },
+    "haiku": {
+     "prediction": [
+      0.472,
+      0.476
+     ],
+     "composite": [
+      56.6,
+      56.7
+     ]
+    },
+    "opus": {
+     "prediction": [
+      0.8,
+      0.8
+     ],
+     "composite": [
+      72.6,
+      72.6
+     ]
+    },
+    "sonnet": {
+     "prediction": [
+      1.0,
+      1.0
+     ],
+     "composite": [
+      81.3,
+      81.3
+     ]
+    }
+   }
+  },
+  "round 2": {
+   "published_folder": "out/round2",
+   "weights": "persona",
+   "changed_vs_current_rule": [
+    {
+     "pair": "r2_haiku_inevitable_harm",
+     "type": "authored",
+     "effect": [
+      2.67,
+      2.68
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.22,
+      0.21
+     ]
+    },
+    {
+     "pair": "r2_haiku_knowledge_causation",
+     "type": "authored",
+     "effect": [
+      0.67,
+      0.46
+     ],
+     "verdict": [
+      "A_higher",
+      "none"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness",
+     "type": "authored",
+     "effect": [
+      -0.47,
+      -0.55
+     ],
+     "verdict": [
+      "none",
+      "B_higher"
+     ],
+     "score": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "pair": "r2_sonnet_knowledge_causation",
+     "type": "authored",
+     "effect": [
+      1.87,
+      1.81
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.76,
+      0.79
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation",
+     "type": "authored",
+     "effect": [
+      1.53,
+      1.56
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.98,
+      0.96
+     ]
+    },
+    {
+     "pair": "r2_opus_luck_wrongness",
+     "type": "authored",
+     "effect": [
+      1.4,
+      1.66
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      1.0,
+      0.89
+     ]
+    },
+    {
+     "pair": "au_haiku_norm_causation",
+     "type": "authored",
+     "effect": [
+      1.53,
+      1.33
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.98,
+      1.0
+     ]
+    },
+    {
+     "pair": "nc_weather",
+     "type": "control_null",
+     "effect": [
+      0.47,
+      0.6
+     ],
+     "verdict": [
+      "none",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.94
+     ]
+    },
+    {
+     "pair": "nc_paraphrase",
+     "type": "control_null",
+     "effect": [
+      0.4,
+      0.51
+     ],
+     "verdict": [
+      "none",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      1.0
+     ]
+    }
+   ],
+   "classic_controls_reproduced": [
+    4,
+    4
+   ],
+   "nulls_confirmed": [
+    0,
+    0
+   ],
+   "authors": {
+    "fable": {
+     "prediction": [
+      1.0,
+      1.0
+     ],
+     "composite": [
+      82.5,
+      82.5
+     ]
+    },
+    "haiku": {
+     "prediction": [
+      0.44,
+      0.442
+     ],
+     "composite": [
+      54.9,
+      55.0
+     ]
+    },
+    "opus": {
+     "prediction": [
+      0.796,
+      0.77
+     ],
+     "composite": [
+      74.2,
+      73.1
+     ]
+    },
+    "sonnet": {
+     "prediction": [
+      0.552,
+      0.558
+     ],
+     "composite": [
+      60.0,
+      60.3
+     ]
+    }
+   }
+  },
+  "round 2b, panel 1": {
+   "published_folder": "out/round2b",
+   "weights": "persona",
+   "changed_vs_current_rule": [
+    {
+     "pair": "r2_haiku_inevitable_harm",
+     "type": "authored",
+     "effect": [
+      2.13,
+      2.39
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.58,
+      0.41
+     ]
+    },
+    {
+     "pair": "r2_haiku_inevitable_harm_2",
+     "type": "authored",
+     "effect": [
+      1.67,
+      1.59
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.89,
+      0.94
+     ]
+    },
+    {
+     "pair": "r2_haiku_inevitable_harm_3",
+     "type": "authored",
+     "effect": [
+      1.27,
+      1.02
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_2",
+     "type": "authored",
+     "effect": [
+      -0.73,
+      -0.79
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.49,
+      0.53
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_3",
+     "type": "authored",
+     "effect": [
+      -1.47,
+      -1.44
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.98,
+      0.96
+     ]
+    },
+    {
+     "pair": "r2_sonnet_knowledge_causation_3",
+     "type": "authored",
+     "effect": [
+      1.6,
+      1.71
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.93,
+      0.86
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation_2",
+     "type": "authored",
+     "effect": [
+      1.73,
+      1.7
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.84,
+      0.86
+     ]
+    },
+    {
+     "pair": "cc_doing_allowing",
+     "type": "control_classic",
+     "effect": [
+      1.07,
+      1.05
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    }
+   ],
+   "classic_controls_reproduced": [
+    4,
+    3
+   ],
+   "nulls_confirmed": [
+    0,
+    0
+   ],
+   "authors": {
+    "haiku": {
+     "prediction": [
+      0.771,
+      0.649
+     ],
+     "composite": [
+      69.9,
+      65.0
+     ]
+    },
+    "opus": {
+     "prediction": [
+      0.982,
+      0.984
+     ],
+     "composite": [
+      83.4,
+      83.5
+     ]
+    },
+    "sonnet": {
+     "prediction": [
+      0.881,
+      0.873
+     ],
+     "composite": [
+      76.5,
+      76.2
+     ]
+    }
+   }
+  },
+  "round 2b, panel 2": {
+   "published_folder": "out/round2b_p2",
+   "weights": "persona",
+   "changed_vs_current_rule": [
+    {
+     "pair": "r2_haiku_inevitable_harm",
+     "type": "authored",
+     "effect": [
+      2.07,
+      2.1
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.62,
+      0.6
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness",
+     "type": "authored",
+     "effect": [
+      -0.47,
+      -0.57
+     ],
+     "verdict": [
+      "none",
+      "B_higher"
+     ],
+     "score": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "pair": "r2_haiku_inevitable_harm_2",
+     "type": "authored",
+     "effect": [
+      1.07,
+      0.82
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "r2_haiku_inevitable_harm_3",
+     "type": "authored",
+     "effect": [
+      1.53,
+      1.35
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.98,
+      1.0
+     ]
+    },
+    {
+     "pair": "r2_haiku_knowledge_causation_2",
+     "type": "authored",
+     "effect": [
+      1.73,
+      1.78
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.84,
+      0.81
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_2",
+     "type": "authored",
+     "effect": [
+      -0.8,
+      -0.94
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.53,
+      0.62
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_3",
+     "type": "authored",
+     "effect": [
+      -1.33,
+      -1.3
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.89,
+      0.87
+     ]
+    },
+    {
+     "pair": "r2_sonnet_knowledge_causation_3",
+     "type": "authored",
+     "effect": [
+      1.87,
+      1.94
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.76,
+      0.71
+     ]
+    },
+    {
+     "pair": "r2_opus_luck_wrongness",
+     "type": "authored",
+     "effect": [
+      1.53,
+      1.66
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.98,
+      0.9
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation_2",
+     "type": "authored",
+     "effect": [
+      1.6,
+      1.55
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.93,
+      0.97
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation_3",
+     "type": "authored",
+     "effect": [
+      1.87,
+      1.95
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.76,
+      0.7
+     ]
+    },
+    {
+     "pair": "r2_opus_luck_wrongness_3",
+     "type": "authored",
+     "effect": [
+      0.73,
+      0.64
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "cc_knowledge_causation",
+     "type": "control_classic",
+     "effect": [
+      1.6,
+      1.7
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.93,
+      0.87
+     ]
+    },
+    {
+     "pair": "cc_doing_allowing",
+     "type": "control_classic",
+     "effect": [
+      0.93,
+      0.8
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "nc_color",
+     "type": "control_null",
+     "effect": [
+      0.4,
+      0.56
+     ],
+     "verdict": [
+      "none",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.96
+     ]
+    },
+    {
+     "pair": "nc_weather",
+     "type": "control_null",
+     "effect": [
+      0.6,
+      0.67
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.93,
+      0.88
+     ]
+    }
+   ],
+   "classic_controls_reproduced": [
+    3,
+    2
+   ],
+   "nulls_confirmed": [
+    1,
+    1
+   ],
+   "authors": {
+    "haiku": {
+     "prediction": [
+      0.762,
+      0.767
+     ],
+     "composite": [
+      69.7,
+      69.8
+     ]
+    },
+    "opus": {
+     "prediction": [
+      0.951,
+      0.829
+     ],
+     "composite": [
+      82.1,
+      77.2
+     ]
+    },
+    "sonnet": {
+     "prediction": [
+      0.973,
+      0.968
+     ],
+     "composite": [
+      80.3,
+      80.1
+     ]
+    }
+   }
+  },
+  "round 2b, both panels pooled": {
+   "published_folder": "out/round2b_pooled",
+   "weights": "persona",
+   "changed_vs_current_rule": [
+    {
+     "pair": "r2_haiku_inevitable_harm",
+     "type": "authored",
+     "effect": [
+      2.1,
+      2.25
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.6,
+      0.5
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_2",
+     "type": "authored",
+     "effect": [
+      -0.77,
+      -0.86
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.51,
+      0.58
+     ]
+    },
+    {
+     "pair": "r2_haiku_luck_wrongness_3",
+     "type": "authored",
+     "effect": [
+      -1.4,
+      -1.37
+     ],
+     "verdict": [
+      "B_higher",
+      "B_higher"
+     ],
+     "score": [
+      0.93,
+      0.91
+     ]
+    },
+    {
+     "pair": "r2_sonnet_knowledge_causation_3",
+     "type": "authored",
+     "effect": [
+      1.73,
+      1.82
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.84,
+      0.78
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation_2",
+     "type": "authored",
+     "effect": [
+      1.67,
+      1.62
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.89,
+      0.92
+     ]
+    },
+    {
+     "pair": "r2_opus_knowledge_causation_3",
+     "type": "authored",
+     "effect": [
+      1.63,
+      1.58
+     ],
+     "verdict": [
+      "A_higher",
+      "A_higher"
+     ],
+     "score": [
+      0.91,
+      0.95
+     ]
+    },
+    {
+     "pair": "cc_luck_wrongness",
+     "type": "control_classic",
+     "effect": [
+      0.7,
+      0.59
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "pair": "cc_doing_allowing",
+     "type": "control_classic",
+     "effect": [
+      1.0,
+      0.93
+     ],
+     "verdict": [
+      "A_higher",
+      "unclear"
+     ],
+     "score": [
+      1.0,
+      0.0
+     ]
+    }
+   ],
+   "classic_controls_reproduced": [
+    4,
+    2
+   ],
+   "nulls_confirmed": [
+    0,
+    0
+   ],
+   "authors": {
+    "haiku": {
+     "prediction": [
+      0.782,
+      0.777
+     ],
+     "composite": [
+      70.4,
+      70.2
+     ]
+    },
+    "opus": {
+     "prediction": [
+      0.978,
+      0.986
+     ],
+     "composite": [
+      83.2,
+      83.5
+     ]
+    },
+    "sonnet": {
+     "prediction": [
+      0.982,
+      0.976
+     ],
+     "composite": [
+      80.6,
+      80.4
+     ]
+    }
+   }
+  }
+ },
+ "stability": {
+  "authored_pairs": 27,
+  "score_changes_over_0.25_panel1_vs_panel2": {
+   "three_quarters (published)": 5,
+   "two_thirds (current)": 1,
+   "weighted": 6
+  },
+  "weighted_pairs_that_change": [
+   "r2_haiku_luck_wrongness",
+   "r2_haiku_inevitable_harm_2",
+   "r2_haiku_inevitable_harm_3",
+   "r2_sonnet_luck_wrongness",
+   "r2_opus_knowledge_causation_3",
+   "r2_opus_luck_wrongness_3"
+  ],
+  "expected_score_changes_in_a_rerun_of_panel1": {
+   "two_thirds": 1.7,
+   "weighted": 5.7
+  }
+ },
+ "criteria": {
+  "C1_validity_out_of_sample": {
+   "pass": false,
+   "share_backed_by_people": 0.452,
+   "hits": 14,
+   "needs": "share >= 0.50 and hits >= 12"
+  },
+  "C2_stability": {
+   "pass": false,
+   "score_changes": 6,
+   "needs": "<= 2 of 27"
+  },
+  "C3_sanity": {
+   "pass": true,
+   "needs": "no panel confirms more nulls than under the current rule"
+  },
+  "adopt": false
+ }
+}
