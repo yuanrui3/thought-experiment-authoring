@@ -1,0 +1,70 @@
+{
+ "run_id": "round2",
+ "auditors": {
+  "haiku": {
+   "Q01": "r2_fable_knowledge_causation_2",
+   "Q02": "r2_fable_inevitable_harm_2",
+   "Q03": "r2_fable_luck_wrongness_3",
+   "Q04": "r2_fable_knowledge_causation",
+   "Q05": "r2_fable_luck_wrongness_2",
+   "Q06": "r2_fable_luck_wrongness",
+   "Q07": "r2_fable_knowledge_causation_3",
+   "Q08": "r2_fable_inevitable_harm_3",
+   "Q09": "r2_fable_inevitable_harm"
+  },
+  "sonnet": {
+   "Q01": "r2_fable_inevitable_harm_3",
+   "Q02": "r2_fable_luck_wrongness_3",
+   "Q03": "r2_fable_knowledge_causation_2",
+   "Q04": "r2_fable_luck_wrongness_2",
+   "Q05": "r2_fable_knowledge_causation",
+   "Q06": "r2_fable_inevitable_harm",
+   "Q07": "r2_fable_luck_wrongness",
+   "Q08": "r2_fable_inevitable_harm_2",
+   "Q09": "r2_fable_knowledge_causation_3"
+  },
+  "opus": {
+   "Q01": "r2_fable_knowledge_causation_3",
+   "Q02": "r2_fable_luck_wrongness_2",
+   "Q03": "r2_fable_luck_wrongness",
+   "Q04": "r2_fable_knowledge_causation",
+   "Q05": "r2_fable_luck_wrongness_3",
+   "Q06": "r2_fable_knowledge_causation_2",
+   "Q07": "r2_fable_inevitable_harm_3",
+   "Q08": "r2_fable_inevitable_harm",
+   "Q09": "r2_fable_inevitable_harm_2"
+  },
+  "fable": {
+   "Q01": "r2_sonnet_inevitable_harm",
+   "Q02": "r2_haiku_inevitable_harm",
+   "Q03": "r2_sonnet_luck_wrongness",
+   "Q04": "r2_opus_inevitable_harm_3",
+   "Q05": "r2_sonnet_inevitable_harm_3",
+   "Q06": "r2_haiku_knowledge_causation_2",
+   "Q07": "r2_haiku_luck_wrongness_2",
+   "Q08": "r2_sonnet_knowledge_causation",
+   "Q09": "r2_haiku_inevitable_harm_3",
+   "Q10": "r2_haiku_knowledge_causation_3",
+   "Q11": "r2_haiku_luck_wrongness",
+   "Q12": "r2_opus_knowledge_causation_3",
+   "Q13": "cc_knowledge_causation",
+   "Q14": "r2_haiku_inevitable_harm_2",
+   "Q15": "r2_sonnet_inevitable_harm_2",
+   "Q16": "r2_opus_knowledge_causation",
+   "Q17": "r2_opus_luck_wrongness_2",
+   "Q18": "r2_opus_luck_wrongness_3",
+   "Q19": "cc_luck_wrongness",
+   "Q20": "r2_sonnet_knowledge_causation_3",
+   "Q21": "r2_haiku_luck_wrongness_3",
+   "Q22": "r2_sonnet_luck_wrongness_3",
+   "Q23": "r2_opus_inevitable_harm_2",
+   "Q24": "r2_opus_luck_wrongness",
+   "Q25": "r2_opus_knowledge_causation_2",
+   "Q26": "r2_opus_inevitable_harm",
+   "Q27": "r2_sonnet_luck_wrongness_2",
+   "Q28": "cc_inevitable_harm",
+   "Q29": "r2_sonnet_knowledge_causation_2",
+   "Q30": "r2_haiku_knowledge_causation"
+  }
+ }
+}
