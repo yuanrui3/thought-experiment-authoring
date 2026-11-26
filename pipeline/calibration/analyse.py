@@ -43,12 +43,14 @@ ap.add_argument("--splits", type=int, default=200)
 ap.add_argument("--seed", type=int, default=7)
 ap.add_argument("--group", action="append", default=[], metavar="LABEL=DIR",
                 help="an extra judge group (e.g. another vendor's model) whose bNN.json answers in DIR follow the manifest's batches")
-ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds", "ceiling_abstain"], default="three_quarters",
+ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds", "ceiling_abstain", "weighted"], default="three_quarters",
                 help="share of panel groups that must agree on a gap's sign: three_quarters (the pilot's rule, and the "
                      "default here so the published calibration numbers rebuild unchanged), two_thirds (the benchmark's "
                      "rule from 24 November 2026: 2 of 3 groups, 3 of 4) or ceiling_abstain (three quarters of the voting "
                      "groups, at least two; a group whose mean for both sides lies in the top or bottom twelfth of the "
-                     "scale abstains, as in score.py)")
+                     "scale abstains, as in score.py) or weighted (needs --judge-weights: weighted panel gap, and the "
+                     "groups agreeing in sign must carry two thirds of the weight, as in score.py)")
+ap.add_argument("--judge-weights", help="JSON {panel group label: weight}, for --agreement-rule weighted")
 ap.add_argument("--panel", help="comma-separated groups that form the panel (default: the manifest's four Claude models)")
 args = ap.parse_args()
 rng = random.Random(args.seed)
@@ -60,16 +62,37 @@ for m in MODELS:
         raise SystemExit("panel group %s has no answers (add --group %s=DIR)" % (m, m))
 OTR_THRESHOLD = 0.5 * 4 / 6          # the benchmark's 0.5 on a 1-7 scale, as a share of the scale's range, on 1-5
 MOCA_THRESHOLD = 0.25                # yes-share gap treated as "confirmed size" for MoCa (no benchmark analogue)
-AGREE_SHARE = {"three_quarters": 0.75, "two_thirds": 2 / 3, "ceiling_abstain": 0.75}[args.agreement_rule]
+AGREE_SHARE = {"three_quarters": 0.75, "two_thirds": 2 / 3, "ceiling_abstain": 0.75, "weighted": 2 / 3}[args.agreement_rule]
 ABSTAIN = args.agreement_rule == "ceiling_abstain"
+WEIGHTED = args.agreement_rule == "weighted"
+if WEIGHTED:
+    if not args.judge_weights:
+        raise SystemExit("--agreement-rule weighted needs --judge-weights")
+    JW = {k: float(v) for k, v in json.load(open(args.judge_weights)).items()}
+    missing = [m for m in MODELS if m not in JW]
+    if missing:
+        raise SystemExit("no weight for %s" % missing)
+    MODELS = [m for m in MODELS if JW[m] > 0]      # a group with weight 0 is left out entirely
+    if len(MODELS) < 2:
+        raise SystemExit("fewer than two groups with positive weight")
+else:
+    JW = {m: 1.0 for m in MODELS}
+
+
+def wavg(vals):
+    """vals: {group: value}; the weighted mean (the plain mean unless --agreement-rule weighted)."""
+    return sum(JW[m] * v for m, v in vals.items()) / sum(JW[m] for m in vals)
 BOUND_SHARE = 1 / 12                 # as in score.py: the top or bottom twelfth of the scale's range (6.5 or 1.5 on 1-7)
 OTR_SCALE, MOCA_SCALE = (1, 5), (0, 1)
 
 
 def agrees(same, n):
-    """Enough panel groups share the sign: the share, rounded up to whole groups, as in score.py."""
+    """Enough panel groups share the sign: the share, rounded up to whole groups, as in score.py. Under the weighted
+    rule, same and n are weights and the share is compared directly."""
     if ABSTAIN and n < 2:
         return False
+    if WEIGHTED:
+        return n > 0 and same / n >= AGREE_SHARE - 1e-9
     return same >= math.ceil(AGREE_SHARE * n - 1e-9)
 
 
@@ -83,6 +106,10 @@ def votes(per, d, sides=None, scale=None):
     """(groups agreeing in sign with d, groups voting). Under ceiling_abstain a group whose two side means both lie at
     the top or the bottom of the scale abstains."""
     voters = [m for m in per if not (ABSTAIN and sides and m in sides and at_bound(sides[m][0], sides[m][1], scale))]
+    if WEIGHTED:
+        if len(voters) < 2:
+            return 0.0, 0.0
+        return sum(JW[m] for m in voters if d and per[m] * d > 0), sum(JW[m] for m in voters)
     return sum(1 for m in voters if d and per[m] * d > 0), len(voters)
 
 
@@ -248,7 +275,7 @@ def panel_gaps(rows, judge_weights=None):
     for key in {k for g in per_model.values() for k in g}:
         vals = {m: per_model[m][key] for m in MODELS if key in per_model[m]}
         per[key] = vals
-        out[key] = mean(list(vals.values()))
+        out[key] = wavg(vals)
     return out, per
 
 
@@ -291,7 +318,7 @@ for s, fname, fkey, q in CONTRASTS:
     B = [cells[(s, fkey, 0, q, m)] for m in MODELS]
     boots = []
     for _ in range(args.boot):
-        boots.append(mean([mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b))) for a, b in zip(A, B)]))
+        boots.append(wavg({m: mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b))) for m, a, b in zip(MODELS, A, B)}))
     pci[(s, fname, q)] = (pct(boots, 0.025), pct(boots, 0.975))
 
 
@@ -567,7 +594,7 @@ def moca_pair_gap(a, b, sample=None, judges=None):
         pa, pb_ = moca_panel_share(a, m, sample), moca_panel_share(b, m, sample)
         if pa is not None and pb_ is not None:
             vals[m] = pa - pb_
-    return (mean(list(vals.values())) if vals else None), vals
+    return (wavg(vals) if vals else None), vals
 
 
 pairs = [tuple(p) for p in man["moca_pairs"]]

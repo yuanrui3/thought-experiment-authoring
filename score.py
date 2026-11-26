@@ -42,7 +42,12 @@ RULES = {
     "format_cap": 50.0,          # a pair that breaks a hard format rule cannot score above this
 }
 SIZE_ORDER = {"none": 0, "small": 1, "large": 2}
-AGREEMENT_RULES = {"two_thirds": 2 / 3, "three_quarters": 0.75, "ceiling_abstain": 0.75}
+AGREEMENT_RULES = {"two_thirds": 2 / 3, "three_quarters": 0.75, "ceiling_abstain": 0.75, "weighted": 2 / 3}
+# "weighted" (tested 26 November 2026; see reports/Judge weighting test.md): each judge group carries a weight
+# (set_judge_weights; score.py --judge-weights FILE). The gap is the weighted mean of the groups' gaps, its interval the
+# same stratified bootstrap of that weighted mean, and a gap needs the groups agreeing in sign to carry at least two
+# thirds of the total weight. A group with weight 0 is left out entirely. At least two groups with positive weight are
+# needed. With equal weights this is exactly the two-thirds rule.
 # "ceiling_abstain" (tested 26 November 2026; see reports/Ceiling abstention test.md): the pilot's three-quarters share,
 # but a judge group whose mean rating for BOTH versions lies in the top twelfth of the scale (>= 6.5 on 1-7) or BOTH in
 # the bottom twelfth (<= 1.5) abstains: it keeps its place in the averaged gap and its interval, but does not vote on
@@ -56,6 +61,15 @@ def set_agreement_rule(name):
     """Switch the judge-agreement rule (also for scripts that import this module and call classify directly)."""
     RULES["agreement_rule"] = name
     RULES["group_agreement"] = AGREEMENT_RULES[name]
+
+
+JUDGE_WEIGHTS = {}
+
+
+def set_judge_weights(w):
+    """{judge_group: weight >= 0}, used only under the "weighted" rule. Every judge group scored must have a weight."""
+    JUDGE_WEIGHTS.clear()
+    JUDGE_WEIGHTS.update({g: float(v) for g, v in w.items()})
 
 
 # ----------------------------------------------------------------------------- loading
@@ -111,8 +125,20 @@ def cliffs_delta(a, b):
 def effect_stats(cell, n_boot, rng):
     """cell: {version: {group: [ratings]}} for one pair."""
     groups = sorted(g for g in cell["A"] if g in cell["B"] and cell["A"][g] and cell["B"][g])
+    weighted = RULES["agreement_rule"] == "weighted"
+    if weighted:
+        missing = [g for g in groups if g not in JUDGE_WEIGHTS]
+        if missing:
+            raise SystemExit("no judge weight for %s" % missing)
+        groups = [g for g in groups if JUDGE_WEIGHTS[g] > 0]
     if not groups:
         return None
+    W = {g: (JUDGE_WEIGHTS[g] if weighted else 1.0) for g in groups}
+    WT = sum(W.values())
+
+    def wmean(vals):
+        """vals: list of (group, value); the weighted mean."""
+        return sum(W[g] * v for g, v in vals) / sum(W[g] for g, _ in vals)
     per_group = {}
     for g in groups:
         a, b = cell["A"][g], cell["B"][g]
@@ -120,23 +146,23 @@ def effect_stats(cell, n_boot, rng):
                         "effect": mean(a) - mean(b), "cliffs_delta": cliffs_delta(a, b),
                         "ratings_a": a, "ratings_b": b}
     G = len(groups)
-    delta = mean([per_group[g]["effect"] for g in groups])
+    delta = wmean([(g, per_group[g]["effect"]) for g in groups])
     min_n = min(min(per_group[g]["n_a"], per_group[g]["n_b"]) for g in groups)
     boots = []
     if min_n >= 2:
         method = "stratified: ratings resampled inside each judge-group x version cell"
         A = [cell["A"][g] for g in groups]
         B = [cell["B"][g] for g in groups]
+        Wl = [W[g] for g in groups]
         for _ in range(n_boot):
             tot = 0.0
-            for a, b in zip(A, B):
-                tot += mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b)))
-            boots.append(tot / G)
+            for a, b, w in zip(A, B, Wl):
+                tot += w * (mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b))))
+            boots.append(tot / WT)
     else:
         method = "fallback: judge groups resampled (fewer than 2 ratings per cell)"
-        effs = [per_group[g]["effect"] for g in groups]
         for _ in range(n_boot):
-            boots.append(mean(rng.choices(effs, k=G)))
+            boots.append(wmean([(g, per_group[g]["effect"]) for g in rng.choices(groups, k=G)]))
     boots.sort()
     alpha = (1 - RULES["ci_level"]) / 2
     lo, hi = pct(boots, alpha), pct(boots, 1 - alpha)
@@ -144,11 +170,11 @@ def effect_stats(cell, n_boot, rng):
     # disagreement between models (not just repeat-to-repeat noise) widens it. Not used for scoring.
     boots2 = []
     for _ in range(n_boot):
-        tot = 0.0
+        drawn = []
         for g in rng.choices(groups, k=G):
             a, b = cell["A"][g], cell["B"][g]
-            tot += mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b)))
-        boots2.append(tot / G)
+            drawn.append((g, mean(rng.choices(a, k=len(a))) - mean(rng.choices(b, k=len(b)))))
+        boots2.append(wmean(drawn))
     boots2.sort()
     lo2, hi2 = pct(boots2, alpha), pct(boots2, 1 - alpha)
     variances = []
@@ -169,8 +195,8 @@ def effect_stats(cell, n_boot, rng):
     return {
         "groups": groups, "per_group": per_group,
         "n_a": sum(per_group[g]["n_a"] for g in groups), "n_b": sum(per_group[g]["n_b"] for g in groups),
-        "mean_a": mean([per_group[g]["mean_a"] for g in groups]),
-        "mean_b": mean([per_group[g]["mean_b"] for g in groups]),
+        "mean_a": wmean([(g, per_group[g]["mean_a"]) for g in groups]),
+        "mean_b": wmean([(g, per_group[g]["mean_b"]) for g in groups]),
         "effect": delta, "ci_low": lo, "ci_high": hi, "ci_method": method,
         "ci_model_level_low": lo2, "ci_model_level_high": hi2,
         "cliffs_delta": mean([per_group[g]["cliffs_delta"] for g in groups]),
@@ -178,6 +204,9 @@ def effect_stats(cell, n_boot, rng):
         "std_effect": (delta / sd) if sd else None,
         "groups_same_sign": same_sign, "groups_total": len(voting),
         **({"groups_abstaining": abstaining, "groups_all": G} if RULES["agreement_rule"] == "ceiling_abstain" else {}),
+        **({"weights": {g: round(W[g] / WT, 4) for g in groups},
+            "weight_share_agreeing": sum(W[g] for g in voting if delta != 0 and per_group[g]["effect"] * delta > 0) / WT}
+           if weighted else {}),
     }
 
 
@@ -191,6 +220,8 @@ def classify(es):
     groups_agree = es["groups_same_sign"] >= need
     if RULES["agreement_rule"] == "ceiling_abstain" and es["groups_total"] < MIN_VOTING_GROUPS:
         groups_agree = False
+    if RULES["agreement_rule"] == "weighted":
+        groups_agree = es["groups_total"] >= MIN_VOTING_GROUPS and es["weight_share_agreeing"] >= RULES["group_agreement"] - 1e-9
     if size == "none":
         direction = "none"
     elif ci_excludes_zero and groups_agree:
@@ -311,10 +342,15 @@ def main():
                     help="distance: the current rule; classes: the pilot's original rule (half direction, half size class)")
     ap.add_argument("--agreement-rule", choices=sorted(AGREEMENT_RULES), default=RULES["agreement_rule"],
                     help="two_thirds: the current rule (2 of 3 judge groups, 3 of 4); three_quarters: the pilot's rule "
-                         "(3 of 3, 3 of 4)")
+                         "(3 of 3, 3 of 4); ceiling_abstain and weighted: tested 26 November 2026, see reports/")
+    ap.add_argument("--judge-weights", help="JSON {judge_group: weight}, for --agreement-rule weighted")
     args = ap.parse_args()
     RULES["prediction_rule"] = args.prediction_rule
     set_agreement_rule(args.agreement_rule)
+    if args.agreement_rule == "weighted":
+        if not args.judge_weights:
+            raise SystemExit("--agreement-rule weighted needs --judge-weights FILE")
+        set_judge_weights(json.load(open(args.judge_weights)))
 
     doc = json.load(open(args.vignettes, encoding="utf-8"))
     pairs = doc["pairs"]
