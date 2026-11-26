@@ -1,0 +1,94 @@
+{
+ "definition": "pipeline/shared_pool.py docstring",
+ "runs": "round2c",
+ "manifest": "pipeline/round2/shared_pool_manifest_c.json",
+ "n_items": 46,
+ "predictors": {
+  "fable": {
+   "shared_pool_score": 72.2,
+   "mae_others": 0.417,
+   "n_others": 37,
+   "mae_all": 0.445,
+   "mae_own": 0.558,
+   "n_own": 9,
+   "correlation_all": 0.901,
+   "mean_signed_error_all": -0.293
+  },
+  "haiku": {
+   "shared_pool_score": 57.0,
+   "mae_others": 0.655,
+   "n_others": 37,
+   "mae_all": 0.677,
+   "mae_own": 0.767,
+   "n_own": 9,
+   "correlation_all": 0.821,
+   "mean_signed_error_all": -0.215
+  },
+  "opus": {
+   "shared_pool_score": 69.9,
+   "mae_others": 0.452,
+   "n_others": 37,
+   "mae_all": 0.478,
+   "mae_own": 0.586,
+   "n_own": 9,
+   "correlation_all": 0.895,
+   "mean_signed_error_all": -0.304
+  },
+  "sonnet": {
+   "shared_pool_score": 62.0,
+   "mae_others": 0.57,
+   "n_others": 37,
+   "mae_all": 0.558,
+   "mae_own": 0.506,
+   "n_own": 9,
+   "correlation_all": 0.871,
+   "mean_signed_error_all": -0.387
+  }
+ },
+ "judge_level_resampling": {
+  "n": 2000,
+  "score_sd": {
+   "fable": 2.64,
+   "haiku": 2.25,
+   "opus": 2.9,
+   "sonnet": 2.93
+  },
+  "order_by_shared_pool_score": {
+   "fable > opus > sonnet > haiku": 0.927,
+   "opus > fable > sonnet > haiku": 0.072,
+   "fable > opus > haiku > sonnet": 0.001
+  }
+ },
+ "paired_comparisons": {
+  "fable vs haiku": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.205,
+   "sign_flip_p": 0.0056
+  },
+  "fable vs opus": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.016,
+   "sign_flip_p": 0.7715
+  },
+  "fable vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.102,
+   "sign_flip_p": 0.1452
+  },
+  "haiku vs opus": {
+   "items_written_by_neither": 28,
+   "mae_difference": 0.152,
+   "sign_flip_p": 0.0713
+  },
+  "haiku vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.016,
+   "sign_flip_p": 0.8786
+  },
+  "opus vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.162,
+   "sign_flip_p": 0.0217
+  }
+ }
+}

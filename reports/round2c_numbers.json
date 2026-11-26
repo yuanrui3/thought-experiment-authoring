@@ -1,0 +1,599 @@
+{
+ "run": "round2c",
+ "authors": {
+  "fable": {
+   "n_pairs": 9,
+   "mean_prediction_score": 0.753,
+   "mean_composite": 70.7,
+   "demonstrated": 8,
+   "full_marks": 4,
+   "mean_confound_severity": 1.0,
+   "mean_originality": 1.33,
+   "by_factor": {
+    "inevitable_harm": 1.0,
+    "knowledge_causation": 0.75,
+    "luck_wrongness": 0.51
+   },
+   "pairs": {
+    "r2_fable_inevitable_harm": {
+     "title": "Greenhouse vent and the heater",
+     "predicted": "A_higher/large",
+     "effect": 2.42,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_fable_inevitable_harm_2": {
+     "title": "Late lift to the ferry",
+     "predicted": "A_higher/large",
+     "effect": 2.88,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 1.0,
+     "composite": 93.3,
+     "confound_severity": "0",
+     "originality": "2"
+    },
+    "r2_fable_inevitable_harm_3": {
+     "title": "Skipped Friday backup",
+     "predicted": "A_higher/large",
+     "effect": 2.2,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_fable_knowledge_causation": {
+     "title": "Heater in the village hall kitchen",
+     "predicted": "A_higher/small",
+     "effect": 1.9,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.73,
+     "composite": 67.5,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_fable_knowledge_causation_2": {
+     "title": "Bicycle on the stairwell railing",
+     "predicted": "A_higher/small",
+     "effect": 1.8,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.8,
+     "composite": 70.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_fable_knowledge_causation_3": {
+     "title": "Draft saved in the Ready folder",
+     "predicted": "A_higher/small",
+     "effect": 1.92,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.72,
+     "composite": 67.0,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_fable_luck_wrongness": {
+     "title": "Tiles thrown onto the side path",
+     "predicted": "A_higher/small",
+     "effect": 0.32,
+     "groups": "4/4",
+     "observed": "none/none",
+     "prediction_score": 0.0,
+     "composite": 38.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_fable_luck_wrongness_2": {
+     "title": "Dog let off the lead",
+     "predicted": "A_higher/small",
+     "effect": 0.88,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 78.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_fable_luck_wrongness_3": {
+     "title": "Parcel left on the doorstep",
+     "predicted": "A_higher/small",
+     "effect": 2.2,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.53,
+     "composite": 51.3,
+     "confound_severity": "2",
+     "originality": "1"
+    }
+   }
+  },
+  "haiku": {
+   "n_pairs": 9,
+   "mean_prediction_score": 0.77,
+   "mean_composite": 70.0,
+   "demonstrated": 8,
+   "full_marks": 4,
+   "mean_confound_severity": 1.22,
+   "mean_originality": 1.44,
+   "by_factor": {
+    "inevitable_harm": 0.893,
+    "knowledge_causation": 0.99,
+    "luck_wrongness": 0.427
+   },
+   "pairs": {
+    "r2_haiku_inevitable_harm": {
+     "title": "Sluice gate and flooded lane",
+     "predicted": "A_higher/small",
+     "effect": 1.97,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.68,
+     "composite": 63.4,
+     "confound_severity": "2",
+     "originality": "2"
+    },
+    "r2_haiku_inevitable_harm_2": {
+     "title": "Signal box and loose rail",
+     "predicted": "A_higher/small",
+     "effect": 1.45,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 84.6,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_haiku_inevitable_harm_3": {
+     "title": "Bus route and rockfall",
+     "predicted": "A_higher/small",
+     "effect": 1.38,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 77.8,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_haiku_knowledge_causation": {
+     "title": "Solvent room door",
+     "predicted": "A_higher/small",
+     "effect": 1.28,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_haiku_knowledge_causation_2": {
+     "title": "Lab cleaner and rule card",
+     "predicted": "A_higher/small",
+     "effect": 1.32,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 70.0,
+     "confound_severity": "2",
+     "originality": "1"
+    },
+    "r2_haiku_knowledge_causation_3": {
+     "title": "Ferry ramp and posted rule",
+     "predicted": "A_higher/small",
+     "effect": 1.55,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.97,
+     "composite": 75.3,
+     "confound_severity": "2",
+     "originality": "2"
+    },
+    "r2_haiku_luck_wrongness": {
+     "title": "Roofer without harness",
+     "predicted": "B_higher/small",
+     "effect": -0.43,
+     "groups": "3/4",
+     "observed": "none/none",
+     "prediction_score": 0.0,
+     "composite": 38.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_haiku_luck_wrongness_2": {
+     "title": "Kayak crossing at dusk",
+     "predicted": "B_higher/large",
+     "effect": -0.68,
+     "groups": "4/4",
+     "observed": "B_higher/small",
+     "prediction_score": 0.45,
+     "composite": 64.1,
+     "confound_severity": "0",
+     "originality": "1"
+    },
+    "r2_haiku_luck_wrongness_3": {
+     "title": "Unchilled chicken salad",
+     "predicted": "B_higher/large",
+     "effect": -1.25,
+     "groups": "4/4",
+     "observed": "B_higher/small",
+     "prediction_score": 0.83,
+     "composite": 71.5,
+     "confound_severity": "1",
+     "originality": "1"
+    }
+   }
+  },
+  "opus": {
+   "n_pairs": 9,
+   "mean_prediction_score": 0.913,
+   "mean_composite": 80.7,
+   "demonstrated": 9,
+   "full_marks": 3,
+   "mean_confound_severity": 0.67,
+   "mean_originality": 1.44,
+   "by_factor": {
+    "inevitable_harm": 0.993,
+    "knowledge_causation": 0.787,
+    "luck_wrongness": 0.96
+   },
+   "pairs": {
+    "r2_opus_inevitable_harm": {
+     "title": "Orchard spray and beehives",
+     "predicted": "A_higher/small",
+     "effect": 1.52,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.98,
+     "composite": 84.3,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_opus_inevitable_harm_2": {
+     "title": "Cafe fridge unplugged overnight",
+     "predicted": "A_higher/large",
+     "effect": 3.0,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_opus_inevitable_harm_3": {
+     "title": "Shopping stop on the way to the airport",
+     "predicted": "A_higher/large",
+     "effect": 2.3,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_opus_knowledge_causation": {
+     "title": "Farm side gate",
+     "predicted": "A_higher/small",
+     "effect": 1.83,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.78,
+     "composite": 78.0,
+     "confound_severity": "0",
+     "originality": "1"
+    },
+    "r2_opus_knowledge_causation_2": {
+     "title": "Museum blinds and gallery heating",
+     "predicted": "A_higher/small",
+     "effect": 1.65,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.9,
+     "composite": 82.7,
+     "confound_severity": "0",
+     "originality": "1"
+    },
+    "r2_opus_knowledge_causation_3": {
+     "title": "Grapefruit juice on a hospital ward",
+     "predicted": "A_higher/small",
+     "effect": 1.98,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.68,
+     "composite": 74.0,
+     "confound_severity": "0",
+     "originality": "1"
+    },
+    "r2_opus_luck_wrongness": {
+     "title": "Smoke alarm battery",
+     "predicted": "A_higher/small",
+     "effect": 1.6,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.93,
+     "composite": 82.3,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_opus_luck_wrongness_2": {
+     "title": "Wading a flooded stream",
+     "predicted": "A_higher/small",
+     "effect": 1.23,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 78.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_opus_luck_wrongness_3": {
+     "title": "Client file over cafe Wi-Fi",
+     "predicted": "A_higher/small",
+     "effect": 1.57,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.95,
+     "composite": 76.3,
+     "confound_severity": "1",
+     "originality": "1"
+    }
+   }
+  },
+  "sonnet": {
+   "n_pairs": 9,
+   "mean_prediction_score": 0.937,
+   "mean_composite": 76.1,
+   "demonstrated": 9,
+   "full_marks": 6,
+   "mean_confound_severity": 1.22,
+   "mean_originality": 1.33,
+   "by_factor": {
+    "inevitable_harm": 1.0,
+    "knowledge_causation": 0.81,
+    "luck_wrongness": 1.0
+   },
+   "pairs": {
+    "r2_sonnet_inevitable_harm": {
+     "title": "Ladder and greenhouse",
+     "predicted": "A_higher/small",
+     "effect": 0.88,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 76.7,
+     "confound_severity": "2",
+     "originality": "2"
+    },
+    "r2_sonnet_inevitable_harm_2": {
+     "title": "Bakery cream cakes",
+     "predicted": "A_higher/small",
+     "effect": 1.1,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 76.7,
+     "confound_severity": "2",
+     "originality": "2"
+    },
+    "r2_sonnet_inevitable_harm_3": {
+     "title": "Hotel bathtub flood",
+     "predicted": "A_higher/small",
+     "effect": 0.75,
+     "groups": "4/4",
+     "observed": "A_higher/small",
+     "prediction_score": 1.0,
+     "composite": 85.0,
+     "confound_severity": "1",
+     "originality": "2"
+    },
+    "r2_sonnet_knowledge_causation": {
+     "title": "Office circuit overload",
+     "predicted": "A_higher/small",
+     "effect": 1.75,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.83,
+     "composite": 71.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_sonnet_knowledge_causation_2": {
+     "title": "Market lane blocked",
+     "predicted": "A_higher/small",
+     "effect": 1.82,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.78,
+     "composite": 69.5,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_sonnet_knowledge_causation_3": {
+     "title": "Restaurant water pressure",
+     "predicted": "A_higher/small",
+     "effect": 1.78,
+     "groups": "4/4",
+     "observed": "A_higher/large",
+     "prediction_score": 0.82,
+     "composite": 70.4,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_sonnet_luck_wrongness": {
+     "title": "Babysitter shop trip",
+     "predicted": "B_higher/small",
+     "effect": -0.55,
+     "groups": "3/4",
+     "observed": "B_higher/small",
+     "prediction_score": 1.0,
+     "composite": 78.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_sonnet_luck_wrongness_2": {
+     "title": "Brush fire gust",
+     "predicted": "B_higher/small",
+     "effect": -1.5,
+     "groups": "4/4",
+     "observed": "B_higher/large",
+     "prediction_score": 1.0,
+     "composite": 78.3,
+     "confound_severity": "1",
+     "originality": "1"
+    },
+    "r2_sonnet_luck_wrongness_3": {
+     "title": "Skipped wiring test",
+     "predicted": "B_higher/small",
+     "effect": -1.07,
+     "groups": "4/4",
+     "observed": "B_higher/small",
+     "prediction_score": 1.0,
+     "composite": 78.3,
+     "confound_severity": "1",
+     "originality": "1"
+    }
+   }
+  }
+ },
+ "order_by_composite": "opus > sonnet > fable > haiku",
+ "order_by_prediction_score": "sonnet > opus > haiku > fable",
+ "judge_level_resampling": {
+  "n": 300,
+  "author_mean_sd": {
+   "fable": 0.045,
+   "haiku": 0.059,
+   "opus": 0.032,
+   "sonnet": 0.063
+  },
+  "order_by_prediction_score": {
+   "sonnet > opus > haiku > fable": 0.327,
+   "opus > sonnet > haiku > fable": 0.203,
+   "sonnet > opus > fable > haiku": 0.163,
+   "opus > sonnet > fable > haiku": 0.11,
+   "opus > haiku > sonnet > fable": 0.097,
+   "sonnet > haiku > opus > fable": 0.027,
+   "haiku > opus > sonnet > fable": 0.023,
+   "opus > fable > sonnet > haiku": 0.013
+  },
+  "first": {
+   "fable": 0.0,
+   "haiku": 0.037,
+   "opus": 0.44,
+   "sonnet": 0.523
+  },
+  "last": {
+   "fable": 0.683,
+   "haiku": 0.293,
+   "opus": 0.0,
+   "sonnet": 0.023
+  },
+  "authored_pairs_kept_below_0.8": 2
+ },
+ "pairwise_permutation": {
+  "fable - haiku": {
+   "difference": -0.017,
+   "permutation_p": 0.9184
+  },
+  "fable - opus": {
+   "difference": -0.16,
+   "permutation_p": 0.1871
+  },
+  "fable - sonnet": {
+   "difference": -0.183,
+   "permutation_p": 0.0392
+  },
+  "haiku - opus": {
+   "difference": -0.143,
+   "permutation_p": 0.2641
+  },
+  "haiku - sonnet": {
+   "difference": -0.167,
+   "permutation_p": 0.2058
+  },
+  "opus - sonnet": {
+   "difference": -0.023,
+   "permutation_p": 0.3911
+  }
+ },
+ "replication_vs_round2b_pooled": {
+  "n_items": 37,
+  "effect_correlation": 0.975,
+  "mean_abs_effect_difference": 0.22,
+  "noise_ratio": 1.42,
+  "verdict_changes": [],
+  "score_changes_over_0.25": [],
+  "authors_on_shared_pairs": {
+   "haiku": {
+    "round2b_pooled": 0.782,
+    "round2c": 0.77
+   },
+   "opus": {
+    "round2b_pooled": 0.978,
+    "round2c": 0.913
+   },
+   "sonnet": {
+    "round2b_pooled": 0.982,
+    "round2c": 0.937
+   }
+  }
+ },
+ "controls": {
+  "cc_inevitable_harm": {
+   "effect": -0.05,
+   "groups": "2/4",
+   "observed": "none/none"
+  },
+  "cc_knowledge_causation": {
+   "effect": 1.45,
+   "groups": "4/4",
+   "observed": "A_higher/small"
+  },
+  "cc_luck_wrongness": {
+   "effect": 1.03,
+   "groups": "4/4",
+   "observed": "A_higher/small"
+  },
+  "cc_doing_allowing": {
+   "effect": 1.5,
+   "groups": "4/4",
+   "observed": "A_higher/large"
+  },
+  "cc_norm_causation": {
+   "effect": 1.85,
+   "groups": "4/4",
+   "observed": "A_higher/large"
+  },
+  "nc_weekday": {
+   "effect": -0.07,
+   "groups": "2/4",
+   "observed": "none/none"
+  },
+  "nc_color": {
+   "effect": 0.27,
+   "groups": "3/4",
+   "observed": "none/none"
+  },
+  "nc_name": {
+   "effect": 0.2,
+   "groups": "3/4",
+   "observed": "none/none"
+  },
+  "nc_weather": {
+   "effect": -0.28,
+   "groups": "2/4",
+   "observed": "none/none"
+  },
+  "nc_paraphrase": {
+   "effect": -0.15,
+   "groups": "2/4",
+   "observed": "none/none"
+  }
+ }
+}

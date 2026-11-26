@@ -44,7 +44,13 @@ The round-2b point predictions were made blind, but after the round was judged, 
 
 ## First real use
 
-Round 2c, scheduled after Fable's usage limit resets (26 November). All four authors will have written their pairs. Before any judging, each predicts all 46 items:
+*Done on 26 November; results in `reports/Round 2c Fable joins.md` and `reports/shared_pool_round2c_numbers.json`.*
+
+- Fable 72.2, Opus 69.9, Sonnet 62.0, Haiku 57.0.
+- On the 28 items written by neither of the two: Fable and Opus tie (p = 0.77), Opus beats Sonnet again (p = 0.02), and Fable beats Haiku (p = 0.006).
+- Sonnet again predicted its own pairs better than others' items (0.51 against 0.57). Fable, Opus and Haiku did not.
+
+Round 2c ran after Fable's usage limit reset (26 November). All four authors had written their pairs. Before any judging, each predicted all 46 items:
 
 ```bash
 python3 pipeline/shared_pool.py build --vignettes round2/vignettes_c.json --models haiku sonnet opus fable --tag c --out <scratchpad>/spc --manifest pipeline/round2/shared_pool_manifest_c.json

@@ -93,7 +93,7 @@ Before Fable's judges ran, the persona panel had Haiku, Sonnet and Opus only. It
 1. **The pilot's winner is panel-dependent, and two of three panels put Fable first.** The pilot can report "Fable or Sonnet" rather than Sonnet. What's robust is lower down: Haiku is last under every panel, and Opus sits in the middle.
 2. **Persona judges are more conservative about small effects.** That fits the calibration, where they cut false confirmations. It also costs real effects: the classic moral-luck control, which people do show, isn't confirmed here. On balance the calibration still favours personas.
 3. **The survey's target pairs stay the same.** Sonnet's and Opus's doing-vs-allowing pairs, and Fable's and Haiku's norm-violation pairs, are where human data would decide the ranking.
-4. **Persona judges are the panel used from round 2 on.** Round 2c will be the first round with all four models judging as personas from the start.
+4. **Persona judges are the panel used from round 2 on.** Round 2c (26 November) was the first round with all four models judging as personas from the start. There, on the contested factors, Fable came third on the composite and tied Opus for first on the shared-pool prediction score (`reports/Round 2c Fable joins.md`).
 
 ## Rerun
 
