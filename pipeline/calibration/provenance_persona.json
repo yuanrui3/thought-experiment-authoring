@@ -663,5 +663,215 @@
     "b30.json"
    ]
   ]
+ },
+ "b31": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b31.txt"
+   ],
+   [
+    "Write",
+    "b31.json"
+   ]
+  ]
+ },
+ "b32": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b32.txt"
+   ],
+   [
+    "Write",
+    "b32.json"
+   ]
+  ]
+ },
+ "b33": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b33.txt"
+   ],
+   [
+    "Write",
+    "b33.json"
+   ]
+  ]
+ },
+ "b34": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b34.txt"
+   ],
+   [
+    "Write",
+    "b34.json"
+   ]
+  ]
+ },
+ "b35": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b35.txt"
+   ],
+   [
+    "Write",
+    "b35.json"
+   ]
+  ]
+ },
+ "b36": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b36.txt"
+   ],
+   [
+    "Write",
+    "b36.json"
+   ]
+  ]
+ },
+ "b37": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b37.txt"
+   ],
+   [
+    "Write",
+    "b37.json"
+   ]
+  ]
+ },
+ "b38": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b38.txt"
+   ],
+   [
+    "Write",
+    "b38.json"
+   ]
+  ]
+ },
+ "b39": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b39.txt"
+   ],
+   [
+    "Write",
+    "b39.json"
+   ]
+  ]
+ },
+ "b40": {
+  "requested": "fable",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "runs": 1,
+  "clean_tool_use": true,
+  "usable": true,
+  "stray_calls_after_answering": [],
+  "answers": "ok",
+  "calls": [
+   [
+    "Read",
+    "b40.txt"
+   ],
+   [
+    "Write",
+    "b40.json"
+   ]
+  ]
  }
 }
