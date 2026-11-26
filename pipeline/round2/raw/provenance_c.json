@@ -18,5 +18,25 @@
   "revised_own_answer_after_writing": false,
   "usable": true,
   "stray_calls_after_answering": []
+ },
+ "author:fable_more": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable_more.txt"
+   ],
+   [
+    "Write",
+    "fable_more.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
  }
 }
