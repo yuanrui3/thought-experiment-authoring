@@ -161,6 +161,25 @@
   "clean": true,
   "wrote_answers": true
  },
+ "fable_otr_r2": {
+  "task_file": "otr_r2.txt",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "otr_r2.txt"
+   ],
+   [
+    "Write",
+    "fable_otr_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true,
+  "failed_attempts_without_answers": 1
+ },
  "opus_moca_r2": {
   "task_file": "moca_r2.txt",
   "served": [
@@ -179,15 +198,24 @@
   "clean": true,
   "wrote_answers": true
  },
- "fable_otr_r2": {
-  "task_file": "otr_r2.txt",
+ "fable_otr_r1": {
+  "task_file": "otr_r1.txt",
   "served": [
-   "<synthetic>"
+   "claude-fable-5-2"
   ],
-  "calls": [],
-  "clean": false,
-  "wrote_answers": false,
-  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+  "calls": [
+   [
+    "Read",
+    "otr_r1.txt"
+   ],
+   [
+    "Write",
+    "fable_otr_r1.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true,
+  "failed_attempts_without_answers": 1
  },
  "haiku_moca_r2": {
   "task_file": "moca_r2.txt",
@@ -207,15 +235,24 @@
   "clean": true,
   "wrote_answers": true
  },
- "fable_otr_r1": {
-  "task_file": "otr_r1.txt",
+ "fable_moca_r2": {
+  "task_file": "moca_r2.txt",
   "served": [
-   "<synthetic>"
+   "claude-fable-5-2"
   ],
-  "calls": [],
-  "clean": false,
-  "wrote_answers": false,
-  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+  "calls": [
+   [
+    "Read",
+    "moca_r2.txt"
+   ],
+   [
+    "Write",
+    "fable_moca_r2.json"
+   ]
+  ],
+  "clean": true,
+  "wrote_answers": true,
+  "failed_attempts_without_answers": 1
  },
  "opus_moca_r1": {
   "task_file": "moca_r1.txt",
@@ -238,21 +275,20 @@
  "fable_moca_r1": {
   "task_file": "moca_r1.txt",
   "served": [
-   "<synthetic>"
+   "claude-fable-5-2"
   ],
-  "calls": [],
-  "clean": false,
-  "wrote_answers": false,
-  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
- },
- "fable_moca_r2": {
-  "task_file": "moca_r2.txt",
-  "served": [
-   "<synthetic>"
+  "calls": [
+   [
+    "Read",
+    "moca_r1.txt"
+   ],
+   [
+    "Write",
+    "fable_moca_r1.json"
+   ]
   ],
-  "calls": [],
-  "clean": false,
-  "wrote_answers": false,
-  "note": "did not run: the account hit its Fable usage limit (resets 26 November 2026, 10:00 UTC)"
+  "clean": true,
+  "wrote_answers": true,
+  "failed_attempts_without_answers": 1
  }
 }

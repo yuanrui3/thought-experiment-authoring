@@ -1,10 +1,15 @@
 {
  "authors": [
+  "fable",
   "haiku",
   "opus",
   "sonnet"
  ],
  "runs": {
+  "fable": [
+   "1",
+   "2"
+  ],
   "sonnet": [
    "1",
    "2"
@@ -21,6 +26,18 @@
  "problems": [],
  "otr": {
   "predictors": {
+   "fable": {
+    "n": 60,
+    "pearson_r": 0.671,
+    "mean_abs_error": 0.202,
+    "mean_abs_predicted_gap": 0.296,
+    "mean_abs_human_gap": 0.2,
+    "prediction_score": 0.775,
+    "direction_hits": 42,
+    "size_hits": 42,
+    "opposite": 0,
+    "same_sign_where_people_show_a_gap": "19 of 20"
+   },
    "haiku": {
     "n": 60,
     "pearson_r": 0.523,
@@ -107,6 +124,44 @@
    }
   },
   "by_factor": {
+   "fable": {
+    "means_minus_side_effect": {
+     "n": 20,
+     "pearson_r": 0.721,
+     "mean_abs_error": 0.399,
+     "mean_abs_predicted_gap": 0.534,
+     "mean_abs_human_gap": 0.203,
+     "prediction_score": 0.55,
+     "direction_hits": 8,
+     "size_hits": 8,
+     "opposite": 0,
+     "same_sign_where_people_show_a_gap": "6 of 7"
+    },
+    "evitable_minus_inevitable": {
+     "n": 20,
+     "pearson_r": 0.935,
+     "mean_abs_error": 0.09,
+     "mean_abs_predicted_gap": 0.267,
+     "mean_abs_human_gap": 0.288,
+     "prediction_score": 0.775,
+     "direction_hits": 14,
+     "size_hits": 14,
+     "opposite": 0,
+     "same_sign_where_people_show_a_gap": "13 of 13"
+    },
+    "action_minus_omission": {
+     "n": 20,
+     "pearson_r": -0.349,
+     "mean_abs_error": 0.118,
+     "mean_abs_predicted_gap": 0.086,
+     "mean_abs_human_gap": 0.109,
+     "prediction_score": 1.0,
+     "direction_hits": 20,
+     "size_hits": 20,
+     "opposite": 0,
+     "same_sign_where_people_show_a_gap": "0 of 0"
+    }
+   },
    "haiku": {
     "means_minus_side_effect": {
      "n": 20,
@@ -375,6 +430,7 @@
    }
   },
   "run_to_run_r": {
+   "fable": 0.978,
    "haiku": 0.967,
    "opus": 0.967,
    "sonnet": 0.968
@@ -382,6 +438,20 @@
   "human_reliability": 0.667,
   "ceiling_r": 0.817,
   "version_means": {
+   "fable": {
+    "permissibility": {
+     "pearson_r": 0.621,
+     "mean_abs_error": 0.196,
+     "mean_predicted": 4.007,
+     "mean_human": 4.076
+    },
+    "intention": {
+     "pearson_r": 0.587,
+     "mean_abs_error": 0.282,
+     "mean_predicted": 2.263,
+     "mean_human": 2.199
+    }
+   },
    "haiku": {
     "permissibility": {
      "pearson_r": 0.256,
@@ -428,6 +498,19 @@
  },
  "moca": {
   "predictors": {
+   "fable": {
+    "n": 85,
+    "pearson_r": 0.587,
+    "mean_abs_error": 0.228,
+    "mean_abs_predicted_gap": 0.214,
+    "mean_abs_human_gap": 0.264,
+    "where_people_differ_by_0.30_or_more": {
+     "n": 34,
+     "same_sign": 28,
+     "no_gap": 1,
+     "opposite": 5
+    }
+   },
    "haiku": {
     "n": 85,
     "pearson_r": 0.447,
@@ -521,6 +604,12 @@
    }
   },
   "stories": {
+   "fable": {
+    "n": 89,
+    "pearson_r": 0.528,
+    "mean_abs_error": 0.184,
+    "majority_agreement": 0.685
+   },
    "haiku": {
     "n": 89,
     "pearson_r": 0.439,
@@ -541,6 +630,73 @@
    }
   },
   "by_differing_factor": {
+   "fable": {
+    "event_normality": {
+     "n": 30,
+     "pearson_r": 0.846,
+     "mean_abs_error": 0.195,
+     "mean_abs_predicted_gap": 0.274,
+     "mean_abs_human_gap": 0.357,
+     "where_people_differ_by_0.30_or_more": {
+      "n": 19,
+      "same_sign": 19,
+      "no_gap": 0,
+      "opposite": 0
+     }
+    },
+    "causal_structure": {
+     "n": 16,
+     "pearson_r": 0.622,
+     "mean_abs_error": 0.248,
+     "mean_abs_predicted_gap": 0.288,
+     "mean_abs_human_gap": 0.29,
+     "where_people_differ_by_0.30_or_more": {
+      "n": 8,
+      "same_sign": 7,
+      "no_gap": 0,
+      "opposite": 1
+     }
+    },
+    "agent_awareness": {
+     "n": 12,
+     "pearson_r": 0.384,
+     "mean_abs_error": 0.253,
+     "mean_abs_predicted_gap": 0.116,
+     "mean_abs_human_gap": 0.293,
+     "where_people_differ_by_0.30_or_more": {
+      "n": 6,
+      "same_sign": 3,
+      "no_gap": 1,
+      "opposite": 2
+     }
+    },
+    "(no annotated difference)": {
+     "n": 29,
+     "pearson_r": 0.027,
+     "mean_abs_error": 0.233,
+     "mean_abs_predicted_gap": 0.148,
+     "mean_abs_human_gap": 0.172,
+     "where_people_differ_by_0.30_or_more": {
+      "n": 5,
+      "same_sign": 3,
+      "no_gap": 0,
+      "opposite": 2
+     }
+    },
+    "time": {
+     "n": 9,
+     "pearson_r": 0.491,
+     "mean_abs_error": 0.194,
+     "mean_abs_predicted_gap": 0.163,
+     "mean_abs_human_gap": 0.244,
+     "where_people_differ_by_0.30_or_more": {
+      "n": 3,
+      "same_sign": 2,
+      "no_gap": 1,
+      "opposite": 0
+     }
+    }
+   },
    "haiku": {
     "event_normality": {
      "n": 30,
@@ -1012,6 +1168,7 @@
    }
   },
   "run_to_run_r": {
+   "fable": 0.971,
    "haiku": 0.897,
    "opus": 0.956,
    "sonnet": 0.822

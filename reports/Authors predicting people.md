@@ -1,6 +1,6 @@
 # Authors predicting people: a human-grounded score from public data
 
-*22 November 2026. Numbers come from `reports/predict_humans_numbers.json`, which `pipeline/predict_humans/analyse.py` rebuilds. Three of the four pilot authors are scored; Fable could not run because the account hit its Fable usage limit, which resets on 26 November 2026 at 10:00 UTC.*
+*22 November 2026. Numbers come from `reports/predict_humans_numbers.json`, which `pipeline/predict_humans/analyse.py` rebuilds. All four pilot authors are scored. Fable ran on 26 November, after its usage limit reset; its first attempts on 22 November hit the limit and wrote nothing. The other three ran on 22 November.*
 
 ## Bottom line
 
@@ -9,11 +9,16 @@ The pilot scores authors against a panel of models. This task scores them agains
 - **OffTheRails:** 10 moral scenarios × 8 versions, about 23 people per version, each rating two statements from 1 to 5.
 - **MoCa:** 85 near-identical pairs of causal and moral stories, 25 people per story answering yes or no.
 
-1. **Opus predicts people best of the three, on both datasets.** It is first on the pilot's prediction score, on average error, on its predicted average ratings, and on MoCa. The pilot, scored against the Claude panel, ranked Opus third of four. One caution: Opus named both datasets in the earlier recognition check, so part of its lead may be memory.
+1. **Fable and Opus predict people best, about equally.**
+   - Fable tracks people's gaps more closely: correlation 0.67 against Opus's 0.47 on OffTheRails, and 0.59 against 0.56 on MoCa. Its average error on OffTheRails is the lowest of any model (0.20 against Opus's 0.26).
+   - Opus is marginally ahead on the pilot's old prediction score (0.79 against 0.78).
+   - The pilot, scored against the Claude panel, ranked Fable second and Opus third.
+   - One caution: both named these datasets in the earlier recognition check, so part of their lead may be memory.
 2. **Asking a model what people will do works at least as well as simulating people with a model panel, and on MoCa better.**
 
    | Predictor | Correlation with people's gaps, MoCa | Average error, MoCa |
    |---|---|---|
+   | Fable's prediction | 0.59 | 0.23 |
    | Opus's prediction | 0.56 | 0.23 |
    | Haiku's prediction | 0.45 | — |
    | Sonnet's prediction | 0.40 | — |
@@ -22,8 +27,8 @@ The pilot scores authors against a panel of models. This task scores them agains
    | Always "no difference" | — | 0.26 |
 
    The panels' measured gaps are further from people than always guessing no difference.
-3. **On OffTheRails, always predicting "no difference" beats every model** on the pilot's prediction score (0.875, against Opus's 0.79) and on average error. People's gaps there are mostly smaller than the pilot's "small effect" threshold, so the score rewards caution. If human data replaces the panel, the prediction score needs changing; see the recommendations.
-4. **Everyone gets acting vs not preventing backwards relative to these people.** All three authors and the Claude panel expect not preventing a colleague's harmful act to be more permissible than doing it yourself; these participants leaned slightly the other way. Correlation with people on that contrast: −0.33 to −0.36 for every author and the panel. This is the nearest analogue to the benchmark's doing-vs-allowing factor, though it also changes who acts.
+3. **On OffTheRails, always predicting "no difference" beats every model** on the pilot's prediction score (0.875, against Opus's 0.79). On average error only Fable matches it (0.20). People's gaps there are mostly smaller than the pilot's "small effect" threshold, so the score rewards caution. If human data replaces the panel, the prediction score needs changing; see the recommendations.
+4. **Everyone gets acting vs not preventing backwards relative to these people.** All four authors and the Claude panel expect not preventing a colleague's harmful act to be more permissible than doing it yourself; these participants leaned slightly the other way. Correlation with people on that contrast: −0.33 to −0.36 for every author and the panel. This is the nearest analogue to the benchmark's doing-vs-allowing factor, though it also changes who acts.
 
 ## What was run
 
@@ -35,8 +40,8 @@ The pilot scores authors against a panel of models. This task scores them agains
 | Scored on | 60 factor contrasts (10 scenarios × 3 factors × 2 statements), the same contrasts as the panel calibration | The 85 pair gaps |
 | Best possible correlation, given people's own noise | 0.82 | 0.93 |
 
-- **Authors:** Haiku, Sonnet and Opus, each run twice with the order of scenarios, versions, groups and stories reshuffled. Their two runs are averaged.
-  - Predictions were stable: run-to-run correlation 0.97 on OffTheRails and 0.82–0.96 on MoCa.
+- **Authors:** Haiku, Sonnet, Opus and Fable, each run twice with the order of scenarios, versions, groups and stories reshuffled. Their two runs are averaged.
+  - Predictions were stable: run-to-run correlation 0.97–0.98 on OffTheRails and 0.82–0.97 on MoCa.
 - **What authors were told:** what the versions differ in; that the means and side-effect versions are different stories (see the correction in the calibration report); how many people answered; and to predict what people actually answered, not the right answer. They were not told the datasets' names.
 - **Provenance:** every run was served the model requested. Each read only its own task file and wrote only its predictions; `pipeline/predict_humans/check_agents.py` checks this from the transcripts.
 
@@ -44,6 +49,7 @@ The pilot scores authors against a panel of models. This task scores them agains
 
 | Predictor | r with people | Average error | Mean \|predicted gap\| | Pilot prediction score | Direction right (of 60) | Same sign where people show a gap (of 20) |
 |---|---|---|---|---|---|---|
+| Fable | 0.67 | **0.20** | 0.30 | 0.78 | 42 | 19 |
 | Opus | 0.47 | 0.26 | 0.25 | 0.79 | 43 | 19 |
 | Sonnet | 0.46 | 0.32 | 0.37 | 0.71 | 37 | 19 |
 | Haiku | 0.52 | 0.37 | 0.46 | 0.61 | 32 | 19 |
@@ -58,19 +64,20 @@ The pilot scores authors against a panel of models. This task scores them agains
 
 | Factor | What happened |
 |---|---|
-| Avoidable vs unavoidable harm (near-minimal edit) | Every author orders the scenarios almost exactly as people do (r 0.94), better than any panel (0.73–0.83). Opus predicts the right pattern but at a third of the size (mean \|gap\| 0.10 against people's 0.29). Haiku's sizes are closest (error 0.11). |
-| Means vs side effect (two different stories) | Authors, like the panels, predict much bigger gaps than people show: Haiku 0.93, Sonnet 0.73, Opus 0.48, against people's 0.20. Opus exaggerates least. |
+| Avoidable vs unavoidable harm (near-minimal edit) | Every author orders the scenarios almost exactly as people do (r 0.94), better than any panel (0.73–0.83). Opus predicts the right pattern but at a third of the size (mean \|gap\| 0.10 against people's 0.29). Fable's sizes are closest (mean \|gap\| 0.27, error 0.09), then Haiku's (0.11). |
+| Means vs side effect (two different stories) | Authors, like the panels, predict much bigger gaps than people show: Haiku 0.93, Sonnet 0.73, Fable 0.53, Opus 0.48, against people's 0.20. Opus exaggerates least. |
 | Acts vs does not prevent | People's gaps are tiny (0.11), so everyone scores well on the pilot's rule. But the ordering is backwards for every author and the Claude panel (r −0.33 to −0.36). |
 
 **Average ratings, not just gaps.** People's mean ratings across the 80 versions were 4.08 for permissibility and 2.20 for intention.
-- **Opus** is closest: it predicted 4.00 and 2.25, with average errors of 0.22 and 0.28 per version.
+- **Fable and Opus** are closest. Fable predicted 4.01 and 2.26, with average errors of 0.20 and 0.28 per version; Opus predicted 4.00 and 2.25 (errors 0.22 and 0.28).
 - **Haiku** predicted permissibility far too low: 3.43, error 0.67.
 
 ## MoCa: 85 pairs
 
 | Predictor | r with people | Average error | Where people differ by 0.30 or more (34 pairs): same / no gap / opposite | Norm-violation pairs: r, same sign of 19 |
 |---|---|---|---|---|
-| Opus | **0.56** | **0.23** | **28 / 1 / 5** | **0.85, 19** |
+| Fable | **0.59** | **0.23** | **28 / 1 / 5** | **0.85, 19** |
+| Opus | 0.56 | **0.23** | **28 / 1 / 5** | **0.85, 19** |
 | Haiku | 0.45 | 0.26 | 22 / 1 / 11 | 0.69, 16 |
 | Sonnet | 0.40 | 0.25 | 21 / 6 / 7 | 0.70, 16 |
 | Always "no difference" | — | 0.26 | 0 / 34 / 0 | — |
@@ -80,25 +87,25 @@ The pilot scores authors against a panel of models. This task scores them agains
 
 - **Norm violations** are the analogue of the benchmark's fifth factor (rule-breaking makes someone more of a cause).
   - The authors' predictions track people far better than any panel.
-  - Opus gets the direction right on all 19 pairs where people differ clearly.
-- **Agent awareness** (6 clear pairs): Opus 4 right, Haiku 3, Sonnet 2. The Claude panel got 1.
-- **Predicting each story's yes-share** (not the gap): correlation 0.38–0.48, majority answer right 63–64% of the time, for all three.
+  - Fable and Opus get the direction right on all 19 pairs where people differ clearly.
+- **Agent awareness** (6 clear pairs): Opus 4 right, Fable 3, Haiku 3, Sonnet 2. The Claude panel got 1.
+- **Predicting each story's yes-share** (not the gap): correlation 0.38–0.48 for Haiku, Sonnet and Opus, with the majority answer right 63–64% of the time; Fable 0.53 and 69%.
 
 ## Caveats
 
 - **This is prediction, not authoring.** It scores the "predict how readers react" half of the benchmark, on other people's stories. It says nothing about whether an author can write a pair that works.
-- **Memory may help.** In the recognition check, Opus named OffTheRails for all 10 scenarios and named MoCa or BIG-Bench for 45 of 89 stories. Haiku recognised 8 MoCa stories and misattributed OffTheRails. Haiku still reaches r 0.45 on MoCa, so recognition isn't everything, but Opus's lead could partly be recall.
+- **Memory may help.** In the recognition check, Opus and Fable named OffTheRails for all 10 scenarios, and named MoCa or BIG-Bench for 45 (Opus) and 34 (Fable) of 89 stories. Haiku recognised 8 MoCa stories and misattributed OffTheRails. Haiku still reaches r 0.45 on MoCa, so recognition isn't everything, but Opus's and Fable's lead could partly be recall.
 - **These are two particular studies.** One online sample each, and mostly small effects. A factor where people react strongly would test predictions more sharply.
 - **Means vs side effect is not a clean factor in OffTheRails.** The two versions are different stories.
 
 ## What this means for the benchmark
 
-1. **Use this as the benchmark's human-grounded component now.** It needs no new participants, costs nothing per run beyond the model calls, and gives a ranking against people rather than against models. Rerun it whenever an author model is added. Add Fable once its limit resets.
+1. **Use this as the benchmark's human-grounded component now.** It needs no new participants, costs nothing per run beyond the model calls, and gives a ranking against people rather than against models. Rerun it whenever an author model is added (Fable was added on 26 November).
 2. **Fix the prediction score before it meets human data.** *(Done 22 November: see `reports/Prediction score change.md`.)*
    - With mostly small human effects, "always no difference" wins on the pilot's thresholds. Score the error against the human gap instead of size classes.
    - For authored pairs, keep the separate "demonstrated" requirement: the pair must actually show a gap in people. Then predicting "none" can't win.
 3. **Be wary of textbook expectations on doing vs allowing.** Authors and panels share the expectation that doing is worse than allowing. These participants didn't follow it. The benchmark's doing/allowing pairs are where authors' predictions and the panel's verdicts are most likely to agree with each other and both be wrong.
-4. **For a prior on the pilot's pairs, a strong author's direct prediction may beat the panel's measurement.** On MoCa it did (r 0.56 against 0.23). That suggests asking Opus to predict the human gap for each pilot pair, and using that alongside the panel when the survey data are analysed.
+4. **For a prior on the pilot's pairs, a strong author's direct prediction may beat the panel's measurement.** On MoCa it did (r 0.56 against 0.23). That suggests asking Opus or Fable to predict the human gap for each pilot pair, and using that alongside the panel when the survey data are analysed.
 
 ## Rerun
 

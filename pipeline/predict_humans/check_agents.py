@@ -37,7 +37,17 @@ for f in glob.glob(os.path.join(args.transcripts, "agent-*.jsonl")):
     writes = [c for c in calls if c[0] == "Write"]
     clean = (bool(reads) and all(c[1] == task + ".txt" for c in reads) and len(writes) == 1 and writes[0][1] == out + ".json"
              and len(reads) + len(writes) == len(calls))
-    rep[out] = {"task_file": task + ".txt", "served": sorted(models), "calls": calls, "clean": clean, "wrote_answers": bool(writes)}
+    new = {"task_file": task + ".txt", "served": sorted(models), "calls": calls, "clean": clean, "wrote_answers": bool(writes)}
+    # Several transcripts can target the same output (e.g. attempts that hit a usage limit and wrote nothing, then a
+    # successful rerun): keep the attempt that wrote answers, and count the others.
+    old = rep.get(out)
+    if old is not None:
+        keep, drop = (new, old) if (new["wrote_answers"] and not old["wrote_answers"]) else (old, new)
+        if keep["wrote_answers"] and drop["wrote_answers"]:
+            raise SystemExit("two attempts wrote %s; resolve by hand" % out)
+        keep["failed_attempts_without_answers"] = old.get("failed_attempts_without_answers", 0) + 1
+        new = keep
+    rep[out] = new
 for k in sorted(rep):
     r = rep[k]
     print("%-18s served %-22s clean %-5s calls %s" % (k, ",".join(r["served"]), r["clean"], [c[0] for c in r["calls"]]))
