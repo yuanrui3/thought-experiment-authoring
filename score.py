@@ -42,7 +42,14 @@ RULES = {
     "format_cap": 50.0,          # a pair that breaks a hard format rule cannot score above this
 }
 SIZE_ORDER = {"none": 0, "small": 1, "large": 2}
-AGREEMENT_RULES = {"two_thirds": 2 / 3, "three_quarters": 0.75}
+AGREEMENT_RULES = {"two_thirds": 2 / 3, "three_quarters": 0.75, "ceiling_abstain": 0.75}
+# "ceiling_abstain" (tested 26 November 2026; see reports/Ceiling abstention test.md): the pilot's three-quarters share,
+# but a judge group whose mean rating for BOTH versions lies in the top twelfth of the scale (>= 6.5 on 1-7) or BOTH in
+# the bottom twelfth (<= 1.5) abstains: it keeps its place in the averaged gap and its interval, but does not vote on
+# the sign. A gap then needs three quarters of the voting groups, and at least two voting groups.
+BOUND_SHARE = 1 / 12
+SCALE = (1, 7)
+MIN_VOTING_GROUPS = 2
 
 
 def set_agreement_rule(name):
@@ -151,7 +158,14 @@ def effect_stats(cell, n_boot, rng):
             if len(xs) >= 2:
                 variances.append(statistics.variance(xs))
     sd = math.sqrt(mean(variances)) if variances else None
-    same_sign = sum(1 for g in groups if delta != 0 and per_group[g]["effect"] * delta > 0)
+    abstaining = []
+    if RULES["agreement_rule"] == "ceiling_abstain":
+        lo_b = SCALE[0] + BOUND_SHARE * (SCALE[1] - SCALE[0])
+        hi_b = SCALE[1] - BOUND_SHARE * (SCALE[1] - SCALE[0])
+        abstaining = [g for g in groups if min(per_group[g]["mean_a"], per_group[g]["mean_b"]) >= hi_b - 1e-9
+                      or max(per_group[g]["mean_a"], per_group[g]["mean_b"]) <= lo_b + 1e-9]
+    voting = [g for g in groups if g not in abstaining]
+    same_sign = sum(1 for g in voting if delta != 0 and per_group[g]["effect"] * delta > 0)
     return {
         "groups": groups, "per_group": per_group,
         "n_a": sum(per_group[g]["n_a"] for g in groups), "n_b": sum(per_group[g]["n_b"] for g in groups),
@@ -162,7 +176,8 @@ def effect_stats(cell, n_boot, rng):
         "cliffs_delta": mean([per_group[g]["cliffs_delta"] for g in groups]),
         "within_cell_sd": sd,
         "std_effect": (delta / sd) if sd else None,
-        "groups_same_sign": same_sign, "groups_total": G,
+        "groups_same_sign": same_sign, "groups_total": len(voting),
+        **({"groups_abstaining": abstaining, "groups_all": G} if RULES["agreement_rule"] == "ceiling_abstain" else {}),
     }
 
 
@@ -174,6 +189,8 @@ def classify(es):
     ci_excludes_zero = es["ci_low"] > 0 or es["ci_high"] < 0
     need = math.ceil(RULES["group_agreement"] * es["groups_total"] - 1e-9)
     groups_agree = es["groups_same_sign"] >= need
+    if RULES["agreement_rule"] == "ceiling_abstain" and es["groups_total"] < MIN_VOTING_GROUPS:
+        groups_agree = False
     if size == "none":
         direction = "none"
     elif ci_excludes_zero and groups_agree:

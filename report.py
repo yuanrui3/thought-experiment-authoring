@@ -277,6 +277,9 @@ def agreement_text(rules):
     """How many judge groups must agree on a gap's sign, in words, for the rule in force."""
     if rules.get("agreement_rule", "three_quarters") == "two_thirds":
         return "at least two-thirds of a panel\'s models agree (2 of 3, 3 of 4)"
+    if rules.get("agreement_rule") == "ceiling_abstain":
+        return ("at least 75% of the panel\'s voting models agree (3 of 3, 3 of 4); a model that rates both versions at "
+                "the top or bottom of the scale abstains, and at least two must vote")
     return "at least 75% of a panel\'s models agree (3 of 3, 3 of 4)"
 
 

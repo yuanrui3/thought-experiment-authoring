@@ -43,10 +43,12 @@ ap.add_argument("--splits", type=int, default=200)
 ap.add_argument("--seed", type=int, default=7)
 ap.add_argument("--group", action="append", default=[], metavar="LABEL=DIR",
                 help="an extra judge group (e.g. another vendor's model) whose bNN.json answers in DIR follow the manifest's batches")
-ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds"], default="three_quarters",
+ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds", "ceiling_abstain"], default="three_quarters",
                 help="share of panel groups that must agree on a gap's sign: three_quarters (the pilot's rule, and the "
-                     "default here so the published calibration numbers rebuild unchanged) or two_thirds (the benchmark's "
-                     "rule from 24 November 2026: 2 of 3 groups, 3 of 4)")
+                     "default here so the published calibration numbers rebuild unchanged), two_thirds (the benchmark's "
+                     "rule from 24 November 2026: 2 of 3 groups, 3 of 4) or ceiling_abstain (three quarters of the voting "
+                     "groups, at least two; a group whose mean for both sides lies in the top or bottom twelfth of the "
+                     "scale abstains, as in score.py)")
 ap.add_argument("--panel", help="comma-separated groups that form the panel (default: the manifest's four Claude models)")
 args = ap.parse_args()
 rng = random.Random(args.seed)
@@ -58,12 +60,30 @@ for m in MODELS:
         raise SystemExit("panel group %s has no answers (add --group %s=DIR)" % (m, m))
 OTR_THRESHOLD = 0.5 * 4 / 6          # the benchmark's 0.5 on a 1-7 scale, as a share of the scale's range, on 1-5
 MOCA_THRESHOLD = 0.25                # yes-share gap treated as "confirmed size" for MoCa (no benchmark analogue)
-AGREE_SHARE = {"three_quarters": 0.75, "two_thirds": 2 / 3}[args.agreement_rule]
+AGREE_SHARE = {"three_quarters": 0.75, "two_thirds": 2 / 3, "ceiling_abstain": 0.75}[args.agreement_rule]
+ABSTAIN = args.agreement_rule == "ceiling_abstain"
+BOUND_SHARE = 1 / 12                 # as in score.py: the top or bottom twelfth of the scale's range (6.5 or 1.5 on 1-7)
+OTR_SCALE, MOCA_SCALE = (1, 5), (0, 1)
 
 
 def agrees(same, n):
     """Enough panel groups share the sign: the share, rounded up to whole groups, as in score.py."""
+    if ABSTAIN and n < 2:
+        return False
     return same >= math.ceil(AGREE_SHARE * n - 1e-9)
+
+
+def at_bound(a, b, scale):
+    lo_b = scale[0] + BOUND_SHARE * (scale[1] - scale[0])
+    hi_b = scale[1] - BOUND_SHARE * (scale[1] - scale[0])
+    return min(a, b) >= hi_b - 1e-9 or max(a, b) <= lo_b + 1e-9
+
+
+def votes(per, d, sides=None, scale=None):
+    """(groups agreeing in sign with d, groups voting). Under ceiling_abstain a group whose two side means both lie at
+    the top or the bottom of the scale abstains."""
+    voters = [m for m in per if not (ABSTAIN and sides and m in sides and at_bound(sides[m][0], sides[m][1], scale))]
+    return sum(1 for m in voters if d and per[m] * d > 0), len(voters)
 
 
 HUMAN_CLEAR = 0.30                   # MoCa: human yes-share gap counted as clear for direction agreement
@@ -242,6 +262,13 @@ def cluster_weights(units, r):
 # point estimates
 hg = human_gaps(H)
 pg, pg_per = panel_gaps(P_otr)
+pg_sides = defaultdict(dict)          # per-model mean of each side, for ceiling abstention
+for m in MODELS:
+    acc_m = side_means([x for x in P_otr if x["model"] == m])
+    for s, fname, fkey, q in CONTRASTS:
+        a, b = acc_m.get((s, fkey, 1, q)), acc_m.get((s, fkey, 0, q))
+        if a and b and a[1] and b[1]:
+            pg_sides[(s, fname, q)][m] = (a[0] / a[1], b[0] / b[1])
 
 # human intervals: resample workers
 hboot = defaultdict(list)
@@ -271,8 +298,8 @@ for s, fname, fkey, q in CONTRASTS:
 def panel_verdict(key):
     d = pg[key]
     lo, hi = pci[key]
-    same = sum(1 for v in pg_per[key].values() if v * d > 0)
-    if abs(d) >= OTR_THRESHOLD and (lo > 0 or hi < 0) and agrees(same, len(pg_per[key])):
+    same, n = votes(pg_per[key], d, pg_sides.get(key), OTR_SCALE)
+    if abs(d) >= OTR_THRESHOLD and (lo > 0 or hi < 0) and agrees(same, n):
         return "+" if d > 0 else "-"
     return "0"
 
@@ -302,7 +329,8 @@ for s, fname, fkey, q in CONTRASTS:
     rows_out.append({"scenario": s, "factor": fname, "question": q, "human_gap": r3(hg[key]), "human_ci": [r3(v) for v in hci[key]],
                      "panel_gap": r3(pg[key]), "panel_ci": [r3(v) for v in pci[key]],
                      "panel_per_model": {m: r3(v) for m, v in pg_per[key].items()},
-                     "panel_verdict": pv, "human_verdict": hv, "class": cls})
+                     "panel_verdict": pv, "human_verdict": hv, "class": cls,
+                     **({"abstaining": [m for m, sd in pg_sides.get(key, {}).items() if at_bound(sd[0], sd[1], OTR_SCALE)]} if ABSTAIN else {})})
 
 
 def otr_agreement(keys, per_model=None):
@@ -362,8 +390,8 @@ def threshold_rule(t, ci=True, agree=None):
     def v(k):
         d = pg[k]
         lo, hi = pci[k]
-        same = sum(1 for x in pg_per[k].values() if x * d > 0)
-        ok = abs(d) >= t and (not ci or lo > 0 or hi < 0) and (agrees(same, len(pg_per[k])) if agree is None else same / len(pg_per[k]) >= agree)
+        same, n = votes(pg_per[k], d, pg_sides.get(k), OTR_SCALE) if agree is None else (sum(1 for x in pg_per[k].values() if x * d > 0), len(pg_per[k]))
+        ok = abs(d) >= t and (not ci or lo > 0 or hi < 0) and (agrees(same, n) if agree is None else same / n >= agree)
         return ("+" if d > 0 else "-") if ok else "0"
     return v
 
@@ -377,8 +405,8 @@ def human_noise_rule(sd, t):
         nb = sum(len(cells[(s_, fkey, 0, q_, m)]) for m in MODELS)
         half = 1.96 * sd * math.sqrt(1 / na + 1 / nb)
         d = pg[k]
-        same = sum(1 for x in pg_per[k].values() if x * d > 0)
-        return ("+" if d > 0 else "-") if abs(d) >= t and abs(d) > half and agrees(same, len(pg_per[k])) else "0"
+        same, n = votes(pg_per[k], d, pg_sides.get(k), OTR_SCALE)
+        return ("+" if d > 0 else "-") if abs(d) >= t and abs(d) > half and agrees(same, n) else "0"
     return v
 
 
@@ -550,8 +578,9 @@ for a, b in pairs:
     se = math.sqrt(moca_h[a] * (1 - moca_h[a]) / NH + moca_h[b] * (1 - moca_h[b]) / NH)
     boots = sorted(moca_pair_gap(a, b, rng)[0] for _ in range(args.boot))
     lo, hi = pct(boots, 0.025), pct(boots, 0.975)
-    same = sum(1 for v in per.values() if g and v * g > 0)
-    pv = ("+" if g > 0 else "-") if abs(g) >= MOCA_THRESHOLD and (lo > 0 or hi < 0) and per and agrees(same, len(per)) else "0"
+    sides = {m: (moca_panel_share(a, m), moca_panel_share(b, m)) for m in per}
+    same, n = votes(per, g, sides, MOCA_SCALE)
+    pv = ("+" if g > 0 else "-") if abs(g) >= MOCA_THRESHOLD and (lo > 0 or hi < 0) and per and agrees(same, n) else "0"
     hv = "0" if abs(hgap) < 1.96 * se or se == 0 and hgap == 0 else ("+" if hgap > 0 else "-")
     if se == 0 and hgap != 0:
         hv = "+" if hgap > 0 else "-"
@@ -560,7 +589,8 @@ for a, b in pairs:
                                     r3(mean([moca_panel_share(b, m) for m in MODELS if (b, m) in ans]))],
                       "panel_gap": r3(g), "panel_ci": [r3(lo), r3(hi)], "panel_per_model": {m: r3(v) for m, v in per.items()},
                       "panel_n": {m: [len(ans.get((a, m), [])), len(ans.get((b, m), []))] for m in MODELS},
-                      "panel_verdict": pv, "human_verdict": hv})
+                      "panel_verdict": pv, "human_verdict": hv,
+                      **({"abstaining": [m for m, sd in sides.items() if sd[0] is not None and sd[1] is not None and at_bound(sd[0], sd[1], MOCA_SCALE)]} if ABSTAIN else {})})
 
 moca_cover = {"panel_interval_contains_human_gap": sum(1 for r in moca_rows if r["panel_ci"][0] <= r["human_gap"] <= r["panel_ci"][1]),
               "of": len(moca_rows), "mean_panel_interval_width": r3(mean([r["panel_ci"][1] - r["panel_ci"][0] for r in moca_rows]))}
