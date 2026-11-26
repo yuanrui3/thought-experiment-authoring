@@ -1,34 +1,37 @@
 {
  "new_run": "persona",
  "judge_models": [
+  "claude-fable-5-2",
   "claude-haiku-5-5",
   "claude-opus-5-5",
   "claude-sonnet-5-5"
  ],
- "n_new_ratings": 900,
+ "n_new_ratings": 1200,
  "spread_within_model": {
   "original": {
+   "claude-fable-5-2": 0.193,
    "claude-haiku-5-5": 0.544,
    "claude-opus-5-5": 0.188,
    "claude-sonnet-5-5": 0.408
   },
   "persona": {
+   "claude-fable-5-2": 0.483,
    "claude-haiku-5-5": 0.583,
    "claude-opus-5-5": 0.401,
    "claude-sonnet-5-5": 0.494
   }
  },
  "comprehension": {
-  "original": 0.993,
-  "persona": 0.993
+  "original": 0.995,
+  "persona": 0.995
  },
- "verdicts_changed": 5,
- "verdicts_changed_authored": 3,
- "effect_correlation_with_original": 0.979,
+ "verdicts_changed": 3,
+ "verdicts_changed_authored": 2,
+ "effect_correlation_with_original": 0.986,
  "mean_abs_effect_authored": {
   "published": 2.0,
-  "original_same_models": 1.9,
-  "persona": 1.77,
+  "original_same_models": 2.0,
+  "persona": 1.8,
   "gemini": 2.44
  },
  "null_controls_with_a_gap": {
@@ -61,28 +64,12 @@
    "persona_prediction_score": "0.0"
   },
   {
-   "pair_id": "au_opus_norm_causation",
-   "predicted": "A_higher/large",
-   "original_same_models_verdict": "A_higher/small",
-   "persona_verdict": "A_higher/large",
-   "original_same_models_prediction_score": "0.98",
-   "persona_prediction_score": "1.0"
-  },
-  {
    "pair_id": "cc_moral_luck",
    "predicted": "A_higher/small",
    "original_same_models_verdict": "A_higher/small",
    "persona_verdict": "none/none",
    "original_same_models_prediction_score": "1.0",
    "persona_prediction_score": "0.0"
-  },
-  {
-   "pair_id": "cc_norm_causation",
-   "predicted": "A_higher/large",
-   "original_same_models_verdict": "A_higher/small",
-   "persona_verdict": "A_higher/large",
-   "original_same_models_prediction_score": "0.98",
-   "persona_prediction_score": "1.0"
   }
  ],
  "authors": {
@@ -93,13 +80,13 @@
     "full_hits": "3"
    },
    "original_same_models": {
-    "mean_composite": "76.133",
-    "mean_prediction_score": "0.787",
+    "mean_composite": "76.667",
+    "mean_prediction_score": "0.8",
     "full_hits": "3"
    },
    "persona": {
-    "mean_composite": "74.711",
-    "mean_prediction_score": "0.751",
+    "mean_composite": "75.067",
+    "mean_prediction_score": "0.76",
     "full_hits": "3"
    },
    "gemini": {
@@ -115,13 +102,13 @@
     "full_hits": "1"
    },
    "original_same_models": {
-    "mean_composite": "56.689",
-    "mean_prediction_score": "0.476",
+    "mean_composite": "56.6",
+    "mean_prediction_score": "0.473",
     "full_hits": "1"
    },
    "persona": {
-    "mean_composite": "56.133",
-    "mean_prediction_score": "0.467",
+    "mean_composite": "56.45",
+    "mean_prediction_score": "0.473",
     "full_hits": "1"
    },
    "gemini": {
@@ -137,12 +124,12 @@
     "full_hits": "4"
    },
    "original_same_models": {
-    "mean_composite": "72.389",
-    "mean_prediction_score": "0.796",
-    "full_hits": "3"
+    "mean_composite": "72.592",
+    "mean_prediction_score": "0.8",
+    "full_hits": "4"
    },
    "persona": {
-    "mean_composite": "72.567",
+    "mean_composite": "72.592",
     "mean_prediction_score": "0.8",
     "full_hits": "4"
    },
@@ -176,7 +163,7 @@
   }
  },
  "agrees_with_gemini": {
-  "original_same_models": 20,
+  "original_same_models": 22,
   "persona": 22
  }
 }

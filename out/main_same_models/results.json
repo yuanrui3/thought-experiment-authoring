@@ -28,9 +28,10 @@
   "seed": 7
  },
  "data": {
-  "n_judgments": 900,
-  "n_judges": 30,
+  "n_judgments": 1200,
+  "n_judges": 40,
   "judge_groups": [
+   "anthropic/claude-fable-5-2",
    "anthropic/claude-haiku-5-5",
    "anthropic/claude-opus-5-5",
    "anthropic/claude-sonnet-5-5"
@@ -139,11 +140,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 1.8,
+      "effect": 5.2,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       2,
+       2,
+       1,
+       2,
+       2
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -211,24 +235,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.933333333333334,
-    "mean_b": 2.8000000000000003,
-    "effect": 4.133333333333333,
-    "ci_low": 3.733333333333333,
-    "ci_high": 4.533333333333333,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.95,
+    "mean_b": 2.55,
+    "effect": 4.4,
+    "ci_low": 4.1,
+    "ci_high": 4.7,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 2.6666666666666665,
-    "ci_model_level_high": 5.533333333333334,
+    "ci_model_level_low": 3.15,
+    "ci_model_level_high": 5.449999999999999,
     "cliffs_delta": 1.0,
-    "within_cell_sd": 0.6324555320336759,
-    "std_effect": 6.53537383101465,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "within_cell_sd": 0.570087712549569,
+    "std_effect": 7.7181105699018575,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 4.133333333333333,
+    "effect": 4.4,
     "n_excluded": 0
    },
    "observed": {
@@ -243,6 +267,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -433,11 +458,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 4.4,
+      "mean_b": 4.8,
+      "effect": -0.39999999999999947,
+      "cliffs_delta": -0.4,
+      "ratings_a": [
+       4,
+       4,
+       5,
+       4,
+       5
+      ],
+      "ratings_b": [
+       5,
+       4,
+       5,
+       5,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -505,24 +553,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.0,
-    "mean_b": 4.933333333333334,
-    "effect": -0.9333333333333332,
-    "ci_low": -1.3999999999999997,
-    "ci_high": -0.4666666666666666,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.1,
+    "mean_b": 4.9,
+    "effect": -0.7999999999999998,
+    "ci_low": -1.15,
+    "ci_high": -0.44999999999999984,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -1.7333333333333332,
-    "ci_model_level_high": -0.2666666666666668,
-    "cliffs_delta": -0.64,
-    "within_cell_sd": 0.695221787153807,
-    "std_effect": -1.3424972441590755,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": -1.4500000000000002,
+    "ci_model_level_high": -0.2999999999999996,
+    "cliffs_delta": -0.5800000000000001,
+    "within_cell_sd": 0.6519202405202649,
+    "std_effect": -1.2271439821557923,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -0.9333333333333332,
+    "effect": -0.7999999999999998,
     "n_excluded": 0
    },
    "observed": {
@@ -537,6 +585,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -550,8 +599,8 @@
    },
    "prediction_distance": {
     "score": 0.0,
-    "accuracy": 0.04444444444444462,
-    "distance": 1.4333333333333331,
+    "accuracy": 0.13333333333333341,
+    "distance": 1.2999999999999998,
     "demonstration_required": true,
     "demonstrated": false
    },
@@ -727,11 +776,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 1.6,
+      "effect": 4.4,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       2,
+       2,
+       1,
+       2,
+       1
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -799,24 +871,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
+    "n_a": 20,
+    "n_b": 20,
     "mean_a": 6.0,
-    "mean_b": 2.066666666666667,
-    "effect": 3.9333333333333336,
-    "ci_low": 3.733333333333333,
-    "ci_high": 4.133333333333334,
+    "mean_b": 1.9500000000000002,
+    "effect": 4.05,
+    "ci_low": 3.85,
+    "ci_high": 4.25,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 3.533333333333333,
-    "ci_model_level_high": 4.266666666666667,
+    "ci_model_level_low": 3.6999999999999997,
+    "ci_model_level_high": 4.3500000000000005,
     "cliffs_delta": 1.0,
-    "within_cell_sd": 0.31622776601683794,
-    "std_effect": 12.438292129995626,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "within_cell_sd": 0.33541019662496846,
+    "std_effect": 12.074767078498864,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 3.9333333333333336,
+    "effect": 4.05,
     "n_excluded": 0
    },
    "observed": {
@@ -831,6 +903,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -845,7 +918,7 @@
    "prediction_distance": {
     "score": 0.0,
     "accuracy": 0.0,
-    "distance": 2.4333333333333336,
+    "distance": 2.55,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -1018,11 +1091,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 4.2,
+      "mean_b": 5.0,
+      "effect": -0.7999999999999998,
+      "cliffs_delta": -0.8,
+      "ratings_a": [
+       4,
+       4,
+       4,
+       5,
+       4
+      ],
+      "ratings_b": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -1090,24 +1186,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.3999999999999995,
-    "mean_b": 5.3999999999999995,
-    "effect": -1.0000000000000002,
-    "ci_low": -1.3333333333333333,
-    "ci_high": -0.7333333333333333,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.35,
+    "mean_b": 5.3,
+    "effect": -0.9500000000000001,
+    "ci_low": -1.2,
+    "ci_high": -0.7000000000000002,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -1.7999999999999996,
-    "ci_model_level_high": -0.4000000000000001,
-    "cliffs_delta": -0.7066666666666667,
-    "within_cell_sd": 0.48304589153964794,
-    "std_effect": -2.070196678027063,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": -1.55,
+    "ci_model_level_high": -0.5,
+    "cliffs_delta": -0.73,
+    "within_cell_sd": 0.4472135954999579,
+    "std_effect": -2.1242645786248002,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -1.0000000000000002,
+    "effect": -0.9500000000000001,
     "n_excluded": 0
    },
    "observed": {
@@ -1122,6 +1218,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -1134,9 +1231,9 @@
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.6666666666666667,
-    "accuracy": 0.6666666666666667,
-    "distance": 0.4999999999999998,
+    "score": 0.6333333333333333,
+    "accuracy": 0.6333333333333333,
+    "distance": 0.5499999999999999,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -1218,18 +1315,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.6666666666666667,
+    "distance": 0.6333333333333333,
     "classes": 0.75
    },
    "components": {
-    "prediction": 0.6666666666666667,
+    "prediction": 0.6333333333333333,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 73.33333333333334,
+   "composite": 72.0,
    "gated": {
-    "behavior_score": 75.75757575757576,
+    "behavior_score": 73.33333333333331,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -1299,11 +1396,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 4.2,
+      "effect": 1.7999999999999998,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       4,
+       4,
+       5,
+       4,
+       4
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -1371,24 +1491,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.466666666666666,
-    "mean_b": 3.533333333333333,
-    "effect": 1.9333333333333336,
-    "ci_low": 1.6000000000000003,
-    "ci_high": 2.2666666666666666,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.6,
+    "mean_b": 3.7,
+    "effect": 1.9,
+    "ci_low": 1.65,
+    "ci_high": 2.15,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 1.1333333333333335,
-    "ci_model_level_high": 2.7999999999999994,
-    "cliffs_delta": 0.9199999999999999,
-    "within_cell_sd": 0.5322906474223771,
-    "std_effect": 3.6321008882938672,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 1.3,
+    "ci_model_level_high": 2.5500000000000003,
+    "cliffs_delta": 0.94,
+    "within_cell_sd": 0.48733971724044817,
+    "std_effect": 3.898717737923586,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 1.9333333333333336,
+    "effect": 1.9,
     "n_excluded": 0
    },
    "observed": {
@@ -1403,6 +1523,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -1415,9 +1536,9 @@
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.711111111111111,
-    "accuracy": 0.711111111111111,
-    "distance": 0.43333333333333357,
+    "score": 0.7333333333333334,
+    "accuracy": 0.7333333333333334,
+    "distance": 0.3999999999999999,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -1506,7 +1627,7 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.711111111111111,
+    "distance": 0.7333333333333334,
     "classes": 0.75
    },
    "convergence": {
@@ -1517,14 +1638,14 @@
     ]
    },
    "components": {
-    "prediction": 0.711111111111111,
+    "prediction": 0.7333333333333334,
     "comprehension": 1.0,
     "confounds": 0.33333333333333337,
     "originality": 0.6666666666666666
    },
-   "composite": 65.11111111111111,
+   "composite": 66.0,
    "gated": {
-    "behavior_score": 78.98989898989898,
+    "behavior_score": 80.60606060606061,
     "confound_gate": false,
     "originality_gate": false,
     "shared_setting": true,
@@ -1599,11 +1720,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 4.2,
+      "effect": 2.8,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       4,
+       4,
+       4,
+       4,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -1671,24 +1815,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.666666666666667,
-    "mean_b": 2.9333333333333336,
-    "effect": 3.733333333333333,
-    "ci_low": 3.3333333333333335,
-    "ci_high": 4.133333333333334,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.75,
+    "mean_b": 3.25,
+    "effect": 3.5,
+    "ci_low": 3.1999999999999997,
+    "ci_high": 3.8000000000000003,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 2.9333333333333336,
-    "ci_model_level_high": 4.266666666666667,
+    "ci_model_level_low": 2.8,
+    "ci_model_level_high": 4.15,
     "cliffs_delta": 1.0,
-    "within_cell_sd": 0.6454972243679028,
-    "std_effect": 5.783655130336409,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "within_cell_sd": 0.5809475019311126,
+    "std_effect": 6.024640760767093,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 3.733333333333333,
+    "effect": 3.5,
     "n_excluded": 0
    },
    "observed": {
@@ -1703,6 +1847,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -1894,11 +2039,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.8,
+      "mean_b": 6.0,
+      "effect": 0.7999999999999998,
+      "cliffs_delta": 0.8,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       6,
+       7
+      ],
+      "ratings_b": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -1966,24 +2134,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
+    "n_a": 20,
+    "n_b": 20,
     "mean_a": 6.8,
-    "mean_b": 6.066666666666666,
-    "effect": 0.7333333333333334,
-    "ci_low": 0.5333333333333335,
-    "ci_high": 0.9333333333333332,
+    "mean_b": 6.05,
+    "effect": 0.75,
+    "ci_low": 0.5999999999999999,
+    "ci_high": 0.8999999999999999,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.39999999999999974,
+    "ci_model_level_low": 0.4500000000000002,
     "ci_model_level_high": 1.0,
-    "cliffs_delta": 0.7333333333333334,
-    "within_cell_sd": 0.28867513459481287,
-    "std_effect": 2.5403411844343537,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "cliffs_delta": 0.75,
+    "within_cell_sd": 0.2958039891549808,
+    "std_effect": 2.53546276418555,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.7333333333333334,
+    "effect": 0.75,
     "n_excluded": 0
    },
    "observed": {
@@ -1998,6 +2166,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -2189,11 +2358,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 3.0,
+      "effect": 3.0,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       3,
+       3,
+       3,
+       3,
+       3
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -2261,24 +2453,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.733333333333333,
-    "mean_b": 3.6666666666666665,
-    "effect": 2.066666666666667,
-    "ci_low": 1.7333333333333332,
-    "ci_high": 2.466666666666667,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.8,
+    "mean_b": 3.5,
+    "effect": 2.3,
+    "ci_low": 2.05,
+    "ci_high": 2.6,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.33333333333333365,
-    "ci_model_level_high": 3.2000000000000006,
-    "cliffs_delta": 0.6533333333333333,
-    "within_cell_sd": 0.5916079783099616,
-    "std_effect": 3.493304252877869,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.8500000000000001,
+    "ci_model_level_high": 3.15,
+    "cliffs_delta": 0.74,
+    "within_cell_sd": 0.51234753829798,
+    "std_effect": 4.489140335563252,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 2.066666666666667,
+    "effect": 2.3,
     "n_excluded": 0
    },
    "observed": {
@@ -2293,6 +2485,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -2472,11 +2665,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.0,
+      "mean_b": 6.0,
+      "effect": -1.0,
+      "cliffs_delta": -1.0,
+      "ratings_a": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ],
+      "ratings_b": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -2544,24 +2760,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.533333333333333,
-    "mean_b": 5.333333333333333,
-    "effect": -0.8000000000000002,
-    "ci_low": -1.1333333333333335,
-    "ci_high": -0.4666666666666668,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.65,
+    "mean_b": 5.5,
+    "effect": -0.8500000000000001,
+    "ci_low": -1.1,
+    "ci_high": -0.6000000000000001,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -1.1999999999999997,
-    "ci_model_level_high": -0.40000000000000036,
-    "cliffs_delta": -0.6533333333333333,
-    "within_cell_sd": 0.5163977794943222,
-    "std_effect": -1.5491933384829673,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": -1.1499999999999997,
+    "ci_model_level_high": -0.55,
+    "cliffs_delta": -0.74,
+    "within_cell_sd": 0.4472135954999579,
+    "std_effect": -1.9006577808748215,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -0.8000000000000002,
+    "effect": -0.8500000000000001,
     "n_excluded": 0
    },
    "observed": {
@@ -2576,6 +2792,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -2746,11 +2963,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 3.2,
+      "mean_b": 5.0,
+      "effect": -1.7999999999999998,
+      "cliffs_delta": -1.0,
+      "ratings_a": [
+       3,
+       4,
+       3,
+       3,
+       3
+      ],
+      "ratings_b": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -2818,24 +3058,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 3.733333333333333,
-    "mean_b": 4.733333333333333,
-    "effect": -1.0000000000000002,
-    "ci_low": -1.2666666666666666,
-    "ci_high": -0.7333333333333333,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 3.6,
+    "mean_b": 4.8,
+    "effect": -1.2000000000000002,
+    "ci_low": -1.4499999999999997,
+    "ci_high": -0.9500000000000001,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -1.3333333333333333,
-    "ci_model_level_high": -0.6000000000000001,
-    "cliffs_delta": -0.8533333333333334,
-    "within_cell_sd": 0.4472135954999579,
-    "std_effect": -2.2360679774997902,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": -1.65,
+    "ci_model_level_high": -0.7500000000000001,
+    "cliffs_delta": -0.89,
+    "within_cell_sd": 0.4183300132670378,
+    "std_effect": -2.868548662402545,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -1.0000000000000002,
+    "effect": -1.2000000000000002,
     "n_excluded": 0
    },
    "observed": {
@@ -2850,6 +3090,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -3037,11 +3278,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 4.0,
+      "effect": 3.0,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       4,
+       4,
+       4,
+       4,
+       4
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -3109,24 +3373,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.3999999999999995,
-    "mean_b": 2.6666666666666665,
-    "effect": 3.733333333333333,
-    "ci_low": 3.5333333333333337,
-    "ci_high": 3.9333333333333336,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.55,
+    "mean_b": 3.0,
+    "effect": 3.55,
+    "ci_low": 3.4,
+    "ci_high": 3.7,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 3.3333333333333335,
-    "ci_model_level_high": 4.0,
+    "ci_model_level_low": 3.15,
+    "ci_model_level_high": 3.95,
     "cliffs_delta": 1.0,
-    "within_cell_sd": 0.28867513459481287,
-    "std_effect": 12.932646029847616,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "within_cell_sd": 0.25,
+    "std_effect": 14.2,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 3.716666666666667,
+    "effect": 3.5375,
     "n_excluded": 1
    },
    "observed": {
@@ -3137,10 +3401,11 @@
     "equivalence_supported": false
    },
    "comprehension": {
-    "accuracy": 0.9666666666666667,
-    "accuracy_a": 0.9333333333333333,
+    "accuracy": 0.975,
+    "accuracy_a": 0.95,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 0.9,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -3240,13 +3505,13 @@
    },
    "components": {
     "prediction": 1.0,
-    "comprehension": 0.9666666666666667,
+    "comprehension": 0.975,
     "confounds": 0.6666666666666667,
     "originality": 0.6666666666666666
    },
-   "composite": 84.5,
+   "composite": 84.625,
    "gated": {
-    "behavior_score": 99.0909090909091,
+    "behavior_score": 99.31818181818181,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -3316,11 +3581,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.2,
+      "mean_b": 6.0,
+      "effect": 0.20000000000000018,
+      "cliffs_delta": 0.2,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       7
+      ],
+      "ratings_b": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -3388,24 +3676,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.466666666666666,
-    "mean_b": 5.266666666666667,
-    "effect": 0.19999999999999987,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.65,
+    "mean_b": 5.45,
+    "effect": 0.19999999999999996,
     "ci_low": 0.0,
-    "ci_high": 0.4000000000000001,
+    "ci_high": 0.3999999999999999,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.13333333333333344,
-    "ci_model_level_high": 0.6,
-    "cliffs_delta": 0.19999999999999998,
-    "within_cell_sd": 0.3415650255319866,
-    "std_effect": 0.5855400437691196,
-    "groups_same_sign": 1,
-    "groups_total": 3
+    "ci_model_level_low": -0.09999999999999987,
+    "ci_model_level_high": 0.5000000000000002,
+    "cliffs_delta": 0.2,
+    "within_cell_sd": 0.33541019662496846,
+    "std_effect": 0.5962847939999438,
+    "groups_same_sign": 2,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.19999999999999987,
+    "effect": 0.19999999999999996,
     "n_excluded": 0
    },
    "observed": {
@@ -3420,6 +3708,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -3434,7 +3723,7 @@
    "prediction_distance": {
     "score": 0.0,
     "accuracy": 0.7999999999999999,
-    "distance": 0.30000000000000016,
+    "distance": 0.30000000000000004,
     "demonstration_required": true,
     "demonstrated": false
    },
@@ -3607,11 +3896,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 2.0,
+      "effect": 5.0,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -3679,24 +3991,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.2,
-    "mean_b": 3.266666666666667,
-    "effect": 2.9333333333333336,
-    "ci_low": 2.6,
-    "ci_high": 3.3333333333333335,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.4,
+    "mean_b": 2.95,
+    "effect": 3.45,
+    "ci_low": 3.2,
+    "ci_high": 3.75,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 1.6666666666666667,
-    "ci_model_level_high": 4.0,
-    "cliffs_delta": 0.9466666666666667,
-    "within_cell_sd": 0.5773502691896257,
-    "std_effect": 5.0806823688687075,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 2.1000000000000005,
+    "ci_model_level_high": 4.55,
+    "cliffs_delta": 0.96,
+    "within_cell_sd": 0.5,
+    "std_effect": 6.9,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 2.9333333333333336,
+    "effect": 3.45,
     "n_excluded": 0
    },
    "observed": {
@@ -3711,6 +4023,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -3892,11 +4205,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.0,
+      "mean_b": 3.2,
+      "effect": 1.7999999999999998,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ],
+      "ratings_b": [
+       3,
+       3,
+       3,
+       3,
+       4
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -3964,24 +4300,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.866666666666666,
-    "mean_b": 3.0,
-    "effect": 1.8666666666666665,
-    "ci_low": 1.5333333333333332,
-    "ci_high": 2.1999999999999997,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.9,
+    "mean_b": 3.05,
+    "effect": 1.8499999999999999,
+    "ci_low": 1.5999999999999999,
+    "ci_high": 2.1,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 1.3999999999999997,
-    "ci_model_level_high": 2.266666666666667,
-    "cliffs_delta": 0.9466666666666667,
-    "within_cell_sd": 0.5322906474223771,
-    "std_effect": 3.5068560300768366,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 1.4999999999999998,
+    "ci_model_level_high": 2.1500000000000004,
+    "cliffs_delta": 0.96,
+    "within_cell_sd": 0.48733971724044817,
+    "std_effect": 3.7961199027150703,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 1.8666666666666665,
+    "effect": 1.8499999999999999,
     "n_excluded": 0
    },
    "observed": {
@@ -3996,6 +4332,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -4176,11 +4513,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.0,
+      "mean_b": 2.0,
+      "effect": 3.0,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ],
+      "ratings_b": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -4248,29 +4608,29 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.6000000000000005,
-    "mean_b": 3.1333333333333333,
-    "effect": 1.4666666666666668,
-    "ci_low": 1.2000000000000002,
-    "ci_high": 1.7333333333333332,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.7,
+    "mean_b": 2.85,
+    "effect": 1.85,
+    "ci_low": 1.6500000000000001,
+    "ci_high": 2.05,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.4666666666666668,
-    "ci_model_level_high": 2.1999999999999997,
-    "cliffs_delta": 0.7999999999999999,
-    "within_cell_sd": 0.3872983346207417,
-    "std_effect": 3.78691704962503,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.8500000000000002,
+    "ci_model_level_high": 2.75,
+    "cliffs_delta": 0.85,
+    "within_cell_sd": 0.33541019662496846,
+    "std_effect": 5.515634344499482,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 1.4666666666666668,
+    "effect": 1.85,
     "n_excluded": 0
    },
    "observed": {
     "direction": "A_higher",
-    "size": "small",
+    "size": "large",
     "ci_excludes_zero": true,
     "groups_agree": true,
     "equivalence_supported": false
@@ -4280,21 +4640,22 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
     }
    },
    "prediction_result": {
-    "score": 0.75,
+    "score": 1.0,
     "direction_hit": true,
-    "size_hit": false,
+    "size_hit": true,
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.9777777777777779,
-    "accuracy": 0.9777777777777779,
-    "distance": 0.033333333333333215,
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -4380,8 +4741,8 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.9777777777777779,
-    "classes": 0.75
+    "distance": 1.0,
+    "classes": 1.0
    },
    "convergence": {
     "label": "a farm gate is left open and animals get out",
@@ -4391,14 +4752,14 @@
     ]
    },
    "components": {
-    "prediction": 0.9777777777777779,
+    "prediction": 1.0,
     "comprehension": 1.0,
     "confounds": 0.33333333333333337,
     "originality": 0.6666666666666666
    },
-   "composite": 75.77777777777779,
+   "composite": 76.66666666666667,
    "gated": {
-    "behavior_score": 98.3838383838384,
+    "behavior_score": 100.0,
     "confound_gate": false,
     "originality_gate": false,
     "shared_setting": true,
@@ -4473,11 +4834,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 4.2,
+      "effect": 2.8,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       4,
+       4,
+       4,
+       4,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -4545,24 +4929,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.866666666666667,
-    "mean_b": 3.6,
-    "effect": 3.266666666666666,
-    "ci_low": 2.9333333333333336,
-    "ci_high": 3.6666666666666665,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.9,
+    "mean_b": 3.75,
+    "effect": 3.15,
+    "ci_low": 2.8500000000000005,
+    "ci_high": 3.45,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 2.2666666666666666,
-    "ci_model_level_high": 4.066666666666666,
+    "ci_model_level_low": 2.4,
+    "ci_model_level_high": 3.85,
     "cliffs_delta": 1.0,
-    "within_cell_sd": 0.5627314338711378,
-    "std_effect": 5.805019002039104,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "within_cell_sd": 0.51234753829798,
+    "std_effect": 6.148170459575758,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 3.266666666666666,
+    "effect": 3.15,
     "n_excluded": 0
    },
    "observed": {
@@ -4577,6 +4961,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -4764,11 +5149,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 5.8,
+      "effect": 1.2000000000000002,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       6,
+       6,
+       5,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -4836,24 +5244,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.0,
-    "mean_b": 5.466666666666666,
-    "effect": 0.5333333333333332,
-    "ci_low": 0.26500000000001445,
-    "ci_high": 0.8000000000000002,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.25,
+    "mean_b": 5.55,
+    "effect": 0.7,
+    "ci_low": 0.4500000000000002,
+    "ci_high": 0.95,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.20000000000000018,
-    "ci_model_level_high": 0.8666666666666666,
-    "cliffs_delta": 0.5066666666666667,
-    "within_cell_sd": 0.4654746681256314,
-    "std_effect": 1.1457837984630923,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.34999999999999987,
+    "ci_model_level_high": 1.0999999999999999,
+    "cliffs_delta": 0.63,
+    "within_cell_sd": 0.4330127018922193,
+    "std_effect": 1.6165807537309522,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.5333333333333332,
+    "effect": 0.7,
     "n_excluded": 0
    },
    "observed": {
@@ -4868,6 +5276,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -5059,11 +5468,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.4,
+      "mean_b": 2.2,
+      "effect": 4.2,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       6,
+       6,
+       6,
+       7
+      ],
+      "ratings_b": [
+       2,
+       3,
+       2,
+       2,
+       2
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -5131,24 +5563,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.6000000000000005,
-    "mean_b": 3.4,
-    "effect": 2.1999999999999997,
-    "ci_low": 1.7333333333333332,
-    "ci_high": 2.6666666666666665,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.8,
+    "mean_b": 3.1,
+    "effect": 2.7,
+    "ci_low": 2.3,
+    "ci_high": 3.05,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.4666666666666668,
-    "ci_model_level_high": 3.466666666666667,
-    "cliffs_delta": 0.7333333333333334,
-    "within_cell_sd": 0.7416198487095662,
-    "std_effect": 2.9664793948382653,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 1.15,
+    "ci_model_level_high": 3.95,
+    "cliffs_delta": 0.8,
+    "within_cell_sd": 0.689202437604511,
+    "std_effect": 3.9175717505940635,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 2.1999999999999997,
+    "effect": 2.7,
     "n_excluded": 0
    },
    "observed": {
@@ -5163,6 +5595,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -5340,11 +5773,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 4.0,
+      "mean_b": 5.8,
+      "effect": -1.7999999999999998,
+      "cliffs_delta": -1.0,
+      "ratings_a": [
+       4,
+       4,
+       4,
+       4,
+       4
+      ],
+      "ratings_b": [
+       6,
+       6,
+       5,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -5412,24 +5868,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.533333333333334,
-    "mean_b": 5.933333333333334,
-    "effect": -1.3999999999999997,
-    "ci_low": -1.5999999999999999,
-    "ci_high": -1.2,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.4,
+    "mean_b": 5.9,
+    "effect": -1.4999999999999998,
+    "ci_low": -1.65,
+    "ci_high": -1.2999999999999998,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -2.0,
-    "ci_model_level_high": -0.6666666666666664,
-    "cliffs_delta": -0.8666666666666667,
-    "within_cell_sd": 0.3415650255319866,
-    "std_effect": -4.098780306383839,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": -1.95,
+    "ci_model_level_high": -0.8999999999999997,
+    "cliffs_delta": -0.9,
+    "within_cell_sd": 0.33541019662496846,
+    "std_effect": -4.472135954999579,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -1.3999999999999997,
+    "effect": -1.4999999999999998,
     "n_excluded": 0
    },
    "observed": {
@@ -5444,6 +5900,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -5456,9 +5913,9 @@
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.9333333333333331,
-    "accuracy": 0.9333333333333331,
-    "distance": 0.10000000000000031,
+    "score": 0.9999999999999999,
+    "accuracy": 0.9999999999999999,
+    "distance": 2.220446049250313e-16,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -5535,18 +5992,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.9333333333333331,
+    "distance": 0.9999999999999999,
     "classes": 0.75
    },
    "components": {
-    "prediction": 0.9333333333333331,
+    "prediction": 0.9999999999999999,
     "comprehension": 1.0,
     "confounds": 1.0,
     "originality": 0.3333333333333333
    },
-   "composite": 84.0,
+   "composite": 86.66666666666666,
    "gated": {
-    "behavior_score": 95.15151515151514,
+    "behavior_score": 99.99999999999999,
     "confound_gate": true,
     "originality_gate": true,
     "shared_setting": false,
@@ -5616,11 +6073,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 4.8,
+      "mean_b": 3.6,
+      "effect": 1.1999999999999997,
+      "cliffs_delta": 0.88,
+      "ratings_a": [
+       4,
+       5,
+       5,
+       5,
+       5
+      ],
+      "ratings_b": [
+       3,
+       4,
+       4,
+       4,
+       3
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -5688,38 +6168,39 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.066666666666666,
-    "mean_b": 4.0,
-    "effect": 0.06666666666666672,
-    "ci_low": -0.2666666666666666,
-    "ci_high": 0.4000000000000002,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.25,
+    "mean_b": 3.9,
+    "effect": 0.35,
+    "ci_low": 0.050000000000000044,
+    "ci_high": 0.6499999999999999,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.3999999999999999,
-    "ci_model_level_high": 0.5333333333333331,
-    "cliffs_delta": 0.06666666666666667,
-    "within_cell_sd": 0.5477225575051661,
-    "std_effect": 0.12171612389003703,
-    "groups_same_sign": 1,
-    "groups_total": 3
+    "ci_model_level_low": -0.20000000000000007,
+    "ci_model_level_high": 0.9500000000000001,
+    "cliffs_delta": 0.27,
+    "within_cell_sd": 0.5361902647381804,
+    "std_effect": 0.6527533657682195,
+    "groups_same_sign": 2,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.06666666666666672,
+    "effect": 0.35,
     "n_excluded": 0
    },
    "observed": {
     "direction": "none",
     "size": "none",
-    "ci_excludes_zero": false,
+    "ci_excludes_zero": true,
     "groups_agree": false,
-    "equivalence_supported": true
+    "equivalence_supported": false
    },
    "comprehension": {
     "accuracy": 1.0,
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -5733,8 +6214,8 @@
    },
    "prediction_distance": {
     "score": 0.0,
-    "accuracy": 0.7111111111111111,
-    "distance": 0.4333333333333333,
+    "accuracy": 0.9,
+    "distance": 0.15000000000000002,
     "demonstration_required": true,
     "demonstrated": false
    },
@@ -5900,11 +6381,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 7.0,
+      "mean_b": 1.4,
+      "effect": 5.6,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "ratings_b": [
+       1,
+       2,
+       1,
+       2,
+       1
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -5972,24 +6476,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.466666666666666,
-    "mean_b": 1.5999999999999999,
-    "effect": 3.8666666666666667,
-    "ci_low": 3.1333333333333333,
-    "ci_high": 4.533333333333333,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.85,
+    "mean_b": 1.55,
+    "effect": 4.3,
+    "ci_low": 3.75,
+    "ci_high": 4.8,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 2.266666666666667,
-    "ci_model_level_high": 5.8,
-    "cliffs_delta": 0.8933333333333334,
-    "within_cell_sd": 1.0723805294763609,
-    "std_effect": 3.605685258529213,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 2.8,
+    "ci_model_level_high": 5.75,
+    "cliffs_delta": 0.92,
+    "within_cell_sd": 0.9486832980505138,
+    "std_effect": 4.532597979574677,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 3.9555555555555557,
+    "effect": 4.366666666666667,
     "n_excluded": 2
    },
    "observed": {
@@ -6000,10 +6504,11 @@
     "equivalence_supported": false
    },
    "comprehension": {
-    "accuracy": 0.9333333333333333,
+    "accuracy": 0.95,
     "accuracy_a": 1.0,
-    "accuracy_b": 0.8666666666666667,
+    "accuracy_b": 0.9,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 0.8,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -6104,13 +6609,13 @@
    },
    "components": {
     "prediction": 1.0,
-    "comprehension": 0.9333333333333333,
+    "comprehension": 0.95,
     "confounds": 0.6666666666666667,
     "originality": 0.0
    },
-   "composite": 70.66666666666667,
+   "composite": 70.91666666666667,
    "gated": {
-    "behavior_score": 98.18181818181817,
+    "behavior_score": 98.63636363636363,
     "confound_gate": true,
     "originality_gate": false,
     "shared_setting": false,
@@ -6193,11 +6698,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 5.0,
+      "effect": 1.0,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -6265,24 +6793,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.666666666666667,
-    "mean_b": 4.466666666666667,
-    "effect": 1.2,
-    "ci_low": 0.866666666666667,
-    "ci_high": 1.4666666666666668,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.75,
+    "mean_b": 4.6,
+    "effect": 1.15,
+    "ci_low": 0.9000000000000002,
+    "ci_high": 1.35,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.5333333333333338,
-    "ci_model_level_high": 1.7999999999999998,
-    "cliffs_delta": 0.7866666666666666,
-    "within_cell_sd": 0.4654746681256314,
-    "std_effect": 2.5780135465419582,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.7,
+    "ci_model_level_high": 1.6499999999999997,
+    "cliffs_delta": 0.84,
+    "within_cell_sd": 0.4031128874149275,
+    "std_effect": 2.852798895551794,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 1.2,
+    "effect": 1.15,
     "n_excluded": 0
    },
    "observed": {
@@ -6297,6 +6825,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -6486,11 +7015,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.6,
+      "mean_b": 3.0,
+      "effect": 3.5999999999999996,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       7,
+       6,
+       7,
+       6,
+       7
+      ],
+      "ratings_b": [
+       3,
+       3,
+       3,
+       3,
+       3
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -6558,24 +7110,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 6.0,
-    "mean_b": 3.7999999999999994,
-    "effect": 2.2,
-    "ci_low": 1.6000000000000003,
-    "ci_high": 2.8000000000000003,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 6.15,
+    "mean_b": 3.5999999999999996,
+    "effect": 2.55,
+    "ci_low": 2.1,
+    "ci_high": 3.0,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.9999999999999999,
-    "ci_model_level_high": 3.3333333333333335,
-    "cliffs_delta": 0.7466666666666667,
-    "within_cell_sd": 0.9309493362512627,
-    "std_effect": 2.363179084330129,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 1.4,
+    "ci_model_level_high": 3.55,
+    "cliffs_delta": 0.81,
+    "within_cell_sd": 0.82915619758885,
+    "std_effect": 3.0754157146931886,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 2.2,
+    "effect": 2.55,
     "n_excluded": 0
    },
    "observed": {
@@ -6590,6 +7142,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -6783,11 +7336,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.8,
+      "mean_b": 5.0,
+      "effect": 0.7999999999999998,
+      "cliffs_delta": 0.8,
+      "ratings_a": [
+       6,
+       6,
+       5,
+       6,
+       6
+      ],
+      "ratings_b": [
+       5,
+       5,
+       5,
+       5,
+       5
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -6855,24 +7431,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.3999999999999995,
-    "mean_b": 3.8666666666666667,
-    "effect": 0.5333333333333332,
-    "ci_low": 0.1333333333333333,
-    "ci_high": 0.9333333333333332,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.75,
+    "mean_b": 4.15,
+    "effect": 0.5999999999999999,
+    "ci_low": 0.29999999999999993,
+    "ci_high": 0.9,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.06666666666666672,
-    "ci_model_level_high": 1.2,
-    "cliffs_delta": 0.38666666666666666,
-    "within_cell_sd": 0.6324555320336759,
-    "std_effect": 0.8432740427115676,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.09999999999999976,
+    "ci_model_level_high": 1.0999999999999999,
+    "cliffs_delta": 0.49,
+    "within_cell_sd": 0.570087712549569,
+    "std_effect": 1.0524696231684347,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.5333333333333332,
+    "effect": 0.5999999999999999,
     "n_excluded": 0
    },
    "observed": {
@@ -6887,6 +7463,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -7082,11 +7659,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.2,
+      "mean_b": 2.8,
+      "effect": 2.4000000000000004,
+      "cliffs_delta": 1.0,
+      "ratings_a": [
+       5,
+       5,
+       5,
+       6,
+       5
+      ],
+      "ratings_b": [
+       3,
+       3,
+       2,
+       3,
+       3
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -7154,53 +7754,54 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.466666666666667,
-    "mean_b": 3.0,
-    "effect": 1.4666666666666668,
-    "ci_low": 1.0666666666666667,
-    "ci_high": 1.8,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.65,
+    "mean_b": 2.95,
+    "effect": 1.7000000000000002,
+    "ci_low": 1.4,
+    "ci_high": 2.0,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.6000000000000001,
-    "ci_model_level_high": 2.1333333333333333,
-    "cliffs_delta": 0.7866666666666666,
-    "within_cell_sd": 0.5773502691896257,
-    "std_effect": 2.5403411844343537,
-    "groups_same_sign": 3,
-    "groups_total": 3
+    "ci_model_level_low": 0.95,
+    "ci_model_level_high": 2.3000000000000003,
+    "cliffs_delta": 0.84,
+    "within_cell_sd": 0.5477225575051661,
+    "std_effect": 3.1037611591959418,
+    "groups_same_sign": 4,
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 1.7333333333333334,
+    "effect": 1.9000000000000001,
     "n_excluded": 3
    },
    "observed": {
     "direction": "A_higher",
-    "size": "small",
+    "size": "large",
     "ci_excludes_zero": true,
     "groups_agree": true,
     "equivalence_supported": false
    },
    "comprehension": {
-    "accuracy": 0.9,
-    "accuracy_a": 0.8,
+    "accuracy": 0.925,
+    "accuracy_a": 0.85,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 0.7,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
     }
    },
    "prediction_result": {
-    "score": 0.75,
+    "score": 1.0,
     "direction_hit": true,
-    "size_hit": false,
+    "size_hit": true,
     "opposite": false
    },
    "prediction_distance": {
-    "score": 0.9777777777777779,
-    "accuracy": 0.9777777777777779,
-    "distance": 0.033333333333333215,
+    "score": 1.0,
+    "accuracy": 1.0,
+    "distance": 0.0,
     "demonstration_required": true,
     "demonstrated": true
    },
@@ -7282,18 +7883,18 @@
     ]
    },
    "prediction_scores_by_rule": {
-    "distance": 0.9777777777777779,
-    "classes": 0.75
+    "distance": 1.0,
+    "classes": 1.0
    },
    "components": {
-    "prediction": 0.9777777777777779,
-    "comprehension": 0.9,
+    "prediction": 1.0,
+    "comprehension": 0.925,
     "confounds": 0.6666666666666667,
     "originality": 0.0
    },
-   "composite": 69.2777777777778,
+   "composite": 70.54166666666667,
    "gated": {
-    "behavior_score": 95.65656565656566,
+    "behavior_score": 97.95454545454545,
     "confound_gate": true,
     "originality_gate": false,
     "shared_setting": false,
@@ -7367,11 +7968,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 5.2,
+      "mean_b": 5.4,
+      "effect": -0.20000000000000018,
+      "cliffs_delta": -0.2,
+      "ratings_a": [
+       5,
+       5,
+       5,
+       6,
+       5
+      ],
+      "ratings_b": [
+       5,
+       5,
+       6,
+       5,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -7439,24 +8063,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 3.8000000000000003,
-    "mean_b": 3.6666666666666665,
-    "effect": 0.1333333333333333,
-    "ci_low": -0.20000000000000004,
-    "ci_high": 0.4666666666666666,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.15,
+    "mean_b": 4.1,
+    "effect": 0.04999999999999993,
+    "ci_low": -0.2499999999999999,
+    "ci_high": 0.34999999999999987,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.20166666666665206,
-    "ci_model_level_high": 0.5333333333333335,
-    "cliffs_delta": 0.10666666666666667,
-    "within_cell_sd": 0.5163977794943222,
-    "std_effect": 0.2581988897471611,
+    "ci_model_level_low": -0.29999999999999993,
+    "ci_model_level_high": 0.40000000000000013,
+    "cliffs_delta": 0.03,
+    "within_cell_sd": 0.51234753829798,
+    "std_effect": 0.09759000729485318,
     "groups_same_sign": 1,
-    "groups_total": 3
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.1333333333333333,
+    "effect": 0.04999999999999993,
     "n_excluded": 0
    },
    "observed": {
@@ -7471,6 +8095,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -7639,11 +8264,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 2.6,
+      "mean_b": 2.6,
+      "effect": 0.0,
+      "cliffs_delta": 0.0,
+      "ratings_a": [
+       3,
+       3,
+       2,
+       3,
+       2
+      ],
+      "ratings_b": [
+       3,
+       2,
+       2,
+       3,
+       3
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -7711,24 +8359,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 2.9333333333333336,
-    "mean_b": 2.533333333333333,
-    "effect": 0.4000000000000002,
-    "ci_low": 0.13333333333333344,
-    "ci_high": 0.6666666666666666,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 2.85,
+    "mean_b": 2.55,
+    "effect": 0.30000000000000016,
+    "ci_low": 0.050000000000000155,
+    "ci_high": 0.55,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": 0.06666666666666672,
-    "ci_model_level_high": 0.8666666666666667,
-    "cliffs_delta": 0.3466666666666667,
-    "within_cell_sd": 0.408248290463863,
-    "std_effect": 0.9797958971132718,
+    "ci_model_level_low": -0.04999999999999993,
+    "ci_model_level_high": 0.7000000000000001,
+    "cliffs_delta": 0.26,
+    "within_cell_sd": 0.4472135954999579,
+    "std_effect": 0.6708203932499373,
     "groups_same_sign": 3,
-    "groups_total": 3
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.4000000000000002,
+    "effect": 0.30000000000000016,
     "n_excluded": 0
    },
    "observed": {
@@ -7743,6 +8391,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -7911,11 +8560,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 6.0,
+      "effect": 0.0,
+      "cliffs_delta": 0.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -7983,31 +8655,31 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 5.400000000000001,
-    "mean_b": 5.133333333333334,
-    "effect": 0.2666666666666669,
-    "ci_low": -0.19999999999999987,
-    "ci_high": 0.7333333333333334,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 5.550000000000001,
+    "mean_b": 5.35,
+    "effect": 0.20000000000000018,
+    "ci_low": -0.1499999999999997,
+    "ci_high": 0.5499999999999998,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.20000000000000018,
-    "ci_model_level_high": 0.8666666666666666,
-    "cliffs_delta": 0.14666666666666667,
-    "within_cell_sd": 0.7187952884282608,
-    "std_effect": 0.37099111660813494,
+    "ci_model_level_low": -0.15000000000000013,
+    "ci_model_level_high": 0.6500000000000001,
+    "cliffs_delta": 0.11,
+    "within_cell_sd": 0.6224949798994366,
+    "std_effect": 0.3212877315609998,
     "groups_same_sign": 2,
-    "groups_total": 3
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": 0.2666666666666669,
+    "effect": 0.20000000000000018,
     "n_excluded": 0
    },
    "observed": {
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": true,
+    "groups_agree": false,
     "equivalence_supported": false
    },
    "comprehension": {
@@ -8015,6 +8687,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -8183,11 +8856,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 6.0,
+      "mean_b": 6.0,
+      "effect": 0.0,
+      "cliffs_delta": 0.0,
+      "ratings_a": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ],
+      "ratings_b": [
+       6,
+       6,
+       6,
+       6,
+       6
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -8255,31 +8951,31 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.2,
-    "mean_b": 4.333333333333333,
-    "effect": -0.13333333333333344,
-    "ci_low": -0.4666666666666666,
-    "ci_high": 0.19999999999999987,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.65,
+    "mean_b": 4.75,
+    "effect": -0.10000000000000009,
+    "ci_low": -0.34999999999999987,
+    "ci_high": 0.1499999999999999,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.5333333333333332,
-    "ci_model_level_high": 0.19999999999999987,
-    "cliffs_delta": -0.12,
-    "within_cell_sd": 0.48304589153964794,
-    "std_effect": -0.2760262237369419,
+    "ci_model_level_low": -0.4,
+    "ci_model_level_high": 0.15000000000000002,
+    "cliffs_delta": -0.09,
+    "within_cell_sd": 0.4183300132670378,
+    "std_effect": -0.23904572186687895,
     "groups_same_sign": 2,
-    "groups_total": 3
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -0.13333333333333344,
+    "effect": -0.10000000000000009,
     "n_excluded": 0
    },
    "observed": {
     "direction": "none",
     "size": "none",
     "ci_excludes_zero": false,
-    "groups_agree": true,
+    "groups_agree": false,
     "equivalence_supported": true
    },
    "comprehension": {
@@ -8287,6 +8983,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -8455,11 +9152,34 @@
    },
    "effect": {
     "groups": [
+     "anthropic/claude-fable-5-2",
      "anthropic/claude-haiku-5-5",
      "anthropic/claude-opus-5-5",
      "anthropic/claude-sonnet-5-5"
     ],
     "per_group": {
+     "anthropic/claude-fable-5-2": {
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 4.0,
+      "mean_b": 4.0,
+      "effect": 0.0,
+      "cliffs_delta": 0.0,
+      "ratings_a": [
+       4,
+       4,
+       4,
+       4,
+       4
+      ],
+      "ratings_b": [
+       4,
+       4,
+       4,
+       4,
+       4
+      ]
+     },
      "anthropic/claude-haiku-5-5": {
       "n_a": 5,
       "n_b": 5,
@@ -8527,24 +9247,24 @@
       ]
      }
     },
-    "n_a": 15,
-    "n_b": 15,
-    "mean_a": 4.2,
-    "mean_b": 4.266666666666667,
-    "effect": -0.06666666666666672,
-    "ci_low": -0.3333333333333332,
-    "ci_high": 0.19999999999999987,
+    "n_a": 20,
+    "n_b": 20,
+    "mean_a": 4.15,
+    "mean_b": 4.2,
+    "effect": -0.050000000000000044,
+    "ci_low": -0.2499999999999999,
+    "ci_high": 0.1499999999999999,
     "ci_method": "stratified: ratings resampled inside each judge-group x version cell",
-    "ci_model_level_low": -0.7999999999999999,
-    "ci_model_level_high": 0.5999999999999996,
-    "cliffs_delta": -0.013333333333333345,
-    "within_cell_sd": 0.3872983346207417,
-    "std_effect": -0.17213259316477422,
+    "ci_model_level_low": -0.6000000000000001,
+    "ci_model_level_high": 0.44999999999999996,
+    "cliffs_delta": -0.010000000000000009,
+    "within_cell_sd": 0.33541019662496846,
+    "std_effect": -0.1490711984999861,
     "groups_same_sign": 1,
-    "groups_total": 3
+    "groups_total": 4
    },
    "effect_if_comprehension_passed": {
-    "effect": -0.06666666666666672,
+    "effect": -0.050000000000000044,
     "n_excluded": 0
    },
    "observed": {
@@ -8559,6 +9279,7 @@
     "accuracy_a": 1.0,
     "accuracy_b": 1.0,
     "by_group": {
+     "anthropic/claude-fable-5-2": 1.0,
      "anthropic/claude-haiku-5-5": 1.0,
      "anthropic/claude-opus-5-5": 1.0,
      "anthropic/claude-sonnet-5-5": 1.0
@@ -8775,10 +9496,8 @@
    }
   },
   "model_level_interval": {
-   "gaps_no_longer_confirmed": [
-    "cc_moral_luck"
-   ],
-   "nulls_excluding_zero": 1
+   "gaps_no_longer_confirmed": [],
+   "nulls_excluding_zero": 0
   },
   "classics": [
    {
@@ -8788,10 +9507,10 @@
      "size": "large",
      "rationale": "Human reference: harm done with a harmful belief is judged far less permissible than the same harm done by accident."
     },
-    "effect": 3.8666666666666667,
+    "effect": 4.3,
     "ci": [
-     3.1333333333333333,
-     4.533333333333333
+     3.75,
+     4.8
     ],
     "observed": {
      "direction": "A_higher",
@@ -8809,10 +9528,10 @@
      "size": "small",
      "rationale": "Human reference: between 30% and 65% of people judged the commission worse than the matching omission when shown both; almost none the reverse."
     },
-    "effect": 1.2,
+    "effect": 1.15,
     "ci": [
-     0.866666666666667,
-     1.4666666666666668
+     0.9000000000000002,
+     1.35
     ],
     "observed": {
      "direction": "A_higher",
@@ -8830,10 +9549,10 @@
      "size": "large",
      "rationale": "Human reference: most Western participants deny knowledge in the Gettier version; the clear-knowledge version has no human data."
     },
-    "effect": 2.2,
+    "effect": 2.55,
     "ci": [
-     1.6000000000000003,
-     2.8000000000000003
+     2.1,
+     3.0
     ],
     "observed": {
      "direction": "A_higher",
@@ -8851,10 +9570,10 @@
      "size": "small",
      "rationale": "Human reference: a bad outcome raised blame for the same negligent act by about a third to two fifths of a standard deviation when each person saw one outcome."
     },
-    "effect": 0.5333333333333332,
+    "effect": 0.5999999999999999,
     "ci": [
-     0.1333333333333333,
-     0.9333333333333332
+     0.29999999999999993,
+     0.9
     ],
     "observed": {
      "direction": "A_higher",
@@ -8872,14 +9591,14 @@
      "size": "large",
      "rationale": "Human reference: a rule-breaking agent is rated more of a cause than a permitted agent in the same story; extended here to one agent across two versions."
     },
-    "effect": 1.4666666666666668,
+    "effect": 1.7000000000000002,
     "ci": [
-     1.0666666666666667,
-     1.8
+     1.4,
+     2.0
     ],
     "observed": {
      "direction": "A_higher",
-     "size": "small",
+     "size": "large",
      "ci_excludes_zero": true,
      "groups_agree": true,
      "equivalence_supported": false
@@ -8892,10 +9611,10 @@
   "nulls": [
    {
     "pair_id": "nc_weekday",
-    "effect": 0.1333333333333333,
+    "effect": 0.04999999999999993,
     "ci": [
-     -0.20000000000000004,
-     0.4666666666666666
+     -0.2499999999999999,
+     0.34999999999999987
     ],
     "observed": {
      "direction": "none",
@@ -8907,10 +9626,10 @@
    },
    {
     "pair_id": "nc_color",
-    "effect": 0.4000000000000002,
+    "effect": 0.30000000000000016,
     "ci": [
-     0.13333333333333344,
-     0.6666666666666666
+     0.050000000000000155,
+     0.55
     ],
     "observed": {
      "direction": "none",
@@ -8922,40 +9641,40 @@
    },
    {
     "pair_id": "nc_name",
-    "effect": 0.2666666666666669,
+    "effect": 0.20000000000000018,
     "ci": [
-     -0.19999999999999987,
-     0.7333333333333334
+     -0.1499999999999997,
+     0.5499999999999998
     ],
     "observed": {
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": true,
+     "groups_agree": false,
      "equivalence_supported": false
     }
    },
    {
     "pair_id": "nc_weather",
-    "effect": -0.13333333333333344,
+    "effect": -0.10000000000000009,
     "ci": [
-     -0.4666666666666666,
-     0.19999999999999987
+     -0.34999999999999987,
+     0.1499999999999999
     ],
     "observed": {
      "direction": "none",
      "size": "none",
      "ci_excludes_zero": false,
-     "groups_agree": true,
+     "groups_agree": false,
      "equivalence_supported": true
     }
    },
    {
     "pair_id": "nc_paraphrase",
-    "effect": -0.06666666666666672,
+    "effect": -0.050000000000000044,
     "ci": [
-     -0.3333333333333332,
-     0.19999999999999987
+     -0.2499999999999999,
+     0.1499999999999999
     ],
     "observed": {
      "direction": "none",
@@ -8968,16 +9687,28 @@
   ],
   "null_false_positives": 0,
   "null_ci_excludes_zero": 1,
-  "null_max_abs_effect": 0.4000000000000002,
+  "null_max_abs_effect": 0.30000000000000016,
   "nulls_total": 5,
   "split_half_noise": {
-   "median": 0.16666666666666666,
-   "p95": 0.6111111111111112,
-   "share_at_least_half_point": 0.09816666666666667,
+   "median": 0.12500000000000008,
+   "p95": 0.45833333333333337,
+   "share_at_least_half_point": 0.04058333333333333,
    "n": 12000
   },
-  "position_effect_r": -0.04442683027076682,
+  "position_effect_r": -0.02843152095470861,
   "by_group": {
+   "anthropic/claude-fable-5-2": {
+    "n_judgments": 300,
+    "n_judges": 10,
+    "mean_rating": 4.85,
+    "share_extreme": 0.17,
+    "mean_within_cell_sd": 0.2163224622757623,
+    "share_cells_zero_variance": 0.55,
+    "comprehension_accuracy": 1.0,
+    "mean_abs_effect_authored": 2.3099999999999996,
+    "mean_abs_effect_nulls": 0.040000000000000036,
+    "nulls_half_point_or_more": 0
+   },
    "anthropic/claude-haiku-5-5": {
     "n_judgments": 300,
     "n_judges": 10,
@@ -9021,99 +9752,129 @@
      "pair_id": "au_haiku_intent_accident",
      "author": "anthropic/claude-haiku-5-5",
      "own": 5.6,
-     "others": 3.4
+     "others": 4.0
     },
     {
      "pair_id": "au_haiku_doing_allowing",
      "author": "anthropic/claude-haiku-5-5",
      "own": -0.40000000000000036,
-     "others": -1.1999999999999997
+     "others": -0.933333333333333
     },
     {
      "pair_id": "au_haiku_knowledge_luck",
      "author": "anthropic/claude-haiku-5-5",
      "own": 3.5999999999999996,
-     "others": 4.1
+     "others": 4.2
     },
     {
      "pair_id": "au_haiku_moral_luck",
      "author": "anthropic/claude-haiku-5-5",
      "own": 1.8000000000000003,
-     "others": 0.6000000000000001
+     "others": 0.6666666666666666
     },
     {
      "pair_id": "au_haiku_norm_causation",
      "author": "anthropic/claude-haiku-5-5",
      "own": 1.2000000000000002,
-     "others": 2.3
+     "others": 2.1333333333333333
     },
     {
      "pair_id": "au_sonnet_intent_accident",
      "author": "anthropic/claude-sonnet-5-5",
      "own": 4.0,
-     "others": 3.6
+     "others": 3.3333333333333335
     },
     {
      "pair_id": "au_sonnet_doing_allowing",
      "author": "anthropic/claude-sonnet-5-5",
      "own": 0.7999999999999998,
-     "others": 0.7000000000000002
+     "others": 0.7333333333333334
     },
     {
      "pair_id": "au_sonnet_knowledge_luck",
      "author": "anthropic/claude-sonnet-5-5",
      "own": 3.2,
-     "others": 1.5
+     "others": 2.0
     },
     {
      "pair_id": "au_sonnet_moral_luck",
      "author": "anthropic/claude-sonnet-5-5",
      "own": 0.6000000000000005,
-     "others": 0.8999999999999999
+     "others": 0.9333333333333332
     },
     {
      "pair_id": "au_sonnet_norm_causation",
      "author": "anthropic/claude-sonnet-5-5",
      "own": 1.2000000000000002,
-     "others": 0.9000000000000001
+     "others": 1.2
     },
     {
      "pair_id": "au_opus_intent_accident",
      "author": "anthropic/claude-opus-5-5",
      "own": 4.0,
-     "others": 3.6
+     "others": 3.4
     },
     {
      "pair_id": "au_opus_doing_allowing",
      "author": "anthropic/claude-opus-5-5",
      "own": 0.0,
-     "others": 0.2999999999999998
+     "others": 0.2666666666666666
     },
     {
      "pair_id": "au_opus_knowledge_luck",
      "author": "anthropic/claude-opus-5-5",
      "own": 4.0,
-     "others": 2.4
+     "others": 3.266666666666667
     },
     {
      "pair_id": "au_opus_moral_luck",
      "author": "anthropic/claude-opus-5-5",
      "own": 2.2,
-     "others": 1.6999999999999997
+     "others": 1.7333333333333332
     },
     {
      "pair_id": "au_opus_norm_causation",
      "author": "anthropic/claude-opus-5-5",
      "own": 2.0,
-     "others": 1.2000000000000004
+     "others": 1.8
+    },
+    {
+     "pair_id": "au_fable_intent_accident",
+     "author": "anthropic/claude-fable-5-2",
+     "own": 2.8,
+     "others": 3.266666666666666
+    },
+    {
+     "pair_id": "au_fable_doing_allowing",
+     "author": "anthropic/claude-fable-5-2",
+     "own": 1.2000000000000002,
+     "others": 0.5333333333333332
+    },
+    {
+     "pair_id": "au_fable_knowledge_luck",
+     "author": "anthropic/claude-fable-5-2",
+     "own": 4.2,
+     "others": 2.1999999999999997
+    },
+    {
+     "pair_id": "au_fable_moral_luck",
+     "author": "anthropic/claude-fable-5-2",
+     "own": 1.7999999999999998,
+     "others": 1.3999999999999997
+    },
+    {
+     "pair_id": "au_fable_norm_causation",
+     "author": "anthropic/claude-fable-5-2",
+     "own": 1.1999999999999997,
+     "others": 0.06666666666666672
     }
    ],
-   "mean_own": 2.253333333333333,
-   "mean_others": 1.7333333333333334,
-   "n_own_larger": 11,
+   "mean_own": 2.25,
+   "mean_others": 1.81,
+   "n_own_larger": 15,
    "mean_difference_ci": [
-    0.08000000000000013,
-    0.9466666666666668
+    0.10991666666666651,
+    0.7633333333333334
    ]
   },
   "auditors": {
@@ -9280,63 +10041,63 @@
    "author_id": "anthropic/claude-fable-5-2",
    "tier": "fable",
    "n_pairs": 5,
-   "mean_composite": 76.13333333333333,
+   "mean_composite": 76.66666666666666,
    "direction_hits": 4,
    "size_hits": 3,
    "full_hits": 3,
    "demonstrated": 4,
-   "mean_prediction_score": 0.7866666666666666,
+   "mean_prediction_score": 0.8,
    "mean_prediction_score_classes_rule": 0.8,
-   "mean_abs_effect": 1.4933333333333332,
+   "mean_abs_effect": 1.6800000000000002,
    "mean_confound_severity": 0.4,
    "mean_originality": 1.2,
    "mean_comprehension": 1.0,
    "mean_words_changed": 20.8,
    "n_flagged": 2,
    "gated_passes": 3,
-   "gated_mean_behavior_of_passing": 74.14141414141413,
+   "gated_mean_behavior_of_passing": 75.75757575757575,
    "n_shared_setting": 2
   },
   {
    "author_id": "anthropic/claude-haiku-5-5",
    "tier": "haiku",
    "n_pairs": 5,
-   "mean_composite": 56.68888888888889,
+   "mean_composite": 56.6,
    "direction_hits": 4,
    "size_hits": 2,
    "full_hits": 1,
    "demonstrated": 4,
-   "mean_prediction_score": 0.47555555555555556,
+   "mean_prediction_score": 0.47333333333333333,
    "mean_prediction_score_classes_rule": 0.65,
-   "mean_abs_effect": 2.3866666666666667,
+   "mean_abs_effect": 2.42,
    "mean_confound_severity": 1.4,
    "mean_originality": 1.4,
    "mean_comprehension": 1.0,
    "mean_words_changed": 31.0,
    "n_flagged": 2,
    "gated_passes": 2,
-   "gated_mean_behavior_of_passing": 51.515151515151516,
+   "gated_mean_behavior_of_passing": 50.30303030303029,
    "n_shared_setting": 1
   },
   {
    "author_id": "anthropic/claude-opus-5-5",
    "tier": "opus",
    "n_pairs": 5,
-   "mean_composite": 72.38888888888889,
+   "mean_composite": 72.59166666666667,
    "direction_hits": 4,
-   "size_hits": 3,
-   "full_hits": 3,
+   "size_hits": 4,
+   "full_hits": 4,
    "demonstrated": 4,
-   "mean_prediction_score": 0.7955555555555556,
-   "mean_prediction_score_classes_rule": 0.8,
-   "mean_abs_effect": 2.04,
+   "mean_prediction_score": 0.8,
+   "mean_prediction_score_classes_rule": 0.85,
+   "mean_abs_effect": 2.18,
    "mean_confound_severity": 1.2,
    "mean_originality": 1.6,
-   "mean_comprehension": 0.9933333333333334,
+   "mean_comprehension": 0.9949999999999999,
    "mean_words_changed": 8.8,
    "n_flagged": 2,
    "gated_passes": 3,
-   "gated_mean_behavior_of_passing": 99.6969696969697,
+   "gated_mean_behavior_of_passing": 99.77272727272727,
    "n_shared_setting": 2
   },
   {
@@ -9350,7 +10111,7 @@
    "demonstrated": 5,
    "mean_prediction_score": 1.0,
    "mean_prediction_score_classes_rule": 1.0,
-   "mean_abs_effect": 1.6666666666666667,
+   "mean_abs_effect": 1.72,
    "mean_confound_severity": 0.8,
    "mean_originality": 1.2,
    "mean_comprehension": 1.0,

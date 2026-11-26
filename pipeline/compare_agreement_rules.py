@@ -2,10 +2,11 @@
 """What the 24 November agreement-rule change did: the pilot's rule (three_quarters: 3 of 3 judge groups, 3 of 4)
 against the new one (two_thirds: 2 of 3, 3 of 4).
 
-    python3 pipeline/compare_agreement_rules.py [--before 3c8a99c]
+    python3 pipeline/compare_agreement_rules.py [--before 3c8a99c] [--after 400c712]
 
-"Before" is read from git at --before (the last commit scored under the old rule); "after" is the working tree, scored
-under the new rule. Writes reports/agreement_rule_numbers.json. The old scores can also be rebuilt from the data with
+"Before" is read from git at --before (the last commit scored under the old rule); "after" from git at --after (the
+commit that rescored everything under the new rule), so later additions (e.g. Fable's persona judges on 26 November)
+don't change this comparison. Pass --after "" to compare with the working tree instead. Writes reports/agreement_rule_numbers.json. The old scores can also be rebuilt from the data with
 `python3 score.py ... --agreement-rule three_quarters`.
 
 Also compares the calibration on public human data for the two three-model Claude panels: the old rule's numbers are in
@@ -34,12 +35,14 @@ def read(text):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--before", default="3c8a99c")
+    ap.add_argument("--after", default="400c712")
     args = ap.parse_args()
     res = {"before_commit": args.before, "runs": {}}
     for label, d in RUNS:
         old = read(subprocess.run(["git", "show", "%s:%s/pair_scores.csv" % (args.before, d)], cwd=ROOT, capture_output=True,
                                   text=True, check=True).stdout)
-        new = read(open(os.path.join(ROOT, d, "pair_scores.csv"), encoding="utf-8").read())
+        new = read(subprocess.run(["git", "show", "%s:%s/pair_scores.csv" % (args.after, d)], cwd=ROOT, capture_output=True,
+                                  text=True, check=True).stdout) if args.after else read(open(os.path.join(ROOT, d, "pair_scores.csv"), encoding="utf-8").read())
         assert set(old) == set(new), d
         changed = []
         for p in new:

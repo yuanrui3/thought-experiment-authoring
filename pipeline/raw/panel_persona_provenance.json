@@ -37,6 +37,25 @@
   "usable": true,
   "stray_calls_after_answering": []
  },
+ "fable-r5-x": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r5-x.txt"
+   ],
+   [
+    "Write",
+    "fable-r5-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "opus-r3-y": {
   "requested": "claude-opus-5-5",
   "served": [
@@ -50,6 +69,25 @@
    [
     "Write",
     "opus-r3-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "fable-r4-x": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r4-x.txt"
+   ],
+   [
+    "Write",
+    "fable-r4-x.json"
    ]
   ],
   "strictly_clean": true,
@@ -151,6 +189,25 @@
   "usable": true,
   "stray_calls_after_answering": []
  },
+ "fable-r4-y": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r4-y.txt"
+   ],
+   [
+    "Write",
+    "fable-r4-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "sonnet-r3-y": {
   "requested": "claude-sonnet-5-5",
   "served": [
@@ -183,6 +240,25 @@
    [
     "Write",
     "opus-r2-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "fable-r1-x": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r1-x.txt"
+   ],
+   [
+    "Write",
+    "fable-r1-x.json"
    ]
   ],
   "strictly_clean": true,
@@ -397,6 +473,25 @@
   "usable": true,
   "stray_calls_after_answering": []
  },
+ "fable-r2-y": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r2-y.txt"
+   ],
+   [
+    "Write",
+    "fable-r2-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "sonnet-r2-y": {
   "requested": "claude-sonnet-5-5",
   "served": [
@@ -501,6 +596,25 @@
    ]
   ]
  },
+ "fable-r3-y": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r3-y.txt"
+   ],
+   [
+    "Write",
+    "fable-r3-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "opus-r3-x": {
   "requested": "claude-opus-5-5",
   "served": [
@@ -558,6 +672,44 @@
   "usable": true,
   "stray_calls_after_answering": []
  },
+ "fable-r2-x": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r2-x.txt"
+   ],
+   [
+    "Write",
+    "fable-r2-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "fable-r3-x": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r3-x.txt"
+   ],
+   [
+    "Write",
+    "fable-r3-x.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "opus-r1-y": {
   "requested": "claude-opus-5-5",
   "served": [
@@ -577,6 +729,25 @@
   "usable": true,
   "stray_calls_after_answering": []
  },
+ "fable-r1-y": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r1-y.txt"
+   ],
+   [
+    "Write",
+    "fable-r1-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
  "opus-r5-y": {
   "requested": "claude-opus-5-5",
   "served": [
@@ -590,6 +761,25 @@
    [
     "Write",
     "opus-r5-y.json"
+   ]
+  ],
+  "strictly_clean": true,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "fable-r5-y": {
+  "requested": "claude-fable-5-2",
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable-r5-y.txt"
+   ],
+   [
+    "Write",
+    "fable-r5-y.json"
    ]
   ],
   "strictly_clean": true,
