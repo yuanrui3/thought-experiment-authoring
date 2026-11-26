@@ -77,3 +77,8 @@ The calibration on public human data (OffTheRails and MoCa) was rerun under the 
 ## What I'd consider next
 
 The ceiling problem has a narrower fix that may not cost as much validity: leave the rule alone and stop using Haiku as a judge where it sits at the top of the scale (option 2), or weight models by how well they track people. Either can be tested on the same calibration data before adopting it. I have not done this; you asked for option 1 only.
+
+*Update, 26 November: option 2 was tested, with its criteria set in advance, and rejected (`reports/Ceiling abstention test.md`).*
+- It costs nearly as much validity as the two-thirds rule (41% of confirmed gaps backed by people), because on MoCa's yes/no questions most models sit at a bound and abstain.
+- It doesn't fix the flips.
+- The test also showed that the vetoes on authored pairs mostly came from a model that saw no gap in the middle of the scale, not from one at the ceiling. The sentence above about "Haiku at the top of the scale" holds for the two classic controls only.
