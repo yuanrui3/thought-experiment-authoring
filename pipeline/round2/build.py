@@ -19,6 +19,18 @@ audit_batches_b.json, raw/provenance_b.json, raw/authoring_b/), so run "round2" 
     python3 pipeline/round2/build.py check    --tag b --transcripts DIR
     python3 pipeline/round2/build.py ingest   --tag b --judges DIR --auditors DIR --run-id round2b
 
+With --tag c ("round 2c", 26 November), Fable joins: it writes its round-2 pairs from the round-2 brief (brief.txt), then
+two more per factor from the round-2b brief showing its own first pairs (fable_more.txt); the set is all four authors'
+36 pairs on the new factors plus the 10 controls; the three earlier auditors audit Fable's pairs and a Fable auditor
+audits everyone else's, so every pair has four auditors:
+
+    python3 pipeline/round2/build.py brief    --tag c --out DIR --tiers fable          # brief.txt, and fable_more.txt once fable.json exists
+    python3 pipeline/round2/build.py check    --tag c --transcripts DIR
+    python3 pipeline/round2/build.py assemble --tag c --tiers fable
+    python3 pipeline/round2/build.py judges   --tag c --out DIR --models fable opus sonnet haiku --repeats 10 --seed 20261126 --run-id round2c
+    python3 pipeline/round2/build.py auditors --tag c --out DIR --models haiku sonnet opus fable
+    python3 pipeline/round2/build.py ingest   --tag c --judges DIR --auditors DIR --run-id round2c
+
 With --panel 2 (and --tag b), the judges, check and ingest steps build and read a second, independent judge panel on
 the same pairs (new personas and batch orders from its own seed), with its own manifest (judge_batches_b_p2.json),
 provenance (raw/provenance_b_p2.json) and batch-id prefix; the pairs and their audits are those of the tag:
@@ -182,8 +194,14 @@ def brief_more(tier):
     base = json.load(open(os.path.join(R2, "vignettes.json"), encoding="utf-8"))
     mine = [p for p in base["pairs"] if p["pair_type"] == "authored" and p["author"]["tier"] == tier
             and p["factor_id"] in {f["factor_id"] for f in NEW_FACTORS}]
-    assert len(mine) == 3, (tier, len(mine))
     parts = []
+    if not mine:  # round 2c: an author who joined later; its first pairs are in raw/authoring_c/<tier>.json
+        raw = json.load(open(os.path.join(RAW, "authoring_c", tier + ".json"), encoding="utf-8"))["pairs"]
+        assert len(raw) == 3, (tier, len(raw))
+        for p in raw:
+            parts.append("Factor: %s. Title: %s\nVersion A: %s\nVersion B: %s\nJudgment question: %s" % (
+                p["factor_id"], p["title"], p["version_a"], p["version_b"], p["judgment_question"]))
+    assert len(mine) == 3 or len(parts) == 3, (tier, len(mine))
     for p in mine:
         parts.append("Factor: %s. Title: %s\nVersion A: %s\nVersion B: %s\nJudgment question: %s" % (
             p["factor_id"], p["title"], p["versions"]["A"]["text"], p["versions"]["B"]["text"], p["judgment_question"]["text"]))
@@ -197,12 +215,62 @@ if args.step == "brief":
     if not TAG:
         open(args.out, "w", encoding="utf-8").write(BRIEF)
         print("wrote", args.out, len(BRIEF.split()), "words")
+    elif TAG == "c":
+        os.makedirs(args.out, exist_ok=True)
+        open(os.path.join(args.out, "brief.txt"), "w", encoding="utf-8").write(BRIEF)
+        print("wrote", os.path.join(args.out, "brief.txt"), len(BRIEF.split()), "words (the round-2 brief, unchanged)")
+        for tier in args.tiers:
+            if os.path.exists(os.path.join(AUTH, tier + ".json")):
+                t = brief_more(tier)
+                open(os.path.join(args.out, tier + "_more.txt"), "w", encoding="utf-8").write(t)
+                print("wrote", os.path.join(args.out, tier + "_more.txt"), len(t.split()), "words")
     else:
         os.makedirs(args.out, exist_ok=True)
         for tier in args.tiers:
             t = brief_more(tier)
             open(os.path.join(args.out, tier + ".txt"), "w", encoding="utf-8").write(t)
             print("wrote", os.path.join(args.out, tier + ".txt"), len(t.split()), "words")
+    sys.exit(0)
+
+if args.step == "assemble" and TAG == "c":
+    base = json.load(open(os.path.join(R2, "vignettes_b.json"), encoding="utf-8"))
+    prov = json.load(open(PROV)) if os.path.exists(PROV) else {}
+    newf = [f["factor_id"] for f in NEW_FACTORS]
+    release = "round2c-2026-11-26"
+    pairs = [p for p in base["pairs"] if p["pair_type"] == "authored" and p["factor_id"] in newf]
+    for tier in args.tiers:
+        for stem, step, per in ((tier, "round-2 brief", 1), (tier + "_more", "round-2b brief (own first pairs shown)", 2)):
+            f = os.path.join(AUTH, stem + ".json")
+            if not os.path.exists(f):
+                raise SystemExit("missing %s" % f)
+            pv = prov.get("author:" + stem, {})
+            if not pv.get("usable"):
+                raise SystemExit("no usable provenance for author:%s" % stem)
+            served = pv["served"][0]
+            author = {"type": "llm", "vendor": "anthropic", "tier": tier, "model": served, "author_id": "anthropic/%s" % served,
+                      "requested_alias": tier, "tool_calls": [c[0] for c in pv.get("calls", [])], "authoring_run": release,
+                      "authoring_step": step}
+            count = {x: 0 for x in newf}
+            for p in json.load(open(f, encoding="utf-8"))["pairs"]:
+                if p["factor_id"] not in count:
+                    raise SystemExit("%s: unexpected factor %s" % (stem, p["factor_id"]))
+                count[p["factor_id"]] += 1
+                pid = "r2_%s_%s" % (tier, p["factor_id"]) if per == 1 else "r2_%s_%s_%d" % (tier, p["factor_id"], count[p["factor_id"]] + 1)
+                pairs.append(BV.shape(p, pid, "authored", author))
+            if any(n != per for n in count.values()):
+                raise SystemExit("%s: pairs per factor %s, expected %d each" % (stem, count, per))
+    pairs += [p for p in base["pairs"] if p["pair_type"] in ("control_classic", "control_null")]
+    doc = {k: base[k] for k in ("schema_version", "benchmark", "language", "task", "factors")}
+    doc.update({"release": release, "pairs": pairs, "audit_calibration_pairs": [],
+                "note": "Round 2c: Fable joins round 2 (3 pairs from the round-2 brief, then 6 from the round-2b brief). All four "
+                        "authors' 36 pairs on the new factors and the ten controls are judged together in one run."})
+    json.dump(doc, open(VIGN, "w"), indent=1, ensure_ascii=False)
+    print("wrote %s: %d pairs" % (os.path.relpath(VIGN, ROOT), len(pairs)))
+    for p in pairs:
+        flag = ("  !! " + "; ".join(p["format_problems"])) if p.get("format_problems") else ""
+        if p["pair_id"].startswith("r2_" + args.tiers[0]) or flag:
+            print("  %-32s %-16s %-20s A=%3d B=%3d%s" % (p["pair_id"], p["pair_type"], p["factor_id"], p["versions"]["A"]["word_count"],
+                                                         p["versions"]["B"]["word_count"], flag))
     sys.exit(0)
 
 if args.step == "assemble" and TAG:
@@ -331,7 +399,12 @@ if args.step == "auditors":
     intro = audit_intro()
     os.makedirs(args.out, exist_ok=True)
     man = {"run_id": args.run_id, "auditors": {}}
+    full = [p for p in doc["pairs"] if p["factor_id"] in {f["factor_id"] for f in NEW_FACTORS}]
     for model in args.models:
+        if TAG == "c":  # earlier auditors audit the newcomer's pairs; the newcomer audits everything else on the new factors
+            newcomer = "fable"
+            new = ([p for p in full if p["pair_type"] != "authored" or p["author"]["tier"] != newcomer] if model == newcomer
+                   else [p for p in full if p["pair_type"] == "authored" and p["author"]["tier"] == newcomer])
         order = [p["pair_id"] for p in new]
         rng.shuffle(order)
         codes = {"Q%02d" % (i + 1): pid for i, pid in enumerate(order)}
@@ -350,7 +423,7 @@ if args.step == "auditors":
         open(os.path.join(args.out, "audit-%s.txt" % model), "w", encoding="utf-8").write(text)
         man["auditors"][model] = codes
     json.dump(man, open(AB, "w"), indent=1)
-    print("wrote %d auditor files of %d pairs to %s" % (len(args.models), len(new), args.out))
+    print("wrote %d auditor files to %s: %s" % (len(args.models), args.out, {m: len(c) for m, c in man["auditors"].items()}))
     sys.exit(0)
 
 if args.step == "check":
@@ -365,7 +438,7 @@ if args.step == "check":
         t = c if isinstance(c, str) else " ".join(x.get("text", "") for x in c if isinstance(x, dict))
         for kind, rx in (("author", r"/%sbrief/\w+\.txt.*?/%sa/(\w+)\.json" % (PFX, PFX)),
                          ("auditor", r"/%saud/audit-(\w+)\.txt.*?/%saa/" % (PFX, PFX)),
-                         ("judge", r"/%sj/(%s-\w+-r\d-[xy])\.txt.*?/%sja/" % (PFX, PFX, PFX))):
+                         ("judge", r"/%sj/(%s-\w+-r\d+-[xy])\.txt.*?/%sja/" % (PFX, PFX, PFX))):
             m = re.search(rx, t, re.S)
             if not m:
                 continue
