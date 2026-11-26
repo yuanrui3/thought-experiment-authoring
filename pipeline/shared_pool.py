@@ -6,7 +6,9 @@
     python3 pipeline/shared_pool.py score --vignettes V --runs R1[,R2] --manifest M --answers DIR --provenance P --out NUMBERS.json
 
 Adopted 24-25 November 2026 (owner's decision, "option B"), and committed before any prediction for the next round was
-collected. The composite score is unchanged; this is a second score reported beside it, never folded into it.
+collected. The composite score is unchanged; this is a second score reported beside it. Since 26 November 2026 (owner's
+decision, taken after round 2c) it is also averaged with the composite, at equal weight, into a summary score: see
+pipeline/summary_score.py. Neither the composite nor this score is changed by that.
 
 DEFINITION
   Pool. Every item of the round: all authored pairs and all controls. Items carry neutral codes; authors are not named.

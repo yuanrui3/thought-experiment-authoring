@@ -6,6 +6,8 @@
 
 A second score, reported beside the composite and never folded into it.
 
+*Update, 26 November: at the owner's request, after round 2c, a summary score now averages the composite and this score with equal weight. Both are still reported unchanged beside it. See `reports/Summary score.md`.*
+
 - **Pool:** every item of a round, meaning all authored pairs and all controls, under neutral codes.
 - **Who predicts:** every author of the round, each in a fresh context, each predicting every item as a gap in points (mean rating of A minus mean rating of B).
 - **When:** after all pairs are written and before any judging of the round starts.

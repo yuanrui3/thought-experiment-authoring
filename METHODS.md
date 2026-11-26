@@ -24,6 +24,12 @@
     - Composite: Opus 80.7, Sonnet 76.1, Fable 70.7, Haiku 70.0.
     - Shared pool: Fable 72.2 and Opus 69.9 (a tie on items neither wrote), then Sonnet 62.0 and Haiku 57.0.
     - Details: `reports/Round 2c Fable joins.md`.
+17. **On 26 November, after seeing round 2c, you gave the shared-pool score equal weight with the composite.** The summary score is 0.5 × composite + 0.5 × shared-pool score, with both parts still reported unchanged beside it.
+    - In components, that is 50% shared-pool prediction, 20% own-pair prediction, 12.5% confounds, 10% originality and 7.5% comprehension.
+    - Neither part is rescaled to the field, so an author's summary doesn't depend on who else is in the round.
+    - It applies from round 2c on; the pilot keeps the composite alone.
+    - Round 2c: Opus 75.3, Fable 71.4, Sonnet 69.0, Haiku 63.5. Opus is first in 96.5% of combined judge- and item-level draws, but not clearly ahead of Fable. The order holds for any weighting between 35/65 and 65/35.
+    - Details: `reports/Summary score.md`.
 
 ## What the checks showed
 
@@ -50,7 +56,7 @@
 
 1. Run the same pairs on people and re-set the size bins on that data. The survey and its analysis plan are ready (`docs/human-survey.md`); the project is paused until participants are found.
 2. Add judges from other vendors; `judgments.csv` already carries type, vendor, model and group.
-3. Replace easy factors with contested ones (done in round 2), and have authors hit a target size (not yet). Round 2b added pairs per author and a second panel. The agreement rule was settled on 24 November (item 14). A points target was then tested on the round-2b pairs (`reports/Point predictions.md`): on their own nine pairs Sonnet and Opus did not separate, but on all 37 shared items Opus was clearly the best predictor. That suggests scoring prediction on a shared pool, next to the authoring score. This was adopted on 25 November (item 15) and first used in round 2c (item 16), where the two scores ranked authors differently: Opus and Sonnet lead on the composite, while Fable and Opus lead on the shared pool. The own-pair prediction score also has a weakness. When every author misjudges a factor's size the same way, as all four did on knowledge and causation, it ranks them by how strong their manipulation happened to be.
+3. Replace easy factors with contested ones (done in round 2), and have authors hit a target size (not yet). Round 2b added pairs per author and a second panel. The agreement rule was settled on 24 November (item 14). A points target was then tested on the round-2b pairs (`reports/Point predictions.md`): on their own nine pairs Sonnet and Opus did not separate, but on all 37 shared items Opus was clearly the best predictor. That suggests scoring prediction on a shared pool, next to the authoring score. This was adopted on 25 November (item 15) and first used in round 2c (item 16), where the two scores ranked authors differently: Opus and Sonnet lead on the composite, while Fable and Opus lead on the shared pool. The own-pair prediction score also has a weakness. When every author misjudges a factor's size the same way, as all four did on knowledge and causation, it ranks them by how strong their manipulation happened to be. Since 26 November the two scores carry equal weight in a summary score (item 17).
 4. Score originality across the whole set, so shared settings count against a pair.
 5. Add trained human auditors and placebo questions, so confounds are measured by behavior.
 6. Anchor classic controls to public human data (OffTheRails, MoCa, replication archives).

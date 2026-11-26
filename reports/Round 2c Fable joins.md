@@ -17,6 +17,7 @@ Fable wrote nine pairs on the three contested factors, the same brief and the sa
 
 *Composite: 0–100, the benchmark's main score. Own-pair prediction score: 0–1, how close each pair's measured gap came to its author's predicted size. Shared-pool score: 0–100, how well the author predicted, in points, the gaps of pairs it didn't write and of the controls (`reports/Shared-pool prediction score.md`).*
 
+- **The summary score combines the two with equal weight.** It was adopted after this round (`reports/Summary score.md`) and gives Opus 75.3, Fable 71.4, Sonnet 69.0, Haiku 63.5. Opus is first in 96.5% of draws, but not clearly ahead of Fable.
 - **As a pair designer, Fable is third on the composite and last on prediction.**
   - Behind Sonnet, the prediction gap is significant: p = 0.04 in a permutation test within factors.
   - Fable is never first in 300 judge-level resamples, and last in 68%.
@@ -56,7 +57,7 @@ Fable wrote nine pairs on the three contested factors, the same brief and the sa
 
 ## Authors on their own pairs
 
-| Author | Composite | Prediction score | Pairs showing a gap | Mean confound (0–3) | Mean originality (0–2) | Avoidable harm | Knowledge and causation | Luck and wrongness |
+| Author | Composite | Prediction score | Pairs showing a gap | Mean confound (0–3) | Mean originality (0–3) | Avoidable harm | Knowledge and causation | Luck and wrongness |
 |---|---|---|---|---|---|---|---|---|
 | Opus | 80.7 | 0.91 | 9/9 | 0.67 | 1.44 | 0.99 | 0.79 | 0.96 |
 | Sonnet | 76.1 | 0.94 | 9/9 | 1.22 | 1.33 | 1.00 | 0.81 | 1.00 |
@@ -189,7 +190,7 @@ Fable wrote nine pairs on the three contested factors, the same brief and the sa
    - Sonnet designs pairs whose size it calls well: it predicts "small" and lands there. But as a general predictor it is third.
    - Fable is the reverse.
    - Folding them into one number would hide that, so they stay side by side.
-4. **The own-pair prediction score has a known weakness on factors where every author misjudges the size the same way:** it then ranks authors by how strong their manipulation happened to be. The shared-pool score doesn't have that problem, because every predictor is scored on the same items. This is a reason to give the shared-pool score at least equal weight in any summary.
+4. **The own-pair prediction score has a known weakness on factors where every author misjudges the size the same way:** it then ranks authors by how strong their manipulation happened to be. The shared-pool score doesn't have that problem, because every predictor is scored on the same items. This is why the owner adopted a summary score afterwards that gives the shared-pool score equal weight with the composite. In round 2c the summary is Opus 75.3, Fable 71.4, Sonnet 69.0, Haiku 63.5 (`reports/Summary score.md`).
 5. **Haiku is last on the composite and on the shared pool,** and level with Fable on own-pair prediction (p = 0.92). Opus is in the top two on all three measures.
 
 ## Caveats
