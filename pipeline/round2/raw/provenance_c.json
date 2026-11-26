@@ -1,0 +1,22 @@
+{
+ "author:fable": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "brief.txt"
+   ],
+   [
+    "Write",
+    "fable.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ }
+}
