@@ -1,0 +1,210 @@
+{
+ "panel1_vs_panel2": {
+  "n_items": 46,
+  "effect_correlation": 0.979,
+  "mean_abs_effect_difference": 0.18,
+  "noise_ratio": 1.26,
+  "verdict_changes": [
+   "nc_weekday",
+   "r2_sonnet_inevitable_harm",
+   "r2_sonnet_inevitable_harm_3"
+  ],
+  "authored_score_changes_over_0.25": [
+   "r2_fable_luck_wrongness_3",
+   "r2_sonnet_inevitable_harm",
+   "r2_sonnet_inevitable_harm_3"
+  ]
+ },
+ "judge_level_resampling": {
+  "panel1_10_ratings": {
+   "expected_score_changes_in_a_rerun_authored": 1.0,
+   "author_mean_sd": {
+    "fable": 0.039,
+    "haiku": 0.063,
+    "opus": 0.033,
+    "sonnet": 0.062
+   },
+   "first": {
+    "fable": 0.0,
+    "haiku": 0.023,
+    "opus": 0.477,
+    "sonnet": 0.5
+   }
+  },
+  "pooled_20_ratings": {
+   "expected_score_changes_in_a_rerun_authored": 0.7,
+   "author_mean_sd": {
+    "fable": 0.034,
+    "haiku": 0.042,
+    "opus": 0.02,
+    "sonnet": 0.062
+   },
+   "first": {
+    "fable": 0.0,
+    "haiku": 0.0,
+    "opus": 0.4,
+    "sonnet": 0.6
+   }
+  }
+ },
+ "authors": {
+  "fable": {
+   "composite": {
+    "panel1": 70.7,
+    "panel2": 73.2,
+    "pooled": 71.9
+   },
+   "prediction": {
+    "panel1": 0.753,
+    "panel2": 0.817,
+    "pooled": 0.786
+   }
+  },
+  "haiku": {
+   "composite": {
+    "panel1": 70.0,
+    "panel2": 70.0,
+    "pooled": 70.1
+   },
+   "prediction": {
+    "panel1": 0.77,
+    "panel2": 0.771,
+    "pooled": 0.772
+   }
+  },
+  "opus": {
+   "composite": {
+    "panel1": 80.7,
+    "panel2": 81.9,
+    "pooled": 81.5
+   },
+   "prediction": {
+    "panel1": 0.913,
+    "panel2": 0.948,
+    "pooled": 0.937
+   }
+  },
+  "sonnet": {
+   "composite": {
+    "panel1": 76.1,
+    "panel2": 69.5,
+    "pooled": 77.5
+   },
+   "prediction": {
+    "panel1": 0.937,
+    "panel2": 0.77,
+    "pooled": 0.972
+   }
+  }
+ },
+ "controls_pooled": {
+  "cc_doing_allowing": {
+   "effect": 1.41,
+   "groups": "4/4",
+   "observed": "A_higher/small"
+  },
+  "cc_inevitable_harm": {
+   "effect": -0.04,
+   "groups": "2/4",
+   "observed": "none/none"
+  },
+  "cc_knowledge_causation": {
+   "effect": 1.53,
+   "groups": "4/4",
+   "observed": "A_higher/large"
+  },
+  "cc_luck_wrongness": {
+   "effect": 0.95,
+   "groups": "4/4",
+   "observed": "A_higher/small"
+  },
+  "cc_norm_causation": {
+   "effect": 2.03,
+   "groups": "4/4",
+   "observed": "A_higher/large"
+  },
+  "nc_color": {
+   "effect": 0.19,
+   "groups": "3/4",
+   "observed": "none/none"
+  },
+  "nc_name": {
+   "effect": 0.12,
+   "groups": "3/4",
+   "observed": "none/none"
+  },
+  "nc_paraphrase": {
+   "effect": -0.12,
+   "groups": "2/4",
+   "observed": "none/none"
+  },
+  "nc_weather": {
+   "effect": -0.02,
+   "groups": "1/4",
+   "observed": "none/none"
+  },
+  "nc_weekday": {
+   "effect": -0.32,
+   "groups": "4/4",
+   "observed": "none/none"
+  }
+ },
+ "calibration_persona4": {
+  "all_10_judges_per_model": {
+   "confirmed": 33,
+   "hits": 14,
+   "false_positives": 17,
+   "share_backed_by_people": 0.42424242424242425,
+   "otr": {
+    "confirmed": 17,
+    "hits": 8,
+    "false_positives": 8
+   },
+   "moca": {
+    "confirmed": 16,
+    "hits": 6,
+    "false_positives": 9
+   }
+  },
+  "all_10_judges_per_model_same_settings_as_halves": {
+   "confirmed": 34,
+   "hits": 15,
+   "false_positives": 17,
+   "share_backed_by_people": 0.4411764705882353,
+   "otr": {
+    "confirmed": 18,
+    "hits": 9,
+    "false_positives": 8
+   },
+   "moca": {
+    "confirmed": 16,
+    "hits": 6,
+    "false_positives": 9
+   }
+  },
+  "halves_5_judges_per_model": {
+   "n": 20,
+   "mean_confirmed": 32.9,
+   "mean_hits": 13.7,
+   "mean_false_positives": 17.9,
+   "mean_share_backed_by_people": 0.414
+  },
+  "halves_redrawn_for_coverage": 1712058,
+  "earlier_panels_for_comparison": "persona x3 under two-thirds: 33 confirmed, 13 backed, 39%; plain x4: 38, 12, 32%"
+ },
+ "criteria": {
+  "C1_stability": {
+   "pass": false,
+   "expected_changes_10": 1.0,
+   "expected_changes_20": 0.7,
+   "needs": "20 <= half of 10"
+  },
+  "C2_no_validity_cost": {
+   "pass": true,
+   "share_10_judges": 0.441,
+   "mean_share_5_judges": 0.414,
+   "needs": "share with 10 >= mean share with 5 - 0.05"
+  },
+  "adopt_20_ratings": false
+ }
+}

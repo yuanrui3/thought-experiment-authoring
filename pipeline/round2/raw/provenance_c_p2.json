@@ -1,0 +1,1718 @@
+{
+ "judge:r2cp2-sonnet-r5-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r5-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r5-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r5-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r5-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r5-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r7-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r7-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r7-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r6-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r6-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r6-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r8-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r8-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r8-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r4-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r4-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r4-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r4-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r4-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r4-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r3-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r3-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r3-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r1-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r1-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r1-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r10-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r10-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r10-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r10-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r10-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r10-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r9-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r9-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r9-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r9-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r9-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r9-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r1-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r1-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r1-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r5-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r5-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r5-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__create_session",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-haiku-r8-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r8-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r8-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r9-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r9-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r9-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r7-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r7-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r7-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r9-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r9-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r9-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r2-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r2-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r2-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r5-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r5-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r5-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r3-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r3-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r3-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r10-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r10-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r10-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-haiku-r9-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r9-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r9-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r2-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r2-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r2-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r2-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r2-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r2-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-sonnet-r7-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r7-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r7-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r5-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r5-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r5-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r10-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r10-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r10-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r1-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r1-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r1-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r5-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r5-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r5-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r1-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r1-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r1-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r4-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r4-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r4-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r7-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r7-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r7-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-haiku-r3-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r3-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r3-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__SubagentHandback",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__SubagentHandback",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-fable-r8-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r8-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r8-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r4-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r4-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r4-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r3-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r3-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r3-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r3-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r3-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r3-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r3-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r3-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r3-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r5-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r5-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r5-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r1-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r1-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r1-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-fable-r6-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r6-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r6-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r2-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r2-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r2-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r6-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r6-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r6-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r2-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r2-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r2-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r5-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r5-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r5-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-haiku-r4-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r4-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r4-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-fable-r3-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r3-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r3-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r9-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r9-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r9-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r4-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r4-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r4-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r8-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r8-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r8-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r6-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r6-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r6-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-sonnet-r10-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r10-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r10-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r8-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r8-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r8-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r8-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r8-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r8-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r1-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r1-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r1-x.json"
+   ],
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__send_message",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-fable-r10-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r10-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r10-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r10-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r10-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r10-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r8-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r8-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r8-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r6-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r6-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r6-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r6-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r6-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r6-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r9-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r9-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r9-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r2-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r2-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r2-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r6-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r6-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r6-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r1-x": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r1-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r1-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r8-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r8-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r8-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r1-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r1-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r1-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r4-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r4-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r4-x.json"
+   ],
+   [
+    "Edit",
+    "r2cp2-haiku-r4-x.json"
+   ],
+   [
+    "Edit",
+    "r2cp2-haiku-r4-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": true,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "Edit",
+    "r2cp2-haiku-r4-x.json"
+   ],
+   [
+    "Edit",
+    "r2cp2-haiku-r4-x.json"
+   ]
+  ]
+ },
+ "judge:r2cp2-fable-r7-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r7-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r7-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r2-y": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r2-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r2-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r4-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r4-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r4-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r9-x": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r9-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r9-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-fable-r2-y": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-fable-r2-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-fable-r2-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-sonnet-r7-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r7-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r7-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r3-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r3-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r3-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r7-y": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r7-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r7-y.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-opus-r7-x": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-opus-r7-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-opus-r7-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ },
+ "judge:r2cp2-haiku-r6-y": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-haiku-r6-y.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-haiku-r6-y.json"
+   ],
+   [
+    "mcp__claude-code-remote__interrupt_session",
+    ""
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": [
+   [
+    "mcp__claude-code-remote__interrupt_session",
+    ""
+   ]
+  ]
+ },
+ "judge:r2cp2-sonnet-r10-x": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "r2cp2-sonnet-r10-x.txt"
+   ],
+   [
+    "Write",
+    "r2cp2-sonnet-r10-x.json"
+   ]
+  ],
+  "wrote": true,
+  "only_read_its_file_before_writing": true,
+  "revised_own_answer_after_writing": false,
+  "usable": true,
+  "stray_calls_after_answering": []
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "definition": "pipeline/summary_score.py docstring",
+ "weights": {
+  "composite": 0.5,
+  "shared_pool": 0.5
+ },
+ "results": "out/round2c_pooled/results.json",
+ "runs": "round2c,round2c-p2",
+ "authors": {
+  "fable": {
+   "composite": 72.0,
+   "shared_pool": 75.2,
+   "summary": 73.6,
+   "summary_95": [
+    69.3,
+    77.5
+   ],
+   "sd_judge_level": 1.21,
+   "sd_item_level": 1.74,
+   "sd_combined": 2.17,
+   "mean_of_draws_minus_observed": -0.21
+  },
+  "haiku": {
+   "composite": 70.1,
+   "shared_pool": 57.5,
+   "summary": 63.8,
+   "summary_95": [
+    58.5,
+    68.7
+   ],
+   "sd_judge_level": 1.2,
+   "sd_item_level": 2.27,
+   "sd_combined": 2.58,
+   "mean_of_draws_minus_observed": -0.13
+  },
+  "opus": {
+   "composite": 81.5,
+   "shared_pool": 72.5,
+   "summary": 77.0,
+   "summary_95": [
+    73.1,
+    79.4
+   ],
+   "sd_judge_level": 1.09,
+   "sd_item_level": 1.07,
+   "sd_combined": 1.61,
+   "mean_of_draws_minus_observed": -0.52
+  },
+  "sonnet": {
+   "composite": 77.5,
+   "shared_pool": 62.5,
+   "summary": 70.0,
+   "summary_95": [
+    63.9,
+    72.4
+   ],
+   "sd_judge_level": 1.49,
+   "sd_item_level": 1.12,
+   "sd_combined": 2.14,
+   "mean_of_draws_minus_observed": -1.19
+  }
+ },
+ "spread_between_authors": {
+  "composite": {
+   "range": 11.4,
+   "sd": 4.53
+  },
+  "shared_pool": {
+   "range": 17.8,
+   "sd": 7.23
+  }
+ },
+ "pairwise": {
+  "opus - fable": {
+   "difference": 3.4,
+   "combined_95": [
+    -0.4,
+    6.8
+   ],
+   "clear": false,
+   "share_same_sign": 0.958
+  },
+  "opus - sonnet": {
+   "difference": 7.0,
+   "combined_95": [
+    4.0,
+    12.7
+   ],
+   "clear": true,
+   "share_same_sign": 1.0
+  },
+  "opus - haiku": {
+   "difference": 13.2,
+   "combined_95": [
+    7.6,
+    18.4
+   ],
+   "clear": true,
+   "share_same_sign": 1.0
+  },
+  "fable - sonnet": {
+   "difference": 3.6,
+   "combined_95": [
+    0.3,
+    10.4
+   ],
+   "clear": true,
+   "share_same_sign": 0.984
+  },
+  "fable - haiku": {
+   "difference": 9.8,
+   "combined_95": [
+    3.5,
+    16.6
+   ],
+   "clear": true,
+   "share_same_sign": 1.0
+  },
+  "sonnet - haiku": {
+   "difference": 6.2,
+   "combined_95": [
+    -0.8,
+    11.0
+   ],
+   "clear": false,
+   "share_same_sign": 0.957
+  }
+ },
+ "order_by_summary": "opus > fable > sonnet > haiku",
+ "order_by_composite": "opus > sonnet > fable > haiku",
+ "order_by_shared_pool": "fable > opus > sonnet > haiku",
+ "order_frequencies": {
+  "combined": {
+   "opus > fable > sonnet > haiku": 0.9,
+   "opus > fable > haiku > sonnet": 0.041,
+   "fable > opus > sonnet > haiku": 0.041,
+   "opus > sonnet > fable > haiku": 0.016,
+   "fable > opus > haiku > sonnet": 0.001,
+   "opus > haiku > fable > sonnet": 0.0
+  },
+  "judge_level_only": {
+   "opus > fable > sonnet > haiku": 0.99,
+   "opus > fable > haiku > sonnet": 0.01
+  },
+  "item_level_only": {
+   "opus > fable > sonnet > haiku": 0.959,
+   "opus > sonnet > fable > haiku": 0.019,
+   "fable > opus > sonnet > haiku": 0.017,
+   "opus > fable > haiku > sonnet": 0.005,
+   "opus > haiku > fable > sonnet": 0.0
+  }
+ },
+ "first": {
+  "fable": 0.042,
+  "haiku": 0.0,
+  "opus": 0.958,
+  "sonnet": 0.0
+ },
+ "n": {
+  "judge_level": 300,
+  "inner_bootstrap": 400,
+  "draws": 5000,
+  "pairs_held_fixed": []
+ }
+}

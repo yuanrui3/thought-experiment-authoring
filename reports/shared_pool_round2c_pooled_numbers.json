@@ -1,0 +1,93 @@
+{
+ "definition": "pipeline/shared_pool.py docstring",
+ "runs": "round2c,round2c-p2",
+ "manifest": "pipeline/round2/shared_pool_manifest_c.json",
+ "n_items": 46,
+ "predictors": {
+  "fable": {
+   "shared_pool_score": 75.2,
+   "mae_others": 0.371,
+   "n_others": 37,
+   "mae_all": 0.399,
+   "mae_own": 0.515,
+   "n_own": 9,
+   "correlation_all": 0.916,
+   "mean_signed_error_all": -0.257
+  },
+  "haiku": {
+   "shared_pool_score": 57.5,
+   "mae_others": 0.642,
+   "n_others": 37,
+   "mae_all": 0.673,
+   "mae_own": 0.803,
+   "n_own": 9,
+   "correlation_all": 0.822,
+   "mean_signed_error_all": -0.179
+  },
+  "opus": {
+   "shared_pool_score": 72.5,
+   "mae_others": 0.413,
+   "n_others": 37,
+   "mae_all": 0.436,
+   "mae_own": 0.533,
+   "n_own": 9,
+   "correlation_all": 0.907,
+   "mean_signed_error_all": -0.268
+  },
+  "sonnet": {
+   "shared_pool_score": 62.5,
+   "mae_others": 0.562,
+   "n_others": 37,
+   "mae_all": 0.537,
+   "mae_own": 0.436,
+   "n_own": 9,
+   "correlation_all": 0.866,
+   "mean_signed_error_all": -0.351
+  }
+ },
+ "judge_level_resampling": {
+  "n": 2000,
+  "score_sd": {
+   "fable": 1.56,
+   "haiku": 1.5,
+   "opus": 1.63,
+   "sonnet": 1.67
+  },
+  "order_by_shared_pool_score": {
+   "fable > opus > sonnet > haiku": 0.988,
+   "opus > fable > sonnet > haiku": 0.012
+  }
+ },
+ "paired_comparisons": {
+  "fable vs haiku": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.272,
+   "sign_flip_p": 0.0001
+  },
+  "fable vs opus": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.028,
+   "sign_flip_p": 0.5282
+  },
+  "fable vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.131,
+   "sign_flip_p": 0.0908
+  },
+  "haiku vs opus": {
+   "items_written_by_neither": 28,
+   "mae_difference": 0.193,
+   "sign_flip_p": 0.0444
+  },
+  "haiku vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.014,
+   "sign_flip_p": 0.8947
+  },
+  "opus vs sonnet": {
+   "items_written_by_neither": 28,
+   "mae_difference": -0.172,
+   "sign_flip_p": 0.0194
+  }
+ }
+}

@@ -43,6 +43,16 @@
     - In sample the rule looks better (57%), but that's the weights fitting their own data.
 
     Three replacement rules have now been tested. None gives both stable verdicts and verdicts people back, so the two-thirds rule stays. Details: `reports/Judge weighting test.md`.
+20. **On 26 November I tested more ratings per judge model.** A second, independent 80-judge panel rejudged round 2c, giving 20 ratings per model and version pooled. Fable's 10 persona judges also ran on the public human data, completing the four-model persona calibration.
+    - By the criteria committed first, 20 ratings don't become the standard: expected score changes per rerun fall only from 1.0 to 0.7 of 36 pairs (needed: half).
+    - But the real rerun moved more than that estimate:
+      - 3 of 36 authored scores changed.
+      - Two of Sonnet's pairs fell just under the 0.5 bar.
+      - The null control "weekday" was confirmed in panel 2. Pooling fixed it.
+    - More judges cost no validity on human data.
+    - The four-model persona panel round 2c uses is backed by people on 42% of the gaps it confirms.
+    - Round 2c's headline is now the pooled panel: summary Opus 77.0, Fable 73.6, Sonnet 70.0, Haiku 63.8.
+    - One deviation from the committed analysis: the 5-judge calibration halves were redrawn until every story was covered. Details: `reports/More ratings per judge model.md`.
 
 ## What the checks showed
 

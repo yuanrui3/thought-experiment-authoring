@@ -2,6 +2,17 @@
 
 *26 November 2026. Pairs in `round2/vignettes_c.json`; run `round2c` in `judgments.csv` and `audits.csv`; scores in `out/round2c/`. Composite and own-pair numbers are in `reports/round2c_numbers.json`, rebuilt by `pipeline/round2/analyse_c.py`. Shared-pool numbers are in `reports/shared_pool_round2c_numbers.json`, rebuilt by `pipeline/shared_pool.py score`. All four authors' shared-pool predictions were committed before any judging (commit 9bf8007). Current rules throughout: the distance prediction score and the two-thirds agreement rule, which with four judge models means 3 of 4.*
 
+*Update, later on 26 November: a second, independent 80-judge panel rejudged round 2c (`reports/More ratings per judge model.md`). As fixed in advance, round 2c's headline numbers are now those of the two panels pooled (20 ratings per model and version).*
+
+| Author | Summary | Composite | Shared-pool score | Own-pair prediction |
+|---|---|---|---|---|
+| Opus | **77.0** | **81.5** | 72.5 | 0.94 |
+| Fable | 73.6 | 72.0 | **75.2** | 0.79 |
+| Sonnet | 70.0 | 77.5 | 62.5 | **0.97** |
+| Haiku | 63.8 | 70.1 | 57.5 | 0.77 |
+
+*The order is unchanged. Pooling settles Fable over Sonnet on the summary. The rest of this report describes the first panel alone.*
+
 ## Bottom line
 
 Fable wrote nine pairs on the three contested factors, the same brief and the same number as the other three authors. All 36 authored pairs and the 10 controls were then judged together by one persona panel with all four Claude models as judges.

@@ -51,6 +51,10 @@ ap.add_argument("--agreement-rule", choices=["three_quarters", "two_thirds", "ce
                      "scale abstains, as in score.py) or weighted (needs --judge-weights: weighted panel gap, and the "
                      "groups agreeing in sign must carry two thirds of the weight, as in score.py)")
 ap.add_argument("--judge-weights", help="JSON {panel group label: weight}, for --agreement-rule weighted")
+ap.add_argument("--tolerate-empty", action="store_true",
+                help="an empty cell gives NaN instead of an error; for subsampled panels (e.g. 5 judges per model) whose "
+                     "split-half and bootstrap statistics can hit empty cells. Verdicts are unaffected; never used for "
+                     "published full-panel numbers")
 ap.add_argument("--panel", help="comma-separated groups that form the panel (default: the manifest's four Claude models)")
 args = ap.parse_args()
 rng = random.Random(args.seed)
@@ -119,6 +123,8 @@ QUESTIONS = ["permissibility", "intention"]
 
 
 def mean(x):
+    if not x and args.tolerate_empty:
+        return float("nan")
     return sum(x) / len(x)
 
 

@@ -29,6 +29,14 @@
 
 ## Round 2c
 
+*Update: round 2c's headline is now the two panels pooled (`reports/More ratings per judge model.md`, `reports/summary_round2c_pooled_numbers.json`).*
+- Opus 77.0, Fable 73.6, Sonnet 70.0, Haiku 63.8.
+- Opus is first in 96% of draws but still not clearly ahead of Fable (−0.4 to +6.8).
+- Fable is now clearly ahead of Sonnet (+0.3 to +10.4).
+- Sonnet against Haiku is still not clear.
+
+The table below is the first panel alone.
+
 | Author | Summary | 95% interval | Composite | Shared-pool score |
 |---|---|---|---|---|
 | Opus | **75.3** | 70.0 – 78.5 | **80.7** | 69.9 |

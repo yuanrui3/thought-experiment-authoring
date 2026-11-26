@@ -100,11 +100,13 @@ def summarise(sims, X, authored, tiers, n):
             "first": {t: round(first[t] / n, 3) for t in tiers}}
 
 
-def cal_run(dirs, out, moral, moca, boot, splits):
+def cal_run(dirs, out, moral, moca, boot, splits, tolerate=False):
     args = [sys.executable, os.path.join(CAL, "analyse.py"), "--answers", os.path.join(CAL, "answers"), "--moral-evals", moral, "--moca", moca]
     for m in MODELS:
         args += ["--group", "%s-persona=%s" % (m, dirs[m])]
     args += ["--panel", ",".join(m + "-persona" for m in MODELS), "--boot", str(boot), "--splits", str(splits), "--out", out]
+    if tolerate:
+        args.append("--tolerate-empty")
     return subprocess.Popen(args, cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
 
 
@@ -167,13 +169,48 @@ def main():
     tmp = tempfile.mkdtemp()
     full_out = os.path.join(ROOT, "reports", "calibration_numbers_persona4.json")
     jobs = [("full", cal_run(full_dirs, full_out, a.moral_evals, a.moca, 4000, 400), full_out)]
+    # Deviation from the committed plan (found when it first ran, 26 November): a random 5 of a model's 10 calibration
+    # judges can leave an OffTheRails scenario with no rating at one level of a factor, and the analysis then cannot
+    # compute that contrast (or a condition-level mean). Halves are therefore redrawn until every scenario x factor x
+    # level has at least one rating from every model, every condition of every scenario at least one rating from the
+    # four models together, and every MoCa pair both of its stories from at least one model. The full panel is
+    # unaffected.
+    man = json.load(open(os.path.join(CAL, "manifest.json")))["batches"]
+
+    def covered(bids):
+        have = set()
+        for b in bids:
+            for it in man[b]["part1"]:
+                c = it["condition"]
+                for fk, lvl in (("cs", c.startswith("cc_")), ("ev", "_evitable_" in c), ("ac", c.endswith("action_yes"))):
+                    have.add((it["scenario_id"], fk, int(lvl)))
+        scen = {it["scenario_id"] for b in man for it in man[b]["part1"]}
+        return all((s_, fk, l) in have for s_ in scen for fk in ("cs", "ev", "ac") for l in (0, 1))
+
+    all_cells = {(it["scenario_id"], it["condition"]) for b in man for it in man[b]["part1"]}
+    moca_pairs = [tuple(p) for p in json.load(open(os.path.join(CAL, "manifest.json")))["moca_pairs"]]
+    redraws = 0
     for h in range(a.halves):
-        dirs = {}
+        dirs, picks = {}, {}
+        while True:  # every model covers every factor level, and together they cover every condition of every scenario
+            for m in MODELS:
+                files = sorted(x for x in os.listdir(full_dirs[m]) if x.endswith(".json"))
+                while True:
+                    picks[m] = rng.sample(files, 5)
+                    if covered([x[:-5] for x in picks[m]]):
+                        break
+                    redraws += 1
+            got = {(it["scenario_id"], it["condition"]) for m in MODELS for x in picks[m] for it in man[x[:-5]]["part1"]}
+            seen = {m: {sid for x in picks[m] for sid in man[x[:-5]]["part2"]} for m in MODELS}
+            moca_ok = all(any(a_ in seen[m] and b_ in seen[m] for m in MODELS) for a_, b_ in moca_pairs)
+            if got >= all_cells and moca_ok:
+                break
+            redraws += 1
         for m in MODELS:
-            files = sorted(x for x in os.listdir(full_dirs[m]) if x.endswith(".json"))
+            pick = picks[m]
             d = os.path.join(tmp, "h%02d_%s" % (h, m))
             os.makedirs(d)
-            for x in rng.sample(files, 5):
+            for x in pick:
                 shutil.copy(os.path.join(full_dirs[m], x), d)
             dirs[m] = d
         jobs.append(("half", None, (dirs, os.path.join(tmp, "h%02d.json" % h))))
@@ -185,7 +222,7 @@ def main():
     while running or queue:
         while queue and len(running) < 4:
             kind, _, (dirs, out) = queue.pop(0)
-            running.append((kind, cal_run(dirs, out, a.moral_evals, a.moca, 1000, 20), out))
+            running.append((kind, cal_run(dirs, out, a.moral_evals, a.moca, 1000, 20, tolerate=(kind == "half")), out))
         kind, p, out = running.pop(0)
         _, err = p.communicate()
         if p.returncode != 0:
@@ -206,6 +243,7 @@ def main():
                                       "mean_hits": round(statistics.mean(h["hits"] for h in halves), 1),
                                       "mean_false_positives": round(statistics.mean(h["false_positives"] for h in halves), 1),
                                       "mean_share_backed_by_people": round(statistics.mean(h["share_backed_by_people"] for h in halves if h["share_backed_by_people"] is not None), 3)},
+        "halves_redrawn_for_coverage": redraws,
         "earlier_panels_for_comparison": "persona x3 under two-thirds: 33 confirmed, 13 backed, 39%; plain x4: 38, 12, 32%"}
 
     # criteria
