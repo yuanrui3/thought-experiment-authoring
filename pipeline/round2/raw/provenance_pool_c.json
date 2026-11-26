@@ -1,0 +1,70 @@
+{
+ "pool:fable": {
+  "served": [
+   "claude-fable-5-2"
+  ],
+  "calls": [
+   [
+    "Read",
+    "fable.txt"
+   ],
+   [
+    "Write",
+    "fable.json"
+   ]
+  ],
+  "usable": true
+ },
+ "pool:haiku": {
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "haiku.txt"
+   ],
+   [
+    "Write",
+    "haiku.json"
+   ]
+  ],
+  "usable": true
+ },
+ "pool:opus": {
+  "served": [
+   "claude-opus-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "opus.txt"
+   ],
+   [
+    "Write",
+    "opus.json"
+   ]
+  ],
+  "usable": true
+ },
+ "pool:sonnet": {
+  "served": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   [
+    "Read",
+    "sonnet.txt"
+   ],
+   [
+    "Write",
+    "sonnet.json"
+   ],
+   [
+    "Edit",
+    "sonnet.json"
+   ]
+  ],
+  "usable": true
+ }
+}
